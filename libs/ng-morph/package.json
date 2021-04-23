@@ -1,0 +1,28 @@
+{
+  "name": "ng-morph",
+  "version": "0.0.0-development",
+  "peerDependencies": {
+    "@angular-devkit/core": ">=11.0.0",
+    "@angular-devkit/schematics": ">=11.0.0"
+  },
+  "dependencies": {
+    "ts-morph": "10.0.2",
+    "jsonc-parser": "3.0.0"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "typescript",
+    "ast",
+    "mutations",
+    "angular",
+    "schematics"
+  ],
+  "authors": [
+    "Igor Katsuba <katsuba.igor@gmail.ru>"
+  ],
+  "contributors": [
+    "Igor Katsuba <katsuba.igor@gmail.ru>"
+  ],
+  "repository": "https://github.com/TinkoffCreditSystems/ng-morph",
+  "homepage": "https://github.com/TinkoffCreditSystems/ng-morph"
+}
