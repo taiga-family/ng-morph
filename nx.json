@@ -10,10 +10,10 @@
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
+  "npmScope": "ng-morph",
   "affected": {
     "defaultBase": "main"
   },
-  "npmScope": "ng-morph",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
