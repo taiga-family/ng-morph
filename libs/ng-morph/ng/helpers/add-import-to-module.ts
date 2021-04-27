@@ -1,21 +1,10 @@
 import { ClassDeclaration, Node } from 'ts-morph';
 import { getDecorators } from 'ng-morph/decorators';
-import { getImports } from 'ng-morph/imports';
 
 export function addImportToModule(
   classDeclaration: ClassDeclaration,
-  {
-    moduleName,
-    moduleSpecifier,
-    element = moduleName,
-  }: {
-    moduleName: string;
-    moduleSpecifier: string;
-    element?: string;
-  }
+  moduleName: string
 ) {
-  const file = classDeclaration.getSourceFile();
-
   const [moduleDecorator] = getDecorators(classDeclaration, {
     name: 'NgModule',
   });
@@ -41,22 +30,5 @@ export function addImportToModule(
     return;
   }
 
-  importsInitializer.addElement(element);
-
-  const [
-    moduleImport = file.addImportDeclaration({
-      moduleSpecifier,
-      namedImports: [moduleName],
-    }),
-  ] = getImports(file.getFilePath(), {
-    moduleSpecifier,
-  });
-
-  if (
-    !moduleImport
-      .getNamedImports()
-      .find((namedImport) => namedImport.getName() === moduleName)
-  ) {
-    moduleImport.addNamedImport(moduleName);
-  }
+  importsInitializer.addElement(moduleName);
 }
