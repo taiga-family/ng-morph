@@ -32,16 +32,15 @@ export class SomeModule {
     });
 
     it('should create the imports property', () => {
-      addImportToModule(getClasses('src/main.ts', { name: 'SomeModule' })[0], {
-        moduleName: 'TestModule',
-        moduleSpecifier: '@test/scope',
-      });
+      addImportToModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestModule'
+      );
 
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { NgModule } from '@angular/core';
-import { TestModule } from "@test/scope";
 
 @NgModule({
         imports: [TestModule]
@@ -66,16 +65,15 @@ export class SomeModule {
     });
 
     it('should create the imports property', () => {
-      addImportToModule(getClasses('src/main.ts', { name: 'SomeModule' })[0], {
-        moduleName: 'TestModule',
-        moduleSpecifier: '@test/scope',
-      });
+      addImportToModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestModule'
+      );
 
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { NgModule } from '@angular/core';
-import { TestModule } from "@test/scope";
 
 @NgModule({imports: [TestModule]})
 export class SomeModule {
@@ -101,20 +99,19 @@ export class SomeModule {
     });
 
     it('should add module to imports', () => {
-      addImportToModule(getClasses('src/main.ts', { name: 'SomeModule' })[0], {
-        moduleName: 'TestModule',
-        moduleSpecifier: '@test/scope',
-      });
+      addImportToModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestModule.forRoot()'
+      );
 
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TestModule } from "@test/scope";
 
 @NgModule({
-  imports: [CommonModule, TestModule]
+  imports: [CommonModule, TestModule.forRoot()]
 })
 export class SomeModule {
 
