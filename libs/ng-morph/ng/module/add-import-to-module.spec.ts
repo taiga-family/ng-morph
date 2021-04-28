@@ -6,7 +6,7 @@ import {
   setActiveProject,
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
-import { addImportToModule } from 'ng-morph/ng/helpers/add-import-to-module';
+import { addImportToModule } from 'ng-morph/ng/module/add-import-to-module';
 import { getClasses } from 'ng-morph/classes';
 
 describe('addImportToModule', () => {
