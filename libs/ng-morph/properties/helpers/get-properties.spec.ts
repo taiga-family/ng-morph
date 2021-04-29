@@ -31,6 +31,8 @@ class A {
       `
 class B {
   static d = 's';
+
+  static hello2 = 'hello';
 }
 `
     );
@@ -39,7 +41,7 @@ class B {
   it('should find two properties', () => {
     const declarations = getProperties(getClasses('some/path/**.ts'));
 
-    expect(declarations.length).toEqual(2);
+    expect(declarations.length).toEqual(3);
   });
 
   it('should find one property', () => {
@@ -48,9 +50,18 @@ class B {
     expect(declarations.length).toEqual(1);
   });
 
-  it('should find one property by name', () => {
+  it('should find one property by name pattern **', () => {
     const declarations = getProperties(getClasses('some/path/**.ts'), {
       name: 'd',
+      isStatic: true,
+    });
+
+    expect(declarations.length).toEqual(1);
+  });
+
+  it('should find one property by blob pattern **/*', () => {
+    const declarations = getProperties(getClasses('**/*.ts'), {
+      name: 'hello*',
       isStatic: true,
     });
 

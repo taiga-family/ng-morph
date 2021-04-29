@@ -18,8 +18,7 @@
     "@nrwl/angular:application": {
       "style": "less",
       "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
+      "unitTestRunner": "jest"
     },
     "@nrwl/angular:library": {
       "style": "less",
