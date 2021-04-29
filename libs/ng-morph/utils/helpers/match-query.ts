@@ -1,3 +1,4 @@
+import * as minimatch from 'minimatch';
 import { coerceArray } from 'ng-morph/utils';
 import { Structure, WriterFunction } from 'ts-morph';
 
@@ -63,7 +64,13 @@ export function matchQuery<T extends Structure>(
     Object.keys(query).every((key) =>
       coerceArray(value[key])
         .map(coerceName)
-        .some((v) => coerceArray(query[key]).includes(v))
+        .some((v) => {
+          const patterns = coerceArray(query[key]);
+
+          return typeof v === 'string'
+            ? patterns.some((pattern) => pattern && minimatch(v, pattern))
+            : patterns.includes(v);
+        })
     )
   );
 }
