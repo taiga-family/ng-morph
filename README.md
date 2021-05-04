@@ -1,5 +1,7 @@
 # ng-morph
 
+[![npm version](https://img.shields.io/npm/v/ng-morph.svg)](https://npmjs.com/package/ng-morph)
+
 Code mutations in schematics were never easier than now.
 
 ## Core team
