@@ -26,6 +26,12 @@ describe('getSourceFiles', () => {
     expect(sourceFiles.length).toEqual(2);
   });
 
+  it('should find three source files', () => {
+    const sourceFiles = getSourceFiles('**/*.ts');
+
+    expect(sourceFiles.length).toEqual(3);
+  });
+
   it('should find one source file', () => {
     const sourceFiles = getSourceFiles('some/test.ts');
 
