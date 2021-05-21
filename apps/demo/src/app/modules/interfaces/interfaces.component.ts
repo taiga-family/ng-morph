@@ -22,7 +22,6 @@ editInterfaces(declarations, () => ({
 removeInterfaces(declarations);
 `;
 
-
 @Component({
   selector: 'interfaces',
   templateUrl: 'interfaces.template.html',

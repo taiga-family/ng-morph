@@ -10,7 +10,8 @@ export const pages: TuiDocPages = [
   {
     section: `File body processing`,
     title: `Classes`,
-    keywords: 'classes, file, methods, props, properties, accessors, constructors, decorators',
+    keywords:
+      'classes, file, methods, props, properties, accessors, constructors, decorators',
     route: 'classes',
   },
   {

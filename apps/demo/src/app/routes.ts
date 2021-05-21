@@ -12,7 +12,7 @@ export const ROUTES: Route[] = [
   {
     path: 'classes',
     loadChildren: () =>
-      import(`./modules/classes/classes.module`).then((m) => m.ClassesModule),
+      import('./modules/classes/classes.module').then((m) => m.ClassesModule),
     data: {
       title: `Classes`,
     },
@@ -20,7 +20,9 @@ export const ROUTES: Route[] = [
   {
     path: 'interfaces',
     loadChildren: () =>
-      import(`./modules/interfaces/interfaces.module`).then((m) => m.InterfacesModule),
+      import('./modules/interfaces/interfaces.module').then(
+        (m) => m.InterfacesModule
+      ),
     data: {
       title: `Interfaces`,
     },
@@ -28,7 +30,9 @@ export const ROUTES: Route[] = [
   {
     path: 'variables',
     loadChildren: () =>
-      import(`./modules/variables/variables.module`).then((m) => m.VariablesModule),
+      import('./modules/variables/variables.module').then(
+        (m) => m.VariablesModule
+      ),
     data: {
       title: `Variables`,
     },
@@ -36,7 +40,9 @@ export const ROUTES: Route[] = [
   {
     path: 'imports-and-exports',
     loadChildren: () =>
-      import(`./modules/imports-and-exports/imports-and-exports.module`).then((m) => m.ImportsAndExportsModule),
+      import('./modules/imports-and-exports/imports-and-exports.module').then(
+        (m) => m.ImportsAndExportsModule
+      ),
     data: {
       title: `Imports and Exports`,
     },
@@ -44,7 +50,7 @@ export const ROUTES: Route[] = [
   {
     path: 'enums',
     loadChildren: () =>
-      import(`./modules/enums/enums.module`).then((m) => m.EnumsModule),
+      import('./modules/enums/enums.module').then((m) => m.EnumsModule),
     data: {
       title: `Enums`,
     },
@@ -52,7 +58,7 @@ export const ROUTES: Route[] = [
   {
     path: 'types',
     loadChildren: () =>
-      import(`./modules/types/types.module`).then((m) => m.TypesModule),
+      import('./modules/types/types.module').then((m) => m.TypesModule),
     data: {
       title: `Types`,
     },
@@ -60,7 +66,9 @@ export const ROUTES: Route[] = [
   {
     path: 'get-main-module',
     loadChildren: () =>
-      import(`./modules/get-main-module/get-main-module.module`).then((m) => m.GetMainModuleModule),
+      import('./modules/get-main-module/get-main-module.module').then(
+        (m) => m.GetMainModuleModule
+      ),
     data: {
       title: `Get main module`,
     },
@@ -68,7 +76,9 @@ export const ROUTES: Route[] = [
   {
     path: 'get-bootstrap-function',
     loadChildren: () =>
-      import(`./modules/get-bootstrap-function/get-bootstrap-function.module`).then((m) => m.GetBootstrapFunctionModule),
+      import(
+        `./modules/get-bootstrap-function/get-bootstrap-function.module`
+      ).then((m) => m.GetBootstrapFunctionModule),
     data: {
       title: `Get bootstrap function`,
     },
@@ -76,7 +86,9 @@ export const ROUTES: Route[] = [
   {
     path: 'source-files',
     loadChildren: () =>
-      import(`./modules/source-files/source-files.module`).then((m) => m.SourceFilesModule),
+      import('./modules/source-files/source-files.module').then(
+        (m) => m.SourceFilesModule
+      ),
     data: {
       title: `Source files`,
     },

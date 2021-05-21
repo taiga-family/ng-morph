@@ -73,7 +73,6 @@ editExports(exports, () => ({
 removeExports(exports);
 `;
 
-
 @Component({
   selector: 'imports-and-exports',
   templateUrl: 'imports-and-exports.template.html',

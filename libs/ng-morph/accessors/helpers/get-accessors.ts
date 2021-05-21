@@ -1,9 +1,4 @@
-import {
-  arrayFlat,
-  coerceArray,
-  matchQuery,
-  Query,
-} from 'ng-morph/utils';
+import { arrayFlat, coerceArray, matchQuery, Query } from 'ng-morph/utils';
 import {
   AccessorDeclaration,
   ClassDeclaration,

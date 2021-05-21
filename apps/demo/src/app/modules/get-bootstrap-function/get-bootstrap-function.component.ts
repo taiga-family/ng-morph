@@ -7,7 +7,6 @@ const code = `import {
 const bootstrapFn = getBootstrapFn('src/main.ts');
 `;
 
-
 @Component({
   selector: 'get-bootstrap-function',
   templateUrl: './get-bootstrap-function.template.html',

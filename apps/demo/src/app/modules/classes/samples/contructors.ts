@@ -29,4 +29,3 @@ editConstructors(declarations, () => ({
 
 removeConstructors(declarations);
 `;
-

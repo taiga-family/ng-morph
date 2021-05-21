@@ -14,16 +14,16 @@ import { LOGO_CONTENT } from './logo/logo.component';
 import { pages } from './pages';
 import { GettingStartedModule } from './getting-started/getting-started.module';
 import { ROUTES } from './routes';
-import {HIGHLIGHT_OPTIONS} from 'ngx-highlightjs';
+import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 export const HIGHLIGHT_OPTIONS_VALUE = {
-    coreLibraryLoader: () => import('highlight.js/lib/core'),
-    lineNumbersLoader: () => import('highlightjs-line-numbers.js'), // Optional, only if you want the line numbers
-    languages: {
-        typescript: () => import('highlight.js/lib/languages/typescript'),
-        less: () => import('highlight.js/lib/languages/less'),
-        xml: () => import('highlight.js/lib/languages/xml'),
-    },
+  coreLibraryLoader: () => import('highlight.js/lib/core'),
+  lineNumbersLoader: () => import('highlightjs-line-numbers.js'), // Optional, only if you want the line numbers
+  languages: {
+    typescript: () => import('highlight.js/lib/languages/typescript'),
+    less: () => import('highlight.js/lib/languages/less'),
+    xml: () => import('highlight.js/lib/languages/xml'),
+  },
 };
 
 @NgModule({
@@ -46,8 +46,8 @@ export const HIGHLIGHT_OPTIONS_VALUE = {
       useValue: pages,
     },
     {
-        provide: HIGHLIGHT_OPTIONS,
-        useValue: HIGHLIGHT_OPTIONS_VALUE,
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: HIGHLIGHT_OPTIONS_VALUE,
     },
   ],
   bootstrap: [AppComponent],

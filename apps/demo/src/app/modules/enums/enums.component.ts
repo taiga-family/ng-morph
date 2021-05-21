@@ -28,7 +28,6 @@ editEnums(declarations, () => ({
 removeEnums(declarations);
 `;
 
-
 @Component({
   selector: 'enums',
   templateUrl: 'enums.template.html',

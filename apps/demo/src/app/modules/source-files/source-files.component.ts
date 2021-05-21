@@ -15,7 +15,6 @@ const sourceFiles = getSourceFiles('some/**/*.ts');
 moveSourceFilePaths(sourceFiles, dasherize);
 `;
 
-
 @Component({
   selector: 'source-files',
   templateUrl: './source-files.template.html',

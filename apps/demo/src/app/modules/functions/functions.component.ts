@@ -24,7 +24,6 @@ editFunctions(functions, () => ({
 removeFunctions(declarations);
 `;
 
-
 @Component({
   selector: 'functions',
   templateUrl: 'functions.template.html',

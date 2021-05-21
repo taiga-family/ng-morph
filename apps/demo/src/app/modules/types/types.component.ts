@@ -22,7 +22,6 @@ editTypeAliases(declarations, () => ({
 removeTypeAliases(declarations);
 `;
 
-
 @Component({
   selector: 'types',
   templateUrl: 'types.template.html',

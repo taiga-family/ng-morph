@@ -7,7 +7,6 @@ const code = `import {
 const classDeclaration = getMainModule('src/main.ts');
 `;
 
-
 @Component({
   selector: 'get-main-module',
   templateUrl: 'get-main-module.template.html',

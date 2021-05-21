@@ -26,7 +26,6 @@ editVariables(declarations, () => ({
 removeVariables(declarations);
 `;
 
-
 @Component({
   selector: 'variables',
   templateUrl: 'variables.template.html',

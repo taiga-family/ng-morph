@@ -31,7 +31,7 @@ describe('addClasses', () => {
           statements: 'return 0',
           returnType: 'number',
         },
-      ]
+      ],
     });
 
     saveActiveProject();
