@@ -77,7 +77,7 @@ export const ROUTES: Route[] = [
     path: 'get-bootstrap-function',
     loadChildren: () =>
       import(
-        `./modules/get-bootstrap-function/get-bootstrap-function.module`
+        './modules/get-bootstrap-function/get-bootstrap-function.module'
       ).then((m) => m.GetBootstrapFunctionModule),
     data: {
       title: `Get bootstrap function`,
