@@ -1,19 +1,14 @@
 {
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
   "npmScope": "ng-morph",
-  "affected": {
-    "defaultBase": "main"
-  },
+  "affected": { "defaultBase": "main" },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
@@ -25,9 +20,5 @@
       }
     }
   },
-  "projects": {
-    "ng-morph": {
-      "tags": []
-    }
-  }
+  "projects": { "ng-morph": { "tags": [] }, "demo": { "tags": [] } }
 }
