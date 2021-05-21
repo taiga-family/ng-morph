@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/r.sedov/opensource/ng-morph/apps/demo/src/polyfills.ts */"z6G3");
+module.exports = __webpack_require__(/*! /home/runner/work/ng-morph/ng-morph/apps/demo/src/polyfills.ts */"z6G3");
 
 
 /***/ }),
