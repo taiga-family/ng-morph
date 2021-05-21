@@ -6,20 +6,22 @@
     allows you to manipulate with safe TypeScript AST.
   </p>
 
-  <h3>Why is it better than default schematics?</h3>
+  <section>
+    <h3>Why is it better than default schematics?</h3>
 
-  <ul>
-    <li>
-      🛠 There are many tools made for working with Angular. You can easily find
-      and manipulate TS and Ng entities.
-    </li>
+    <ul>
+      <li>
+        🛠 There are many tools made for working with Angular. You can easily
+        find and manipulate TS and Ng entities.
+      </li>
 
-    <li>
-      ✅ You work with an abstract tree and it can be replaced, for example,
-      with virtual tree for testing instead of real file system. So, you can
-      test your schematics rapidly fast.
-    </li>
-  </ul>
+      <li>
+        ✅ You work with an abstract tree and it can be replaced, for example,
+        with virtual tree for testing instead of real file system. So, you can
+        test your schematics rapidly fast.
+      </li>
+    </ul>
+  </section>
 
   <h3>How to install</h3>
 
@@ -32,40 +34,49 @@
 
   <p>Enjoy!</p>
 
-  <h3>How to use these all things</h3>
+  <section>
+    <h3>How to use these all things</h3>
 
-  <p>
-    Creating Angular <code>ng-add</code> or <code>ng-update</code> schematics
-    you work with
-    <a
-      tuiLink
-      href="https://angular.io/guide/schematics-for-libraries#define-the-rule"
-      target="_blank"
-      >Rule</a
-    >
-    functions. Rule function gets a <code>Tree</code> as a first argument and
-    you can pass this tree to <code>setActiveProject</code> function from
-    ng-morph the following way:
-  </p>
+    <p>
+      Creating Angular <code>ng-add</code> or <code>ng-update</code> schematics
+      you work with
+      <a
+        tuiLink
+        href="https://angular.io/guide/schematics-for-libraries#define-the-rule"
+        target="_blank"
+        >Rule</a
+      >
+      functions. Rule function gets a <code>Tree</code> as a first argument and
+      you can pass this tree to <code>setActiveProject</code> function from
+      ng-morph the following way:
+    </p>
 
-  <tui-doc-code filename="ng-add.ts" [code]="creatingRule"></tui-doc-code>
+    <tui-doc-code filename="ng-add.ts" [code]="creatingRule"></tui-doc-code>
+  </section>
 
-  <h3>How to test your schematics</h3>
+  <section>
+    <h3>How to test your schematics</h3>
 
-  <p>
-    You can use any test runner you like to check that your schematics work as
-    you expect.
-  </p>
+    <p>
+      You can use any test runner you like to check that your schematics work as
+      you expect.
+    </p>
 
-  <p>Let's try to test the migration above:</p>
+    <p>Let's try to test the migration above:</p>
 
-  <tui-doc-code filename="ng-add.spec.ts" [code]="creatingSpec"></tui-doc-code>
+    <tui-doc-code
+      filename="ng-add.spec.ts"
+      [code]="creatingSpec"
+    ></tui-doc-code>
+  </section>
 
-  <h3>What is next?</h3>
+  <section>
+    <h3>What is next?</h3>
 
-  <p>
-    So, now you know how to set it up. Explore utils in the left menu and find
-    tools that you need. We suggest you to start with
-    <a tuiLink routerLink="/classes">Classes</a>
-  </p>
+    <p>
+      So, now you know how to set it up. Explore utils in the left menu and find
+      tools that you need. We suggest you to start with
+      <a tuiLink routerLink="/classes">Classes</a>
+    </p>
+  </section>
 </tui-doc-page>
