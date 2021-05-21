@@ -464,15 +464,13 @@ export default (): Rule => {
          * This function gets all imports from the project TS files and
          * replaces 'old' substring with 'new'
          * */
-        getImports('**/*.ts', {
-            moduleSpecifier: '@tinkoff*',
-        }).forEach(importEntity => {
-            const newSpecifier = importEntity
-                .getModuleSpecifierValue()
-                .replace('old', 'new');
-    
-            importEntity.setModuleSpecifier(newSpecifier);
+        const imports = getImports('some/path/**.ts', {
+            moduleSpecifier: '@morph-old*',
         });
+         
+        editImports(imports, importEntity => ({
+            moduleSpecifier: importEntity.moduleSpecifier.replace('old', 'new')
+        }));
 
         /**
          * All changes are made in a virtual project.
@@ -510,7 +508,7 @@ describe('ng-add', () => {
 
             createSourceFile(
                 'src/module.ts',
-                "import {a} from '@tinkoff-old/core';",
+                "import {a} from '@morph-old/core';",
             );
 
             saveActiveProject();
@@ -524,7 +522,7 @@ describe('ng-add', () => {
             rule(host, {} as any);
 
             expect(host.readContent('src/module.ts')).toEqual(
-                "import {a} from '@tinkoff-new/core';",
+                "import {a} from '@morph-new/core';",
             );
         });
 
