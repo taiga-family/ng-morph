@@ -9,6 +9,7 @@ on:
     branches:
       - main
     paths:
+      - '.github/workflows/deploy.yml'
       - 'apps/**'
       - 'libs/**'
       - 'angular.json'
