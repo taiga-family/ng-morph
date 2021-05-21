@@ -7,7 +7,6 @@
     "nx": "nx",
     "start": "nx run-many --target serve --parallel --all",
     "build": "nx affected --target build --prod --with-deps",
-    "postbuild": "node scripts/postbuild.js",
     "release": "nx affected --target release",
     "test": "nx affected --target test",
     "lint": "nx workspace-lint && nx affected --target lint",
