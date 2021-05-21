@@ -34,8 +34,8 @@ jobs:
             ${{ runner.OS }}-
       - name: npm ci and build demo
         run: |
-          npm ci
-          npm run build
+          npm ci --cache ~/.npm --prefer-offline
+          npm run build:demo
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
