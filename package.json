@@ -8,6 +8,7 @@
     "start": "nx run-many --target serve --parallel --all",
     "build": "nx affected --target build --prod --with-deps",
     "build:demo": "nx build demo",
+    "postbuild:demo": "cp ./dist/apps/demo/index.html ./dist/apps/demo/404.html",
     "release": "nx affected --target release",
     "test": "nx affected --target test",
     "lint": "nx workspace-lint && nx affected --target lint",
