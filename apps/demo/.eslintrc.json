@@ -9,16 +9,7 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "parserOptions": { "project": ["apps/demo/tsconfig.*?.json"] },
-      "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          { "type": "attribute", "prefix": "ng-morph", "style": "camelCase" }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          { "type": "element", "prefix": "ng-morph", "style": "kebab-case" }
-        ]
-      }
+      "rules": {}
     },
     {
       "files": ["*.html"],
