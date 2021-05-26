@@ -5,6 +5,7 @@ const creatingRule = `import {
     saveActiveProject,
     createProject,
     getImports,
+    editImports,
 } from 'ng-morph';
 
 export default (): Rule => {
@@ -22,7 +23,7 @@ export default (): Rule => {
         const imports = getImports('some/path/**.ts', {
             moduleSpecifier: '@morph-old*',
         });
-         
+
         editImports(imports, importEntity => ({
             moduleSpecifier: importEntity.moduleSpecifier.replace('old', 'new')
         }));
@@ -37,7 +38,7 @@ export default (): Rule => {
 
 const creatingSpec = `
 // We use schematics devkit to emulate virtual Tree
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {SchematicTestRunner, UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
 
 // We can emulate filesystem with ng-morph
@@ -49,15 +50,16 @@ import {
     saveActiveProject,
 } from 'ng-morph';
 
-// And import the schematics itself
-import migration from './index';
+const collectionPath = join(__dirname, '../collection.json');
 
 describe('ng-add', () => {
     describe('removes old postfix', () => {
         let host: UnitTestTree;
+        let runner: SchematicTestRunner;
 
         beforeEach(() => {
             host = new UnitTestTree(new HostTree());
+            runner = new SchematicTestRunner('schematics', collectionPath);
 
             // preparing virtual file tree with one file
             setActiveProject(createProject(host));
@@ -70,14 +72,13 @@ describe('ng-add', () => {
             saveActiveProject();
         });
 
-        it('should replace old with new in TS imports', () => {
-            // Our migration returns rule
-            const rule = migration();
+        it('should replace old with new in TS imports', async () => {
+            expect.assertions(1);
 
-            // we process our emulated files
-            rule(host, {} as any);
+            // Our migration returns Tree
+            const tree = await runner.runSchematicAsync('ng-add', {}, host).toPromise();
 
-            expect(host.readContent('src/module.ts')).toEqual(
+            expect(tree.readContent('src/module.ts')).toEqual(
                 "import {a} from '@morph-new/core';",
             );
         });
