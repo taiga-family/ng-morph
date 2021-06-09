@@ -1,10 +1,19 @@
-import { HostTree } from '@angular-devkit/schematics';
+import { HostSink, HostTree } from '@angular-devkit/schematics';
 import { ScopedHost } from '@angular-devkit/core/src/virtual-fs/host';
 import { NodeJsSyncHost } from '@angular-devkit/core/node';
 import { normalize } from '@angular-devkit/core';
 
 export class NgMorphTree extends HostTree {
+  private hostSink: HostSink;
+
   constructor(root: string = process.cwd()) {
-    super(new ScopedHost(new NodeJsSyncHost(), normalize(root)));
+    const host = new ScopedHost(new NodeJsSyncHost(), normalize(root));
+    super(host);
+
+    this.hostSink = new HostSink(host);
+  }
+
+  commitChanges(): Promise<void> {
+    return this.hostSink.commit(this).toPromise();
   }
 }

@@ -23,7 +23,7 @@ import { DirectoryEntry, FileSystem } from './file-system';
 export class DevkitFileSystem extends FileSystem {
   private _updateRecorderCache = new Map<string, UpdateRecorder>();
 
-  constructor(private _tree: Tree) {
+  constructor(readonly tree: Tree) {
     super();
   }
 
@@ -36,13 +36,13 @@ export class DevkitFileSystem extends FileSystem {
     if (this._updateRecorderCache.has(filePath)) {
       return this._updateRecorderCache.get(filePath) as UpdateRecorder;
     }
-    const recorder = this._tree.beginUpdate(filePath);
+    const recorder = this.tree.beginUpdate(filePath);
     this._updateRecorderCache.set(filePath, recorder);
     return recorder;
   }
 
   commitEdits() {
-    this._updateRecorderCache.forEach((r) => this._tree.commitUpdate(r));
+    this._updateRecorderCache.forEach((r) => this.tree.commitUpdate(r));
     this._updateRecorderCache.clear();
   }
 
@@ -51,7 +51,7 @@ export class DevkitFileSystem extends FileSystem {
     // directory exists. It throws a specific error though if a directory
     // is being read as a file. We use that to check if a directory exists.
     try {
-      return this._tree.get(fileOrDirPath) !== null;
+      return this.tree.get(fileOrDirPath) !== null;
     } catch (e) {
       if (e instanceof PathIsDirectoryException) {
         return true;
@@ -61,25 +61,25 @@ export class DevkitFileSystem extends FileSystem {
   }
 
   overwrite(filePath: Path, content: string) {
-    this._tree.overwrite(filePath, content);
+    this.tree.overwrite(filePath, content);
   }
 
   create(filePath: Path, content: string) {
-    this._tree.create(filePath, content);
+    this.tree.create(filePath, content);
   }
 
   delete(filePath: Path) {
-    this._tree.delete(filePath);
+    this.tree.delete(filePath);
   }
 
   read(filePath: Path) {
-    const buffer = this._tree.read(filePath);
+    const buffer = this.tree.read(filePath);
     return buffer !== null ? buffer.toString() : null;
   }
 
   readDirectory(dirPath: Path): DirectoryEntry {
     try {
-      const { subdirs: directories, subfiles: files } = this._tree.getDir(
+      const { subdirs: directories, subfiles: files } = this.tree.getDir(
         dirPath
       );
       return { directories, files };

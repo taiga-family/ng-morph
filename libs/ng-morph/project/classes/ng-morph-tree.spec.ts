@@ -1,7 +1,13 @@
 import { Tree } from '@angular-devkit/schematics';
-import { NgMorphTree } from 'ng-morph/project/classes/ng-morph-tree';
-import { createProject, setActiveProject } from 'ng-morph/project';
-import { getSourceFile } from 'ng-morph/source-file';
+import { NgMorphTree } from './ng-morph-tree';
+import {
+  createProject,
+  saveActiveProject,
+  setActiveProject,
+} from 'ng-morph/project';
+import { createSourceFile, getSourceFile } from 'ng-morph/source-file';
+import * as fs from 'fs';
+import { join } from 'path';
 
 describe('NgMorphTree', () => {
   let tree: Tree;
@@ -18,16 +24,44 @@ describe('NgMorphTree', () => {
 
   it('should read from fs', () => {
     expect(getSourceFile('/ng-morph-tree.ts')?.getFullText())
-      .toStrictEqual(`import { HostTree } from '@angular-devkit/schematics';
+      .toStrictEqual(`import { HostSink, HostTree } from '@angular-devkit/schematics';
 import { ScopedHost } from '@angular-devkit/core/src/virtual-fs/host';
 import { NodeJsSyncHost } from '@angular-devkit/core/node';
 import { normalize } from '@angular-devkit/core';
 
 export class NgMorphTree extends HostTree {
+  private hostSink: HostSink;
+
   constructor(root: string = process.cwd()) {
-    super(new ScopedHost(new NodeJsSyncHost(), normalize(root)));
+    const host = new ScopedHost(new NodeJsSyncHost(), normalize(root));
+    super(host);
+
+    this.hostSink = new HostSink(host);
+  }
+
+  commitChanges(): Promise<void> {
+    return this.hostSink.commit(this).toPromise();
   }
 }
 `);
+  });
+
+  it('should write to fs', () => {
+    createSourceFile('__file.ts', `content`, { overwrite: true });
+
+    const spy = jest.spyOn(fs, 'writeFileSync');
+
+    spy.mockImplementationOnce(() => {
+      // empty
+    });
+
+    saveActiveProject();
+
+    expect(spy).toHaveBeenCalledWith(
+      join(__dirname, '__file.ts'),
+      Uint8Array.from([99, 111, 110, 116, 101, 110, 116])
+    );
+
+    spy.mockRestore();
   });
 });
