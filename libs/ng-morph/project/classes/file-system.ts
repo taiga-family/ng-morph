@@ -10,6 +10,7 @@ import { UpdateRecorder } from './update-recorder';
 import { FileSystemHost } from 'ts-morph';
 import { basename, join } from 'path';
 import * as miltimatch from 'multimatch';
+import { DevkitFileSystem } from './devkit-file-system';
 
 /**
  * A workspace path semantically is equivalent to the `Path` type provided by the
@@ -87,7 +88,7 @@ export abstract class FileSystem {
 }
 
 export class NgCliFileSystem implements FileSystemHost {
-  constructor(public fs: FileSystem) {}
+  constructor(public fs: DevkitFileSystem) {}
 
   async copy(srcPath: string, destPath: string): Promise<void> {
     this.copySync(srcPath, destPath);
