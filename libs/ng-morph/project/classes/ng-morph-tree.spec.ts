@@ -7,7 +7,7 @@ describe('NgMorphTree', () => {
   let tree: Tree;
 
   beforeEach(() => {
-    tree = new NgMorphTree();
+    tree = new NgMorphTree(__dirname);
 
     setActiveProject(createProject(tree));
   });
