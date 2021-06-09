@@ -1,4 +1,5 @@
 export * from './classes/ng-cli-project';
+export * from './classes/ng-morph-tree';
 
 export * from './types/ng-cli-project-options';
 
