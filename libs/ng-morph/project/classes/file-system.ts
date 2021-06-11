@@ -9,7 +9,7 @@
 import { UpdateRecorder } from './update-recorder';
 import { FileSystemHost } from 'ts-morph';
 import { basename, join } from 'path';
-import * as miltimatch from 'multimatch';
+import * as multimatch from 'multimatch';
 import { DevkitFileSystem } from './devkit-file-system';
 
 /**
@@ -145,7 +145,7 @@ export class NgCliFileSystem implements FileSystemHost {
   }
 
   globSync(patterns: ReadonlyArray<string>): string[] {
-    return miltimatch(this.getAllFilePaths(), patterns as string[]);
+    return multimatch(this.getAllFilePaths(), patterns as string[]);
   }
 
   isCaseSensitive(): boolean {
