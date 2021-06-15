@@ -6,10 +6,10 @@ import {
   setActiveProject,
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
-import { addImportToModule } from 'ng-morph/ng/module/add-import-to-module';
 import { getClasses } from 'ng-morph/classes';
+import { addBootstrapToNgModule } from './add-bootstrap-to-ng-module';
 
-describe('addImportToModule', () => {
+describe('addBootstrapToModule', () => {
   let host: UnitTestTree;
 
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('addImportToModule', () => {
     setActiveProject(createProject(host));
   });
 
-  describe('No imports property', () => {
+  describe('No bootstrap property', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -31,10 +31,10 @@ export class SomeModule {
       );
     });
 
-    it('should create the imports property', () => {
-      addImportToModule(
+    it('should create the declarations property', () => {
+      addBootstrapToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestComponent'
       );
 
       saveActiveProject();
@@ -43,7 +43,7 @@ export class SomeModule {
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({
-        imports: [TestModule]
+        bootstrap: [TestComponent]
     })
 export class SomeModule {
 
@@ -64,10 +64,10 @@ export class SomeModule {
       );
     });
 
-    it('should create the imports property', () => {
-      addImportToModule(
+    it('should create the bootstrap property', () => {
+      addBootstrapToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestComponent'
       );
 
       saveActiveProject();
@@ -75,14 +75,14 @@ export class SomeModule {
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
-@NgModule({imports: [TestModule]})
+@NgModule({bootstrap: [TestComponent]})
 export class SomeModule {
 
 }`);
     });
   });
 
-  describe('The imports property is exists', () => {
+  describe('The bootstrap property is exists', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -90,7 +90,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports: [CommonModule]
+  bootstrap: [CommonComponent]
 })
 export class SomeModule {
 
@@ -98,10 +98,10 @@ export class SomeModule {
       );
     });
 
-    it('should add module to imports', () => {
-      addImportToModule(
+    it('should add module to entryComponents', () => {
+      addBootstrapToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule.forRoot()'
+        'TestComponent'
       );
 
       saveActiveProject();
@@ -111,7 +111,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports: [CommonModule, TestModule.forRoot()]
+  bootstrap: [CommonComponent, TestComponent]
 })
 export class SomeModule {
 

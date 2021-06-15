@@ -6,10 +6,10 @@ import {
   setActiveProject,
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
+import { addProviderToNgModule } from './add-provider-to-ng-module';
 import { getClasses } from 'ng-morph/classes';
-import { addExportToModule } from './add-export-to-module';
 
-describe('addExportToModule', () => {
+describe('addProviderToModule', () => {
   let host: UnitTestTree;
 
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('addExportToModule', () => {
     setActiveProject(createProject(host));
   });
 
-  describe('No exports property', () => {
+  describe('No providers property', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -31,10 +31,10 @@ export class SomeModule {
       );
     });
 
-    it('should create the imports property', () => {
-      addExportToModule(
+    it('should create the providers property', () => {
+      addProviderToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestService'
       );
 
       saveActiveProject();
@@ -43,7 +43,7 @@ export class SomeModule {
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({
-        exports: [TestModule]
+        providers: [TestService]
     })
 export class SomeModule {
 
@@ -64,10 +64,10 @@ export class SomeModule {
       );
     });
 
-    it('should create the exports property', () => {
-      addExportToModule(
+    it('should create the providers property', () => {
+      addProviderToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestService'
       );
 
       saveActiveProject();
@@ -75,14 +75,14 @@ export class SomeModule {
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
-@NgModule({exports: [TestModule]})
+@NgModule({providers: [TestService]})
 export class SomeModule {
 
 }`);
     });
   });
 
-  describe('The exports property is exists', () => {
+  describe('The providers property is exists', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -90,7 +90,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  exports: [CommonModule]
+  providers: [CommonService]
 })
 export class SomeModule {
 
@@ -98,10 +98,10 @@ export class SomeModule {
       );
     });
 
-    it('should add module to exports', () => {
-      addExportToModule(
+    it('should add module to providers', () => {
+      addProviderToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestService'
       );
 
       saveActiveProject();
@@ -111,7 +111,46 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  exports: [CommonModule, TestModule]
+  providers: [CommonService, TestService]
+})
+export class SomeModule {
+
+}`);
+    });
+  });
+
+  describe('The providers property is exists and providers is a imported const', () => {
+    beforeEach(() => {
+      createSourceFile(
+        'src/main.ts',
+        `import { NgModule } from '@angular/core';
+import { PROVIDERS } from './providers.ts';
+
+@NgModule({
+  providers: PROVIDERS
+})
+export class SomeModule {
+
+}`
+      );
+    });
+
+    it('should add module to providers', () => {
+      addProviderToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestService',
+        'test-package'
+      );
+
+      saveActiveProject();
+
+      expect(host.readContent('src/main.ts'))
+        .toStrictEqual(`import { TestService } from "test-package";
+import { NgModule } from '@angular/core';
+import { PROVIDERS } from './providers.ts';
+
+@NgModule({
+  providers: [PROVIDERS, TestService]
 })
 export class SomeModule {
 

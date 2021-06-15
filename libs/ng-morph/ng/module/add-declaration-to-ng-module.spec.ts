@@ -6,10 +6,10 @@ import {
   setActiveProject,
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
-import { addSchemaToModule } from './add-schema-to-module';
 import { getClasses } from 'ng-morph/classes';
+import { addDeclarationToNgModule } from './add-declaration-to-ng-module';
 
-describe('addSchemaToModule', () => {
+describe('addDeclarationToModule', () => {
   let host: UnitTestTree;
 
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('addSchemaToModule', () => {
     setActiveProject(createProject(host));
   });
 
-  describe('No schemas property', () => {
+  describe('No declaration property', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -31,10 +31,10 @@ export class SomeModule {
       );
     });
 
-    it('should create the schemas property', () => {
-      addSchemaToModule(
+    it('should create the declarations property', () => {
+      addDeclarationToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CUSTOM_ELEMENTS_SCHEMA'
+        'TestComponent'
       );
 
       saveActiveProject();
@@ -43,7 +43,7 @@ export class SomeModule {
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({
-        schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        declarations: [TestComponent]
     })
 export class SomeModule {
 
@@ -64,10 +64,10 @@ export class SomeModule {
       );
     });
 
-    it('should create the schemas property', () => {
-      addSchemaToModule(
+    it('should create the declarations property', () => {
+      addDeclarationToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CUSTOM_ELEMENTS_SCHEMA'
+        'TestComponent'
       );
 
       saveActiveProject();
@@ -75,14 +75,14 @@ export class SomeModule {
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
-@NgModule({schemas: [CUSTOM_ELEMENTS_SCHEMA]})
+@NgModule({declarations: [TestComponent]})
 export class SomeModule {
 
 }`);
     });
   });
 
-  describe('The schemas property is exists', () => {
+  describe('The declarations property is exists', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -90,7 +90,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  schemas: [NO_ERRORS_SCHEMA]
+  declarations: [CommonComponent]
 })
 export class SomeModule {
 
@@ -98,10 +98,10 @@ export class SomeModule {
       );
     });
 
-    it('should add module to schemas', () => {
-      addSchemaToModule(
+    it('should add module to entryComponents', () => {
+      addDeclarationToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CUSTOM_ELEMENTS_SCHEMA'
+        'TestComponent'
       );
 
       saveActiveProject();
@@ -111,7 +111,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
+  declarations: [CommonComponent, TestComponent]
 })
 export class SomeModule {
 

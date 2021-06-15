@@ -7,9 +7,9 @@ import {
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
 import { getClasses } from 'ng-morph/classes';
-import { addEntryComponentToModule } from './add-entry-component-to-module';
+import { addExportToNgModule } from './add-export-to-ng-module';
 
-describe('addEntryComponentToModule', () => {
+describe('addExportToModule', () => {
   let host: UnitTestTree;
 
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('addEntryComponentToModule', () => {
     setActiveProject(createProject(host));
   });
 
-  describe('No entryComponents property', () => {
+  describe('No exports property', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -31,10 +31,10 @@ export class SomeModule {
       );
     });
 
-    it('should create the entryComponents property', () => {
-      addEntryComponentToModule(
+    it('should create the imports property', () => {
+      addExportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
+        'TestModule'
       );
 
       saveActiveProject();
@@ -43,7 +43,7 @@ export class SomeModule {
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({
-        entryComponents: [TestComponent]
+        exports: [TestModule]
     })
 export class SomeModule {
 
@@ -64,10 +64,10 @@ export class SomeModule {
       );
     });
 
-    it('should create the entryComponents property', () => {
-      addEntryComponentToModule(
+    it('should create the exports property', () => {
+      addExportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
+        'TestModule'
       );
 
       saveActiveProject();
@@ -75,14 +75,14 @@ export class SomeModule {
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
-@NgModule({entryComponents: [TestComponent]})
+@NgModule({exports: [TestModule]})
 export class SomeModule {
 
 }`);
     });
   });
 
-  describe('The entryComponents property is exists', () => {
+  describe('The exports property is exists', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -90,7 +90,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  entryComponents: [CommonComponent]
+  exports: [CommonModule]
 })
 export class SomeModule {
 
@@ -98,10 +98,10 @@ export class SomeModule {
       );
     });
 
-    it('should add module to entryComponents', () => {
-      addEntryComponentToModule(
+    it('should add module to exports', () => {
+      addExportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
+        'TestModule'
       );
 
       saveActiveProject();
@@ -111,7 +111,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  entryComponents: [CommonComponent, TestComponent]
+  exports: [CommonModule, TestModule]
 })
 export class SomeModule {
 

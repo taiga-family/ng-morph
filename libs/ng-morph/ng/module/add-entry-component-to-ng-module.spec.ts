@@ -7,9 +7,9 @@ import {
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
 import { getClasses } from 'ng-morph/classes';
-import { addBootstrapToModule } from './add-bootstrap-to-module';
+import { addEntryComponentToNgModule } from './add-entry-component-to-ng-module';
 
-describe('addBootstrapToModule', () => {
+describe('addEntryComponentToModule', () => {
   let host: UnitTestTree;
 
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('addBootstrapToModule', () => {
     setActiveProject(createProject(host));
   });
 
-  describe('No bootstrap property', () => {
+  describe('No entryComponents property', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -31,8 +31,8 @@ export class SomeModule {
       );
     });
 
-    it('should create the declarations property', () => {
-      addBootstrapToModule(
+    it('should create the entryComponents property', () => {
+      addEntryComponentToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'TestComponent'
       );
@@ -43,7 +43,7 @@ export class SomeModule {
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({
-        bootstrap: [TestComponent]
+        entryComponents: [TestComponent]
     })
 export class SomeModule {
 
@@ -64,8 +64,8 @@ export class SomeModule {
       );
     });
 
-    it('should create the bootstrap property', () => {
-      addBootstrapToModule(
+    it('should create the entryComponents property', () => {
+      addEntryComponentToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'TestComponent'
       );
@@ -75,14 +75,14 @@ export class SomeModule {
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
-@NgModule({bootstrap: [TestComponent]})
+@NgModule({entryComponents: [TestComponent]})
 export class SomeModule {
 
 }`);
     });
   });
 
-  describe('The bootstrap property is exists', () => {
+  describe('The entryComponents property is exists', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -90,7 +90,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  bootstrap: [CommonComponent]
+  entryComponents: [CommonComponent]
 })
 export class SomeModule {
 
@@ -99,7 +99,7 @@ export class SomeModule {
     });
 
     it('should add module to entryComponents', () => {
-      addBootstrapToModule(
+      addEntryComponentToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'TestComponent'
       );
@@ -111,7 +111,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  bootstrap: [CommonComponent, TestComponent]
+  entryComponents: [CommonComponent, TestComponent]
 })
 export class SomeModule {
 

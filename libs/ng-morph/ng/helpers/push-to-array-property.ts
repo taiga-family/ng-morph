@@ -27,9 +27,21 @@ export function pushToArrayProperty(
     return;
   }
 
+  if (!Node.isArrayLiteralExpression(property.getInitializer())) {
+    property.setInitializer(`[${property.getInitializer().getText()}]`);
+  }
+
   const importsInitializer = property.getInitializer();
 
   if (!Node.isArrayLiteralExpression(importsInitializer)) {
+    return;
+  }
+
+  if (
+    importsInitializer
+      .getElements()
+      .some((element) => element.getText() === initializer)
+  ) {
     return;
   }
 

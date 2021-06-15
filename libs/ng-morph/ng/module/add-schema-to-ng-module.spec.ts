@@ -6,10 +6,10 @@ import {
   setActiveProject,
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
-import { addProviderToModule } from './add-provider-to-module';
+import { addSchemaToNgModule } from './add-schema-to-ng-module';
 import { getClasses } from 'ng-morph/classes';
 
-describe('addProviderToModule', () => {
+describe('addSchemaToModule', () => {
   let host: UnitTestTree;
 
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('addProviderToModule', () => {
     setActiveProject(createProject(host));
   });
 
-  describe('No providers property', () => {
+  describe('No schemas property', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -31,10 +31,10 @@ export class SomeModule {
       );
     });
 
-    it('should create the providers property', () => {
-      addProviderToModule(
+    it('should create the schemas property', () => {
+      addSchemaToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestService'
+        'CUSTOM_ELEMENTS_SCHEMA'
       );
 
       saveActiveProject();
@@ -43,7 +43,7 @@ export class SomeModule {
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({
-        providers: [TestService]
+        schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
 export class SomeModule {
 
@@ -64,10 +64,10 @@ export class SomeModule {
       );
     });
 
-    it('should create the providers property', () => {
-      addProviderToModule(
+    it('should create the schemas property', () => {
+      addSchemaToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestService'
+        'CUSTOM_ELEMENTS_SCHEMA'
       );
 
       saveActiveProject();
@@ -75,14 +75,14 @@ export class SomeModule {
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
-@NgModule({providers: [TestService]})
+@NgModule({schemas: [CUSTOM_ELEMENTS_SCHEMA]})
 export class SomeModule {
 
 }`);
     });
   });
 
-  describe('The providers property is exists', () => {
+  describe('The schemas property is exists', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -90,7 +90,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  providers: [CommonService]
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class SomeModule {
 
@@ -98,10 +98,10 @@ export class SomeModule {
       );
     });
 
-    it('should add module to providers', () => {
-      addProviderToModule(
+    it('should add module to schemas', () => {
+      addSchemaToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestService'
+        'CUSTOM_ELEMENTS_SCHEMA'
       );
 
       saveActiveProject();
@@ -111,7 +111,7 @@ export class SomeModule {
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  providers: [CommonService, TestService]
+  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SomeModule {
 
