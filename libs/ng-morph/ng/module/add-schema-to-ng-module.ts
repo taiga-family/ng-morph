@@ -1,5 +1,5 @@
 import { ClassDeclaration } from 'ts-morph';
-import { checkAndAddImport } from '../helpers/check-and-add-import';
+import { mergeImports } from '../../imports/helpers/merge-imports';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
 
 export function addSchemaToNgModule(
@@ -8,11 +8,12 @@ export function addSchemaToNgModule(
   packageName?: string
 ) {
   if (packageName) {
-    checkAndAddImport(
+    mergeImports(
       classDeclaration.getSourceFile().getFilePath(),
       schema,
       packageName
     );
   }
+
   pushToArrayProperty(classDeclaration, 'NgModule', 'schemas', schema);
 }

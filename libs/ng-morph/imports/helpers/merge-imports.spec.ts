@@ -6,9 +6,9 @@ import {
   saveActiveProject,
 } from '../../project';
 import { createSourceFile } from '../../source-file';
-import { checkAndAddImport } from './check-and-add-import';
+import { mergeImports } from './merge-imports';
 
-describe('check-and-add-import', () => {
+describe('merge-import', () => {
   let host: UnitTestTree;
 
   beforeEach(() => {
@@ -31,7 +31,7 @@ export class SomeModule {
     });
 
     it('should add the import', () => {
-      checkAndAddImport('src/main.ts', 'TestModule', 'test-package');
+      mergeImports('src/main.ts', 'TestModule', 'test-package');
 
       saveActiveProject();
 
@@ -60,12 +60,13 @@ export class SomeModule {
     });
 
     it('should add the import to existing declaration', () => {
-      checkAndAddImport('src/main.ts', 'TestModule', '@angular/core');
+      mergeImports('src/main.ts', 'TestModule', '@angular/core');
 
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule, TestModule } from "@angular/core";
+        .toStrictEqual(`import { NgModule, TestModule } from '@angular/core';
+
 @NgModule()
 export class SomeModule {
 
@@ -87,7 +88,7 @@ export class SomeModule {
     });
 
     it('should not add the import', () => {
-      checkAndAddImport('src/main.ts', 'NgModule', '@angular/core');
+      mergeImports('src/main.ts', 'NgModule', '@angular/core');
 
       saveActiveProject();
 

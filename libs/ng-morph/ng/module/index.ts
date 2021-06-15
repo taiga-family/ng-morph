@@ -5,3 +5,6 @@ export * from './add-export-to-ng-module';
 export * from './add-import-to-ng-module';
 export * from './add-provider-to-ng-module';
 export * from './add-schema-to-ng-module';
+export * from './add-provider-to-component';
+export * from './add-style-url-to-component';
+export * from './add-provider-to-directive';

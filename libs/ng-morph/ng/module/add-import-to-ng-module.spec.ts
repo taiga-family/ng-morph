@@ -117,26 +117,6 @@ export class SomeModule {
 
 }`);
     });
-
-    it('should not add module to imports if initializer is exist', () => {
-      addImportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CommonModule'
-      );
-
-      saveActiveProject();
-
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-@NgModule({
-  imports: [CommonModule]
-})
-export class SomeModule {
-
-}`);
-    });
   });
 
   describe('Package name is specified', () => {
@@ -189,34 +169,12 @@ export class SomeModule {
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { ExistingModule, TestModule } from "test-package";
-import { NgModule } from '@angular/core';
+        .toStrictEqual(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ExistingModule, TestModule } from 'test-package';
 
 @NgModule({
   imports: [CommonModule, ExistingModule, TestModule]
-})
-export class SomeModule {
-
-}`);
-    });
-
-    it('should not add module to imports', () => {
-      addImportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'ExistingModule',
-        'test-package'
-      );
-
-      saveActiveProject();
-
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ExistingModule } from 'test-package';
-
-@NgModule({
-  imports: [CommonModule, ExistingModule]
 })
 export class SomeModule {
 

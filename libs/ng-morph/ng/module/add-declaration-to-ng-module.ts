@@ -1,5 +1,5 @@
 import { ClassDeclaration } from 'ts-morph';
-import { checkAndAddImport } from '../helpers/check-and-add-import';
+import { mergeImports } from '../../imports/helpers/merge-imports';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
 
 export function addDeclarationToNgModule(
@@ -8,7 +8,7 @@ export function addDeclarationToNgModule(
   packageName?: string
 ) {
   if (packageName) {
-    checkAndAddImport(
+    mergeImports(
       classDeclaration.getSourceFile().getFilePath(),
       declaration,
       packageName
