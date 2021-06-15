@@ -6,9 +6,9 @@ import {
   saveActiveProject,
 } from '../../project';
 import { createSourceFile } from '../../source-file';
-import { checkImportAndAdd } from './check-and-add-import';
+import { checkAndAddImport } from './check-and-add-import';
 
-describe('checkImportAndAdd', () => {
+describe('check-and-add-import', () => {
   let host: UnitTestTree;
 
   beforeEach(() => {
@@ -31,7 +31,7 @@ export class SomeModule {
     });
 
     it('should add the import', () => {
-      checkImportAndAdd('src/main.ts', 'TestModule', 'test-package');
+      checkAndAddImport('src/main.ts', 'TestModule', 'test-package');
 
       saveActiveProject();
 
@@ -60,7 +60,7 @@ export class SomeModule {
     });
 
     it('should add the import to existing declaration', () => {
-      checkImportAndAdd('src/main.ts', 'TestModule', '@angular/core');
+      checkAndAddImport('src/main.ts', 'TestModule', '@angular/core');
 
       saveActiveProject();
 
@@ -87,7 +87,7 @@ export class SomeModule {
     });
 
     it('should not add the import', () => {
-      checkImportAndAdd('src/main.ts', 'NgModule', '@angular/core');
+      checkAndAddImport('src/main.ts', 'NgModule', '@angular/core');
 
       saveActiveProject();
 

@@ -1,7 +1,7 @@
 import { getImports, removeImports, addImports } from '../../imports';
 import { Pattern } from '../../utils';
 
-export function checkImportAndAdd(
+export function checkAndAddImport(
   pattern: Pattern,
   initializer: string,
   packageName: string
