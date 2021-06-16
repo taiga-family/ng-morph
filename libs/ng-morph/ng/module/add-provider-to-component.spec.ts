@@ -6,7 +6,6 @@ import {
   setActiveProject,
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
-import { addStyleUrlToComponent } from './add-style-url-to-component';
 import { getClasses } from 'ng-morph/classes';
 import { addProviderToComponent } from './add-provider-to-component';
 
