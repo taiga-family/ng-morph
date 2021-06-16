@@ -5,6 +5,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addEntryComponentToNgModule(
   classDeclaration: ClassDeclaration,
   component: string,
+  unique = false,
   packageName?: string
 ) {
   if (packageName) {
@@ -19,6 +20,8 @@ export function addEntryComponentToNgModule(
     classDeclaration,
     'NgModule',
     'entryComponents',
-    component
+    component,
+    unique,
+    true
   );
 }

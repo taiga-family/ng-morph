@@ -3,7 +3,14 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 
 export function addStyleUrlToComponent(
   classDeclaration: ClassDeclaration,
-  styleUrl: string
+  styleUrl: string,
+  unique = false
 ) {
-  pushToArrayProperty(classDeclaration, 'Component', 'styleUrls', styleUrl);
+  pushToArrayProperty(
+    classDeclaration,
+    'Component',
+    'styleUrls',
+    styleUrl,
+    unique
+  );
 }

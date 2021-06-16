@@ -5,6 +5,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addBootstrapToNgModule(
   classDeclaration: ClassDeclaration,
   component: string,
+  unique = false,
   packageName?: string
 ) {
   if (packageName) {
@@ -14,5 +15,12 @@ export function addBootstrapToNgModule(
       packageName
     );
   }
-  pushToArrayProperty(classDeclaration, 'NgModule', 'bootstrap', component);
+  pushToArrayProperty(
+    classDeclaration,
+    'NgModule',
+    'bootstrap',
+    component,
+    unique,
+    true
+  );
 }

@@ -119,6 +119,82 @@ export class SomeModule {
     });
   });
 
+  describe('With unique flag', () => {
+    beforeEach(() => {
+      createSourceFile(
+        'src/main.ts',
+        `import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@NgModule({
+  imports: [CommonModule]
+})
+export class SomeModule {
+
+}`
+      );
+    });
+
+    it('should not add duplicate module to imports', () => {
+      addImportToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'CommonModule',
+        true
+      );
+
+      saveActiveProject();
+
+      expect(host.readContent('src/main.ts'))
+        .toStrictEqual(`import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@NgModule({
+  imports: [CommonModule]
+})
+export class SomeModule {
+
+}`);
+    });
+  });
+
+  describe('Imports is a const', () => {
+    beforeEach(() => {
+      createSourceFile(
+        'src/main.ts',
+        `import { NgModule } from '@angular/core';
+import { APP_IMPORTS } from './imports.ts';
+
+@NgModule({
+  imports: APP_IMPORTS
+})
+export class SomeModule {
+
+}`
+      );
+    });
+
+    it('should wrap const with array and push new provider', () => {
+      addImportToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'CommonModule',
+        true
+      );
+
+      saveActiveProject();
+
+      expect(host.readContent('src/main.ts'))
+        .toStrictEqual(`import { NgModule } from '@angular/core';
+import { APP_IMPORTS } from './imports.ts';
+
+@NgModule({
+  imports: [APP_IMPORTS, CommonModule]
+})
+export class SomeModule {
+
+}`);
+    });
+  });
+
   describe('Package name is specified', () => {
     beforeEach(() => {
       createSourceFile(
@@ -140,6 +216,7 @@ export class SomeModule {
       addImportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'TestModule',
+        true,
         'test-package-new'
       );
 
@@ -163,6 +240,7 @@ export class SomeModule {
       addImportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'TestModule',
+        true,
         'test-package'
       );
 

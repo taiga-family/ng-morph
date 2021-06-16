@@ -5,6 +5,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addExportToNgModule(
   classDeclaration: ClassDeclaration,
   exportName: string,
+  unique = false,
   packageName?: string
 ) {
   if (packageName) {
@@ -15,5 +16,12 @@ export function addExportToNgModule(
     );
   }
 
-  pushToArrayProperty(classDeclaration, 'NgModule', 'exports', exportName);
+  pushToArrayProperty(
+    classDeclaration,
+    'NgModule',
+    'exports',
+    exportName,
+    unique,
+    true
+  );
 }

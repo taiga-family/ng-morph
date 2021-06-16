@@ -98,7 +98,7 @@ export class SomeModule {
       );
     });
 
-    it('should add module to entryComponents', () => {
+    it('should add component to bootstrap', () => {
       addBootstrapToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'TestComponent'

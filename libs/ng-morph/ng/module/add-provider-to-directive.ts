@@ -5,6 +5,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addProviderToDirective(
   classDeclaration: ClassDeclaration,
   provider: string,
+  unique = false,
   packageName?: string
 ) {
   if (packageName) {
@@ -15,5 +16,12 @@ export function addProviderToDirective(
     );
   }
 
-  pushToArrayProperty(classDeclaration, 'Directive', 'providers', provider);
+  pushToArrayProperty(
+    classDeclaration,
+    'Directive',
+    'providers',
+    provider,
+    unique,
+    true
+  );
 }

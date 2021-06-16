@@ -5,6 +5,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addSchemaToNgModule(
   classDeclaration: ClassDeclaration,
   schema: string,
+  unique = false,
   packageName?: string
 ) {
   if (packageName) {
@@ -15,5 +16,12 @@ export function addSchemaToNgModule(
     );
   }
 
-  pushToArrayProperty(classDeclaration, 'NgModule', 'schemas', schema);
+  pushToArrayProperty(
+    classDeclaration,
+    'NgModule',
+    'schemas',
+    schema,
+    unique,
+    true
+  );
 }

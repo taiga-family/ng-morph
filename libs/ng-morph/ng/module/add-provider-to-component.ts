@@ -5,6 +5,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addProviderToComponent(
   classDeclaration: ClassDeclaration,
   provider: string,
+  unique = false,
   packageName?: string
 ) {
   if (packageName) {
@@ -15,5 +16,12 @@ export function addProviderToComponent(
     );
   }
 
-  pushToArrayProperty(classDeclaration, 'Component', 'providers', provider);
+  pushToArrayProperty(
+    classDeclaration,
+    'Component',
+    'providers',
+    provider,
+    unique,
+    true
+  );
 }

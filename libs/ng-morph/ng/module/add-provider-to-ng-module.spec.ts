@@ -118,4 +118,120 @@ export class SomeModule {
 }`);
     });
   });
+
+  describe('With unique flag', () => {
+    beforeEach(() => {
+      createSourceFile(
+        'src/main.ts',
+        `import { NgModule } from '@angular/core';
+import { CommonService } from '@angular/common';
+
+@NgModule({
+  providers: [CommonService]
+})
+export class SomeModule {
+
+}`
+      );
+    });
+
+    it('should not add duplicate module to providers', () => {
+      addProviderToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'CommonService',
+        true
+      );
+
+      saveActiveProject();
+
+      expect(host.readContent('src/main.ts'))
+        .toStrictEqual(`import { NgModule } from '@angular/core';
+import { CommonService } from '@angular/common';
+
+@NgModule({
+  providers: [CommonService]
+})
+export class SomeModule {
+
+}`);
+    });
+  });
+
+  describe('Providers is a const', () => {
+    beforeEach(() => {
+      createSourceFile(
+        'src/main.ts',
+        `import { NgModule } from '@angular/core';
+import { APP_PROVIDERS } from './providers.ts';
+
+@NgModule({
+  providers: APP_PROVIDERS
+})
+export class SomeModule {
+
+}`
+      );
+    });
+
+    it('should wrap const with array and push new provider', () => {
+      addProviderToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'CommonService',
+        true
+      );
+
+      saveActiveProject();
+
+      expect(host.readContent('src/main.ts'))
+        .toStrictEqual(`import { NgModule } from '@angular/core';
+import { APP_PROVIDERS } from './providers.ts';
+
+@NgModule({
+  providers: [APP_PROVIDERS, CommonService]
+})
+export class SomeModule {
+
+}`);
+    });
+  });
+
+  describe('With specified packageName', () => {
+    beforeEach(() => {
+      createSourceFile(
+        'src/main.ts',
+        `import { NgModule } from '@angular/core';
+import { CommonService } from '@angular/common';
+
+@NgModule({
+  providers: [CommonService]
+})
+export class SomeModule {
+
+}`
+      );
+    });
+
+    it('should not add service to providers and import package', () => {
+      addProviderToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'NewService',
+        true,
+        'new-package'
+      );
+
+      saveActiveProject();
+
+      expect(host.readContent('src/main.ts'))
+        .toStrictEqual(`import { NewService } from "new-package";
+import { NgModule } from '@angular/core';
+import { CommonService } from '@angular/common';
+
+@NgModule({
+  providers: [CommonService, NewService]
+})
+export class SomeModule {
+
+}`);
+    });
+  });
 });

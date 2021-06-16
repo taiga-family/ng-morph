@@ -5,6 +5,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addProviderToNgModule(
   classDeclaration: ClassDeclaration,
   provider: string,
+  unique = false,
   packageName?: string
 ) {
   if (packageName) {
@@ -15,5 +16,12 @@ export function addProviderToNgModule(
     );
   }
 
-  pushToArrayProperty(classDeclaration, 'NgModule', 'providers', provider);
+  pushToArrayProperty(
+    classDeclaration,
+    'NgModule',
+    'providers',
+    provider,
+    unique,
+    true
+  );
 }
