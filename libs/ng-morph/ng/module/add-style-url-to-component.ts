@@ -1,16 +1,16 @@
-import { ClassDeclaration } from 'ts-morph';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
+import { AddStyleUrlsOptions } from './add-to-ng-options';
 
-export function addStyleUrlToComponent(
-  classDeclaration: ClassDeclaration,
-  styleUrl: string,
-  unique = false
-) {
-  pushToArrayProperty(
+export function addStyleUrlToComponent({
+  classDeclaration,
+  styleUrl,
+  unique,
+}: AddStyleUrlsOptions) {
+  pushToArrayProperty({
     classDeclaration,
-    'Component',
-    'styleUrls',
-    styleUrl,
-    unique
-  );
+    decoratorName: 'Component',
+    propertyName: 'styleUrls',
+    initializer: styleUrl,
+    unique,
+  });
 }

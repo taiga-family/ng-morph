@@ -1,13 +1,13 @@
-import { ClassDeclaration } from 'ts-morph';
 import { mergeImports } from '../../imports/helpers/merge-imports';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
+import { AddProviderOptions } from './add-to-ng-options';
 
-export function addProviderToDirective(
-  classDeclaration: ClassDeclaration,
-  provider: string,
-  unique = false,
-  packageName?: string
-) {
+export function addProviderToDirective({
+  classDeclaration,
+  provider,
+  unique,
+  packageName,
+}: AddProviderOptions) {
   if (packageName) {
     mergeImports(
       classDeclaration.getSourceFile().getFilePath(),
@@ -16,12 +16,12 @@ export function addProviderToDirective(
     );
   }
 
-  pushToArrayProperty(
+  pushToArrayProperty({
     classDeclaration,
-    'Directive',
-    'providers',
-    provider,
+    decoratorName: 'Directive',
+    propertyName: 'providers',
+    initializer: provider,
     unique,
-    true
-  );
+    forceToArray: true,
+  });
 }

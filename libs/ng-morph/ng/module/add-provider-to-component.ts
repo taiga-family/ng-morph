@@ -1,13 +1,13 @@
-import { ClassDeclaration } from 'ts-morph';
 import { mergeImports } from '../../imports/helpers/merge-imports';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
+import { AddProviderOptions } from './add-to-ng-options';
 
-export function addProviderToComponent(
-  classDeclaration: ClassDeclaration,
-  provider: string,
+export function addProviderToComponent({
+  classDeclaration,
+  provider,
   unique = false,
-  packageName?: string
-) {
+  packageName,
+}: AddProviderOptions) {
   if (packageName) {
     mergeImports(
       classDeclaration.getSourceFile().getFilePath(),
@@ -16,12 +16,12 @@ export function addProviderToComponent(
     );
   }
 
-  pushToArrayProperty(
+  pushToArrayProperty({
     classDeclaration,
-    'Component',
-    'providers',
-    provider,
+    decoratorName: 'Component',
+    propertyName: 'providers',
+    initializer: provider,
     unique,
-    true
-  );
+    forceToArray: true,
+  });
 }

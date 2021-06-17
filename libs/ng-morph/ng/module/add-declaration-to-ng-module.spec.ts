@@ -32,10 +32,10 @@ export class SomeModule {
     });
 
     it('should create the declarations property', () => {
-      addDeclarationToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
-      );
+      addDeclarationToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        declaration: 'TestComponent',
+      });
 
       saveActiveProject();
 
@@ -65,10 +65,10 @@ export class SomeModule {
     });
 
     it('should create the declarations property', () => {
-      addDeclarationToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
-      );
+      addDeclarationToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        declaration: 'TestComponent',
+      });
 
       saveActiveProject();
 
@@ -99,10 +99,10 @@ export class SomeModule {
     });
 
     it('should add component to declarations', () => {
-      addDeclarationToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
-      );
+      addDeclarationToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        declaration: 'TestComponent',
+      });
 
       saveActiveProject();
 

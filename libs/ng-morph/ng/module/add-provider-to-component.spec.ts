@@ -32,10 +32,12 @@ export class SomeComponent {
     });
 
     it('should create the providers property', () => {
-      addProviderToComponent(
-        getClasses('src/main.ts', { name: 'SomeComponent' })[0],
-        'TestProvider'
-      );
+      addProviderToComponent({
+        classDeclaration: getClasses('src/main.ts', {
+          name: 'SomeComponent',
+        })[0],
+        provider: 'TestProvider',
+      });
 
       saveActiveProject();
 
@@ -65,10 +67,12 @@ export class SomeComponent {
     });
 
     it('should create the providers property', () => {
-      addProviderToComponent(
-        getClasses('src/main.ts', { name: 'SomeComponent' })[0],
-        'TestProvider'
-      );
+      addProviderToComponent({
+        classDeclaration: getClasses('src/main.ts', {
+          name: 'SomeComponent',
+        })[0],
+        provider: 'TestProvider',
+      });
 
       saveActiveProject();
 
@@ -99,10 +103,12 @@ export class SomeComponent {
     });
 
     it('should add module to providers', () => {
-      addProviderToComponent(
-        getClasses('src/main.ts', { name: 'SomeComponent' })[0],
-        'NewTestProvider'
-      );
+      addProviderToComponent({
+        classDeclaration: getClasses('src/main.ts', {
+          name: 'SomeComponent',
+        })[0],
+        provider: 'NewTestProvider',
+      });
 
       saveActiveProject();
 

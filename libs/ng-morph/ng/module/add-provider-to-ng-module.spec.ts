@@ -32,10 +32,10 @@ export class SomeModule {
     });
 
     it('should create the providers property', () => {
-      addProviderToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestService'
-      );
+      addProviderToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        provider: 'TestService',
+      });
 
       saveActiveProject();
 
@@ -65,10 +65,10 @@ export class SomeModule {
     });
 
     it('should create the providers property', () => {
-      addProviderToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestService'
-      );
+      addProviderToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        provider: 'TestService',
+      });
 
       saveActiveProject();
 
@@ -99,10 +99,10 @@ export class SomeModule {
     });
 
     it('should add module to providers', () => {
-      addProviderToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestService'
-      );
+      addProviderToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        provider: 'TestService',
+      });
 
       saveActiveProject();
 
@@ -136,11 +136,11 @@ export class SomeModule {
     });
 
     it('should not add duplicate module to providers', () => {
-      addProviderToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CommonService',
-        true
-      );
+      addProviderToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        provider: 'CommonService',
+        unique: true,
+      });
 
       saveActiveProject();
 
@@ -174,11 +174,11 @@ export class SomeModule {
     });
 
     it('should wrap const with array and push new provider', () => {
-      addProviderToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CommonService',
-        true
-      );
+      addProviderToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        provider: 'CommonService',
+        unique: true,
+      });
 
       saveActiveProject();
 
@@ -212,13 +212,12 @@ export class SomeModule {
     });
 
     it('should not add service to providers and import package', () => {
-      addProviderToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'NewService',
-        true,
-        'new-package'
-      );
-
+      addProviderToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        provider: 'NewService',
+        packageName: 'new-package',
+        unique: true,
+      });
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))

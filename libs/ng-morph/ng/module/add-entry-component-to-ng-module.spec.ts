@@ -32,10 +32,10 @@ export class SomeModule {
     });
 
     it('should create the entryComponents property', () => {
-      addEntryComponentToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
-      );
+      addEntryComponentToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        component: 'TestComponent',
+      });
 
       saveActiveProject();
 
@@ -65,10 +65,10 @@ export class SomeModule {
     });
 
     it('should create the entryComponents property', () => {
-      addEntryComponentToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
-      );
+      addEntryComponentToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        component: 'TestComponent',
+      });
 
       saveActiveProject();
 
@@ -99,10 +99,10 @@ export class SomeModule {
     });
 
     it('should add module to entryComponents', () => {
-      addEntryComponentToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
-      );
+      addEntryComponentToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        component: 'TestComponent',
+      });
 
       saveActiveProject();
 

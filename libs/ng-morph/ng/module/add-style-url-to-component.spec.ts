@@ -32,10 +32,12 @@ export class SomeComponent {
     });
 
     it('should create the providers property', () => {
-      addStyleUrlToComponent(
-        getClasses('src/main.ts', { name: 'SomeComponent' })[0],
-        '"./style.less"'
-      );
+      addStyleUrlToComponent({
+        classDeclaration: getClasses('src/main.ts', {
+          name: 'SomeComponent',
+        })[0],
+        styleUrl: '"./style.less"',
+      });
 
       saveActiveProject();
 
@@ -65,11 +67,12 @@ export class SomeComponent {
     });
 
     it('should create the providers property', () => {
-      addStyleUrlToComponent(
-        getClasses('src/main.ts', { name: 'SomeComponent' })[0],
-        '"./style.less"'
-      );
-
+      addStyleUrlToComponent({
+        classDeclaration: getClasses('src/main.ts', {
+          name: 'SomeComponent',
+        })[0],
+        styleUrl: '"./style.less"',
+      });
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
@@ -99,10 +102,12 @@ export class SomeComponent {
     });
 
     it('should add module to providers', () => {
-      addStyleUrlToComponent(
-        getClasses('src/main.ts', { name: 'SomeComponent' })[0],
-        '"./new-style.less"'
-      );
+      addStyleUrlToComponent({
+        classDeclaration: getClasses('src/main.ts', {
+          name: 'SomeComponent',
+        })[0],
+        styleUrl: '"./new-style.less"',
+      });
 
       saveActiveProject();
 

@@ -8,3 +8,4 @@ export * from './add-schema-to-ng-module';
 export * from './add-provider-to-component';
 export * from './add-style-url-to-component';
 export * from './add-provider-to-directive';
+export * from './add-to-ng-options';

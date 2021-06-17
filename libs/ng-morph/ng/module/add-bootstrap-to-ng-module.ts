@@ -1,13 +1,13 @@
-import { ClassDeclaration } from 'ts-morph';
 import { mergeImports } from '../../imports/helpers/merge-imports';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
+import { AddComponentOptions } from './add-to-ng-options';
 
-export function addBootstrapToNgModule(
-  classDeclaration: ClassDeclaration,
-  component: string,
+export function addBootstrapToNgModule({
+  classDeclaration,
+  component,
   unique = false,
-  packageName?: string
-) {
+  packageName,
+}: AddComponentOptions) {
   if (packageName) {
     mergeImports(
       classDeclaration.getSourceFile().getFilePath(),
@@ -15,12 +15,12 @@ export function addBootstrapToNgModule(
       packageName
     );
   }
-  pushToArrayProperty(
+  pushToArrayProperty({
     classDeclaration,
-    'NgModule',
-    'bootstrap',
-    component,
+    decoratorName: 'NgModule',
+    propertyName: 'bootstrap',
+    initializer: component,
     unique,
-    true
-  );
+    forceToArray: true,
+  });
 }

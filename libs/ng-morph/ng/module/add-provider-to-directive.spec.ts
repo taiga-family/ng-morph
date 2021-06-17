@@ -32,10 +32,12 @@ export class SomeDirective {
     });
 
     it('should create the providers property', () => {
-      addProviderToDirective(
-        getClasses('src/main.ts', { name: 'SomeDirective' })[0],
-        'TestProvider'
-      );
+      addProviderToDirective({
+        classDeclaration: getClasses('src/main.ts', {
+          name: 'SomeDirective',
+        })[0],
+        provider: 'TestProvider',
+      });
 
       saveActiveProject();
 
@@ -65,10 +67,12 @@ export class SomeDirective {
     });
 
     it('should create the providers property', () => {
-      addProviderToDirective(
-        getClasses('src/main.ts', { name: 'SomeDirective' })[0],
-        'TestProvider'
-      );
+      addProviderToDirective({
+        classDeclaration: getClasses('src/main.ts', {
+          name: 'SomeDirective',
+        })[0],
+        provider: 'TestProvider',
+      });
 
       saveActiveProject();
 
@@ -87,10 +91,10 @@ export class SomeDirective {
       createSourceFile(
         'src/main.ts',
         `import { Component } from '@angular/core';
-import { TestModule } from '@angular/common';
+import { TestService } from 'test-package';
 
 @Directive({
-  providers: [TestModule]
+  providers: [TestService]
 })
 export class SomeDirective {
 
@@ -99,19 +103,20 @@ export class SomeDirective {
     });
 
     it('should add module to providers', () => {
-      addProviderToDirective(
-        getClasses('src/main.ts', { name: 'SomeDirective' })[0],
-        'NewTestModule'
-      );
-
+      addProviderToDirective({
+        classDeclaration: getClasses('src/main.ts', {
+          name: 'SomeDirective',
+        })[0],
+        provider: 'NewTestService',
+      });
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { Component } from '@angular/core';
-import { TestModule } from '@angular/common';
+import { TestService } from 'test-package';
 
 @Directive({
-  providers: [TestModule, NewTestModule]
+  providers: [TestService, NewTestService]
 })
 export class SomeDirective {
 

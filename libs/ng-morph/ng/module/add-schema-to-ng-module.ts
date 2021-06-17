@@ -1,13 +1,14 @@
 import { ClassDeclaration } from 'ts-morph';
 import { mergeImports } from '../../imports/helpers/merge-imports';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
+import { AddSchemaOptions } from './add-to-ng-options';
 
-export function addSchemaToNgModule(
-  classDeclaration: ClassDeclaration,
-  schema: string,
-  unique = false,
-  packageName?: string
-) {
+export function addSchemaToNgModule({
+  classDeclaration,
+  schema,
+  unique,
+  packageName,
+}: AddSchemaOptions) {
   if (packageName) {
     mergeImports(
       classDeclaration.getSourceFile().getFilePath(),
@@ -16,12 +17,12 @@ export function addSchemaToNgModule(
     );
   }
 
-  pushToArrayProperty(
+  pushToArrayProperty({
     classDeclaration,
-    'NgModule',
-    'schemas',
-    schema,
+    decoratorName: 'NgModule',
+    propertyName: 'schemas',
+    initializer: schema,
     unique,
-    true
-  );
+    forceToArray: true,
+  });
 }

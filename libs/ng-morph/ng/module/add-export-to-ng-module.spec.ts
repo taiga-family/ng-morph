@@ -32,10 +32,10 @@ export class SomeModule {
     });
 
     it('should create the imports property', () => {
-      addExportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
-      );
+      addExportToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        exportName: 'TestModule',
+      });
 
       saveActiveProject();
 
@@ -65,10 +65,10 @@ export class SomeModule {
     });
 
     it('should create the exports property', () => {
-      addExportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
-      );
+      addExportToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        exportName: 'TestModule',
+      });
 
       saveActiveProject();
 
@@ -99,10 +99,10 @@ export class SomeModule {
     });
 
     it('should add module to exports', () => {
-      addExportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
-      );
+      addExportToNgModule({
+        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        exportName: 'TestModule',
+      });
 
       saveActiveProject();
 
