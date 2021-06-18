@@ -15,6 +15,7 @@ export function addDeclarationToNgModule({
       packageName
     );
   }
+
   pushToArrayProperty({
     classDeclaration,
     decoratorName: 'NgModule',
