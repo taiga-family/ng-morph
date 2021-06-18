@@ -15,6 +15,7 @@ export function addBootstrapToNgModule({
       packageName
     );
   }
+  
   pushToArrayProperty({
     classDeclaration,
     decoratorName: 'NgModule',
