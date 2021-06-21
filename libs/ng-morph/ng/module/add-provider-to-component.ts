@@ -1,4 +1,3 @@
-import { mergeImports } from '../../imports/helpers/merge-imports';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
 import { AddProviderOptions } from './add-to-ng-options';
 
@@ -6,16 +5,7 @@ export function addProviderToComponent({
   classDeclaration,
   provider,
   unique = false,
-  packageName,
 }: AddProviderOptions) {
-  if (packageName) {
-    mergeImports(
-      classDeclaration.getSourceFile().getFilePath(),
-      provider,
-      packageName
-    );
-  }
-
   pushToArrayProperty({
     classDeclaration,
     decoratorName: 'Component',

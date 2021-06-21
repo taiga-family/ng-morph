@@ -2,7 +2,6 @@ import { ClassDeclaration } from 'ts-morph';
 
 export interface AddToNgOptions {
   classDeclaration: ClassDeclaration;
-  packageName?: string;
   unique?: boolean;
 }
 

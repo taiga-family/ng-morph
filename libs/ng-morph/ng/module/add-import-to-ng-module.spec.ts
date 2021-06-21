@@ -216,14 +216,12 @@ export class SomeModule {
       addImportToNgModule({
         classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
         moduleName: 'TestModule',
-        packageName: 'test-package-new',
       });
 
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { TestModule } from "test-package-new";
-import { NgModule } from '@angular/core';
+        .toStrictEqual(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExistingModule } from 'test-package';
 
@@ -239,7 +237,6 @@ export class SomeModule {
       addImportToNgModule({
         classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
         moduleName: 'TestModule',
-        packageName: 'test-package',
         unique: true,
       });
       saveActiveProject();
@@ -247,7 +244,7 @@ export class SomeModule {
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ExistingModule, TestModule } from 'test-package';
+import { ExistingModule } from 'test-package';
 
 @NgModule({
   imports: [CommonModule, ExistingModule, TestModule]

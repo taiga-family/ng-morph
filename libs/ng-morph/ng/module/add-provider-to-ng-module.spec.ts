@@ -211,18 +211,16 @@ export class SomeModule {
       );
     });
 
-    it('should not add service to providers and import package', () => {
+    it('should not add service to providers', () => {
       addProviderToNgModule({
         classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
         provider: 'NewService',
-        packageName: 'new-package',
         unique: true,
       });
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NewService } from "new-package";
-import { NgModule } from '@angular/core';
+        .toStrictEqual(`import { NgModule } from '@angular/core';
 import { CommonService } from '@angular/common';
 
 @NgModule({
