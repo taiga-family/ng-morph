@@ -32,10 +32,10 @@ export class SomeModule {
     });
 
     it('should create the declarations property', () => {
-      addBootstrapToNgModule({
-        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        component: 'TestComponent',
-      });
+      addBootstrapToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestComponent'
+      );
 
       saveActiveProject();
 
@@ -65,11 +65,10 @@ export class SomeModule {
     });
 
     it('should create the bootstrap property', () => {
-      addBootstrapToNgModule({
-        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        component: 'TestComponent',
-      });
-
+      addBootstrapToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestComponent'
+      );
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
@@ -99,10 +98,10 @@ export class SomeModule {
     });
 
     it('should add component to bootstrap', () => {
-      addBootstrapToNgModule({
-        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        component: 'TestComponent',
-      });
+      addBootstrapToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestComponent'
+      );
 
       saveActiveProject();
 

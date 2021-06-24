@@ -6,10 +6,10 @@ import {
   setActiveProject,
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
-import { addStyleUrlToComponent } from './add-style-url-to-component';
 import { getClasses } from 'ng-morph/classes';
+import { addProviderToComponent } from './add-provider-to-component';
 
-describe('addStyleUrlToComponent', () => {
+describe('addProviderToComponent', () => {
   let host: UnitTestTree;
 
   beforeEach(() => {
@@ -18,7 +18,7 @@ describe('addStyleUrlToComponent', () => {
     setActiveProject(createProject(host));
   });
 
-  describe('No styleUrl property', () => {
+  describe('No providers property', () => {
     beforeEach(() => {
       createSourceFile(
         'src/main.ts',
@@ -32,12 +32,12 @@ export class SomeComponent {
     });
 
     it('should create the providers property', () => {
-      addStyleUrlToComponent({
-        classDeclaration: getClasses('src/main.ts', {
+      addProviderToComponent(
+        getClasses('src/main.ts', {
           name: 'SomeComponent',
         })[0],
-        styleUrl: '"./style.less"',
-      });
+        'TestProvider'
+      );
 
       saveActiveProject();
 
@@ -45,7 +45,7 @@ export class SomeComponent {
         .toStrictEqual(`import { Component } from '@angular/core';
 
 @Component({
-        styleUrls: ["./style.less"]
+        providers: [TestProvider]
     })
 export class SomeComponent {
 
@@ -67,18 +67,19 @@ export class SomeComponent {
     });
 
     it('should create the providers property', () => {
-      addStyleUrlToComponent({
-        classDeclaration: getClasses('src/main.ts', {
+      addProviderToComponent(
+        getClasses('src/main.ts', {
           name: 'SomeComponent',
         })[0],
-        styleUrl: '"./style.less"',
-      });
+        'TestProvider'
+      );
+
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { Component } from '@angular/core';
 
-@Component({styleUrls: ["./style.less"]})
+@Component({providers: [TestProvider]})
 export class SomeComponent {
 
 }`);
@@ -90,10 +91,10 @@ export class SomeComponent {
       createSourceFile(
         'src/main.ts',
         `import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { TestProvider } from '@angular/common';
 
 @Component({
-  styleUrls: ["./style.less"]
+  providers: [TestProvider]
 })
 export class SomeComponent {
 
@@ -102,21 +103,21 @@ export class SomeComponent {
     });
 
     it('should add module to providers', () => {
-      addStyleUrlToComponent({
-        classDeclaration: getClasses('src/main.ts', {
+      addProviderToComponent(
+        getClasses('src/main.ts', {
           name: 'SomeComponent',
         })[0],
-        styleUrl: '"./new-style.less"',
-      });
+        'NewTestProvider'
+      );
 
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
         .toStrictEqual(`import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { TestProvider } from '@angular/common';
 
 @Component({
-  styleUrls: ["./style.less", "./new-style.less"]
+  providers: [TestProvider, NewTestProvider]
 })
 export class SomeComponent {
 

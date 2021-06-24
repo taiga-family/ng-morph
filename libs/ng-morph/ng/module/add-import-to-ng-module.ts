@@ -1,16 +1,12 @@
+import { ClassDeclaration } from 'ts-morph';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
-import { AddImportOptions } from './add-to-ng-options';
 
-export function addImportToNgModule({
-  classDeclaration,
-  moduleName,
-  unique,
-}: AddImportOptions) {
-  pushToArrayProperty({
-    classDeclaration,
-    decoratorName: 'NgModule',
-    propertyName: 'imports',
-    initializer: moduleName,
+export function addImportToNgModule(
+  classDeclaration: ClassDeclaration,
+  moduleName: string,
+  { unique }: { unique: boolean } = { unique: false }
+) {
+  pushToArrayProperty(classDeclaration, 'NgModule', 'imports', moduleName, {
     unique,
     forceToArray: true,
   });

@@ -32,10 +32,10 @@ export class SomeModule {
     });
 
     it('should create the imports property', () => {
-      addImportToNgModule({
-        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        moduleName: 'TestModule',
-      });
+      addImportToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestModule'
+      );
 
       saveActiveProject();
 
@@ -65,10 +65,10 @@ export class SomeModule {
     });
 
     it('should create the imports property', () => {
-      addImportToNgModule({
-        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        moduleName: 'TestModule',
-      });
+      addImportToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestModule'
+      );
 
       saveActiveProject();
 
@@ -99,10 +99,10 @@ export class SomeModule {
     });
 
     it('should add module to imports', () => {
-      addImportToNgModule({
-        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        moduleName: 'TestModule.forRoot()',
-      });
+      addImportToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestModule.forRoot()'
+      );
 
       saveActiveProject();
 
@@ -136,11 +136,11 @@ export class SomeModule {
     });
 
     it('should not add duplicate module to imports', () => {
-      addImportToNgModule({
-        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        moduleName: 'CommonModule',
-        unique: true,
-      });
+      addImportToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'CommonModule',
+        { unique: true }
+      );
 
       saveActiveProject();
 
@@ -174,11 +174,11 @@ export class SomeModule {
     });
 
     it('should wrap const with array and push new provider', () => {
-      addImportToNgModule({
-        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        moduleName: 'CommonModule',
-        unique: true,
-      });
+      addImportToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'CommonModule',
+        { unique: true }
+      );
 
       saveActiveProject();
 
@@ -213,10 +213,10 @@ export class SomeModule {
     });
 
     it('should add module to imports', () => {
-      addImportToNgModule({
-        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        moduleName: 'TestModule',
-      });
+      addImportToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestModule'
+      );
 
       saveActiveProject();
 
@@ -234,11 +234,11 @@ export class SomeModule {
     });
 
     it('should add module to imports', () => {
-      addImportToNgModule({
-        classDeclaration: getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        moduleName: 'TestModule',
-        unique: true,
-      });
+      addImportToNgModule(
+        getClasses('src/main.ts', { name: 'SomeModule' })[0],
+        'TestModule',
+        { unique: true }
+      );
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))

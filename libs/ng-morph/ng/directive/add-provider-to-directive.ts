@@ -1,12 +1,12 @@
 import { ClassDeclaration } from 'ts-morph';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
 
-export function addExportToNgModule(
+export function addProviderToDirective(
   classDeclaration: ClassDeclaration,
-  exportName: string,
+  provider: string,
   { unique }: { unique: boolean } = { unique: false }
 ) {
-  pushToArrayProperty(classDeclaration, 'NgModule', 'exports', exportName, {
+  pushToArrayProperty(classDeclaration, 'Directive', 'providers', provider, {
     unique,
     forceToArray: true,
   });

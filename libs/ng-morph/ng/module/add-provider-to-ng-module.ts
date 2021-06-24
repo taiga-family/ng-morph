@@ -1,16 +1,12 @@
+import { ClassDeclaration } from 'ts-morph';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
-import { AddProviderOptions } from './add-to-ng-options';
 
-export function addProviderToNgModule({
-  classDeclaration,
-  provider,
-  unique,
-}: AddProviderOptions) {
-  pushToArrayProperty({
-    classDeclaration,
-    decoratorName: 'NgModule',
-    propertyName: 'providers',
-    initializer: provider,
+export function addProviderToNgModule(
+  classDeclaration: ClassDeclaration,
+  provider: string,
+  { unique }: { unique: boolean } = { unique: false }
+) {
+  pushToArrayProperty(classDeclaration, 'NgModule', 'providers', provider, {
     unique,
     forceToArray: true,
   });

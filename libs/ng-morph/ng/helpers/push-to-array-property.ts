@@ -1,16 +1,20 @@
 import { getDecorators } from 'ng-morph/decorators';
-import { Node } from 'ts-morph';
-import { PushToArrayOptions } from './push-to-array-options';
+import { ClassDeclaration, Node } from 'ts-morph';
 
 // TODO: investigate how to handle consts in descriptors that don't accept array of array type, like styleUrls
-export function pushToArrayProperty({
-  classDeclaration,
-  decoratorName,
-  propertyName,
-  initializer,
-  unique = false,
-  forceToArray = false,
-}: PushToArrayOptions) {
+export function pushToArrayProperty(
+  classDeclaration: ClassDeclaration,
+  decoratorName: string,
+  propertyName: string,
+  initializer: string,
+  {
+    unique = false,
+    forceToArray = false,
+  }: { unique?: boolean; forceToArray?: boolean } = {
+    unique: false,
+    forceToArray: false,
+  }
+) {
   const [decorator] = getDecorators(classDeclaration, {
     name: decoratorName,
   });

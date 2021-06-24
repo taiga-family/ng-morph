@@ -1,13 +1,12 @@
 import { ClassDeclaration } from 'ts-morph';
 import { pushToArrayProperty } from '../helpers/push-to-array-property';
 
-export function addExportToNgModule(
+export function addStyleUrlToComponent(
   classDeclaration: ClassDeclaration,
-  exportName: string,
+  styleUrl: string,
   { unique }: { unique: boolean } = { unique: false }
 ) {
-  pushToArrayProperty(classDeclaration, 'NgModule', 'exports', exportName, {
+  pushToArrayProperty(classDeclaration, 'Component', 'styleUrls', styleUrl, {
     unique,
-    forceToArray: true,
   });
 }
