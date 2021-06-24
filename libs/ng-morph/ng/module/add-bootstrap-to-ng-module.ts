@@ -4,7 +4,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addBootstrapToNgModule(
   classDeclaration: ClassDeclaration,
   component: string,
-  { unique }: { unique: boolean } = { unique: false }
+  { unique = false }: { unique?: boolean } = {}
 ) {
   pushToArrayProperty(classDeclaration, 'NgModule', 'bootstrap', component, {
     unique,

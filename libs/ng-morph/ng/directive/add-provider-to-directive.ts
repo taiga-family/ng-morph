@@ -4,7 +4,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addProviderToDirective(
   classDeclaration: ClassDeclaration,
   provider: string,
-  { unique }: { unique: boolean } = { unique: false }
+  { unique = false }: { unique?: boolean } = {}
 ) {
   pushToArrayProperty(classDeclaration, 'Directive', 'providers', provider, {
     unique,

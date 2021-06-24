@@ -10,10 +10,7 @@ export function pushToArrayProperty(
   {
     unique = false,
     forceToArray = false,
-  }: { unique?: boolean; forceToArray?: boolean } = {
-    unique: false,
-    forceToArray: false,
-  }
+  }: { unique?: boolean; forceToArray?: boolean } = {}
 ) {
   const [decorator] = getDecorators(classDeclaration, {
     name: decoratorName,

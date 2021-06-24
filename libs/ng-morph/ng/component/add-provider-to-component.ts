@@ -4,7 +4,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addProviderToComponent(
   classDeclaration: ClassDeclaration,
   provider: string,
-  { unique }: { unique: boolean } = { unique: false }
+  { unique = false }: { unique?: boolean } = {}
 ) {
   pushToArrayProperty(classDeclaration, 'Component', 'providers', provider, {
     unique,

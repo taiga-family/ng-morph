@@ -4,7 +4,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addExportToNgModule(
   classDeclaration: ClassDeclaration,
   exportName: string,
-  { unique }: { unique: boolean } = { unique: false }
+  { unique = false }: { unique?: boolean } = {}
 ) {
   pushToArrayProperty(classDeclaration, 'NgModule', 'exports', exportName, {
     unique,

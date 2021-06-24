@@ -4,7 +4,7 @@ import { pushToArrayProperty } from '../helpers/push-to-array-property';
 export function addSchemaToNgModule(
   classDeclaration: ClassDeclaration,
   schema: string,
-  { unique }: { unique: boolean } = { unique: false }
+  { unique = false }: { unique?: boolean } = {}
 ) {
   pushToArrayProperty(classDeclaration, 'NgModule', 'schemas', schema, {
     unique,
