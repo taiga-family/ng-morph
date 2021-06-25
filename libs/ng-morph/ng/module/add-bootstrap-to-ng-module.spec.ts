@@ -7,7 +7,7 @@ import {
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
 import { getClasses } from 'ng-morph/classes';
-import { addBootstrapToModule } from './add-bootstrap-to-module';
+import { addBootstrapToNgModule } from './add-bootstrap-to-ng-module';
 
 describe('addBootstrapToModule', () => {
   let host: UnitTestTree;
@@ -32,7 +32,7 @@ export class SomeModule {
     });
 
     it('should create the declarations property', () => {
-      addBootstrapToModule(
+      addBootstrapToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'TestComponent'
       );
@@ -65,11 +65,10 @@ export class SomeModule {
     });
 
     it('should create the bootstrap property', () => {
-      addBootstrapToModule(
+      addBootstrapToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'TestComponent'
       );
-
       saveActiveProject();
 
       expect(host.readContent('src/main.ts'))
@@ -98,8 +97,8 @@ export class SomeModule {
       );
     });
 
-    it('should add module to entryComponents', () => {
-      addBootstrapToModule(
+    it('should add component to bootstrap', () => {
+      addBootstrapToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'TestComponent'
       );
