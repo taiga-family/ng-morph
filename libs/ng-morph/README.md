@@ -24,7 +24,7 @@ So, you can test your schematics rapidly fast.
 
 ## How to start
 
-Install the package and visit our [documentation](TODO)
+Install the package and visit our [documentation](https://tinkoff.github.io/ng-morph/)
 
 ## Core team
 
