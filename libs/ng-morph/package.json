@@ -9,7 +9,7 @@
     "jsonc-parser": "^3.0.0",
     "minimatch": "^3.0.4",
     "multimatch": "^5.0.0",
-    "ts-morph": "^10.1.0"
+    "ts-morph": "^12.2.0"
   },
   "devDependencies": {
     "@types/minimatch": "^3.0.5"
