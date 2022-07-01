@@ -54,11 +54,11 @@ import b from 'd';
     expect(imports.map((i) => i.getStructure())).toEqual([
       {
         isTypeOnly: false,
-        kind: 14,
+        kind: 15,
         moduleSpecifier: 'd',
         namedImports: [
           {
-            kind: 15,
+            kind: 16,
             name: 'c',
           },
         ],
