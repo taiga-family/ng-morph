@@ -6,6 +6,7 @@
     "build:demo": "nx build demo",
     "postbuild:demo": "cp ./dist/apps/demo/index.html ./dist/apps/demo/404.html",
     "release": "nx affected --target release",
+    "build": "nx affected --target build --prod --with-deps",
     "test": "nx affected --target test",
     "lint": "nx workspace-lint && nx affected --target lint"
   },
