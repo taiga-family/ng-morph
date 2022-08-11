@@ -1,5 +1,8 @@
 export * from './types/pattern';
 export * from './types/structure-editor';
+export * from './types/structure-type';
+export * from './types/structured-statement';
+export * from './types/filter-primitive';
 
 export * from './helpers/array-flat';
 export * from './helpers/coerce-array';

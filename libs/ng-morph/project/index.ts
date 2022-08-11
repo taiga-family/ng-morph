@@ -1,3 +1,6 @@
+export * from './classes/devkit-file-system';
+export * from './classes/update-recorder';
+export * from './classes/file-system';
 export * from './classes/ng-cli-project';
 export * from './classes/ng-morph-tree';
 
