@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-node-
       - run: npm ci --cache ~/.npm --prefer-offline
       - name: release
-        run: npm run release -- --base=remotes/origin/${GITHUB_REF#refs/heads/}~1
+        run: npx nx release ng-morph
         env:
           CI: true
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
