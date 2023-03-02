@@ -35,7 +35,28 @@
   <p>Enjoy!</p>
 
   <section>
-    <h3>How to use these all things</h3>
+    <h3>How to run ng-morph</h3>
+
+    <h4>Running in your own project as a script</h4>
+
+    <p>
+      You can use ng-morph for global updates of your porject code base, big
+      refactiorings, dependencies migrations and much more. Just describe
+      everything you want in a simple script and run it.
+    </p>
+
+    <tui-doc-code filename="script.ts" [code]="script"></tui-doc-code>
+
+    Now you can compile and run this script or just use something like
+    <a tuiLink href="https://www.npmjs.com/package/ts-nodee" target="_blank"
+      >ts-node</a
+    >
+    that allows you to start TS script as soon as it is ready.
+
+    <h4>Creating schematics for publishing with libraries</h4>
+
+    You can write schematics scripts to simplify your library installation or
+    make fully automated migrations between releases with breaking changes.
 
     <p>
       Creating Angular <code>ng-add</code> or <code>ng-update</code> schematics
