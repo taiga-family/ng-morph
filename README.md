@@ -12,9 +12,12 @@ You also need `@angular-devkit/core` and `@angular-devkit/schematics` to be inst
 
 ## What is it?
 
-It is a large set of tools that speeds up your work with Angular schematics. It has [ts-morph](https://ts-morph.com/) under the hood and allows you to manipulate with safe TypeScript AST.
+It is a large set of tools for both global code base
+updates in your project and speeding up your work on Angular schematics. It has [ts-morph](https://ts-morph.com/) under the hood and allows you to manipulate with safe TypeScript AST.
 
 ## Why is it better than default schematics?
+
+🦅 You can quickly write migrations for your own project and run it as a simple script
 
 🛠 There are many tools made for working with Angular. You can easily find and manipulate TS and Ng entities.
 
@@ -25,6 +28,43 @@ So, you can test your schematics rapidly fast.
 ## How to start
 
 Install the package and visit our [documentation](https://tinkoff.github.io/ng-morph)
+
+For example, this is how `ng-morph` setup looks for migrating your own project:
+
+```typescript
+import {
+  setActiveProject,
+  createProject,
+  getImports,
+  NgMorphTree,
+} from 'ng-morph';
+
+/**
+ * set all ng-morph functions to work with the all TS and JSON files
+ * of the current project
+ * */
+setActiveProject(
+  createProject(new NgMorphTree(), '/', ['**/*.ts', '**/*.json'])
+);
+
+/**
+ * This simple migration gets all imports from the project TS files and
+ * replaces 'old' substring with 'new'
+ * */
+const imports = getImports('some/path/**.ts', {
+  moduleSpecifier: '@morph-old*',
+});
+
+editImports(imports, (importEntity) => ({
+  moduleSpecifier: importEntity.moduleSpecifier.replace('old', 'new'),
+}));
+
+/**
+ * All changes are made in a virtual project.
+ * You can save them when it is time
+ * */
+saveActiveProject();
+```
 
 ## Core team
 
