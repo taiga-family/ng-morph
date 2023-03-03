@@ -371,16 +371,19 @@ __webpack_require__.r(__webpack_exports__);
 class AppComponent {
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["ng-morph-root"]], decls: 5, vars: 0, consts: [["ngProjectAs", "tuiDocHeader", 5, ["tuiDocHeader"]], ["tuiLink", "", "tuiMode", "onLight", "href", "https://github.com/TinkoffCreditSystems/ng-morph", "target", "_blank", 1, "link"], ["src", "assets/images/github.svg", "alt", "", 1, "github"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["ng-morph-root"]], decls: 7, vars: 0, consts: [["ngProjectAs", "tuiDocHeader", 5, ["tuiDocHeader"]], ["href", "https://www.npmjs.com/package/ng-morph", "target", "_blank", 1, "npm-link"], ["alt", "npm-link", "src", "https://img.shields.io/npm/dy/ng-morph?color=gainsboro&style=flat-square"], ["tuiLink", "", "tuiMode", "onLight", "href", "https://github.com/TinkoffCreditSystems/ng-morph", "target", "_blank", 1, "github-link"], ["src", "assets/images/github.svg", "alt", "", 1, "github"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-main");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](1, 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "img", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " GitHub ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "a", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "img", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " GitHub ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__["TuiDocMainComponent"], _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__["TuiLinkComponent"]], styles: ["[_nghost-%COMP%] {\n  font: var(--tui-font-text-m);\n}\n.link[_ngcontent-%COMP%] {\n  font-weight: bold;\n  height: 24px;\n}\n.github[_ngcontent-%COMP%] {\n  width: 24px;\n  height: 24px;\n  margin: 0 4px 0 16px;\n  vertical-align: -6px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDRCQUFBO0FBQ0Y7QUFFQTtFQUNFLGlCQUFBO0VBQ0EsWUFBQTtBQUFGO0FBR0E7RUFDRSxXQUFBO0VBQ0EsWUFBQTtFQUNBLG9CQUFBO0VBQ0Esb0JBQUE7QUFERiIsImZpbGUiOiJhcHAuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGZvbnQ6IHZhcigtLXR1aS1mb250LXRleHQtbSk7XG59XG5cbi5saW5rIHtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGhlaWdodDogMjRweDtcbn1cblxuLmdpdGh1YiB7XG4gIHdpZHRoOiAyNHB4O1xuICBoZWlnaHQ6IDI0cHg7XG4gIG1hcmdpbjogMCA0cHggMCAxNnB4O1xuICB2ZXJ0aWNhbC1hbGlnbjogLTZweDtcbn1cbiJdfQ== */"], changeDetection: 0 });
+    } }, directives: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__["TuiDocMainComponent"], _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__["TuiLinkComponent"]], styles: ["[_nghost-%COMP%] {\n  font: var(--tui-font-text-m);\n}\n.npm-link[_ngcontent-%COMP%] {\n  margin-top: 8px;\n  margin-left: 12px;\n}\n.github-link[_ngcontent-%COMP%] {\n  font-weight: bold;\n  height: 24px;\n}\n.github[_ngcontent-%COMP%] {\n  width: 24px;\n  height: 24px;\n  margin: 0 4px 0 16px;\n  vertical-align: -6px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDRCQUFBO0FBQ0Y7QUFFQTtFQUNFLGVBQUE7RUFDQSxpQkFBQTtBQUFGO0FBR0E7RUFDRSxpQkFBQTtFQUNBLFlBQUE7QUFERjtBQUlBO0VBQ0UsV0FBQTtFQUNBLFlBQUE7RUFDQSxvQkFBQTtFQUNBLG9CQUFBO0FBRkYiLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICBmb250OiB2YXIoLS10dWktZm9udC10ZXh0LW0pO1xufVxuXG4ubnBtLWxpbmsge1xuICBtYXJnaW4tdG9wOiA4cHg7XG4gIG1hcmdpbi1sZWZ0OiAxMnB4O1xufVxuXG4uZ2l0aHViLWxpbmsge1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgaGVpZ2h0OiAyNHB4O1xufVxuXG4uZ2l0aHViIHtcbiAgd2lkdGg6IDI0cHg7XG4gIGhlaWdodDogMjRweDtcbiAgbWFyZ2luOiAwIDRweCAwIDE2cHg7XG4gIHZlcnRpY2FsLWFsaWduOiAtNnB4O1xufVxuIl19 */"], changeDetection: 0 });
 
 
 /***/ }),
@@ -445,6 +448,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const script = `import {
+  setActiveProject,
+  createProject,
+  getImports,
+  NgMorphTree,
+} from 'ng-morph';
+
+/**
+ * set all ng-morph functions to work with the all TS and JSON files
+ * of the current project
+ * */
+setActiveProject(
+  createProject(new NgMorphTree(), '/', ['**/*.ts', '**/*.json'])
+);
+
+/**
+ * This simple migration gets all imports from the project TS files and
+ * replaces 'old' substring with 'new'
+ * */
+const imports = getImports('some/path/**.ts', {
+    moduleSpecifier: '@morph-old*',
+});
+
+editImports(imports, importEntity => ({
+    moduleSpecifier: importEntity.moduleSpecifier.replace('old', 'new')
+}));
+
+/**
+ * All changes are made in a virtual project.
+ * You can save them when it is time
+ * */
+saveActiveProject();
+`;
 const creatingRule = `import {
     setActiveProject,
     saveActiveProject,
@@ -536,12 +572,13 @@ describe('ng-add', () => {
 `;
 class GettingStartedComponent {
     constructor() {
+        this.script = script;
         this.creatingRule = creatingRule;
         this.creatingSpec = creatingSpec;
     }
 }
 GettingStartedComponent.ɵfac = function GettingStartedComponent_Factory(t) { return new (t || GettingStartedComponent)(); };
-GettingStartedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GettingStartedComponent, selectors: [["getting-started"]], decls: 65, vars: 2, consts: [["header", "Getting started"], ["tuiLink", "", "href", "https://ts-morph.com/"], ["code", "npm i --save-dev ng-morph"], ["tuiLink", "", "href", "https://angular.io/guide/schematics-for-libraries#define-the-rule", "target", "_blank"], ["filename", "ng-add.ts", 3, "code"], ["filename", "ng-add.spec.ts", 3, "code"], ["tuiLink", "", "routerLink", "/classes"]], template: function GettingStartedComponent_Template(rf, ctx) { if (rf & 1) {
+GettingStartedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: GettingStartedComponent, selectors: [["getting-started"]], decls: 80, vars: 3, consts: [["header", "Getting started"], ["tuiLink", "", "href", "https://ts-morph.com/"], ["code", "npm i --save-dev ng-morph"], ["filename", "script.ts", 3, "code"], ["tuiLink", "", "href", "https://www.npmjs.com/package/ts-node", "target", "_blank"], ["tuiLink", "", "href", "https://angular.io/guide/schematics-for-libraries#define-the-rule", "target", "_blank"], ["filename", "ng-add.ts", 3, "code"], ["filename", "ng-add.spec.ts", 3, "code"], ["tuiLink", "", "href", "https://github.com/TinkoffCreditSystems/ng-morph", "target", "_blank"], ["tuiLink", "", "routerLink", "/classes"]], template: function GettingStartedComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-page", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "strong");
@@ -586,59 +623,81 @@ GettingStartedComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "section");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "How to use these all things");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "How to run ng-morph");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, " Creating Angular ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "code");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "ng-add");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Running in your own project as a script");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, " or ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "code");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "ng-update");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, " You can use ng-morph for global updates of your porject code base, big refactiorings, dependencies migrations and much more. Just describe everything you want in a simple script and run it. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, " schematics you work with ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "a", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, "Rule");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "tui-doc-code", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " Now you can compile and run this script or just use something like ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "a", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "ts-node");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, " functions. Rule function gets a ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "code");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, "Tree");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, " that allows you to start TS script as soon as it is ready. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "Creating schematics for publishing with libraries");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, " as a first argument and you can pass this tree to ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, " You can write schematics scripts to simplify your library installation or make fully automated migrations between releases with breaking changes. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, " Creating Angular ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "code");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, "setActiveProject");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, "ng-add");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, " function from ng-morph the following way: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, " or ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "code");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, "ng-update");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](49, "tui-doc-code", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, " schematics you work with ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "a", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "Rule");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "section");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](52, "How to test your schematics");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, " functions. Rule function gets a ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "code");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, "Tree");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, " You can use any test runner you like to check that your schematics work as you expect. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](57, " as a first argument and you can pass this tree to ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "code");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](59, "setActiveProject");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, "Let's try to test the migration above:");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, " function from ng-morph the following way: ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](57, "tui-doc-code", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](61, "tui-doc-code", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "section");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, "What is next?");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "section");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](64, "How to test your schematics");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](62, " So, now you know how to set it up. Explore utils in the left menu and find tools that you need. We suggest you to start with ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "a", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](64, "Classes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](65, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](66, " You can use any test runner you like to check that your schematics work as you expect. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](67, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](68, "Let's try to test the migration above:");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](69, "tui-doc-code", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "section");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, "What is next?");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, " So, now you know how to set it up. Give a star to ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "a", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](76, "our project on Github");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](77, " and start exploring utils in the left menu to find all the tools you need. We suggest you to start with ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "a", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](79, "Classes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](49);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](36);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("code", ctx.script);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](25);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("code", ctx.creatingRule);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("code", ctx.creatingSpec);
