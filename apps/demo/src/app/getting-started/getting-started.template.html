@@ -1,8 +1,8 @@
 <tui-doc-page header="Getting started">
   <p>
-    <strong>ng-morph</strong> is a large set of tools that speeds up your work
-    with Angular schematics. It has
-    <a tuiLink href="https://ts-morph.com/">ts-morph</a> under the hood and
+    <strong>ng-morph</strong> is a large set of tools for both global code base
+    updates in your project and speeding up your work on Angular schematics. It
+    has <a tuiLink href="https://ts-morph.com/">ts-morph</a> under the hood and
     allows you to manipulate with safe TypeScript AST.
   </p>
 
@@ -10,6 +10,11 @@
     <h3>Why is it better than default schematics?</h3>
 
     <ul>
+      <li>
+        🦅 You can quickly write migrations for your own project and run it as a
+        simple script
+      </li>
+
       <li>
         🛠 There are many tools made for working with Angular. You can easily
         find and manipulate TS and Ng entities.
@@ -47,11 +52,13 @@
 
     <tui-doc-code filename="script.ts" [code]="script"></tui-doc-code>
 
-    Now you can compile and run this script or just use something like
-    <a tuiLink href="https://www.npmjs.com/package/ts-node" target="_blank"
-      >ts-node</a
-    >
-    that allows you to start TS script as soon as it is ready.
+    <p>
+      Now you can compile and run this script or just use something like
+      <a tuiLink href="https://www.npmjs.com/package/ts-node" target="_blank"
+        >ts-node</a
+      >
+      that allows you to start TS script as soon as it is ready.
+    </p>
 
     <h4>Creating schematics for publishing with libraries</h4>
 
