@@ -1,6 +1,7 @@
 # <img src="apps/demo/src/assets/images/ng-morph.png" alt="logo" width="48px"> ng-morph
 
 [![npm version](https://img.shields.io/npm/v/ng-morph.svg)](https://npmjs.com/package/ng-morph)
+[![downloads](https://img.shields.io/npm/dy/ng-morph?color=dark-green)](https://npmjs.com/package/ng-morph)
 
 Code mutations in schematics were never easier than now.
 
