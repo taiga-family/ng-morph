@@ -236,6 +236,13 @@ const ROUTES = [
             title: `Source files`,
         },
     },
+    {
+        path: 'inject-sample',
+        loadChildren: () => __webpack_require__.e(/*! import() | modules-inject-sample-inject-sample-module */ "modules-inject-sample-inject-sample-module").then(__webpack_require__.bind(null, /*! ./modules/inject-sample/inject-sample.module */ "0XWf")).then((m) => m.InjectSampleModule),
+        data: {
+            title: `@Inject -> inject example`,
+        },
+    },
     { path: '**', redirectTo: 'getting-started' },
 ];
 
@@ -318,6 +325,12 @@ const pages = [
         title: `Source files`,
         keywords: 'files, file, system, tree, typescript',
         route: 'source-files',
+    },
+    {
+        section: `Examples`,
+        title: `@Inject -> inject migration`,
+        keywords: 'example, DI, decorators',
+        route: 'inject-sample',
     },
 ];
 
