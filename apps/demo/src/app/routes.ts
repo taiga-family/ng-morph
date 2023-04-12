@@ -101,5 +101,15 @@ export const ROUTES: Route[] = [
       title: `Source files`,
     },
   },
+  {
+    path: 'inject-sample',
+    loadChildren: () =>
+      import('./modules/inject-sample/inject-sample.module').then(
+        (m) => m.InjectSampleModule
+      ),
+    data: {
+      title: `@Inject -> inject example`,
+    },
+  },
   { path: '**', redirectTo: 'getting-started' },
 ];
