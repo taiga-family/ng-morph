@@ -3,7 +3,11 @@ export const CONSTRUCTORS_SAMPLES = `import {
     getConstructors,
     editConstructors,
     removeConstructors,
-} from 'ng-morph/project';
+    setActiveProject,
+    saveActiveProject,
+} from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addConstructors(getClasses('some/path/file.ts', { name: 'B' }), {
     parameters: [
@@ -28,4 +32,6 @@ editConstructors(declarations, () => ({
 }));
 
 removeConstructors(declarations);
+
+saveActiveProject();
 `;

@@ -7,7 +7,11 @@ import { PROPERTIES_SAMPLES } from './samples/properties';
 
 const add = `import {
     addClasses,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addClasses('some/path/file.ts', {
     name: 'A',
@@ -20,33 +24,53 @@ addClasses('some/path/file.ts', {
         returnType: 'number',
       },
     ],
-});`;
+});
+
+saveActiveProject();
+`;
 
 const edit = `import {
     getClasses,
     editClasses,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 const classes = getClasses('some/path/file.ts');
 
 editClasses(classes, classEntity => ({
   isExported: true,
   name: classEntity.name.replace('Test', ''),
-}));`;
+}));
+
+saveActiveProject();
+`;
 
 const remove = `import {
     removeClasses,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 removeClasses(getClasses('**/**', { name: 'A' }));`;
 
 const getClasses = `import {
     getClasses,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 const allClassesWithNameB = getClasses('some/path/**.ts', {
     name: 'B',
 });
+
+saveActiveProject();
 `;
 
 @Component({
