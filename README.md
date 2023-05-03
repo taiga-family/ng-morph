@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/ng-morph.svg)](https://npmjs.com/package/ng-morph)
 [![downloads](https://img.shields.io/npm/dy/ng-morph?color=dark-green)](https://npmjs.com/package/ng-morph)
 
-Code mutations in schematics were never easier than now.
+Code mutations were never easier than now.
 
 ```
 npm i --save-dev ng-morph
