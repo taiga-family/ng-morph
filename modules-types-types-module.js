@@ -55,7 +55,11 @@ const types = `import {
     editTypeAliases,
     getTypeAliases,
     removeTypeAliases,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addTypeAliases('some/path/file.ts', {
     name: 'A',
@@ -70,6 +74,8 @@ editTypeAliases(declarations, () => ({
 }));
 
 removeTypeAliases(declarations);
+
+saveActiveProject();
 `;
 class TypesComponent {
     constructor() {

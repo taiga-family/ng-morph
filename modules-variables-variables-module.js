@@ -55,7 +55,11 @@ const code = `import {
     editVariables,
     getVariables,
     removeVariables,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addVariables('some/path/file.ts', {
     declarationKind: VariableDeclarationKind.Const,
@@ -74,6 +78,8 @@ editVariables(declarations, () => ({
 }));
 
 removeVariables(declarations);
+
+saveActiveProject();
 `;
 class VariablesComponent {
     constructor() {

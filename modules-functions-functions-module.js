@@ -19,7 +19,11 @@ const code = `import {
     editFunctions,
     getFunctions,
     removeFunctions,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addFunctions('some/**/**.ts', {
     isExported: true,
@@ -36,6 +40,8 @@ editFunctions(functions, () => ({
 }));
 
 removeFunctions(declarations);
+
+saveActiveProject();
 `;
 class FunctionsComponent {
     constructor() {

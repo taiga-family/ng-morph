@@ -16,7 +16,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const code = `import {
     getMainModule
+    setActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 const classDeclaration = getMainModule('src/main.ts');
 `;

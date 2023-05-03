@@ -52,7 +52,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const code = `import {
     getBootstrapFn
+    setActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 const bootstrapFn = getBootstrapFn('src/main.ts');
 `;

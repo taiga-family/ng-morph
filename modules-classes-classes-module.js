@@ -15,7 +15,11 @@ const DECORATORS_SAMPLES = `import {
     getDecorators,
     editDecorators,
     removeDecorators,
-} from 'ng-morph/project';
+    setActiveProject,
+    saveActiveProject,
+} from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 const classes = getClasses('some/path/file.ts');
 const methods = getMethods(classes, { name: 'method' });
@@ -71,6 +75,8 @@ editDecorators(declarations, () => ({
 }));
 
 removeDecorators(declarations);
+
+saveActiveProject();
 `;
 
 
@@ -127,7 +133,11 @@ const ACCESSORS_SAMPLES = `import {
     getAccessors,
     editAccessors,
     removeAccessors,
-} from 'ng-morph/project';
+    setActiveProject,
+    saveActiveProject,
+} from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addAccessors(getClasses('some/path/file.ts'), [
     {
@@ -146,6 +156,8 @@ editAccessors(declarations, () => ({
 }));
 
 removeAccessors(declarations);
+
+saveActiveProject();
 `;
 
 
@@ -166,7 +178,11 @@ const CONSTRUCTORS_SAMPLES = `import {
     getConstructors,
     editConstructors,
     removeConstructors,
-} from 'ng-morph/project';
+    setActiveProject,
+    saveActiveProject,
+} from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addConstructors(getClasses('some/path/file.ts', { name: 'B' }), {
     parameters: [
@@ -191,6 +207,8 @@ editConstructors(declarations, () => ({
 }));
 
 removeConstructors(declarations);
+
+saveActiveProject();
 `;
 
 
@@ -211,7 +229,11 @@ const METHODS_SAMPLES = `import {
     getMethods,
     editMethods,
     removeMethods,
-} from 'ng-morph/project';
+    setActiveProject,
+    saveActiveProject,
+} from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addMethods(getClasses('some/path/file.ts', { name: 'B' }), {
     name: 'test',
@@ -230,6 +252,8 @@ editMethods(declarations, ({ isAsync }) => ({
 }));
 
 removeMethods(declarations);
+
+saveActiveProject();
 `;
 
 
@@ -250,7 +274,11 @@ const PROPERTIES_SAMPLES = `import {
     getProperties,
     editProperties,
     removeProperties,
-} from 'ng-morph/project';
+    setActiveProject,
+    saveActiveProject,
+} from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addProperties(getClasses('some/path/file.ts', { name: 'B' }), {
     name: 'test',
@@ -268,6 +296,8 @@ editProperties(declarations, () => ({
 }));
 
 removeProperties(declarations);
+
+saveActiveProject();
 `;
 
 
@@ -400,7 +430,11 @@ function ClassesComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
 } }
 const add = `import {
     addClasses,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addClasses('some/path/file.ts', {
     name: 'A',
@@ -413,30 +447,50 @@ addClasses('some/path/file.ts', {
         returnType: 'number',
       },
     ],
-});`;
+});
+
+saveActiveProject();
+`;
 const edit = `import {
     getClasses,
     editClasses,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 const classes = getClasses('some/path/file.ts');
 
 editClasses(classes, classEntity => ({
   isExported: true,
   name: classEntity.name.replace('Test', ''),
-}));`;
+}));
+
+saveActiveProject();
+`;
 const remove = `import {
     removeClasses,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 removeClasses(getClasses('**/**', { name: 'A' }));`;
 const getClasses = `import {
     getClasses,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 const allClassesWithNameB = getClasses('some/path/**.ts', {
     name: 'B',
 });
+
+saveActiveProject();
 `;
 class ClassesComponent {
     constructor() {

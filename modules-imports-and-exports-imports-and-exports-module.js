@@ -75,7 +75,11 @@ const imports = `import {
     editImports,
     getImports,
     removeImports,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addImports('some/path/file.ts', [
     {
@@ -107,13 +111,19 @@ editImports(imports, () => ({
 }));
 
 removeImports(imports);
+
+saveActiveProject();
 `;
 const exportsSamples = `import {
     addExports,
     editExports,
     getExports,
     removeExports,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addExports('some/path/file.ts', [
     {
@@ -140,6 +150,8 @@ editExports(exports, () => ({
 }));
 
 removeExports(exports);
+
+saveActiveProject();
 `;
 class ImportsAndExportsComponent {
     constructor() {
