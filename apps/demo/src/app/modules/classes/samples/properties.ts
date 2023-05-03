@@ -3,7 +3,11 @@ export const PROPERTIES_SAMPLES = `import {
     getProperties,
     editProperties,
     removeProperties,
-} from 'ng-morph/project';
+    setActiveProject,
+    saveActiveProject,
+} from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addProperties(getClasses('some/path/file.ts', { name: 'B' }), {
     name: 'test',
@@ -21,4 +25,6 @@ editProperties(declarations, () => ({
 }));
 
 removeProperties(declarations);
+
+saveActiveProject();
 `;

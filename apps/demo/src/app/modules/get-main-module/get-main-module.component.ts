@@ -2,7 +2,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 const code = `import {
     getMainModule
+    setActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 const classDeclaration = getMainModule('src/main.ts');
 `;

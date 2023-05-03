@@ -3,7 +3,11 @@ export const DECORATORS_SAMPLES = `import {
     getDecorators,
     editDecorators,
     removeDecorators,
-} from 'ng-morph/project';
+    setActiveProject,
+    saveActiveProject,
+} from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 const classes = getClasses('some/path/file.ts');
 const methods = getMethods(classes, { name: 'method' });
@@ -59,4 +63,6 @@ editDecorators(declarations, () => ({
 }));
 
 removeDecorators(declarations);
+
+saveActiveProject();
 `;
