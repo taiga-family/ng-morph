@@ -81,7 +81,7 @@
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "26.2.2",
-    "jest-preset-angular": "8.3.2",
+    "jest-preset-angular": "11.1.2",
     "jsonc-parser": "^3.0.0",
     "multimatch": "^5.0.0",
     "prettier": "2.2.1",
