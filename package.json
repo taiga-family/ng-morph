@@ -83,7 +83,7 @@
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.2",
     "jsonc-parser": "^3.0.0",
-    "multimatch": "^5.0.0",
+    "multimatch": "^6.0.0",
     "prettier": "2.2.1",
     "ts-jest": "26.4.0",
     "ts-morph": "^10.0.2",
