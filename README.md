@@ -142,6 +142,9 @@ You can check it out on [Stackblitz playground](https://stackblitz.com/edit/ts-a
 
 </table>
 
+ng-morph is a part of [Taiga UI](https://github.com/Tinkoff/taiga-ui) libraries family which is backed and used by a
+large enterprise. This means you can rely on timely support and continuous development.
+
 ## License
 
 🆓 Feel free to use our library in your commercial and private applications
