@@ -1,4 +1,4 @@
-# <img src="apps/demo/src/assets/images/ng-morph.png" alt="logo" width="48px"> ng-morph
+# ng-morph
 
 [![npm version](https://img.shields.io/npm/v/ng-morph.svg)](https://npmjs.com/package/ng-morph)
 [![downloads](https://img.shields.io/npm/dy/ng-morph?color=dark-green)](https://npmjs.com/package/ng-morph)
@@ -141,6 +141,8 @@ You can check it out on [Stackblitz playground](https://stackblitz.com/edit/ts-a
     </tr>
 
 </table>
+
+ng-morph is a part of Taiga UI libraries family which is backed and used by a large enterprise. This means you can rely on timely support and continuous development.
 
 ## License
 
