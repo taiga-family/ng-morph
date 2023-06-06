@@ -1,0 +1,64 @@
+{
+  "name": "ng-morph",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ng-morph/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/ng-morph/**/*.ts"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/ng-morph"],
+      "options": {
+        "jestConfig": "libs/ng-morph/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ng-morph",
+        "tsConfig": "libs/ng-morph/tsconfig.lib.json",
+        "packageJson": "libs/ng-morph/package.json",
+        "main": "libs/ng-morph/src/index.ts",
+        "assets": ["libs/ng-morph/*.md"]
+      }
+    },
+    "semrel": {
+      "executor": "@ng-builders/semrel:release",
+      "options": {
+        "npm": {
+          "pkgRoot": "dist/libs/ng-morph"
+        },
+        "branches": [
+          "+([0-9])?(.{+([0-9]),x}).x",
+          "main",
+          "next",
+          "next-major",
+          {
+            "name": "beta",
+            "prerelease": true
+          },
+          {
+            "name": "alpha",
+            "prerelease": true
+          }
+        ]
+      }
+    },
+    "release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["nx build ng-morph", "nx semrel ng-morph"],
+        "parallel": false
+      }
+    }
+  },
+  "tags": []
+}
