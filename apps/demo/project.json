@@ -25,8 +25,10 @@
         ],
         "styles": [
           "apps/demo/src/styles.less",
-          "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
           "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less"
+        ],
+        "allowedCommonJsDependencies": [
+          "text-mask-core"
         ],
         "scripts": [],
         "vendorChunk": true,

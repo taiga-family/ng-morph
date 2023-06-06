@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { generateRoutes, TuiAddonDocModule } from '@taiga-ui/addon-doc';
+import { tuiGenerateRoutes, TuiAddonDocModule } from '@taiga-ui/addon-doc';
 import { TuiLinkModule } from '@taiga-ui/core';
 import { GetMainModuleComponent } from './get-main-module.component';
 
@@ -8,7 +8,7 @@ import { GetMainModuleComponent } from './get-main-module.component';
   imports: [
     TuiLinkModule,
     TuiAddonDocModule,
-    RouterModule.forChild(generateRoutes(GetMainModuleComponent)),
+    RouterModule.forChild(tuiGenerateRoutes(GetMainModuleComponent)),
   ],
   declarations: [GetMainModuleComponent],
   exports: [GetMainModuleComponent],

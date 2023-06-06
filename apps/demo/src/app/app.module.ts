@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   TuiDocMainModule,
   TUI_DOC_LOGO,
-  TUI_DOC_PAGES,
+  TUI_DOC_PAGES, TUI_DOC_EXAMPLE_MARKDOWN_CODE_PROCESSOR,
 } from '@taiga-ui/addon-doc';
 import { TuiLinkModule } from '@taiga-ui/core';
 
