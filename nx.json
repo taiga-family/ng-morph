@@ -5,7 +5,7 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/nx-cloud",
+      "runner": "nx-cloud",
       "options": {
         "cacheableOperations": ["build", "lint", "test"],
         "accessToken": "YWUxOTUxOWUtMDk5ZS00ZmIzLTk0ZDgtODE4M2QwYjIxN2M5fHJlYWQtd3JpdGU=",
@@ -15,7 +15,21 @@
     }
   },
   "generators": {
-    "@nrwl/angular": {
+    "@nx/angular:application": {
+      "style": "less",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "none"
+    },
+    "@nx/angular:library": {
+      "style": "less",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nx/angular:component": {
+      "style": "less"
+    },
+    "@nx/angular": {
       "application": {
         "linter": "eslint"
       },
@@ -25,20 +39,6 @@
       "storybook-configuration": {
         "linter": "eslint"
       }
-    },
-    "@nrwl/angular:application": {
-      "style": "less",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "none"
-    },
-    "@nrwl/angular:library": {
-      "style": "less",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "less"
     }
   },
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
