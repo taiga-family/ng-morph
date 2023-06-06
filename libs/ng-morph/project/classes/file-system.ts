@@ -7,7 +7,7 @@
  */
 
 import { UpdateRecorder } from './update-recorder';
-import { FileSystemHost } from 'ts-morph';
+import {FileSystemHost, RuntimeDirEntry} from 'ts-morph';
 import { basename, join } from 'path';
 import * as multimatch from 'multimatch';
 import { DevkitFileSystem } from './devkit-file-system';
@@ -101,7 +101,7 @@ export class NgCliFileSystem implements FileSystemHost {
       const paths = this.readDirSync(srcPath);
 
       paths.forEach((path) =>
-        this.copySync(path, join(destPath, basename(path)))
+        this.copySync(path.name, join(destPath, basename(path.name)))
       );
     }
   }
@@ -172,12 +172,24 @@ export class NgCliFileSystem implements FileSystemHost {
     this.deleteSync(srcPath);
   }
 
-  readDirSync(dirPath: string): string[] {
+  readDirSync(dirPath: string): RuntimeDirEntry[] {
     const { directories, files } = this.fs.readDirectory(
       dirPath as WorkspacePath
     );
 
-    return [...directories, ...files];
+    return directories.map((name) => ({
+      name,
+      isFile: false,
+      isDirectory: true,
+      isSymlink: false,
+    })).concat(
+      files.map((name) => ({
+        name,
+        isFile: true,
+        isDirectory: false,
+        isSymlink: false,
+      }))
+    )
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

@@ -1,7 +1,7 @@
-import { coerceArray, StructureEditor } from 'ng-morph/utils';
-import { Node, OptionalKind, Structure } from 'ts-morph';
-import { StructuredStatement } from '../types/structured-statement';
-import { StructureType } from 'ng-morph/utils/types/structure-type';
+import {coerceArray, StructureEditor} from 'ng-morph/utils';
+import {ClassDeclaration, OptionalKind, Structure, Node} from 'ts-morph';
+import {StructuredStatement} from '../types/structured-statement';
+import {StructureType} from 'ng-morph/utils/types/structure-type';
 
 export function getDeclarationEditor<
   Declaration extends StructuredStatement<Declaration>,
@@ -14,14 +14,15 @@ export function getDeclarationEditor<
     coerceArray(declarations).forEach((declaration) => {
       const newStructure: Structures = Object.assign(
         declaration.getStructure(),
+        // @ts-ignore
         editor(declaration.getStructure(), declaration)
-      );
+      ) as Structures;
 
       // todo: see https://github.com/dsherret/ts-morph/issues/882
       // if the issue is resolved code will be remove
       if (
         Structure.hasName(newStructure) &&
-        Node.isRenameableNode(declaration)
+        Node.isRenameable(declaration)
       ) {
         declaration.rename(newStructure.name);
         delete newStructure.name;

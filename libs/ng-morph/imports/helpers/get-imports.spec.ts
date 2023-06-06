@@ -7,6 +7,7 @@ import {
   setActiveProject,
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
+import {ImportDeclaration, StructureKind} from "ts-morph";
 
 describe('getImports', () => {
   let host: UnitTestTree;
@@ -54,11 +55,12 @@ import b from 'd';
     expect(imports.map((i) => i.getStructure())).toEqual([
       {
         isTypeOnly: false,
-        kind: 14,
+        kind: StructureKind.ImportDeclaration,
         moduleSpecifier: 'd',
         namedImports: [
           {
-            kind: 15,
+            "isTypeOnly": false,
+            kind: StructureKind.ImportSpecifier,
             name: 'c',
           },
         ],

@@ -43,8 +43,8 @@ export class SomeModule {
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({
-        exports: [TestModule]
-    })
+    exports: [TestModule]
+})
 export class SomeModule {
 
 }`);

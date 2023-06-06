@@ -45,8 +45,8 @@ export class SomeDirective {
         .toStrictEqual(`import { Component } from '@angular/core';
 
 @Directive({
-        providers: [TestProvider]
-    })
+    providers: [TestProvider]
+})
 export class SomeDirective {
 
 }`);

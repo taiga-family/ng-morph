@@ -45,8 +45,8 @@ export class SomeComponent {
         .toStrictEqual(`import { Component } from '@angular/core';
 
 @Component({
-        styleUrls: ["./style.less"]
-    })
+    styleUrls: ["./style.less"]
+})
 export class SomeComponent {
 
 }`);
