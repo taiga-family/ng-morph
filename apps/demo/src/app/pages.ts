@@ -68,4 +68,10 @@ export const pages: TuiDocPages = [
     keywords: 'files, file, system, tree, typescript',
     route: 'source-files',
   },
+  {
+    section: `Examples`,
+    title: `@Inject -> inject migration`,
+    keywords: 'example, DI, decorators',
+    route: 'inject-sample',
+  },
 ];

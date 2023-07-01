@@ -2,7 +2,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 const code = `import {
     getBootstrapFn
+    setActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 const bootstrapFn = getBootstrapFn('src/main.ts');
 `;

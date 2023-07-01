@@ -5,7 +5,11 @@ const code = `import {
     editEnums,
     getEnums,
     removeEnums,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addEnums('some/path/file.ts', [
     {
@@ -26,6 +30,8 @@ editEnums(declarations, () => ({
 }));
 
 removeEnums(declarations);
+
+saveActiveProject();
 `;
 
 @Component({

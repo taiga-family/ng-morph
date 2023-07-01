@@ -1,8 +1,10 @@
 # <img src="apps/demo/src/assets/images/ng-morph.png" alt="logo" width="48px"> ng-morph
 
 [![npm version](https://img.shields.io/npm/v/ng-morph.svg)](https://npmjs.com/package/ng-morph)
+[![downloads](https://img.shields.io/npm/dy/ng-morph?color=dark-green)](https://npmjs.com/package/ng-morph)
+[![telegram chat](https://img.shields.io/badge/support-Contact%20us-blue)](https://t.me/taiga_ui)
 
-Code mutations in schematics were never easier than now.
+Code mutations were never easier than now.
 
 ```
 npm i --save-dev ng-morph
@@ -12,9 +14,12 @@ You also need `@angular-devkit/core` and `@angular-devkit/schematics` to be inst
 
 ## What is it?
 
-It is a large set of tools that speeds up your work with Angular schematics. It has [ts-morph](https://ts-morph.com/) under the hood and allows you to manipulate with safe TypeScript AST.
+It is a large set of tools for both global code base
+updates in your project and speeding up your work on Angular schematics. It has [ts-morph](https://ts-morph.com/) under the hood and allows you to manipulate with safe TypeScript AST.
 
 ## Why is it better than default schematics?
+
+🦅 You can quickly write migrations for your own project and run it as a simple script
 
 🛠 There are many tools made for working with Angular. You can easily find and manipulate TS and Ng entities.
 
@@ -25,6 +30,45 @@ So, you can test your schematics rapidly fast.
 ## How to start
 
 Install the package and visit our [documentation](https://tinkoff.github.io/ng-morph)
+
+For example, this is how `ng-morph` setup looks for migrating your own project:
+
+```typescript
+import {
+  setActiveProject,
+  createProject,
+  getImports,
+  NgMorphTree,
+} from 'ng-morph';
+
+/**
+ * set all ng-morph functions to work with the all TS and JSON files
+ * of the current project
+ * */
+setActiveProject(
+  createProject(new NgMorphTree(), '/', ['**/*.ts', '**/*.json'])
+);
+
+/**
+ * This simple migration gets all imports from the project TS files and
+ * replaces 'old' substring with 'new'
+ * */
+const imports = getImports('some/path/**.ts', {
+  moduleSpecifier: '@morph-old*',
+});
+
+editImports(imports, (importEntity) => ({
+  moduleSpecifier: importEntity.moduleSpecifier.replace('old', 'new'),
+}));
+
+/**
+ * All changes are made in a virtual project.
+ * You can save them when it is time
+ * */
+saveActiveProject();
+```
+
+You can check it out on [Stackblitz playground](https://stackblitz.com/edit/ts-angular-13-web-container-starter-nzd2ew?file=ng-morph-scripts%2Fscript.ts,src%2Fapp%2Fapp.component.ts)
 
 ## Core team
 
@@ -98,6 +142,9 @@ Install the package and visit our [documentation](https://tinkoff.github.io/ng-m
     </tr>
 
 </table>
+
+ng-morph is a part of [Taiga UI](https://github.com/Tinkoff/taiga-ui) libraries family which is backed and used by a
+large enterprise. This means you can rely on timely support and continuous development.
 
 ## License
 

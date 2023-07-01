@@ -3,7 +3,11 @@ export const METHODS_SAMPLES = `import {
     getMethods,
     editMethods,
     removeMethods,
-} from 'ng-morph/project';
+    setActiveProject,
+    saveActiveProject,
+} from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addMethods(getClasses('some/path/file.ts', { name: 'B' }), {
     name: 'test',
@@ -22,4 +26,6 @@ editMethods(declarations, ({ isAsync }) => ({
 }));
 
 removeMethods(declarations);
+
+saveActiveProject();
 `;

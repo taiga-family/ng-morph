@@ -3,7 +3,11 @@ export const ACCESSORS_SAMPLES = `import {
     getAccessors,
     editAccessors,
     removeAccessors,
-} from 'ng-morph/project';
+    setActiveProject,
+    saveActiveProject,
+} from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addAccessors(getClasses('some/path/file.ts'), [
     {
@@ -22,4 +26,6 @@ editAccessors(declarations, () => ({
 }));
 
 removeAccessors(declarations);
+
+saveActiveProject();
 `;

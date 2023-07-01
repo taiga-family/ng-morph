@@ -25,7 +25,7 @@ describe('NgMorphTree', () => {
   it('should read from fs', () => {
     expect(getSourceFile('/ng-morph-tree.ts')?.getFullText())
       .toStrictEqual(`import { HostSink, HostTree } from '@angular-devkit/schematics';
-import { ScopedHost } from '@angular-devkit/core/src/virtual-fs/host';
+import { ScopedHost } from '@angular-devkit/core/src/virtual-fs/host/scoped';
 import { NodeJsSyncHost } from '@angular-devkit/core/node';
 import { normalize } from '@angular-devkit/core';
 

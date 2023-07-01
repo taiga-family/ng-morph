@@ -5,7 +5,11 @@ const interfaces = `import {
     editInterfaces,
     getInterfaces,
     removeInterfaces,
+    setActiveProject,
+    saveActiveProject,
 } from 'ng-morph';
+
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
 addInterfaces('some/path/file.ts', {
     name: 'A',
@@ -20,6 +24,8 @@ editInterfaces(declarations, () => ({
 }));
 
 removeInterfaces(declarations);
+
+saveActiveProject();
 `;
 
 @Component({
