@@ -45,8 +45,8 @@ export class SomeComponent {
         .toStrictEqual(`import { Component } from '@angular/core';
 
 @Component({
-        imports: [TestImport]
-    })
+    imports: [TestImport]
+})
 export class SomeComponent {
 
 }`);
