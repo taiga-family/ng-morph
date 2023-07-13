@@ -1,9 +1,5 @@
 import { arrayFlat, coerceArray, matchQuery, Query } from 'ng-morph/utils';
-import {
-  FunctionLikeDeclaration,
-  ParameterDeclaration,
-  ParameterDeclarationStructure,
-} from 'ts-morph';
+import { FunctionLikeDeclaration, ParameterDeclaration, ParameterDeclarationStructure, } from 'ts-morph';
 
 export function getParams(
   functionsLike: FunctionLikeDeclaration | FunctionLikeDeclaration[],

@@ -1,4 +1,4 @@
-import {minimatch} from 'minimatch';
+import { minimatch } from 'minimatch';
 import { coerceArray } from 'ng-morph/utils';
 import { Structure, WriterFunction } from 'ts-morph';
 

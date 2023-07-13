@@ -1,7 +1,7 @@
-import {coerceArray, StructureEditor} from 'ng-morph/utils';
-import {ClassDeclaration, OptionalKind, Structure, Node} from 'ts-morph';
-import {StructuredStatement} from '../types/structured-statement';
-import {StructureType} from 'ng-morph/utils/types/structure-type';
+import { coerceArray, StructureEditor } from 'ng-morph/utils';
+import { Node, OptionalKind, Structure } from 'ts-morph';
+import { StructuredStatement } from '../types/structured-statement';
+import { StructureType } from 'ng-morph/utils/types/structure-type';
 
 export function getDeclarationEditor<
   Declaration extends StructuredStatement<Declaration>,
@@ -14,6 +14,8 @@ export function getDeclarationEditor<
     coerceArray(declarations).forEach((declaration) => {
       const newStructure: Structures = Object.assign(
         declaration.getStructure(),
+        // TODO: refactor it to support new typings
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         editor(declaration.getStructure(), declaration)
       ) as Structures;

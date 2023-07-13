@@ -1,6 +1,6 @@
 import { StructuredStatement } from '../types/structured-statement';
 import { StructureType } from '../types/structure-type';
-import { OptionalKind} from 'ts-morph';
+import { OptionalKind } from 'ts-morph';
 import { FilterPrimitive } from '../types/filter-primitive';
 
 export type StructureEditor<

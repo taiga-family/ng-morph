@@ -1,8 +1,8 @@
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {TuiAddonDocModule, tuiGenerateRoutes} from '@taiga-ui/addon-doc';
-import {TuiLinkModule} from '@taiga-ui/core';
-import {ClassesComponent} from './classes.component';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { TuiAddonDocModule, tuiGenerateRoutes } from '@taiga-ui/addon-doc';
+import { TuiLinkModule } from '@taiga-ui/core';
+import { ClassesComponent } from './classes.component';
 
 @NgModule({
   imports: [

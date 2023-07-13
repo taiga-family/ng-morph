@@ -1,11 +1,6 @@
 import { UnitTestTree } from '@angular-devkit/schematics/testing';
 import { HostTree } from '@angular-devkit/schematics';
-import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
-} from 'ng-morph/project';
+import { createProject, resetActiveProject, saveActiveProject, setActiveProject, } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
 import { getDecorators } from './get-decorators';
 import { editDecorators } from './edit-decorators';

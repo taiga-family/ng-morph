@@ -7,7 +7,7 @@
  */
 
 import { UpdateRecorder } from './update-recorder';
-import {FileSystemHost, RuntimeDirEntry} from 'ts-morph';
+import { FileSystemHost, RuntimeDirEntry } from 'ts-morph';
 import { basename, join } from 'path';
 import * as multimatch from 'multimatch';
 import { DevkitFileSystem } from './devkit-file-system';

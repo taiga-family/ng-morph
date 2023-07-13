@@ -6,11 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {
-  normalize,
-  Path,
-  PathIsDirectoryException,
-} from '@angular-devkit/core';
+import { normalize, Path, PathIsDirectoryException, } from '@angular-devkit/core';
 import { Tree, UpdateRecorder } from '@angular-devkit/schematics';
 import * as path from 'path';
 import { DirectoryEntry, FileSystem } from './file-system';

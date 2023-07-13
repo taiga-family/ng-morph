@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { tuiGenerateRoutes, TuiAddonDocModule } from '@taiga-ui/addon-doc';
+import { TuiAddonDocModule, tuiGenerateRoutes } from '@taiga-ui/addon-doc';
 import { TuiLinkModule } from '@taiga-ui/core';
 import { InjectSampleComponent } from './inject-sample.component';
 
