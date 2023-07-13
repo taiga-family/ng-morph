@@ -20,7 +20,7 @@
       }
     },
     "build": {
-      "executor": "@nx/node:package",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ng-morph",
