@@ -6,7 +6,7 @@
     "ng": "ng",
     "nx": "nx",
     "start": "nx run-many --target serve --parallel --all",
-    "build": "nx affected --target build --configuration production --with-deps",
+    "build": "nx affected --target build --configuration production",
     "build:demo": "nx build demo",
     "postbuild:demo": "cp ./dist/apps/demo/index.html ./dist/apps/demo/404.html",
     "release": "nx affected --target release",
