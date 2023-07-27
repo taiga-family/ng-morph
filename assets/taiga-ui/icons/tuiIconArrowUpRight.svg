@@ -1,5 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false"><g id="tuiIconArrowUpRight" xmlns="http://www.w3.org/2000/svg" transform="translate(-8,-8)"><svg x="50%" y="50%"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 12L12 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M5 4L12 4L12 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+  <g id="tuiIconArrowUpRight" xmlns="http://www.w3.org/2000/svg">
+    <svg x="50%" y="50%" width="1em" height="1em" overflow="visible" viewBox="0 0 16 16">
+      <svg x="-8" y="-8">
+        <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+          <line x1="7" y1="17" x2="17" y2="7" />
+          <polyline points="7 7 17 7 17 17" />
+        </svg>
+      </svg>
+    </svg>
+  </g>
 </svg>
-</svg></g></svg>
