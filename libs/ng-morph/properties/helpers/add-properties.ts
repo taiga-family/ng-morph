@@ -1,8 +1,4 @@
-import {
-  ClassDeclaration,
-  OptionalKind,
-  PropertyDeclarationStructure,
-} from 'ts-morph';
+import { ClassDeclaration, OptionalKind, PropertyDeclarationStructure, } from 'ts-morph';
 import { coerceArray } from 'ng-morph/utils';
 
 export function addProperties(

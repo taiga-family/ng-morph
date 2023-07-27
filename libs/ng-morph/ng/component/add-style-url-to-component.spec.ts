@@ -1,10 +1,6 @@
 import { UnitTestTree } from '@angular-devkit/schematics/testing';
 import { HostTree } from '@angular-devkit/schematics';
-import {
-  createProject,
-  saveActiveProject,
-  setActiveProject,
-} from 'ng-morph/project';
+import { createProject, saveActiveProject, setActiveProject, } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
 import { addStyleUrlToComponent } from './add-style-url-to-component';
 import { getClasses } from 'ng-morph/classes';
@@ -45,8 +41,8 @@ export class SomeComponent {
         .toStrictEqual(`import { Component } from '@angular/core';
 
 @Component({
-        styleUrls: ["./style.less"]
-    })
+    styleUrls: ["./style.less"]
+})
 export class SomeComponent {
 
 }`);

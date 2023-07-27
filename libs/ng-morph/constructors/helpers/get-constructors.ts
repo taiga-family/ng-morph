@@ -1,9 +1,5 @@
 import { arrayFlat, coerceArray, matchQuery, Query } from 'ng-morph/utils';
-import {
-  ClassDeclaration,
-  ConstructorDeclaration,
-  ConstructorDeclarationStructure,
-} from 'ts-morph';
+import { ClassDeclaration, ConstructorDeclaration, ConstructorDeclarationStructure, } from 'ts-morph';
 
 export function getConstructors(
   classes: ClassDeclaration | ClassDeclaration[],

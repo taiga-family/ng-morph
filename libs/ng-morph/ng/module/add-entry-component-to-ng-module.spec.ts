@@ -1,10 +1,6 @@
 import { UnitTestTree } from '@angular-devkit/schematics/testing';
 import { HostTree } from '@angular-devkit/schematics';
-import {
-  createProject,
-  saveActiveProject,
-  setActiveProject,
-} from 'ng-morph/project';
+import { createProject, saveActiveProject, setActiveProject, } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
 import { getClasses } from 'ng-morph/classes';
 import { addEntryComponentToNgModule } from './add-entry-component-to-ng-module';
@@ -43,8 +39,8 @@ export class SomeModule {
         .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({
-        entryComponents: [TestComponent]
-    })
+    entryComponents: [TestComponent]
+})
 export class SomeModule {
 
 }`);

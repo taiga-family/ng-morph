@@ -1,9 +1,5 @@
 import { arrayFlat, coerceArray, matchQuery, Query } from 'ng-morph/utils';
-import {
-  ClassDeclaration,
-  PropertyDeclaration,
-  PropertyDeclarationStructure,
-} from 'ts-morph';
+import { ClassDeclaration, PropertyDeclaration, PropertyDeclarationStructure, } from 'ts-morph';
 
 export function getProperties<T extends ClassDeclaration>(
   classes: T | T[],

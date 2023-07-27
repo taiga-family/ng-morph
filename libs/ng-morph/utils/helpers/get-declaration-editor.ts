@@ -14,14 +14,17 @@ export function getDeclarationEditor<
     coerceArray(declarations).forEach((declaration) => {
       const newStructure: Structures = Object.assign(
         declaration.getStructure(),
+        // TODO: refactor it to support new typings
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         editor(declaration.getStructure(), declaration)
-      );
+      ) as Structures;
 
       // todo: see https://github.com/dsherret/ts-morph/issues/882
       // if the issue is resolved code will be remove
       if (
         Structure.hasName(newStructure) &&
-        Node.isRenameableNode(declaration)
+        Node.isRenameable(declaration)
       ) {
         declaration.rename(newStructure.name);
         delete newStructure.name;

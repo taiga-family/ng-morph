@@ -1,9 +1,5 @@
 import { coerceArray } from 'ng-morph/utils';
-import {
-  FunctionLikeDeclaration,
-  OptionalKind,
-  ParameterDeclarationStructure,
-} from 'ts-morph';
+import { FunctionLikeDeclaration, OptionalKind, ParameterDeclarationStructure, } from 'ts-morph';
 
 export function addParams(
   functionsLike: FunctionLikeDeclaration | FunctionLikeDeclaration[],

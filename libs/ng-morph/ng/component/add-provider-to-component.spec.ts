@@ -1,10 +1,6 @@
 import { UnitTestTree } from '@angular-devkit/schematics/testing';
 import { HostTree } from '@angular-devkit/schematics';
-import {
-  createProject,
-  saveActiveProject,
-  setActiveProject,
-} from 'ng-morph/project';
+import { createProject, saveActiveProject, setActiveProject, } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
 import { getClasses } from 'ng-morph/classes';
 import { addProviderToComponent } from './add-provider-to-component';
@@ -45,8 +41,8 @@ export class SomeComponent {
         .toStrictEqual(`import { Component } from '@angular/core';
 
 @Component({
-        providers: [TestProvider]
-    })
+    providers: [TestProvider]
+})
 export class SomeComponent {
 
 }`);

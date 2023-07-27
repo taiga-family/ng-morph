@@ -1,12 +1,9 @@
 import { UnitTestTree } from '@angular-devkit/schematics/testing';
 import { HostTree } from '@angular-devkit/schematics';
 import { getImports } from './get-imports';
-import {
-  createProject,
-  resetActiveProject,
-  setActiveProject,
-} from 'ng-morph/project';
+import { createProject, resetActiveProject, setActiveProject, } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
+import { StructureKind } from "ts-morph";
 
 describe('getImports', () => {
   let host: UnitTestTree;
@@ -54,11 +51,12 @@ import b from 'd';
     expect(imports.map((i) => i.getStructure())).toEqual([
       {
         isTypeOnly: false,
-        kind: 14,
+        kind: StructureKind.ImportDeclaration,
         moduleSpecifier: 'd',
         namedImports: [
           {
-            kind: 15,
+            "isTypeOnly": false,
+            kind: StructureKind.ImportSpecifier,
             name: 'c',
           },
         ],

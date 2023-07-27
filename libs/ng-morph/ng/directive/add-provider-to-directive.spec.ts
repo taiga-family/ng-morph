@@ -1,10 +1,6 @@
 import { UnitTestTree } from '@angular-devkit/schematics/testing';
 import { HostTree } from '@angular-devkit/schematics';
-import {
-  createProject,
-  saveActiveProject,
-  setActiveProject,
-} from 'ng-morph/project';
+import { createProject, saveActiveProject, setActiveProject, } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
 import { getClasses } from 'ng-morph/classes';
 import { addProviderToDirective } from './add-provider-to-directive';
@@ -45,8 +41,8 @@ export class SomeDirective {
         .toStrictEqual(`import { Component } from '@angular/core';
 
 @Directive({
-        providers: [TestProvider]
-    })
+    providers: [TestProvider]
+})
 export class SomeDirective {
 
 }`);

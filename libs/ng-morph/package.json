@@ -6,10 +6,10 @@
     "@angular-devkit/schematics": ">=11.0.0"
   },
   "dependencies": {
-    "minimatch": "3.0.5",
+    "minimatch": "9.0.1",
     "multimatch": "5.0.0",
-    "ts-morph": "10.0.2",
-    "jsonc-parser": "3.0.0"
+    "ts-morph": "19.0.0",
+    "jsonc-parser": "3.2.0"
   },
   "license": "Apache-2.0",
   "keywords": [

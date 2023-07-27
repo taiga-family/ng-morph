@@ -1,17 +1,11 @@
 {
-  "implicitDependencies": {
-    "angular.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
-    "tsconfig.base.json": "*",
-    "tslint.json": "*",
-    ".eslintrc.json": "*",
-    "nx.json": "*"
-  },
   "npmScope": "ng-morph",
-  "affected": { "defaultBase": "main" },
+  "affected": {
+    "defaultBase": "main"
+  },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/nx-cloud",
+      "runner": "nx-cloud",
       "options": {
         "cacheableOperations": ["build", "lint", "test"],
         "accessToken": "YWUxOTUxOWUtMDk5ZS00ZmIzLTk0ZDgtODE4M2QwYjIxN2M5fHJlYWQtd3JpdGU=",
@@ -20,5 +14,56 @@
       }
     }
   },
-  "projects": { "ng-morph": { "tags": [] }, "demo": { "tags": [] } }
+  "generators": {
+    "@nx/angular:application": {
+      "style": "less",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "none"
+    },
+    "@nx/angular:library": {
+      "style": "less",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nx/angular:component": {
+      "style": "less"
+    },
+    "@nx/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    }
+  },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "test": {
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
+    }
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": [
+      "{workspaceRoot}/angular.json",
+      "{workspaceRoot}/tsconfig.base.json",
+      "{workspaceRoot}/tslint.json",
+      "{workspaceRoot}/nx.json"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s"
+    ]
+  }
 }

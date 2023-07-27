@@ -2,12 +2,7 @@ import { UnitTestTree } from '@angular-devkit/schematics/testing';
 import { HostTree } from '@angular-devkit/schematics';
 import { dasherize } from '@angular-devkit/core/src/utils/strings';
 import { moveSourceFilePaths } from './move-source-file-paths';
-import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
-} from 'ng-morph/project';
+import { createProject, resetActiveProject, saveActiveProject, setActiveProject, } from 'ng-morph/project';
 import { createSourceFile, getSourceFiles } from 'ng-morph/source-file';
 
 describe('renameSourceFilePaths', () => {
