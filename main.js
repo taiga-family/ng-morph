@@ -26,7 +26,7 @@ AppComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ
   selectors: [["ng-morph-root"]],
   decls: 7,
   vars: 0,
-  consts: [["ngProjectAs", "tuiDocHeader", 5, ["tuiDocHeader"]], ["href", "https://www.npmjs.com/package/ng-morph", "target", "_blank", 1, "npm-link"], ["alt", "npm-link", "src", "https://img.shields.io/npm/dy/ng-morph?color=gainsboro&style=flat-square"], ["tuiLink", "", "tuiMode", "onLight", "href", "https://github.com/TinkoffCreditSystems/ng-morph", "target", "_blank", 1, "github-link"], ["src", "assets/images/github.svg", "alt", "", 1, "github"]],
+  consts: [["ngProjectAs", "tuiDocHeader", 5, ["tuiDocHeader"]], ["href", "https://www.npmjs.com/package/ng-morph", "target", "_blank", 1, "npm-link"], ["alt", "npm-link", "src", "https://img.shields.io/npm/dy/ng-morph?color=gainsboro&style=flat-square"], ["tuiLink", "", "tuiMode", "onLight", "href", "https://github.com/taiga-family/ng-morph", "target", "_blank", 1, "github-link"], ["src", "assets/images/github.svg", "alt", "", 1, "github"]],
   template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-main");
@@ -284,7 +284,7 @@ GettingStartedComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MOD
   selectors: [["getting-started"]],
   decls: 83,
   vars: 3,
-  consts: [["header", "Getting started"], ["tuiLink", "", "href", "https://ts-morph.com/"], ["code", "npm i --save-dev ng-morph"], ["filename", "script.ts", 3, "code"], ["tuiLink", "", "href", "https://www.npmjs.com/package/ts-node", "target", "_blank"], ["tuiLink", "", "href", "https://angular.io/guide/schematics-for-libraries#define-the-rule", "target", "_blank"], ["filename", "ng-add.ts", 3, "code"], ["filename", "ng-add.spec.ts", 3, "code"], ["tuiLink", "", "href", "https://github.com/TinkoffCreditSystems/ng-morph", "target", "_blank"], ["tuiLink", "", "routerLink", "/classes"]],
+  consts: [["header", "Getting started"], ["tuiLink", "", "href", "https://ts-morph.com/"], ["code", "npm i --save-dev ng-morph"], ["filename", "script.ts", 3, "code"], ["tuiLink", "", "href", "https://www.npmjs.com/package/ts-node", "target", "_blank"], ["tuiLink", "", "href", "https://angular.io/guide/schematics-for-libraries#define-the-rule", "target", "_blank"], ["filename", "ng-add.ts", 3, "code"], ["filename", "ng-add.spec.ts", 3, "code"], ["tuiLink", "", "href", "https://github.com/taiga-family/ng-morph", "target", "_blank"], ["tuiLink", "", "routerLink", "/classes"]],
   template: function GettingStartedComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-page", 0)(1, "p")(2, "strong");
