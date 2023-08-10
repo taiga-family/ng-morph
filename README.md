@@ -29,7 +29,7 @@ So, you can test your schematics rapidly fast.
 
 ## How to start
 
-Install the package and visit our [documentation](https://tinkoff.github.io/ng-morph)
+Install the package and visit our [documentation](https://taiga-family.github.io/ng-morph)
 
 For example, this is how `ng-morph` setup looks for migrating your own project:
 
@@ -143,7 +143,7 @@ You can check it out on [Stackblitz playground](https://stackblitz.com/edit/ts-a
 
 </table>
 
-ng-morph is a part of [Taiga UI](https://github.com/Tinkoff/taiga-ui) libraries family which is backed and used by a
+ng-morph is a part of [Taiga UI](https://github.com/taiga-family/taiga-ui) libraries family which is backed and used by a
 large enterprise. This means you can rely on timely support and continuous development.
 
 ## License
