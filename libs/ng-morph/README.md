@@ -29,7 +29,7 @@ So, you can test your schematics rapidly fast.
 
 ## How to start
 
-Install the package and visit our [documentation](https://tinkoff.github.io/ng-morph)
+Install the package and visit our [documentation](https://taiga-family.github.io/ng-morph)
 
 For example, this is how `ng-morph` setup looks for migrating your own project:
 
