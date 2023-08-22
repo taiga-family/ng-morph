@@ -66,7 +66,7 @@
     "@ng-builders/semrel": "^1.4.0",
     "@nx/eslint-plugin": "16.3.2",
     "@nx/jest": "16.3.2",
-    "@nx/linter": "16.3.2",
+    "@nx/linter": "16.7.2",
     "@nx/node": "16.3.2",
     "@nx/workspace": "16.3.2",
     "@schematics/angular": "16.0.4",
