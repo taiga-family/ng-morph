@@ -1,7 +1,7 @@
 import { CallExpression, Node, SyntaxKind } from "ts-morph";
 import { getImports } from "ng-morph/imports";
 
-export function getBootstrapApplicationFn(mainFilePath: string): CallExpression {
+export function getBootstrapApplicationFn(mainFilePath: string): CallExpression | undefined {
   const [bootstrapApplicationImport] = getImports(mainFilePath, {
     moduleSpecifier: '@angular/platform-browser',
   });
