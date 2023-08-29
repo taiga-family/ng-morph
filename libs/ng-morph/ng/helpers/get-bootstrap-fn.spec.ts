@@ -12,7 +12,9 @@ describe('getBootstrapFn', () => {
     host = new UnitTestTree(new HostTree());
 
     setActiveProject(createProject(host));
+  });
 
+  it('should find the bootstrap function', () => {
     createSourceFile(
       'src/main.ts',
       `import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
@@ -27,14 +29,18 @@ platformBrowserDynamic()
   .bootstrapModule(AppModule)
   .catch(err => console.log(err));
 `
-    );
-  });
-
-  it('should find the bootstrap function', () => {
+    )
     const bootstrapFn = getBootstrapFn('src/main.ts');
 
     expect(bootstrapFn.getText()).toEqual(`platformBrowserDynamic()
   .bootstrapModule(AppModule)`);
     expect(Node.isCallExpression(bootstrapFn)).toEqual(true);
   });
+
+  it('should return undefined if bootstrap function is not found', () => {
+    createSourceFile('src/main.ts', '');
+    const bootstrapFn = getBootstrapFn('src/main.ts');
+
+    expect(bootstrapFn).toBeUndefined();
+  })
 });

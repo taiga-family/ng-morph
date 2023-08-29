@@ -1,23 +1,20 @@
-import { CallExpression, Node } from 'ts-morph';
+import { CallExpression, Node, SyntaxKind } from 'ts-morph';
 import { getImports } from 'ng-morph/imports';
-import { getActiveProject } from 'ng-morph/project';
 
-export function getBootstrapFn(mainFilePath: string): CallExpression {
+export function getBootstrapFn(mainFilePath: string): CallExpression | undefined {
   const [platformBrowserImport] = getImports(mainFilePath, {
     moduleSpecifier: '@angular/platform-browser-dynamic',
   });
 
   const namedImport = platformBrowserImport
-    .getNamedImports()
+    ?.getNamedImports()
     .find((imp) => imp.getName() === 'platformBrowserDynamic');
 
-  const refs = getActiveProject()
-    .getLanguageService()
-    .findReferencesAsNodes(namedImport);
-
-  return refs
+  return namedImport
+    ?.getNameNode()
+    .findReferencesAsNodes()
     .find((ref) => Node.isCallExpression(ref.getParent()))
-    .getParent()
-    .getParent()
-    .getParent() as CallExpression;
+    ?.getParentIfKind(SyntaxKind.CallExpression)
+    ?.getParentIfKind(SyntaxKind.PropertyAccessExpression)
+    ?.getParentIfKind(SyntaxKind.CallExpression)
 }
