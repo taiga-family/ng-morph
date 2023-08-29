@@ -1,5 +1,26 @@
 <tui-doc-page header="Get bootstrap function">
-  <p>Finds a bootstrap function of Angular application with a path pattern</p>
+  <section>
+    <h2>Module Application</h2>
 
-  <tui-doc-code filename="migration.ts" [code]="code"></tui-doc-code>
+    <p>Finds a bootstrap function of Angular application with a path pattern</p>
+
+    <tui-doc-code filename="migration.ts" [code]="bootstrap"></tui-doc-code>
+  </section>
+
+  <section>
+    <h2>Standalone Application</h2>
+
+    <p>Finds a bootstrap application function with a path pattern</p>
+
+    <tui-doc-code filename="migration.ts" [code]="bootstrapApplication"></tui-doc-code>
+  </section>
+
+  <section>
+    <h2>Add providers to standalone Application</h2>
+
+    <p>To add providers to standalone application you need to use <code>addProviderToBootstrapApplicationFn</code> function</p>
+
+    <tui-doc-code filename="migration.ts" [code]="addProviders"></tui-doc-code>
+  </section>
+
 </tui-doc-page>
