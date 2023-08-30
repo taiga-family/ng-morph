@@ -4,6 +4,8 @@ import { createProject, setActiveProject } from "ng-morph/project";
 import { createSourceFile } from "ng-morph/source-file";
 import { getBootstrapApplicationFn } from "ng-morph/ng";
 import { addProviderToBootstrapApplicationFn } from "./add-provider-to-bootstrap-application-fn";
+import { getVariables } from "ng-morph/variables";
+import { VariableDeclarationStructure } from "ts-morph";
 
 describe('addProviderToBootstrapApplicationFn', () => {
   let host: UnitTestTree;
@@ -61,4 +63,23 @@ bootstrapApplication(AppComponent, {providers: [provideApp()]})
 
     expect(bootstrapFn.getText()).toEqual(`bootstrapApplication(AppComponent, {providers: [provideApp()]})`);
   })
+
+  it('should add provider to variable that used for bootstrapApplication', () => {
+    createSourceFile(
+      'src/main.ts',
+      `import {bootstrapApplication} from '@angular/platform-browser';
+import {AppComponent} from './app/app.component';
+
+const options = {providers: [provideApp()]};
+
+bootstrapApplication(AppComponent, options)
+`
+    )
+    const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
+    const [options] = getVariables('src/main.ts')[0].getDeclarations();
+
+    addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp2()');
+
+    expect(options.getText()).toEqual(`options = {providers: [provideApp(), provideApp2()]}`);
+  });
 })

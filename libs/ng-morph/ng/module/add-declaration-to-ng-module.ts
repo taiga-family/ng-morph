@@ -1,12 +1,12 @@
 import { ClassDeclaration } from 'ts-morph';
-import { pushToArrayProperty } from '../helpers/push-to-array-property';
+import { pushToDecoratorArrayProperty } from '../helpers/push-to-decorator-array-property';
 
 export function addDeclarationToNgModule(
   classDeclaration: ClassDeclaration,
   declaration: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToArrayProperty(
+  pushToDecoratorArrayProperty(
     classDeclaration,
     'NgModule',
     'declarations',

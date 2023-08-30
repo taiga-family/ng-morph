@@ -1,7 +1,7 @@
-import { Node } from "ts-morph";
+import { Node, ObjectLiteralExpression } from "ts-morph";
 
-export function pushToObjectArgument(
-  argument: Node,
+export function pushToObjectLiteralArrayProperty(
+  objectLiteral: ObjectLiteralExpression,
   propertyName: string,
   initializer: string,
   {
@@ -9,13 +9,9 @@ export function pushToObjectArgument(
     forceToArray = false,
   }: { unique?: boolean; forceToArray?: boolean } = {}
 ) {
-  if (!Node.isObjectLiteralExpression(argument)) {
-    return;
-  }
-
   const property =
-    argument.getProperty(propertyName) ??
-    argument.addProperty(`${propertyName}: []`);
+    objectLiteral.getProperty(propertyName) ??
+    objectLiteral.addProperty(`${propertyName}: []`);
 
   if (!Node.isPropertyAssignment(property)) {
     return;

@@ -1,12 +1,12 @@
 import { ClassDeclaration } from 'ts-morph';
-import { pushToArrayProperty } from '../helpers/push-to-array-property';
+import { pushToDecoratorArrayProperty } from '../helpers/push-to-decorator-array-property';
 
 export function addStyleUrlToComponent(
   classDeclaration: ClassDeclaration,
   styleUrl: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToArrayProperty(classDeclaration, 'Component', 'styleUrls', styleUrl, {
+  pushToDecoratorArrayProperty(classDeclaration, 'Component', 'styleUrls', styleUrl, {
     unique,
   });
 }

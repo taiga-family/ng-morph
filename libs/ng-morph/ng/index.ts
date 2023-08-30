@@ -1,5 +1,4 @@
-export * from './helpers/get-main-module';
-
+export * from './helpers';
 export * from './bootstrap';
 export * from './module';
 export * from './component';

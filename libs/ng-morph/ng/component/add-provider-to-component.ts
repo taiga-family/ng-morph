@@ -1,12 +1,12 @@
 import { ClassDeclaration } from 'ts-morph';
-import { pushToArrayProperty } from '../helpers/push-to-array-property';
+import { pushToDecoratorArrayProperty } from '../helpers/push-to-decorator-array-property';
 
 export function addProviderToComponent(
   classDeclaration: ClassDeclaration,
   provider: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToArrayProperty(classDeclaration, 'Component', 'providers', provider, {
+  pushToDecoratorArrayProperty(classDeclaration, 'Component', 'providers', provider, {
     unique,
     forceToArray: true,
   });
