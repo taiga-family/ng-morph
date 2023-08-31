@@ -1,5 +1,5 @@
 import { ClassDeclaration, Identifier } from 'ts-morph';
-import { getBootstrapFn } from 'ng-morph/ng/helpers/get-bootstrap-fn';
+import { getBootstrapFn } from 'ng-morph/ng/bootstrap/get-bootstrap-fn';
 
 export function getMainModule(mainFilePath: string): ClassDeclaration {
   const bootstrapFn = getBootstrapFn(mainFilePath);
