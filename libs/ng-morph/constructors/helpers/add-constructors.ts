@@ -9,7 +9,7 @@ export function addConstructors(
   classes: ClassDeclaration | ClassDeclaration[],
   constructors:
     | OptionalKind<ConstructorDeclarationStructure>
-    | OptionalKind<ConstructorDeclarationStructure>[]
+    | OptionalKind<ConstructorDeclarationStructure>[],
 ): void {
   coerceArray(classes).forEach((klass) => {
     klass.addConstructors(coerceArray(constructors));

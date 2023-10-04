@@ -27,14 +27,14 @@ describe('addExportToModule', () => {
 @NgModule({})
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the imports property', () => {
       addExportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestModule',
       );
 
       saveActiveProject();
@@ -60,14 +60,14 @@ export class SomeModule {
 @NgModule()
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the exports property', () => {
       addExportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestModule',
       );
 
       saveActiveProject();
@@ -94,14 +94,14 @@ import { CommonModule } from '@angular/common';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should add module to exports', () => {
       addExportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestModule',
       );
 
       saveActiveProject();

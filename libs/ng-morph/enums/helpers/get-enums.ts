@@ -3,5 +3,5 @@ import { arrayFlat, getDeclarationGetter } from 'ng-morph/utils';
 import { EnumDeclaration } from 'ts-morph';
 
 export const getEnums = getDeclarationGetter<EnumDeclaration>((pattern) =>
-  arrayFlat(getSourceFiles(pattern).map((file) => file.getEnums()))
+  arrayFlat(getSourceFiles(pattern).map((file) => file.getEnums())),
 );

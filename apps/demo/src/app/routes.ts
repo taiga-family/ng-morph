@@ -21,7 +21,7 @@ export const ROUTES: Route[] = [
     path: 'interfaces',
     loadChildren: () =>
       import('./modules/interfaces/interfaces.module').then(
-        (m) => m.InterfacesModule
+        (m) => m.InterfacesModule,
       ),
     data: {
       title: `Interfaces`,
@@ -31,7 +31,7 @@ export const ROUTES: Route[] = [
     path: 'variables',
     loadChildren: () =>
       import('./modules/variables/variables.module').then(
-        (m) => m.VariablesModule
+        (m) => m.VariablesModule,
       ),
     data: {
       title: `Variables`,
@@ -41,7 +41,7 @@ export const ROUTES: Route[] = [
     path: 'imports-and-exports',
     loadChildren: () =>
       import('./modules/imports-and-exports/imports-and-exports.module').then(
-        (m) => m.ImportsAndExportsModule
+        (m) => m.ImportsAndExportsModule,
       ),
     data: {
       title: `Imports and Exports`,
@@ -59,7 +59,7 @@ export const ROUTES: Route[] = [
     path: 'functions',
     loadChildren: () =>
       import('./modules/functions/functions.module').then(
-        (m) => m.FunctionsModule
+        (m) => m.FunctionsModule,
       ),
     data: {
       title: `Functions`,
@@ -77,7 +77,7 @@ export const ROUTES: Route[] = [
     path: 'get-main-module',
     loadChildren: () =>
       import('./modules/get-main-module/get-main-module.module').then(
-        (m) => m.GetMainModuleModule
+        (m) => m.GetMainModuleModule,
       ),
     data: {
       title: `Get main module`,
@@ -97,7 +97,7 @@ export const ROUTES: Route[] = [
     path: 'source-files',
     loadChildren: () =>
       import('./modules/source-files/source-files.module').then(
-        (m) => m.SourceFilesModule
+        (m) => m.SourceFilesModule,
       ),
     data: {
       title: `Source files`,
@@ -107,7 +107,7 @@ export const ROUTES: Route[] = [
     path: 'inject-sample',
     loadChildren: () =>
       import('./modules/inject-sample/inject-sample.module').then(
-        (m) => m.InjectSampleModule
+        (m) => m.InjectSampleModule,
       ),
     data: {
       title: `@Inject -> inject example`,

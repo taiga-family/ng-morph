@@ -23,7 +23,7 @@ describe('addAccessors', () => {
       'some/path/file.ts',
       `
 class A {}
-    `
+    `,
     );
   });
 

@@ -23,7 +23,7 @@ describe('getProperties', () => {
 class A {
   b = 1;
 }
-`
+`,
     );
 
     createSourceFile(
@@ -34,7 +34,7 @@ class B {
 
   static hello2 = 'hello';
 }
-`
+`,
     );
   });
 

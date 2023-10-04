@@ -11,7 +11,7 @@ export function addAccessors(
   accessors:
     | GetAccessorDeclarationStructure
     | SetAccessorDeclarationStructure
-    | Array<GetAccessorDeclarationStructure | SetAccessorDeclarationStructure>
+    | Array<GetAccessorDeclarationStructure | SetAccessorDeclarationStructure>,
 ): void {
   coerceArray(classes).forEach((klass) => {
     for (const accessor of coerceArray(accessors)) {

@@ -4,7 +4,7 @@ import { pushToDecoratorArrayProperty } from '../helpers/push-to-decorator-array
 export function addExportToNgModule(
   classDeclaration: ClassDeclaration,
   exportName: string,
-  { unique = false }: { unique?: boolean } = {}
+  { unique = false }: { unique?: boolean } = {},
 ) {
   pushToDecoratorArrayProperty(
     classDeclaration,
@@ -14,6 +14,6 @@ export function addExportToNgModule(
     {
       unique,
       forceToArray: true,
-    }
+    },
   );
 }

@@ -29,14 +29,14 @@ class B {
 class A {
   prop = 1;
 }
-`
+`,
     );
   });
 
   it('should remove methods', () => {
     const declarations = getProperties(
       getClasses('some/path/file.ts', { name: 'B' }),
-      { name: 'test' }
+      { name: 'test' },
     );
 
     removeProperties(declarations);

@@ -23,14 +23,14 @@ describe('addProviderToBootstrapApplicationFn', () => {
 import {AppComponent} from './app/app.component';
 
 bootstrapApplication(AppComponent)
-`
+`,
     );
     const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 
     addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp()');
 
     expect(bootstrapFn.getText()).toEqual(
-      `bootstrapApplication(AppComponent, {providers: [provideApp()]})`
+      `bootstrapApplication(AppComponent, {providers: [provideApp()]})`,
     );
   });
 
@@ -41,14 +41,14 @@ bootstrapApplication(AppComponent)
 import {AppComponent} from './app/app.component';
 
 bootstrapApplication(AppComponent, {providers: [provideApp()]})
-`
+`,
     );
     const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 
     addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp2()');
 
     expect(bootstrapFn.getText()).toEqual(
-      `bootstrapApplication(AppComponent, {providers: [provideApp(), provideApp2()]})`
+      `bootstrapApplication(AppComponent, {providers: [provideApp(), provideApp2()]})`,
     );
   });
 
@@ -59,7 +59,7 @@ bootstrapApplication(AppComponent, {providers: [provideApp()]})
 import {AppComponent} from './app/app.component';
 
 bootstrapApplication(AppComponent, {providers: [provideApp()]})
-`
+`,
     );
     const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 
@@ -68,7 +68,7 @@ bootstrapApplication(AppComponent, {providers: [provideApp()]})
     });
 
     expect(bootstrapFn.getText()).toEqual(
-      `bootstrapApplication(AppComponent, {providers: [provideApp()]})`
+      `bootstrapApplication(AppComponent, {providers: [provideApp()]})`,
     );
   });
 
@@ -81,7 +81,7 @@ import {AppComponent} from './app/app.component';
 const options = {providers: [provideApp()]};
 
 bootstrapApplication(AppComponent, options)
-`
+`,
     );
     const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
     const [options] = getVariables('src/main.ts')[0].getDeclarations();
@@ -89,7 +89,7 @@ bootstrapApplication(AppComponent, options)
     addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp2()');
 
     expect(options.getText()).toEqual(
-      `options = {providers: [provideApp(), provideApp2()]}`
+      `options = {providers: [provideApp(), provideApp2()]}`,
     );
   });
 });

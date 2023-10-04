@@ -27,14 +27,14 @@ describe('addImportToModule', () => {
 @NgModule({})
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the imports property', () => {
       addImportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestModule',
       );
 
       saveActiveProject();
@@ -60,14 +60,14 @@ export class SomeModule {
 @NgModule()
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the imports property', () => {
       addImportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestModule',
       );
 
       saveActiveProject();
@@ -94,14 +94,14 @@ import { CommonModule } from '@angular/common';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should add module to imports', () => {
       addImportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule.forRoot()'
+        'TestModule.forRoot()',
       );
 
       saveActiveProject();
@@ -131,7 +131,7 @@ import { CommonModule } from '@angular/common';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
@@ -139,7 +139,7 @@ export class SomeModule {
       addImportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'CommonModule',
-        { unique: true }
+        { unique: true },
       );
 
       saveActiveProject();
@@ -169,7 +169,7 @@ import { APP_IMPORTS } from './imports.ts';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
@@ -177,7 +177,7 @@ export class SomeModule {
       addImportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'CommonModule',
-        { unique: true }
+        { unique: true },
       );
 
       saveActiveProject();
@@ -208,14 +208,14 @@ import { ExistingModule } from 'test-package';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should add module to imports', () => {
       addImportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule'
+        'TestModule',
       );
 
       saveActiveProject();
@@ -237,7 +237,7 @@ export class SomeModule {
       addImportToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'TestModule',
-        { unique: true }
+        { unique: true },
       );
       saveActiveProject();
 

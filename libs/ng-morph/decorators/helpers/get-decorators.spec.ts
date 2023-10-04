@@ -37,7 +37,7 @@ class A {
   @SetDecorator([1, 3])
     set setAccessor(value){}
 }
-    `
+    `,
     );
 
     createSourceFile(
@@ -47,7 +47,7 @@ class A {
 class B {
   constructor(@Inject(TOKEN) value){}
 }
-    `
+    `,
     );
   });
 

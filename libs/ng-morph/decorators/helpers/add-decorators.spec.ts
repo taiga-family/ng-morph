@@ -38,7 +38,7 @@ class A {
 
   set setAccessor(value){}
 }
-    `
+    `,
     );
   });
 

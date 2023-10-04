@@ -59,7 +59,7 @@ export class NgMorphTree extends HostTree {
 
     expect(spy).toHaveBeenCalledWith(
       join(__dirname, '__file.ts'),
-      Uint8Array.from([99, 111, 110, 116, 101, 110, 116])
+      Uint8Array.from([99, 111, 110, 116, 101, 110, 116]),
     );
 
     spy.mockRestore();

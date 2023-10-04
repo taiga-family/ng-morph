@@ -32,7 +32,7 @@ export class JSONFile extends JSONFileContent {
   modify(
     jsonPath: JSONPath,
     value: JsonValue | undefined,
-    insertInOrder?: InsertionIndex | false
+    insertInOrder?: InsertionIndex | false,
   ): void {
     super.modify(jsonPath, value, insertInOrder);
     this.host.overwrite(this.path, this.content);

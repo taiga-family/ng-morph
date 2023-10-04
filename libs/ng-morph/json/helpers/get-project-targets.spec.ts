@@ -25,7 +25,7 @@ describe('get project targets', () => {
               root: '',
             },
           },
-        })
+        }),
       );
     });
 

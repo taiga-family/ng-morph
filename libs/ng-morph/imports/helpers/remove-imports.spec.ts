@@ -24,7 +24,7 @@ describe('removeImports', () => {
 import { a } from 'b';
 
 console.log(a);
-`
+`,
     );
   });
 

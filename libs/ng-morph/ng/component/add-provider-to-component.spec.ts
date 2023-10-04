@@ -27,7 +27,7 @@ describe('addProviderToComponent', () => {
 @Component({})
 export class SomeComponent {
 
-}`
+}`,
       );
     });
 
@@ -36,7 +36,7 @@ export class SomeComponent {
         getClasses('src/main.ts', {
           name: 'SomeComponent',
         })[0],
-        'TestProvider'
+        'TestProvider',
       );
 
       saveActiveProject();
@@ -62,7 +62,7 @@ export class SomeComponent {
 @Component()
 export class SomeComponent {
 
-}`
+}`,
       );
     });
 
@@ -71,7 +71,7 @@ export class SomeComponent {
         getClasses('src/main.ts', {
           name: 'SomeComponent',
         })[0],
-        'TestProvider'
+        'TestProvider',
       );
 
       saveActiveProject();
@@ -98,7 +98,7 @@ import { TestProvider } from '@angular/common';
 })
 export class SomeComponent {
 
-}`
+}`,
       );
     });
 
@@ -107,7 +107,7 @@ export class SomeComponent {
         getClasses('src/main.ts', {
           name: 'SomeComponent',
         })[0],
-        'NewTestProvider'
+        'NewTestProvider',
       );
 
       saveActiveProject();

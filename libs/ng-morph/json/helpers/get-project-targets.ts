@@ -5,7 +5,7 @@ import { JSONFile } from '../classes/json-file';
 
 export function getProjectTargets(
   host: Tree,
-  angularJsonPath: string = ANGULAR_PATH
+  angularJsonPath: string = ANGULAR_PATH,
 ): Map<string, WorkspaceProject> {
   const file = new JSONFile(host, angularJsonPath);
 
@@ -21,7 +21,7 @@ export function getProjectTargets(
 export function getProjectTarget(
   host: Tree,
   name: string,
-  angularJsonPath: string = ANGULAR_PATH
+  angularJsonPath: string = ANGULAR_PATH,
 ): WorkspaceProject | null {
   const file = new JSONFile(host, angularJsonPath);
 

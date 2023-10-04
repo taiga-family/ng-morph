@@ -27,14 +27,14 @@ describe('addBootstrapToModule', () => {
 @NgModule({})
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the declarations property', () => {
       addBootstrapToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
+        'TestComponent',
       );
 
       saveActiveProject();
@@ -60,14 +60,14 @@ export class SomeModule {
 @NgModule()
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the bootstrap property', () => {
       addBootstrapToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
+        'TestComponent',
       );
       saveActiveProject();
 
@@ -93,14 +93,14 @@ import { CommonModule } from '@angular/common';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should add component to bootstrap', () => {
       addBootstrapToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
+        'TestComponent',
       );
 
       saveActiveProject();

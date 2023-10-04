@@ -27,14 +27,14 @@ describe('addDeclarationToModule', () => {
 @NgModule({})
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the declarations property', () => {
       addDeclarationToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
+        'TestComponent',
       );
 
       saveActiveProject();
@@ -60,14 +60,14 @@ export class SomeModule {
 @NgModule()
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the declarations property', () => {
       addDeclarationToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
+        'TestComponent',
       );
 
       saveActiveProject();
@@ -94,14 +94,14 @@ import { CommonModule } from '@angular/common';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should add component to declarations', () => {
       addDeclarationToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestComponent'
+        'TestComponent',
       );
 
       saveActiveProject();

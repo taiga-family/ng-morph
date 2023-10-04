@@ -38,12 +38,12 @@ function versionSanitize(version: string): string {
 export function addPackageJsonDependency(
   tree: Tree,
   dependency: NodeDependency,
-  pkgJsonPath = PACKAGE_PATH
+  pkgJsonPath = PACKAGE_PATH,
 ): void {
   const { version: oldVersion } = getPackageJsonDependency(
     tree,
     dependency.name,
-    pkgJsonPath
+    pkgJsonPath,
   ) ?? { version: '0.0.0' };
 
   const {
@@ -69,7 +69,7 @@ export function addPackageJsonDependency(
 export function removePackageJsonDependency(
   tree: Tree,
   name: string,
-  pkgJsonPath = PACKAGE_PATH
+  pkgJsonPath = PACKAGE_PATH,
 ): void {
   const json = new JSONFile(tree, pkgJsonPath);
 
@@ -81,7 +81,7 @@ export function removePackageJsonDependency(
 export function getPackageJsonDependency(
   tree: Tree,
   name: string,
-  pkgJsonPath = PACKAGE_PATH
+  pkgJsonPath = PACKAGE_PATH,
 ): NodeDependency | null {
   const json = new JSONFile(tree, pkgJsonPath);
 

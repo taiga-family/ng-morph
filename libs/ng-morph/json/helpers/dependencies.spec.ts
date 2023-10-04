@@ -44,7 +44,7 @@ describe('dependencies', () => {
           addPackageJsonDependency(tree, dependency);
           const pkgJson = JSON.parse(tree.readContent(pkgJsonPath));
           expect(pkgJson[type.key][dependency.name]).toEqual(
-            dependency.version
+            dependency.version,
           );
         });
 
@@ -53,7 +53,7 @@ describe('dependencies', () => {
           addPackageJsonDependency(tree, { ...dependency, overwrite: true });
           const pkgJson = JSON.parse(tree.readContent(pkgJsonPath));
           expect(pkgJson[type.key][dependency.name]).toEqual(
-            dependency.version
+            dependency.version,
           );
         });
 
@@ -68,7 +68,7 @@ describe('dependencies', () => {
 
     it('should throw when missing package.json', () => {
       expect(() =>
-        addPackageJsonDependency(new EmptyTree(), dependency)
+        addPackageJsonDependency(new EmptyTree(), dependency),
       ).toThrow();
     });
   });
@@ -84,7 +84,7 @@ describe('dependencies', () => {
           },
         },
         null,
-        2
+        2,
       );
       tree = new UnitTestTree(new EmptyTree());
       tree.create(pkgJsonPath, pkgJsonContent);
@@ -100,7 +100,7 @@ describe('dependencies', () => {
     it('should return null if dependency does not exist', () => {
       const dep = getPackageJsonDependency(
         tree,
-        'missing-pkg'
+        'missing-pkg',
       ) as NodeDependency;
       expect(dep).toBeNull();
     });

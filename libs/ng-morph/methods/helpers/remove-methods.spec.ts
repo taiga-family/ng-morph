@@ -29,14 +29,14 @@ class B {
 class A {
   test(){}
 }
-`
+`,
     );
   });
 
   it('should remove methods', () => {
     const declarations = getMethods(
       getClasses('some/path/file.ts', { name: 'A' }),
-      { name: 'test' }
+      { name: 'test' },
     );
 
     removeMethods(declarations);

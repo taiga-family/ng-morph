@@ -55,7 +55,7 @@ function coerceName<T extends string>(name: T | { name: T }): T {
 
 export function matchQuery<T extends Structure>(
   value: T,
-  query?: Query<T>
+  query?: Query<T>,
 ): boolean {
   return (
     !query ||
@@ -68,7 +68,7 @@ export function matchQuery<T extends Structure>(
           return typeof v === 'string'
             ? patterns.some((pattern) => pattern && minimatch(v, pattern))
             : patterns.includes(v);
-        })
+        }),
     )
   );
 }

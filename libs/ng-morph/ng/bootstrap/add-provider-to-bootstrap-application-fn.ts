@@ -10,7 +10,7 @@ import { pushToObjectLiteralArrayProperty } from '../helpers/push-to-object-lite
 export function addProviderToBootstrapApplicationFn(
   callExpression: CallExpression,
   provider: string,
-  { unique = false }: { unique?: boolean } = {}
+  { unique = false }: { unique?: boolean } = {},
 ) {
   const [_, options = callExpression.addArgument(`{providers: []}`)] =
     callExpression.getArguments();
@@ -23,12 +23,12 @@ export function addProviderToBootstrapApplicationFn(
     getOptionsObject(options),
     'providers',
     provider,
-    { unique }
+    { unique },
   );
 }
 
 function getOptionsObject(
-  options: Identifier | ObjectLiteralExpression
+  options: Identifier | ObjectLiteralExpression,
 ): ObjectLiteralExpression {
   if (Node.isObjectLiteralExpression(options)) {
     return options;

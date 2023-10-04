@@ -24,7 +24,7 @@ describe('editImports', () => {
 import { a } from 'b';
 
 console.log(a);
-`
+`,
     );
   });
 

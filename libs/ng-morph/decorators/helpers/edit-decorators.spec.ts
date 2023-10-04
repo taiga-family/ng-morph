@@ -28,7 +28,7 @@ describe('editDecorators', () => {
 class A{
 
 }
-    `
+    `,
     );
   });
 

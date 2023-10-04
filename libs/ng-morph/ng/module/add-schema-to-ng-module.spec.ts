@@ -27,14 +27,14 @@ describe('addSchemaToModule', () => {
 @NgModule({})
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the schemas property', () => {
       addSchemaToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CUSTOM_ELEMENTS_SCHEMA'
+        'CUSTOM_ELEMENTS_SCHEMA',
       );
 
       saveActiveProject();
@@ -60,14 +60,14 @@ export class SomeModule {
 @NgModule()
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the schemas property', () => {
       addSchemaToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CUSTOM_ELEMENTS_SCHEMA'
+        'CUSTOM_ELEMENTS_SCHEMA',
       );
 
       saveActiveProject();
@@ -94,14 +94,14 @@ import { CommonModule } from '@angular/common';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should add module to schemas', () => {
       addSchemaToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CUSTOM_ELEMENTS_SCHEMA'
+        'CUSTOM_ELEMENTS_SCHEMA',
       );
 
       saveActiveProject();

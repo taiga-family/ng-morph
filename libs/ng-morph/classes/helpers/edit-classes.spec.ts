@@ -24,7 +24,7 @@ describe('editClasses', () => {
 class A {}
 
 const a: A;
-`
+`,
     );
   });
 

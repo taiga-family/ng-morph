@@ -42,7 +42,7 @@ export class JSONFileContent {
   modify(
     jsonPath: JSONPath,
     value: JsonValue | undefined,
-    insertInOrder?: InsertionIndex | false
+    insertInOrder?: InsertionIndex | false,
   ): void {
     let getInsertionIndex: InsertionIndex | undefined;
     if (insertInOrder === undefined) {
@@ -82,8 +82,8 @@ export class JSONFileContent {
       const { error, offset } = errors[0];
       throw new Error(
         `Failed to parse as JSON AST Object. ${printParseErrorCode(
-          error
-        )} at location: ${offset}.`
+          error,
+        )} at location: ${offset}.`,
       );
     }
 

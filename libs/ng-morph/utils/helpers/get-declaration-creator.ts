@@ -14,11 +14,11 @@ export function getDeclarationCreator<
     kind: StructureKind;
   } = Partial<Structure> & {
     kind: StructureKind;
-  }
+  },
 >(common: CommonStructure, { position = null }: { position?: number } = {}) {
   return function addDeclarations(
     pattern: Pattern,
-    structures: Structure | Structure[]
+    structures: Structure | Structure[],
   ) {
     const files = getSourceFiles(pattern);
 

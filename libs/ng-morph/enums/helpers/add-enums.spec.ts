@@ -21,7 +21,7 @@ describe('addEnums', () => {
       'some/path/file.ts',
       `
 console.log('Some log');
-`
+`,
     );
   });
 

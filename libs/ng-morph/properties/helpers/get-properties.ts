@@ -7,9 +7,9 @@ import {
 
 export function getProperties<T extends ClassDeclaration>(
   classes: T | T[],
-  query?: Query<PropertyDeclarationStructure>
+  query?: Query<PropertyDeclarationStructure>,
 ): PropertyDeclaration[] {
   return arrayFlat(
-    coerceArray(classes).map((klass) => klass.getProperties())
+    coerceArray(classes).map((klass) => klass.getProperties()),
   ).filter((method) => matchQuery(method.getStructure(), query));
 }

@@ -4,5 +4,5 @@ import { InterfaceDeclaration } from 'ts-morph';
 
 export const getInterfaces = getDeclarationGetter<InterfaceDeclaration>(
   (pattern) =>
-    arrayFlat(getSourceFiles(pattern).map((file) => file.getInterfaces()))
+    arrayFlat(getSourceFiles(pattern).map((file) => file.getInterfaces())),
 );

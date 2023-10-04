@@ -7,7 +7,7 @@ import {
   setActiveProject,
 } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
-import { addTypeAliases } from './add-type-aliases';
+import { addTypeAliases } from 'ng-morph/type-aliases';
 
 describe('addTypeAliases', () => {
   let host: UnitTestTree;

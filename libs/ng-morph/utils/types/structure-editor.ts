@@ -8,5 +8,5 @@ export type StructureEditor<
   Structure extends OptionalKind<StructureType<Declaration>> = OptionalKind<
     StructureType<Declaration>
   >,
-  UpdatableData extends FilterPrimitive<Structure> = FilterPrimitive<Structure>
+  UpdatableData extends FilterPrimitive<Structure> = FilterPrimitive<Structure>,
 > = (structure: Structure, declaration: Declaration) => Partial<UpdatableData>;

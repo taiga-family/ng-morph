@@ -101,7 +101,7 @@ export class NgCliFileSystem implements FileSystemHost {
       const paths = this.readDirSync(srcPath);
 
       paths.forEach((path) =>
-        this.copySync(path.name, join(destPath, basename(path.name)))
+        this.copySync(path.name, join(destPath, basename(path.name))),
       );
     }
   }
@@ -174,7 +174,7 @@ export class NgCliFileSystem implements FileSystemHost {
 
   readDirSync(dirPath: string): RuntimeDirEntry[] {
     const { directories, files } = this.fs.readDirectory(
-      dirPath as WorkspacePath
+      dirPath as WorkspacePath,
     );
 
     return directories
@@ -190,7 +190,7 @@ export class NgCliFileSystem implements FileSystemHost {
           isFile: true,
           isDirectory: false,
           isSymlink: false,
-        }))
+        })),
       );
   }
 

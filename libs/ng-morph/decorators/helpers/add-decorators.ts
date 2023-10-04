@@ -5,7 +5,7 @@ export function addDecorators(
   nodes: DecoratableNode | DecoratableNode[],
   decorators:
     | OptionalKind<DecoratorStructure>
-    | OptionalKind<DecoratorStructure>[]
+    | OptionalKind<DecoratorStructure>[],
 ) {
   coerceArray(nodes).forEach((node) => {
     node.addDecorators(coerceArray(decorators));

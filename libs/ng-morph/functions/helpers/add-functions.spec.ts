@@ -23,7 +23,7 @@ describe('addFunctions', () => {
 function a(){
   return 'a'
 }
-`
+`,
     );
   });
 

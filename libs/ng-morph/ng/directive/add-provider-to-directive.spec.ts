@@ -27,7 +27,7 @@ describe('addProviderToDirective', () => {
 @Directive({})
 export class SomeDirective {
 
-}`
+}`,
       );
     });
 
@@ -36,7 +36,7 @@ export class SomeDirective {
         getClasses('src/main.ts', {
           name: 'SomeDirective',
         })[0],
-        'TestProvider'
+        'TestProvider',
       );
 
       saveActiveProject();
@@ -62,7 +62,7 @@ export class SomeDirective {
 @Directive()
 export class SomeDirective {
 
-}`
+}`,
       );
     });
 
@@ -71,7 +71,7 @@ export class SomeDirective {
         getClasses('src/main.ts', {
           name: 'SomeDirective',
         })[0],
-        'TestProvider'
+        'TestProvider',
       );
 
       saveActiveProject();
@@ -98,7 +98,7 @@ import { TestService } from 'test-package';
 })
 export class SomeDirective {
 
-}`
+}`,
       );
     });
 
@@ -107,7 +107,7 @@ export class SomeDirective {
         getClasses('src/main.ts', {
           name: 'SomeDirective',
         })[0],
-        'NewTestService'
+        'NewTestService',
       );
 
       saveActiveProject();

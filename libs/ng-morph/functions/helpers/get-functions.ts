@@ -9,6 +9,6 @@ export const getFunctions = getDeclarationGetter<
   const files = getSourceFiles(pattern);
 
   return arrayFlat(files.map((file) => file.getFunctions())).filter(
-    (fn) => !fn.isOverload()
+    (fn) => !fn.isOverload(),
   );
 });

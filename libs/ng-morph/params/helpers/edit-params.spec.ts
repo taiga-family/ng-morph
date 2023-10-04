@@ -27,14 +27,14 @@ describe('editParams', () => {
 class B {
   constructor(param1: number, param2: string){}
 }
-    `
+    `,
     );
   });
 
   it('should edit params', () => {
     const declarations = getParams(
       getConstructors(getClasses('some/path/file.ts')),
-      { name: 'param2' }
+      { name: 'param2' },
     );
 
     editParams(declarations, () => ({

@@ -26,14 +26,14 @@ describe('removeParams', () => {
 class A {
   constructor(value1, value2 = 'defaultValue', value3){}
 }
-    `
+    `,
     );
   });
 
   it('should remove params', () => {
     const declarations = getParams(
       getConstructors(getClasses('some/path/file.ts')),
-      { initializer: `'defaultValue'` }
+      { initializer: `'defaultValue'` },
     );
 
     removeParams(declarations);

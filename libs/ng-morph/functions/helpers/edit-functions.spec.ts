@@ -24,7 +24,7 @@ describe('editFunctions', () => {
 function a(){
   return 'a'
 }
-`
+`,
     );
   });
 

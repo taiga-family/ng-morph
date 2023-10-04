@@ -24,7 +24,7 @@ describe('removeDecorators', () => {
       `
 @Decorator()
 class A {}
-    `
+    `,
     );
   });
 

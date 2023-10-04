@@ -24,7 +24,7 @@ describe('getParams', () => {
 class A {
   constructor(value){}
 }
-    `
+    `,
     );
 
     createSourceFile(
@@ -33,13 +33,13 @@ class A {
 class B {
   constructor(@Inject(SOME_TOKEN) name: number = Math.PI){}
 }
-    `
+    `,
     );
   });
 
   it('should find two params', () => {
     const declarations = getParams(
-      getConstructors(getClasses('some/path/**.ts'))
+      getConstructors(getClasses('some/path/**.ts')),
     );
 
     expect(declarations.length).toEqual(2);
@@ -47,7 +47,7 @@ class B {
 
   it('should find one param', () => {
     const declarations = getParams(
-      getConstructors(getClasses('some/path/file.ts'))
+      getConstructors(getClasses('some/path/file.ts')),
     );
 
     expect(declarations.length).toEqual(1);
@@ -58,7 +58,7 @@ class B {
       getConstructors(getClasses('some/path/**.ts')),
       {
         initializer: 'Math.PI',
-      }
+      },
     );
 
     expect(declarations.length).toEqual(1);

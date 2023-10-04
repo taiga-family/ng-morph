@@ -26,7 +26,7 @@ class A {
 
   }
 }
-    `
+    `,
     );
 
     createSourceFile(
@@ -37,7 +37,7 @@ class B {
 
   }
 }
-    `
+    `,
     );
   });
 
