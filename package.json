@@ -36,7 +36,7 @@
     "@angular/compiler": "16.0.4",
     "@angular/core": "16.0.4",
     "@angular/forms": "16.0.4",
-    "@angular/platform-browser": "16.0.4",
+    "@angular/platform-browser": "16.2.7",
     "@angular/platform-browser-dynamic": "16.0.4",
     "@angular/router": "16.0.4",
     "@nx/angular": "16.3.2",
