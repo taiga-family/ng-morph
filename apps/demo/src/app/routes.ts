@@ -58,7 +58,9 @@ export const ROUTES: Route[] = [
   {
     path: 'functions',
     loadChildren: () =>
-      import('./modules/functions/functions.module').then((m) => m.FunctionsModule),
+      import('./modules/functions/functions.module').then(
+        (m) => m.FunctionsModule
+      ),
     data: {
       title: `Functions`,
     },

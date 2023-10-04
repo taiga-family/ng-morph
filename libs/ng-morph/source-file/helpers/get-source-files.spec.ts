@@ -1,7 +1,11 @@
 import { UnitTestTree } from '@angular-devkit/schematics/testing';
 import { HostTree } from '@angular-devkit/schematics';
 import { createSourceFile, getSourceFiles } from 'ng-morph/source-file';
-import { createProject, resetActiveProject, setActiveProject, } from 'ng-morph/project';
+import {
+  createProject,
+  resetActiveProject,
+  setActiveProject,
+} from 'ng-morph/project';
 
 describe('getSourceFiles', () => {
   let host: UnitTestTree;

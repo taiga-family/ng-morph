@@ -177,19 +177,21 @@ export class NgCliFileSystem implements FileSystemHost {
       dirPath as WorkspacePath
     );
 
-    return directories.map((name) => ({
-      name,
-      isFile: false,
-      isDirectory: true,
-      isSymlink: false,
-    })).concat(
-      files.map((name) => ({
+    return directories
+      .map((name) => ({
         name,
-        isFile: true,
-        isDirectory: false,
+        isFile: false,
+        isDirectory: true,
         isSymlink: false,
       }))
-    )
+      .concat(
+        files.map((name) => ({
+          name,
+          isFile: true,
+          isDirectory: false,
+          isSymlink: false,
+        }))
+      );
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

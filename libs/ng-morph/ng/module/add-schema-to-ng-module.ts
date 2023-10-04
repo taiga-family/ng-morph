@@ -6,8 +6,14 @@ export function addSchemaToNgModule(
   schema: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToDecoratorArrayProperty(classDeclaration, 'NgModule', 'schemas', schema, {
-    unique,
-    forceToArray: true,
-  });
+  pushToDecoratorArrayProperty(
+    classDeclaration,
+    'NgModule',
+    'schemas',
+    schema,
+    {
+      unique,
+      forceToArray: true,
+    }
+  );
 }

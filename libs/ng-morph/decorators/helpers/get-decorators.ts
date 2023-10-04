@@ -1,4 +1,10 @@
-import { arrayFlat, coerceArray, getDeclarationGetter, matchQuery, Query, } from 'ng-morph/utils';
+import {
+  arrayFlat,
+  coerceArray,
+  getDeclarationGetter,
+  matchQuery,
+  Query,
+} from 'ng-morph/utils';
 import { DecoratableNode, Decorator, DecoratorStructure } from 'ts-morph';
 import { getClasses } from 'ng-morph/classes';
 import { getMethods } from 'ng-morph/methods';

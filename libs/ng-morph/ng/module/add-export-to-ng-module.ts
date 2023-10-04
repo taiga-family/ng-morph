@@ -6,8 +6,14 @@ export function addExportToNgModule(
   exportName: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToDecoratorArrayProperty(classDeclaration, 'NgModule', 'exports', exportName, {
-    unique,
-    forceToArray: true,
-  });
+  pushToDecoratorArrayProperty(
+    classDeclaration,
+    'NgModule',
+    'exports',
+    exportName,
+    {
+      unique,
+      forceToArray: true,
+    }
+  );
 }
