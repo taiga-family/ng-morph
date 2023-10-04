@@ -1,11 +1,9 @@
 name: Pull Request Workflow
 
-env:
-  NX_BRANCH: ${{ github.event.number }}
-  NX_RUN_GROUP: ${{ github.run_id }}
-
 on:
   pull_request:
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -15,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
       - uses: taiga-family/ci/actions/setup/node@v1.23.0
-      - run: npm run build -- --base=remotes/origin/${{github.event.pull_request.base.ref}}
+      - run: npm run build
 
   lint:
     runs-on: ubuntu-latest
@@ -25,7 +23,7 @@ jobs:
           fetch-depth: 0
       - uses: taiga-family/ci/actions/setup/node@v1.23.0
       - run: npm run prettier -- --check
-      - run: npm run lint -- --base=remotes/origin/${{github.event.pull_request.base.ref}}
+      - run: npm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -34,4 +32,4 @@ jobs:
         with:
           fetch-depth: 0
       - uses: taiga-family/ci/actions/setup/node@v1.23.0
-      - run: npm test -- --base=remotes/origin/${{github.event.pull_request.base.ref}}
+      - run: npm test
