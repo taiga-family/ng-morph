@@ -20,6 +20,7 @@ jobs:
       - uses: taiga-family/ci/actions/setup/node@v1.23.0
       - name: release
         run: npx nx release ng-morph
+        continue-on-error: true
         env:
           CI: true
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
