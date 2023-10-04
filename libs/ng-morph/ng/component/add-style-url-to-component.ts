@@ -6,7 +6,13 @@ export function addStyleUrlToComponent(
   styleUrl: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToDecoratorArrayProperty(classDeclaration, 'Component', 'styleUrls', styleUrl, {
-    unique,
-  });
+  pushToDecoratorArrayProperty(
+    classDeclaration,
+    'Component',
+    'styleUrls',
+    styleUrl,
+    {
+      unique,
+    }
+  );
 }

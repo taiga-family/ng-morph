@@ -3,7 +3,7 @@ import { HostTree } from '@angular-devkit/schematics';
 import { createProject, setActiveProject } from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
 import { Node } from 'ts-morph';
-import { getBootstrapApplicationFn } from "./get-bootstrap-application-fn";
+import { getBootstrapApplicationFn } from './get-bootstrap-application-fn';
 
 describe('getBootstrapApplicationFn', () => {
   let host: UnitTestTree;
@@ -27,7 +27,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent)
 `
-    )
+    );
     const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 
     expect(bootstrapFn.getText()).toEqual(`bootstrapApplication(AppComponent)`);
@@ -39,5 +39,5 @@ bootstrapApplication(AppComponent)
     const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 
     expect(bootstrapFn).toBeUndefined();
-  })
+  });
 });

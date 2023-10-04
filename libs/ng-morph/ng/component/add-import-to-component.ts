@@ -6,8 +6,14 @@ export function addImportToComponent(
   importName: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToDecoratorArrayProperty(classDeclaration, 'Component', 'imports', importName, {
-    unique,
-    forceToArray: true,
-  });
+  pushToDecoratorArrayProperty(
+    classDeclaration,
+    'Component',
+    'imports',
+    importName,
+    {
+      unique,
+      forceToArray: true,
+    }
+  );
 }

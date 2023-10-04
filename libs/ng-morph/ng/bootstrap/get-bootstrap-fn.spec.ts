@@ -29,7 +29,7 @@ platformBrowserDynamic()
   .bootstrapModule(AppModule)
   .catch(err => console.log(err));
 `
-    )
+    );
     const bootstrapFn = getBootstrapFn('src/main.ts');
 
     expect(bootstrapFn.getText()).toEqual(`platformBrowserDynamic()
@@ -42,5 +42,5 @@ platformBrowserDynamic()
     const bootstrapFn = getBootstrapFn('src/main.ts');
 
     expect(bootstrapFn).toBeUndefined();
-  })
+  });
 });

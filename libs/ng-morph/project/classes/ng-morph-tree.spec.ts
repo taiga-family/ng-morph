@@ -1,6 +1,10 @@
 import { Tree } from '@angular-devkit/schematics';
 import { NgMorphTree } from './ng-morph-tree';
-import { createProject, saveActiveProject, setActiveProject, } from 'ng-morph/project';
+import {
+  createProject,
+  saveActiveProject,
+  setActiveProject,
+} from 'ng-morph/project';
 import { createSourceFile, getSourceFile } from 'ng-morph/source-file';
 import * as fs from 'fs';
 import { join } from 'path';

@@ -1,7 +1,7 @@
 {
   "npmScope": "ng-morph",
   "affected": {
-    "defaultBase": "main"
+    "defaultBase": "origin/main"
   },
   "tasksRunnerOptions": {
     "default": {

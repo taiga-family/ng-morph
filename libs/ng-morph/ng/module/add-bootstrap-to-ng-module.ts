@@ -6,8 +6,14 @@ export function addBootstrapToNgModule(
   component: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToDecoratorArrayProperty(classDeclaration, 'NgModule', 'bootstrap', component, {
-    unique,
-    forceToArray: true,
-  });
+  pushToDecoratorArrayProperty(
+    classDeclaration,
+    'NgModule',
+    'bootstrap',
+    component,
+    {
+      unique,
+      forceToArray: true,
+    }
+  );
 }

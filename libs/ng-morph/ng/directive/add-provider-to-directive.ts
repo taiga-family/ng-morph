@@ -6,8 +6,14 @@ export function addProviderToDirective(
   provider: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToDecoratorArrayProperty(classDeclaration, 'Directive', 'providers', provider, {
-    unique,
-    forceToArray: true,
-  });
+  pushToDecoratorArrayProperty(
+    classDeclaration,
+    'Directive',
+    'providers',
+    provider,
+    {
+      unique,
+      forceToArray: true,
+    }
+  );
 }

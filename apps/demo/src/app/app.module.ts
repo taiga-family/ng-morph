@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TUI_DOC_LOGO, TUI_DOC_PAGES, TuiDocMainModule } from '@taiga-ui/addon-doc';
+import {
+  TUI_DOC_LOGO,
+  TUI_DOC_PAGES,
+  TuiDocMainModule,
+} from '@taiga-ui/addon-doc';
 import { TuiLinkModule } from '@taiga-ui/core';
 
 import { AppComponent } from './app.component';
