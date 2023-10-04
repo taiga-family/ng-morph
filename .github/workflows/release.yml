@@ -16,7 +16,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2.7.0
       - uses: taiga-family/ci/actions/setup/node@v1.23.0
       - name: release
         run: npx nx release ng-morph
