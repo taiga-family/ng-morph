@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkdemo"] = self["webpackChunkdemo"] || []).push([["apps_demo_src_app_modules_classes_classes_module_ts"],{
 
-/***/ 7451:
+/***/ 6793:
 /*!****************************************************************!*\
   !*** ./apps/demo/src/app/modules/classes/classes.component.ts ***!
   \****************************************************************/
@@ -9,15 +9,15 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ClassesComponent": () => (/* binding */ ClassesComponent)
+/* harmony export */   ClassesComponent: () => (/* binding */ ClassesComponent)
 /* harmony export */ });
-/* harmony import */ var _samples_accessors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./samples/accessors */ 9934);
-/* harmony import */ var _samples_contructors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./samples/contructors */ 1442);
-/* harmony import */ var _samples_decorators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./samples/decorators */ 6215);
-/* harmony import */ var _samples_methods__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./samples/methods */ 1312);
-/* harmony import */ var _samples_properties__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./samples/properties */ 3652);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 6839);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 6604);
+/* harmony import */ var _samples_accessors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./samples/accessors */ 3105);
+/* harmony import */ var _samples_contructors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./samples/contructors */ 6672);
+/* harmony import */ var _samples_decorators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./samples/decorators */ 373);
+/* harmony import */ var _samples_methods__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./samples/methods */ 8589);
+/* harmony import */ var _samples_properties__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./samples/properties */ 9928);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7357);
 
 
 
@@ -216,37 +216,37 @@ class ClassesComponent {
     this.decorators = _samples_decorators__WEBPACK_IMPORTED_MODULE_2__.DECORATORS_SAMPLES;
     this.constructors = _samples_contructors__WEBPACK_IMPORTED_MODULE_1__.CONSTRUCTORS_SAMPLES;
   }
+  static #_ = this.ɵfac = function ClassesComponent_Factory(t) {
+    return new (t || ClassesComponent)();
+  };
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineComponent"]({
+    type: ClassesComponent,
+    selectors: [["classes"]],
+    decls: 7,
+    vars: 0,
+    consts: [["header", "Classes"], ["pageTab", "Classes"], ["pageTab", "Constructors"], ["pageTab", "Methods"], ["pageTab", "Properties"], ["pageTab", "Accessors"], ["pageTab", "Decorators"], ["filename", "migration.ts", 3, "code"]],
+    template: function ClassesComponent_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "tui-doc-page", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](1, ClassesComponent_ng_template_1_Template, 26, 4, "ng-template", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](2, ClassesComponent_ng_template_2_Template, 3, 1, "ng-template", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](3, ClassesComponent_ng_template_3_Template, 3, 1, "ng-template", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](4, ClassesComponent_ng_template_4_Template, 3, 1, "ng-template", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](5, ClassesComponent_ng_template_5_Template, 3, 1, "ng-template", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](6, ClassesComponent_ng_template_6_Template, 3, 1, "ng-template", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
+      }
+    },
+    dependencies: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocCodeComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageTabConnectorDirective],
+    styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
+    changeDetection: 0
+  });
 }
-ClassesComponent.ɵfac = function ClassesComponent_Factory(t) {
-  return new (t || ClassesComponent)();
-};
-ClassesComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineComponent"]({
-  type: ClassesComponent,
-  selectors: [["classes"]],
-  decls: 7,
-  vars: 0,
-  consts: [["header", "Classes"], ["pageTab", "Classes"], ["pageTab", "Constructors"], ["pageTab", "Methods"], ["pageTab", "Properties"], ["pageTab", "Accessors"], ["pageTab", "Decorators"], ["filename", "migration.ts", 3, "code"]],
-  template: function ClassesComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "tui-doc-page", 0);
-      _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](1, ClassesComponent_ng_template_1_Template, 26, 4, "ng-template", 1);
-      _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](2, ClassesComponent_ng_template_2_Template, 3, 1, "ng-template", 2);
-      _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](3, ClassesComponent_ng_template_3_Template, 3, 1, "ng-template", 3);
-      _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](4, ClassesComponent_ng_template_4_Template, 3, 1, "ng-template", 4);
-      _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](5, ClassesComponent_ng_template_5_Template, 3, 1, "ng-template", 5);
-      _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](6, ClassesComponent_ng_template_6_Template, 3, 1, "ng-template", 6);
-      _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    }
-  },
-  dependencies: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocCodeComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageTabConnectorDirective],
-  styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
-  changeDetection: 0
-});
 
 
 /***/ }),
 
-/***/ 2203:
+/***/ 8484:
 /*!*************************************************************!*\
   !*** ./apps/demo/src/app/modules/classes/classes.module.ts ***!
   \*************************************************************/
@@ -254,30 +254,31 @@ ClassesComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ClassesModule": () => (/* binding */ ClassesModule)
+/* harmony export */   ClassesModule: () => (/* binding */ ClassesModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 6679);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 9574);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 2171);
-/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 4109);
-/* harmony import */ var _classes_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes.component */ 7451);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 6839);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 7947);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 6684);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7626);
+/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 798);
+/* harmony import */ var _classes_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes.component */ 6793);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
 
 
 
 
 
 
-class ClassesModule {}
-ClassesModule.ɵfac = function ClassesModule_Factory(t) {
-  return new (t || ClassesModule)();
-};
-ClassesModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
-  type: ClassesModule
-});
-ClassesModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-  imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_classes_component__WEBPACK_IMPORTED_MODULE_0__.ClassesComponent))]
-});
+class ClassesModule {
+  static #_ = this.ɵfac = function ClassesModule_Factory(t) {
+    return new (t || ClassesModule)();
+  };
+  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+    type: ClassesModule
+  });
+  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_classes_component__WEBPACK_IMPORTED_MODULE_0__.ClassesComponent))]
+  });
+}
 
 (function () {
   (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](ClassesModule, {
@@ -289,7 +290,7 @@ ClassesModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["�
 
 /***/ }),
 
-/***/ 9934:
+/***/ 3105:
 /*!****************************************************************!*\
   !*** ./apps/demo/src/app/modules/classes/samples/accessors.ts ***!
   \****************************************************************/
@@ -297,7 +298,7 @@ ClassesModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["�
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ACCESSORS_SAMPLES": () => (/* binding */ ACCESSORS_SAMPLES)
+/* harmony export */   ACCESSORS_SAMPLES: () => (/* binding */ ACCESSORS_SAMPLES)
 /* harmony export */ });
 const ACCESSORS_SAMPLES = `import {
     addAccessors,
@@ -333,7 +334,7 @@ saveActiveProject();
 
 /***/ }),
 
-/***/ 1442:
+/***/ 6672:
 /*!******************************************************************!*\
   !*** ./apps/demo/src/app/modules/classes/samples/contructors.ts ***!
   \******************************************************************/
@@ -341,7 +342,7 @@ saveActiveProject();
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CONSTRUCTORS_SAMPLES": () => (/* binding */ CONSTRUCTORS_SAMPLES)
+/* harmony export */   CONSTRUCTORS_SAMPLES: () => (/* binding */ CONSTRUCTORS_SAMPLES)
 /* harmony export */ });
 const CONSTRUCTORS_SAMPLES = `import {
     addConstructors,
@@ -383,7 +384,7 @@ saveActiveProject();
 
 /***/ }),
 
-/***/ 6215:
+/***/ 373:
 /*!*****************************************************************!*\
   !*** ./apps/demo/src/app/modules/classes/samples/decorators.ts ***!
   \*****************************************************************/
@@ -391,7 +392,7 @@ saveActiveProject();
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "DECORATORS_SAMPLES": () => (/* binding */ DECORATORS_SAMPLES)
+/* harmony export */   DECORATORS_SAMPLES: () => (/* binding */ DECORATORS_SAMPLES)
 /* harmony export */ });
 const DECORATORS_SAMPLES = `import {
     addDecorators,
@@ -464,7 +465,7 @@ saveActiveProject();
 
 /***/ }),
 
-/***/ 1312:
+/***/ 8589:
 /*!**************************************************************!*\
   !*** ./apps/demo/src/app/modules/classes/samples/methods.ts ***!
   \**************************************************************/
@@ -472,7 +473,7 @@ saveActiveProject();
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "METHODS_SAMPLES": () => (/* binding */ METHODS_SAMPLES)
+/* harmony export */   METHODS_SAMPLES: () => (/* binding */ METHODS_SAMPLES)
 /* harmony export */ });
 const METHODS_SAMPLES = `import {
     addMethods,
@@ -508,7 +509,7 @@ saveActiveProject();
 
 /***/ }),
 
-/***/ 3652:
+/***/ 9928:
 /*!*****************************************************************!*\
   !*** ./apps/demo/src/app/modules/classes/samples/properties.ts ***!
   \*****************************************************************/
@@ -516,7 +517,7 @@ saveActiveProject();
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "PROPERTIES_SAMPLES": () => (/* binding */ PROPERTIES_SAMPLES)
+/* harmony export */   PROPERTIES_SAMPLES: () => (/* binding */ PROPERTIES_SAMPLES)
 /* harmony export */ });
 const PROPERTIES_SAMPLES = `import {
     addProperties,
