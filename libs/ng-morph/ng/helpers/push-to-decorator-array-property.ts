@@ -1,6 +1,6 @@
 import { getDecorators } from 'ng-morph/decorators';
 import { ClassDeclaration, Node } from 'ts-morph';
-import { pushToObjectLiteralArrayProperty } from "./push-to-object-literal-array-property";
+import { pushToObjectLiteralArrayProperty } from './push-to-object-literal-array-property';
 
 // TODO: investigate how to handle consts in descriptors that don't accept array of array type, like styleUrls
 export function pushToDecoratorArrayProperty(
@@ -17,9 +17,8 @@ export function pushToDecoratorArrayProperty(
     name: decoratorName,
   });
 
-  const [
-    metadata = decorator.addArgument(`{${propertyName}: []}`),
-  ] = decorator.getArguments();
+  const [metadata = decorator.addArgument(`{${propertyName}: []}`)] =
+    decorator.getArguments();
 
   if (!Node.isObjectLiteralExpression(metadata)) {
     return;
@@ -28,5 +27,5 @@ export function pushToDecoratorArrayProperty(
   pushToObjectLiteralArrayProperty(metadata, propertyName, initializer, {
     unique,
     forceToArray,
-  })
+  });
 }

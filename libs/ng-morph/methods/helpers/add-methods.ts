@@ -1,4 +1,8 @@
-import { ClassDeclaration, MethodDeclarationStructure, OptionalKind, } from 'ts-morph';
+import {
+  ClassDeclaration,
+  MethodDeclarationStructure,
+  OptionalKind,
+} from 'ts-morph';
 import { coerceArray } from 'ng-morph/utils';
 
 export function addMethods(

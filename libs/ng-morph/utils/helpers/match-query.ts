@@ -35,13 +35,11 @@ type ExtractPrimitive<T> = Extract<
  * }
  *
  */
-export type Query<T extends Structure> = Partial<
-  {
-    [key in keyof T]:
-      | ExtractPrimitive<T[key]>
-      | NeverIfIsNeverArray<ExtractPrimitive<T[key]>[]>;
-  }
->;
+export type Query<T extends Structure> = Partial<{
+  [key in keyof T]:
+    | ExtractPrimitive<T[key]>
+    | NeverIfIsNeverArray<ExtractPrimitive<T[key]>[]>;
+}>;
 
 function isObject(value: unknown): value is Record<string, unknown> {
   return value !== null && typeof value === 'object';

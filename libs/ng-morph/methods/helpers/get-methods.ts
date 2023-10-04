@@ -1,5 +1,9 @@
 import { arrayFlat, coerceArray, matchQuery, Query } from 'ng-morph/utils';
-import { ClassDeclaration, MethodDeclaration, MethodDeclarationStructure, } from 'ts-morph';
+import {
+  ClassDeclaration,
+  MethodDeclaration,
+  MethodDeclarationStructure,
+} from 'ts-morph';
 
 export function getMethods(
   classes: ClassDeclaration | ClassDeclaration[],

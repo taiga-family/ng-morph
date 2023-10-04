@@ -6,8 +6,14 @@ export function addProviderToComponent(
   provider: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToDecoratorArrayProperty(classDeclaration, 'Component', 'providers', provider, {
-    unique,
-    forceToArray: true,
-  });
+  pushToDecoratorArrayProperty(
+    classDeclaration,
+    'Component',
+    'providers',
+    provider,
+    {
+      unique,
+      forceToArray: true,
+    }
+  );
 }

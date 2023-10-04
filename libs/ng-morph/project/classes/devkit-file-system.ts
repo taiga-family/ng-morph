@@ -6,7 +6,11 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import { normalize, Path, PathIsDirectoryException, } from '@angular-devkit/core';
+import {
+  normalize,
+  Path,
+  PathIsDirectoryException,
+} from '@angular-devkit/core';
 import { Tree, UpdateRecorder } from '@angular-devkit/schematics';
 import * as path from 'path';
 import { DirectoryEntry, FileSystem } from './file-system';
@@ -75,9 +79,8 @@ export class DevkitFileSystem extends FileSystem {
 
   readDirectory(dirPath: Path): DirectoryEntry {
     try {
-      const { subdirs: directories, subfiles: files } = this.tree.getDir(
-        dirPath
-      );
+      const { subdirs: directories, subfiles: files } =
+        this.tree.getDir(dirPath);
       return { directories, files };
     } catch (e) {
       return { directories: [], files: [] };

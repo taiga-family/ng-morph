@@ -22,10 +22,7 @@ export function getDeclarationEditor<
 
       // todo: see https://github.com/dsherret/ts-morph/issues/882
       // if the issue is resolved code will be remove
-      if (
-        Structure.hasName(newStructure) &&
-        Node.isRenameable(declaration)
-      ) {
+      if (Structure.hasName(newStructure) && Node.isRenameable(declaration)) {
         declaration.rename(newStructure.name);
         delete newStructure.name;
       }

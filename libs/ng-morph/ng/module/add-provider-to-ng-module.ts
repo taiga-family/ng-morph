@@ -6,8 +6,14 @@ export function addProviderToNgModule(
   provider: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToDecoratorArrayProperty(classDeclaration, 'NgModule', 'providers', provider, {
-    unique,
-    forceToArray: true,
-  });
+  pushToDecoratorArrayProperty(
+    classDeclaration,
+    'NgModule',
+    'providers',
+    provider,
+    {
+      unique,
+      forceToArray: true,
+    }
+  );
 }

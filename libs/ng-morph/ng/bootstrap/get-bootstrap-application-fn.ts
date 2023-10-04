@@ -1,7 +1,9 @@
-import { CallExpression, Node, SyntaxKind } from "ts-morph";
-import { getImports } from "ng-morph/imports";
+import { CallExpression, Node, SyntaxKind } from 'ts-morph';
+import { getImports } from 'ng-morph/imports';
 
-export function getBootstrapApplicationFn(mainFilePath: string): CallExpression | undefined {
+export function getBootstrapApplicationFn(
+  mainFilePath: string
+): CallExpression | undefined {
   const [bootstrapApplicationImport] = getImports(mainFilePath, {
     moduleSpecifier: '@angular/platform-browser',
   });
@@ -14,5 +16,5 @@ export function getBootstrapApplicationFn(mainFilePath: string): CallExpression 
     ?.getNameNode()
     .findReferencesAsNodes()
     .find((ref) => Node.isCallExpression(ref.getParent()))
-    ?.getParentIfKind(SyntaxKind.CallExpression)
+    ?.getParentIfKind(SyntaxKind.CallExpression);
 }

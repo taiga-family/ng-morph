@@ -6,8 +6,14 @@ export function addImportToNgModule(
   moduleName: string,
   { unique = false }: { unique?: boolean } = {}
 ) {
-  pushToDecoratorArrayProperty(classDeclaration, 'NgModule', 'imports', moduleName, {
-    unique,
-    forceToArray: true,
-  });
+  pushToDecoratorArrayProperty(
+    classDeclaration,
+    'NgModule',
+    'imports',
+    moduleName,
+    {
+      unique,
+      forceToArray: true,
+    }
+  );
 }

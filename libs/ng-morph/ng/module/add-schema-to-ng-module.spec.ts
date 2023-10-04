@@ -1,6 +1,10 @@
 import { UnitTestTree } from '@angular-devkit/schematics/testing';
 import { HostTree } from '@angular-devkit/schematics';
-import { createProject, saveActiveProject, setActiveProject, } from 'ng-morph/project';
+import {
+  createProject,
+  saveActiveProject,
+  setActiveProject,
+} from 'ng-morph/project';
 import { createSourceFile } from 'ng-morph/source-file';
 import { addSchemaToNgModule } from './add-schema-to-ng-module';
 import { getClasses } from 'ng-morph/classes';
