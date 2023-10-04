@@ -5,11 +5,11 @@ import { StructureType } from 'ng-morph/utils/types/structure-type';
 
 export function getDeclarationEditor<
   Declaration extends StructuredStatement<Declaration>,
-  Structures extends StructureType<Declaration> = StructureType<Declaration>
+  Structures extends StructureType<Declaration> = StructureType<Declaration>,
 >() {
   return function editDeclarations(
     declarations: Declaration | Declaration[],
-    editor: StructureEditor<Declaration, OptionalKind<Structures>>
+    editor: StructureEditor<Declaration, OptionalKind<Structures>>,
   ) {
     coerceArray(declarations).forEach((declaration) => {
       const newStructure: Structures = Object.assign(
@@ -17,7 +17,7 @@ export function getDeclarationEditor<
         // TODO: refactor it to support new typings
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        editor(declaration.getStructure(), declaration)
+        editor(declaration.getStructure(), declaration),
       ) as Structures;
 
       // todo: see https://github.com/dsherret/ts-morph/issues/882

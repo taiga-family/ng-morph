@@ -7,7 +7,7 @@ export function getMainModule(mainFilePath: string): ClassDeclaration {
   const [mainModuleIdentifier] = bootstrapFn.getArguments() as [Identifier];
 
   const [mainModuleClass] = mainModuleIdentifier.getDefinitionNodes() as [
-    ClassDeclaration
+    ClassDeclaration,
   ];
 
   return mainModuleClass;

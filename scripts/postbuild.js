@@ -21,7 +21,7 @@ function copyReadmeIntoDistFolder(srcPath, toPath) {
   const fileBody = fs.readFileSync(srcPath).toString();
   const withoutLogos = fileBody.replace(
     'apps/demo/src/assets/images/ng-morph.png',
-    'ng-morph.png'
+    'ng-morph.png',
   );
 
   fs.writeFileSync(toPath, withoutLogos);

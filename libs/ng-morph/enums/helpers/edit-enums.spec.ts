@@ -25,7 +25,7 @@ enum Test {First}
 
 let a: Test;
 const b = Test.First;
-`
+`,
     );
   });
 

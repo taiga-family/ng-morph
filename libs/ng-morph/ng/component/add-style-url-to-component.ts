@@ -4,7 +4,7 @@ import { pushToDecoratorArrayProperty } from '../helpers/push-to-decorator-array
 export function addStyleUrlToComponent(
   classDeclaration: ClassDeclaration,
   styleUrl: string,
-  { unique = false }: { unique?: boolean } = {}
+  { unique = false }: { unique?: boolean } = {},
 ) {
   pushToDecoratorArrayProperty(
     classDeclaration,
@@ -13,6 +13,6 @@ export function addStyleUrlToComponent(
     styleUrl,
     {
       unique,
-    }
+    },
   );
 }

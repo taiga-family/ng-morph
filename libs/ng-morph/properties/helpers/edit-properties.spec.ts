@@ -25,7 +25,7 @@ describe('editProperties', () => {
 class A {
   b = 0;
 }
-`
+`,
     );
   });
 

@@ -20,7 +20,7 @@ describe('getEnums', () => {
       'some/path/file.ts',
       `
 enum A { }
-      `
+      `,
     );
 
     createSourceFile(
@@ -29,7 +29,7 @@ enum A { }
 enum B {
   Wow
 }
-      `
+      `,
     );
   });
 

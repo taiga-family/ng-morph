@@ -4,5 +4,5 @@ import { TypeAliasDeclaration } from 'ts-morph';
 
 export const getTypeAliases = getDeclarationGetter<TypeAliasDeclaration>(
   (pattern) =>
-    arrayFlat(getSourceFiles(pattern).map((file) => file.getTypeAliases()))
+    arrayFlat(getSourceFiles(pattern).map((file) => file.getTypeAliases())),
 );

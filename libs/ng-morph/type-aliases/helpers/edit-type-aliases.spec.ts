@@ -31,7 +31,7 @@ describe('editTypeAliases', () => {
     saveActiveProject();
 
     expect(host.readContent('some/path/file.ts')).toEqual(
-      `type B = string[]; let a: B;`
+      `type B = string[]; let a: B;`,
     );
   });
 

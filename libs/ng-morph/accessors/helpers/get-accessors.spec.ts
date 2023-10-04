@@ -23,7 +23,7 @@ describe('getAccessors', () => {
 class A {
   get getter(){}
 }
-    `
+    `,
     );
 
     createSourceFile(
@@ -32,7 +32,7 @@ class A {
 class B {
   set setter(value){}
 }
-    `
+    `,
     );
   });
 

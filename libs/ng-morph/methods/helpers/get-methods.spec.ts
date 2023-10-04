@@ -23,7 +23,7 @@ describe('getMethods', () => {
 class A {
   b(){}
 }
-`
+`,
     );
 
     createSourceFile(
@@ -32,7 +32,7 @@ class A {
 class B {
   static d(){}
 }
-`
+`,
     );
   });
 

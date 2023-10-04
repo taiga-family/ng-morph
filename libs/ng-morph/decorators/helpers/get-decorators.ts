@@ -15,10 +15,10 @@ import { getAccessors } from 'ng-morph/accessors';
 
 export function getDecorators(
   declarations: DecoratableNode | DecoratableNode[],
-  query?: Query<DecoratorStructure>
+  query?: Query<DecoratorStructure>,
 ): Decorator[] {
   return arrayFlat(
-    coerceArray(declarations).map((declaration) => declaration.getDecorators())
+    coerceArray(declarations).map((declaration) => declaration.getDecorators()),
   ).filter((decorator) => matchQuery(decorator.getStructure(), query));
 }
 
@@ -39,6 +39,6 @@ export const getAllDecorators = getDeclarationGetter<Decorator>((pattern) => {
       constructorParams,
       methodParams,
       accessors,
-    ].map((declarations) => getDecorators(declarations))
+    ].map((declarations) => getDecorators(declarations)),
   );
 });

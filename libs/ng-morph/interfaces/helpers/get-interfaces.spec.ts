@@ -20,14 +20,14 @@ describe('getInterfaces', () => {
       'some/path/file.ts',
       `
 interface A {}
-`
+`,
     );
 
     createSourceFile(
       'some/path/one-more-file.ts',
       `
 interface B {}
-`
+`,
     );
   });
 

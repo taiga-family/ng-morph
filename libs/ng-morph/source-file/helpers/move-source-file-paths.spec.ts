@@ -29,7 +29,7 @@ describe('renameSourceFilePaths', () => {
 
   it('should change a file content', () => {
     expect(host.readContent('testFile.ts')).toEqual(
-      "import {a} from './some/test-file'"
+      "import {a} from './some/test-file'",
     );
   });
 

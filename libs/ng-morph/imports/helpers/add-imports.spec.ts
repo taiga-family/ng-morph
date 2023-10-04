@@ -21,7 +21,7 @@ describe('addImports', () => {
       'some/path/file.ts',
       `
 console.log(a);
-`
+`,
     );
   });
 

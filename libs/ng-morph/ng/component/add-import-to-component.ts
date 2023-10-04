@@ -4,7 +4,7 @@ import { pushToDecoratorArrayProperty } from '../helpers/push-to-decorator-array
 export function addImportToComponent(
   classDeclaration: ClassDeclaration,
   importName: string,
-  { unique = false }: { unique?: boolean } = {}
+  { unique = false }: { unique?: boolean } = {},
 ) {
   pushToDecoratorArrayProperty(
     classDeclaration,
@@ -14,6 +14,6 @@ export function addImportToComponent(
     {
       unique,
       forceToArray: true,
-    }
+    },
   );
 }

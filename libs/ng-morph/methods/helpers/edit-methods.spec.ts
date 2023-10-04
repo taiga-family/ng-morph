@@ -27,7 +27,7 @@ class A {
 }
 
 A.prototype.test();
-`
+`,
     );
   });
 

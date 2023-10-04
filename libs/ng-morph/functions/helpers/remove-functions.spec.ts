@@ -28,7 +28,7 @@ function a(){
 export function b() {
     return 'b'
 }
-`
+`,
     );
   });
 

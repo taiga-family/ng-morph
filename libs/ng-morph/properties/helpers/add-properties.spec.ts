@@ -23,7 +23,7 @@ describe('addProperties', () => {
       `
 class A {}
 class B {}
-`
+`,
     );
   });
 

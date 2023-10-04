@@ -20,14 +20,14 @@ describe('getClasses', () => {
       'some/path/file.ts',
       `
 class A { }
-`
+`,
     );
 
     createSourceFile(
       'some/path/one-more-file.ts',
       `
 class B { }
-`
+`,
     );
   });
 

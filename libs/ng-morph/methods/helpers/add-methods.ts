@@ -9,7 +9,7 @@ export function addMethods(
   classes: ClassDeclaration | ClassDeclaration[],
   methods:
     | OptionalKind<MethodDeclarationStructure>
-    | OptionalKind<MethodDeclarationStructure>[]
+    | OptionalKind<MethodDeclarationStructure>[],
 ) {
   coerceArray(classes).forEach((klass) => {
     klass.addMethods(coerceArray(methods));

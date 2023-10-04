@@ -4,13 +4,13 @@ import { pushToDecoratorArrayProperty } from '../helpers/push-to-decorator-array
 export function addEntryComponentToNgModule(
   classDeclaration: ClassDeclaration,
   component: string,
-  { unique = false }: { unique?: boolean } = {}
+  { unique = false }: { unique?: boolean } = {},
 ) {
   pushToDecoratorArrayProperty(
     classDeclaration,
     'NgModule',
     'entryComponents',
     component,
-    { unique, forceToArray: true }
+    { unique, forceToArray: true },
   );
 }

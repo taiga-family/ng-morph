@@ -20,14 +20,14 @@ describe('getExports', () => {
       'some/path/file.ts',
       `
 export { a } from 'b';
-`
+`,
     );
 
     createSourceFile(
       'some/path/one-more-file.ts',
       `
 export { c } from 'd';
-`
+`,
     );
   });
 

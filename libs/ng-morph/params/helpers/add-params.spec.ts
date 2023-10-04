@@ -25,7 +25,7 @@ describe('addParams', () => {
 class B {
   add(){}
 }
-    `
+    `,
     );
   });
 

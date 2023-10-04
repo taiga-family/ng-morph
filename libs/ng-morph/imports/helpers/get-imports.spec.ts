@@ -1,12 +1,12 @@
 import { UnitTestTree } from '@angular-devkit/schematics/testing';
 import { HostTree } from '@angular-devkit/schematics';
-import { getImports } from './get-imports';
 import {
   createProject,
   resetActiveProject,
   setActiveProject,
-} from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
+  getImports,
+  createSourceFile,
+} from 'ng-morph';
 import { StructureKind } from 'ts-morph';
 
 describe('getImports', () => {
@@ -21,7 +21,7 @@ describe('getImports', () => {
       'some/path/file.ts',
       `
 import { a } from 'b';
-`
+`,
     );
 
     createSourceFile(
@@ -30,7 +30,7 @@ import { a } from 'b';
 import { c } from 'd';
 import { a } from 'd';
 import b from 'd';
-`
+`,
     );
   });
 

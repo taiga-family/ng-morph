@@ -9,7 +9,7 @@ export function addParams(
   functionsLike: FunctionLikeDeclaration | FunctionLikeDeclaration[],
   params:
     | OptionalKind<ParameterDeclarationStructure>
-    | OptionalKind<ParameterDeclarationStructure>[]
+    | OptionalKind<ParameterDeclarationStructure>[],
 ): void {
   coerceArray(functionsLike).forEach((functionLike) => {
     functionLike.addParameters(coerceArray(params));

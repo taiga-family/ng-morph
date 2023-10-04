@@ -24,7 +24,7 @@ describe('removeClasses', () => {
 class A {}
 
 const a: A;
-`
+`,
     );
   });
 

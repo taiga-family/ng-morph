@@ -27,14 +27,14 @@ describe('addProviderToModule', () => {
 @NgModule({})
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the providers property', () => {
       addProviderToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestService'
+        'TestService',
       );
 
       saveActiveProject();
@@ -60,14 +60,14 @@ export class SomeModule {
 @NgModule()
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should create the providers property', () => {
       addProviderToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestService'
+        'TestService',
       );
 
       saveActiveProject();
@@ -94,14 +94,14 @@ import { CommonModule } from '@angular/common';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
     it('should add module to providers', () => {
       addProviderToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestService'
+        'TestService',
       );
 
       saveActiveProject();
@@ -131,7 +131,7 @@ import { CommonService } from '@angular/common';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
@@ -139,7 +139,7 @@ export class SomeModule {
       addProviderToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'CommonService',
-        { unique: true }
+        { unique: true },
       );
 
       saveActiveProject();
@@ -169,7 +169,7 @@ import { APP_PROVIDERS } from './providers.ts';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
@@ -177,7 +177,7 @@ export class SomeModule {
       addProviderToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'CommonService',
-        { unique: true }
+        { unique: true },
       );
 
       saveActiveProject();
@@ -207,7 +207,7 @@ import { CommonService } from '@angular/common';
 })
 export class SomeModule {
 
-}`
+}`,
       );
     });
 
@@ -215,7 +215,7 @@ export class SomeModule {
       addProviderToNgModule(
         getClasses('src/main.ts', { name: 'SomeModule' })[0],
         'NewService',
-        { unique: true }
+        { unique: true },
       );
       saveActiveProject();
 

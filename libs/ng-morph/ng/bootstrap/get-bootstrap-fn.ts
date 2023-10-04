@@ -2,7 +2,7 @@ import { CallExpression, Node, SyntaxKind } from 'ts-morph';
 import { getImports } from 'ng-morph/imports';
 
 export function getBootstrapFn(
-  mainFilePath: string
+  mainFilePath: string,
 ): CallExpression | undefined {
   const [platformBrowserImport] = getImports(mainFilePath, {
     moduleSpecifier: '@angular/platform-browser-dynamic',

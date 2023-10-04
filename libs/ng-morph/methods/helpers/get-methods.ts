@@ -7,11 +7,12 @@ import {
 
 export function getMethods(
   classes: ClassDeclaration | ClassDeclaration[],
-  query?: Query<MethodDeclarationStructure>
+  query?: Query<MethodDeclarationStructure>,
 ): MethodDeclaration[] {
   return arrayFlat(
-    coerceArray(classes).map((klass) => klass.getMethods())
+    coerceArray(classes).map((klass) => klass.getMethods()),
   ).filter(
-    (method) => !method.isOverload() && matchQuery(method.getStructure(), query)
+    (method) =>
+      !method.isOverload() && matchQuery(method.getStructure(), query),
   );
 }

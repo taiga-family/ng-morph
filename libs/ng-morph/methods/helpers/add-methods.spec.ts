@@ -23,7 +23,7 @@ describe('addMethods', () => {
       `
 class A {}
 class B {}
-`
+`,
     );
   });
 

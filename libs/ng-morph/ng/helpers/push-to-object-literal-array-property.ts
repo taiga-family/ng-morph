@@ -7,7 +7,7 @@ export function pushToObjectLiteralArrayProperty(
   {
     unique = false,
     forceToArray = false,
-  }: { unique?: boolean; forceToArray?: boolean } = {}
+  }: { unique?: boolean; forceToArray?: boolean } = {},
 ) {
   const property =
     objectLiteral.getProperty(propertyName) ??

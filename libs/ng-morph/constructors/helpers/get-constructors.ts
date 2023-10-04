@@ -7,12 +7,13 @@ import {
 
 export function getConstructors(
   classes: ClassDeclaration | ClassDeclaration[],
-  query?: Query<ConstructorDeclarationStructure>
+  query?: Query<ConstructorDeclarationStructure>,
 ): ConstructorDeclaration[] {
   return arrayFlat(
-    coerceArray(classes).map((klass) => klass.getConstructors())
+    coerceArray(classes).map((klass) => klass.getConstructors()),
   ).filter(
     (constructor) =>
-      !constructor.isOverload() && matchQuery(constructor.getStructure(), query)
+      !constructor.isOverload() &&
+      matchQuery(constructor.getStructure(), query),
   );
 }

@@ -26,7 +26,7 @@ if (environment.production) {
 }
 
 bootstrapApplication(AppComponent)
-`
+`,
     );
     const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 

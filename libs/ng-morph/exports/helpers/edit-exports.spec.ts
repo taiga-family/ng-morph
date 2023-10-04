@@ -24,7 +24,7 @@ describe('editExports', () => {
 export { a } from 'b';
 
 console.log(a);
-`
+`,
     );
   });
 

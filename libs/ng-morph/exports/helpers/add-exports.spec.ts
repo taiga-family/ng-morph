@@ -21,7 +21,7 @@ describe('addExports', () => {
       'some/path/file.ts',
       `
 console.log(a);
-`
+`,
     );
   });
 

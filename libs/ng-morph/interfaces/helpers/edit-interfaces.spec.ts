@@ -24,7 +24,7 @@ describe('editInterfaces', () => {
 interface A {}
 
 const a: A;
-`
+`,
     );
   });
 

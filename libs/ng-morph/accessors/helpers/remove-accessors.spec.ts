@@ -27,7 +27,7 @@ class A {
 
   set setter(value){}
 }
-    `
+    `,
     );
   });
 
