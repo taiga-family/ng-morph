@@ -83,11 +83,11 @@ GetBootstrapFunctionComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORT
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Add providers to standalone Application");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "p");
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "To add providers to standalone application you need to use ");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, " To add providers to standalone application you need to use ");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "code");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "addProviderToBootstrapApplicationFn");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " function");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " function ");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "tui-doc-code", 1);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
