@@ -63,7 +63,7 @@
     "@angular-eslint/template-parser": "16.2.0",
     "@angular/cli": "16.2.4",
     "@angular/compiler-cli": "16.2.7",
-    "@angular/language-service": "16.2.7",
+    "@angular/language-service": "16.2.8",
     "@ng-builders/semrel": "1.5.0",
     "@nx/eslint-plugin": "16.10.0",
     "@nx/jest": "16.10.0",
