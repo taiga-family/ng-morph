@@ -70,7 +70,7 @@
     "@nx/linter": "16.10.0",
     "@nx/node": "16.10.0",
     "@nx/workspace": "16.10.0",
-    "@schematics/angular": "16.2.4",
+    "@schematics/angular": "16.2.5",
     "@types/jest": "29.5.5",
     "@types/minimatch": "3.0.5",
     "@types/node": "18.18.3",
