@@ -36,7 +36,7 @@ export class NgMorphTree extends HostTree {
     const host = new ScopedHost(new NodeJsSyncHost(), normalize(root));
     super(host);
 
-    this.hostSink = new HostSink(host);
+    this.hostSink = new HostSink(host as any);
   }
 
   commitChanges(): Promise<void> {
