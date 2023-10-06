@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4.1.0
         with:
           fetch-depth: 0
-      - uses: taiga-family/ci/actions/setup/node@v1.28.0
+      - uses: taiga-family/ci/actions/setup/node@v1.29.0
       - run: npm run build
 
   lint:
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4.1.0
         with:
           fetch-depth: 0
-      - uses: taiga-family/ci/actions/setup/node@v1.28.0
+      - uses: taiga-family/ci/actions/setup/node@v1.29.0
       - run: npm run prettier -- --check
       - run: npm run lint
 
@@ -34,7 +34,7 @@ jobs:
       - uses: actions/checkout@v4.1.0
         with:
           fetch-depth: 0
-      - uses: taiga-family/ci/actions/setup/node@v1.28.0
+      - uses: taiga-family/ci/actions/setup/node@v1.29.0
       - run: npm test
 
 concurrency:
