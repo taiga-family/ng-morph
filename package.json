@@ -40,7 +40,7 @@
     "@angular/core": "16.2.8",
     "@angular/forms": "16.2.9",
     "@angular/platform-browser": "16.2.8",
-    "@angular/platform-browser-dynamic": "16.2.8",
+    "@angular/platform-browser-dynamic": "16.2.9",
     "@angular/router": "16.2.8",
     "@nx/angular": "16.10.0",
     "@taiga-ui/addon-doc": "3.48.0",
