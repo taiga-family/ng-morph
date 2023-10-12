@@ -34,7 +34,7 @@
   ],
   "devDependencies": {
     "@angular/animations": "16.2.8",
-    "@angular/cdk": "16.2.7",
+    "@angular/cdk": "16.2.8",
     "@angular/common": "16.2.8",
     "@angular/compiler": "16.2.8",
     "@angular/core": "16.2.8",
