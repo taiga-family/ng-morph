@@ -169,6 +169,9 @@ tui-doc-page section {
   --tui-chart-4: var(--tui-base-05);
 }
 /**
+ * @deprecated remove in 4.0
+ */
+/**
  * @description:
  * disable smooth scrolling when users have prefers-reduced-motion enabled
  */
