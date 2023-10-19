@@ -33,7 +33,7 @@
     "libs/*"
   ],
   "devDependencies": {
-    "@angular/animations": "16.2.9",
+    "@angular/animations": "16.2.10",
     "@angular/cdk": "16.2.8",
     "@angular/common": "16.2.9",
     "@angular/compiler": "16.2.9",
