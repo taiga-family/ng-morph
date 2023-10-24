@@ -13,8 +13,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @taiga-ui/addon-doc/tokens */ 1739);
 
-
-// TODO: drop in v4.0
 const TUI_DOC_RUSSIAN = [{
   provide: _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__.TUI_DOC_DEMO_TEXTS,
   useValue: [`Сделано с помощью директивы: `, `Фон`, `Детали формы`]
@@ -38,11 +36,6 @@ const TUI_DOC_RUSSIAN = [{
   useValue: `Исходный код`
 }];
 
-/**
- * Generated bundle index. Do not edit.
- */
-
-
 
 /***/ }),
 
@@ -52,9 +45,7 @@ const TUI_DOC_RUSSIAN = [{
   \*******************************************************************************/
 /***/ (() => {
 
-/**
- * Generated bundle index. Do not edit.
- */
+
 
 /***/ }),
 
@@ -211,11 +202,6 @@ TuiAddonDocModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_
 function tuiGetDocModules(type) {
   return [TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_9__.RouterModule.forChild((0,_taiga_ui_addon_doc_utils__WEBPACK_IMPORTED_MODULE_1__.tuiGenerateRoutes)(type))];
 }
-
-/**
- * Generated bundle index. Do not edit.
- */
-
 
 
 /***/ })
