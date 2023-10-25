@@ -73,7 +73,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages */ 7103);
 /* harmony import */ var _getting_started_getting_started_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./getting-started/getting-started.module */ 4069);
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routes */ 5527);
-/* harmony import */ var ngx_highlightjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-highlightjs */ 5972);
+/* harmony import */ var ngx_highlightjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-highlightjs */ 1747);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 1699);
 
 
