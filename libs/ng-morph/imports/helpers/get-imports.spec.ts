@@ -4,10 +4,10 @@ import {
   createProject,
   resetActiveProject,
   setActiveProject,
-  getImports,
-  createSourceFile,
-} from 'ng-morph';
+} from 'ng-morph/project';
 import { StructureKind } from 'ts-morph';
+import { getImports } from './get-imports';
+import { createSourceFile } from '../../source-file';
 
 describe('getImports', () => {
   let host: UnitTestTree;

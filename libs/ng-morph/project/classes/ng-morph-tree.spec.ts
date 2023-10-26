@@ -1,3 +1,8 @@
+import { jest } from '@jest/globals';
+import { URL } from 'url';
+
+const __dirname = new URL('.', import.meta.url).pathname;
+
 import { Tree } from '@angular-devkit/schematics';
 import { NgMorphTree } from './ng-morph-tree';
 import {
@@ -6,7 +11,8 @@ import {
   setActiveProject,
 } from 'ng-morph/project';
 import { createSourceFile, getSourceFile } from 'ng-morph/source-file';
-import * as fs from 'fs';
+
+import fs from 'fs';
 import { join } from 'path';
 
 describe('NgMorphTree', () => {
@@ -49,9 +55,7 @@ export class NgMorphTree extends HostTree {
   it('should write to fs', () => {
     createSourceFile('__file.ts', `content`, { overwrite: true });
 
-    const spy = jest.spyOn(fs, 'writeFileSync');
-
-    spy.mockImplementationOnce(() => {
+    const spy = jest.spyOn(fs, 'writeFileSync').mockImplementation(() => {
       // empty
     });
 
