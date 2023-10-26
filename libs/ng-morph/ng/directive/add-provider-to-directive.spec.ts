@@ -1,48 +1,44 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
-import {
-  createProject,
-  saveActiveProject,
-  setActiveProject,
-} from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { getClasses } from 'ng-morph/classes';
-import { addProviderToDirective } from './add-provider-to-directive';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
+import {createProject, saveActiveProject, setActiveProject} from 'ng-morph/project';
+import {createSourceFile} from 'ng-morph/source-file';
+import {getClasses} from 'ng-morph/classes';
+import {addProviderToDirective} from './add-provider-to-directive';
 
 describe('addProviderToDirective', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
-
-    setActiveProject(createProject(host));
-  });
-
-  describe('No providers property', () => {
     beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { Component } from '@angular/core';
+        host = new UnitTestTree(new HostTree());
+
+        setActiveProject(createProject(host));
+    });
+
+    describe('No providers property', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { Component } from '@angular/core';
 
 @Directive({})
 export class SomeDirective {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should create the providers property', () => {
-      addProviderToDirective(
-        getClasses('src/main.ts', {
-          name: 'SomeDirective',
-        })[0],
-        'TestProvider',
-      );
+        it('should create the providers property', () => {
+            addProviderToDirective(
+                getClasses('src/main.ts', {
+                    name: 'SomeDirective',
+                })[0],
+                'TestProvider',
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { Component } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { Component } from '@angular/core';
 
 @Directive({
     providers: [TestProvider]
@@ -50,47 +46,47 @@ export class SomeDirective {
 export class SomeDirective {
 
 }`);
+        });
     });
-  });
 
-  describe('No decorator arguments', () => {
-    beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { Component } from '@angular/core';
+    describe('No decorator arguments', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { Component } from '@angular/core';
 
 @Directive()
 export class SomeDirective {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should create the providers property', () => {
-      addProviderToDirective(
-        getClasses('src/main.ts', {
-          name: 'SomeDirective',
-        })[0],
-        'TestProvider',
-      );
+        it('should create the providers property', () => {
+            addProviderToDirective(
+                getClasses('src/main.ts', {
+                    name: 'SomeDirective',
+                })[0],
+                'TestProvider',
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { Component } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { Component } from '@angular/core';
 
 @Directive({providers: [TestProvider]})
 export class SomeDirective {
 
 }`);
+        });
     });
-  });
 
-  describe('The providers property is exists', () => {
-    beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { Component } from '@angular/core';
+    describe('The providers property is exists', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { Component } from '@angular/core';
 import { TestService } from 'test-package';
 
 @Directive({
@@ -99,21 +95,21 @@ import { TestService } from 'test-package';
 export class SomeDirective {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should add module to providers', () => {
-      addProviderToDirective(
-        getClasses('src/main.ts', {
-          name: 'SomeDirective',
-        })[0],
-        'NewTestService',
-      );
+        it('should add module to providers', () => {
+            addProviderToDirective(
+                getClasses('src/main.ts', {
+                    name: 'SomeDirective',
+                })[0],
+                'NewTestService',
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { Component } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { Component } from '@angular/core';
 import { TestService } from 'test-package';
 
 @Directive({
@@ -122,6 +118,6 @@ import { TestService } from 'test-package';
 export class SomeDirective {
 
 }`);
+        });
     });
-  });
 });

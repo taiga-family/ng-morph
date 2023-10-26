@@ -1,37 +1,37 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { getEnums } from './get-enums';
-import { removeEnums } from './remove-enums';
+import {createSourceFile} from 'ng-morph/source-file';
+import {getEnums} from './get-enums';
+import {removeEnums} from './remove-enums';
 
 describe('removeEnums', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile('some/path/file.ts', `enum Test { }`);
-  });
+        createSourceFile('some/path/file.ts', `enum Test { }`);
+    });
 
-  it('should remove enums', () => {
-    const declarations = getEnums('some/path/file.ts', { name: 'Test' });
+    it('should remove enums', () => {
+        const declarations = getEnums('some/path/file.ts', {name: 'Test'});
 
-    removeEnums(declarations);
+        removeEnums(declarations);
 
-    saveActiveProject();
+        saveActiveProject();
 
-    expect(host.readContent('some/path/file.ts')).toEqual(``);
-  });
+        expect(host.readContent('some/path/file.ts')).toEqual(``);
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });

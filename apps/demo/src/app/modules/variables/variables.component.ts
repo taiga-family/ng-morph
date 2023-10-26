@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const code = `import {
     addVariables,
@@ -33,11 +33,11 @@ saveActiveProject();
 `;
 
 @Component({
-  selector: 'variables',
-  templateUrl: 'variables.template.html',
-  styleUrls: ['./variables.style.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'variables',
+    templateUrl: 'variables.template.html',
+    styleUrls: ['./variables.style.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class VariablesComponent {
-  readonly code = code;
+    readonly code = code;
 }

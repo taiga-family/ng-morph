@@ -1,39 +1,39 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { addTypeAliases } from 'ng-morph/type-aliases';
+import {createSourceFile} from 'ng-morph/source-file';
+import {addTypeAliases} from 'ng-morph/type-aliases';
 
 describe('addTypeAliases', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile('some/path/file.ts', ``);
-  });
-
-  it('should add type aliases', () => {
-    addTypeAliases('some/path/file.ts', {
-      name: 'A',
-      typeParameters: ['T'],
-      type: 'T[]',
+        createSourceFile('some/path/file.ts', ``);
     });
 
-    saveActiveProject();
+    it('should add type aliases', () => {
+        addTypeAliases('some/path/file.ts', {
+            name: 'A',
+            typeParameters: ['T'],
+            type: 'T[]',
+        });
 
-    expect(host.readContent('some/path/file.ts')).toEqual(`type A<T> = T[];
+        saveActiveProject();
+
+        expect(host.readContent('some/path/file.ts')).toEqual(`type A<T> = T[];
 `);
-  });
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });

@@ -1,50 +1,50 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { getAccessors } from './get-accessors';
-import { removeAccessors } from './remove-accessors';
-import { getClasses } from 'ng-morph/classes';
+import {createSourceFile} from 'ng-morph/source-file';
+import {getAccessors} from './get-accessors';
+import {removeAccessors} from './remove-accessors';
+import {getClasses} from 'ng-morph/classes';
 
 describe('removeAccessors', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile(
-      'some/path/file.ts',
-      `
+        createSourceFile(
+            'some/path/file.ts',
+            `
 class A {
   get getter(){}
 
   set setter(value){}
 }
     `,
-    );
-  });
+        );
+    });
 
-  it('should remove accessors', () => {
-    const declarations = getAccessors(getClasses('some/path/file.ts'));
+    it('should remove accessors', () => {
+        const declarations = getAccessors(getClasses('some/path/file.ts'));
 
-    removeAccessors(declarations);
+        removeAccessors(declarations);
 
-    saveActiveProject();
+        saveActiveProject();
 
-    expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toEqual(`
 class A {
 }
     `);
-  });
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });

@@ -1,50 +1,50 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
-import { getExports } from './get-exports';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
+import {getExports} from './get-exports';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { editExports } from './edit-exports';
+import {createSourceFile} from 'ng-morph/source-file';
+import {editExports} from './edit-exports';
 
 describe('editExports', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile(
-      'some/path/file.ts',
-      `
+        createSourceFile(
+            'some/path/file.ts',
+            `
 export { a } from 'b';
 
 console.log(a);
 `,
-    );
-  });
+        );
+    });
 
-  it('should edit exports', () => {
-    const exports = getExports('some/path/file.ts');
+    it('should edit exports', () => {
+        const exports = getExports('some/path/file.ts');
 
-    editExports(exports, () => ({
-      namedExports: ['b,c'],
-    }));
+        editExports(exports, () => ({
+            namedExports: ['b,c'],
+        }));
 
-    saveActiveProject();
+        saveActiveProject();
 
-    expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toEqual(`
 export { b,c } from 'b';
 
 console.log(a);
 `);
-  });
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });

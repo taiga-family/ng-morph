@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const interfaces = `import {
     addInterfaces,
@@ -29,11 +29,11 @@ saveActiveProject();
 `;
 
 @Component({
-  selector: 'interfaces',
-  templateUrl: 'interfaces.template.html',
-  styleUrls: ['./interfaces.style.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'interfaces',
+    templateUrl: 'interfaces.template.html',
+    styleUrls: ['./interfaces.style.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InterfacesComponent {
-  readonly interfaces = interfaces;
+    readonly interfaces = interfaces;
 }

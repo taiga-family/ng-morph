@@ -1,46 +1,42 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
-import {
-  createProject,
-  saveActiveProject,
-  setActiveProject,
-} from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { getClasses } from 'ng-morph/classes';
-import { addExportToNgModule } from './add-export-to-ng-module';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
+import {createProject, saveActiveProject, setActiveProject} from 'ng-morph/project';
+import {createSourceFile} from 'ng-morph/source-file';
+import {getClasses} from 'ng-morph/classes';
+import {addExportToNgModule} from './add-export-to-ng-module';
 
 describe('addExportToModule', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
-
-    setActiveProject(createProject(host));
-  });
-
-  describe('No exports property', () => {
     beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { NgModule } from '@angular/core';
+        host = new UnitTestTree(new HostTree());
+
+        setActiveProject(createProject(host));
+    });
+
+    describe('No exports property', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { NgModule } from '@angular/core';
 
 @NgModule({})
 export class SomeModule {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should create the imports property', () => {
-      addExportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule',
-      );
+        it('should create the imports property', () => {
+            addExportToNgModule(
+                getClasses('src/main.ts', {name: 'SomeModule'})[0],
+                'TestModule',
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({
     exports: [TestModule]
@@ -48,45 +44,45 @@ export class SomeModule {
 export class SomeModule {
 
 }`);
+        });
     });
-  });
 
-  describe('No decorator arguments', () => {
-    beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { NgModule } from '@angular/core';
+    describe('No decorator arguments', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { NgModule } from '@angular/core';
 
 @NgModule()
 export class SomeModule {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should create the exports property', () => {
-      addExportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule',
-      );
+        it('should create the exports property', () => {
+            addExportToNgModule(
+                getClasses('src/main.ts', {name: 'SomeModule'})[0],
+                'TestModule',
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({exports: [TestModule]})
 export class SomeModule {
 
 }`);
+        });
     });
-  });
 
-  describe('The exports property is exists', () => {
-    beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { NgModule } from '@angular/core';
+    describe('The exports property is exists', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -95,19 +91,19 @@ import { CommonModule } from '@angular/common';
 export class SomeModule {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should add module to exports', () => {
-      addExportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule',
-      );
+        it('should add module to exports', () => {
+            addExportToNgModule(
+                getClasses('src/main.ts', {name: 'SomeModule'})[0],
+                'TestModule',
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -116,6 +112,6 @@ import { CommonModule } from '@angular/common';
 export class SomeModule {
 
 }`);
+        });
     });
-  });
 });

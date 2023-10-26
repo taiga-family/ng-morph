@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const bootstrap = `import {
     getBootstrapFn,
@@ -34,13 +34,13 @@ addProviderToBootstrapApplicationFn(bootstrapFn, 'provideRouter()');
 `;
 
 @Component({
-  selector: 'get-bootstrap-function',
-  templateUrl: './get-bootstrap-function.template.html',
-  styleUrls: ['./get-bootstrap-function.style.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'get-bootstrap-function',
+    templateUrl: './get-bootstrap-function.template.html',
+    styleUrls: ['./get-bootstrap-function.style.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GetBootstrapFunctionComponent {
-  readonly bootstrap = bootstrap;
-  readonly bootstrapApplication = bootstrapApplication;
-  readonly addProviders = addProviders;
+    readonly bootstrap = bootstrap;
+    readonly bootstrapApplication = bootstrapApplication;
+    readonly addProviders = addProviders;
 }

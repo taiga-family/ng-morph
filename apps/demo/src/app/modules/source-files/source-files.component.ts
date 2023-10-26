@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const code = `import {
     createSourceFile,
@@ -22,11 +22,11 @@ saveActiveProject();
 `;
 
 @Component({
-  selector: 'source-files',
-  templateUrl: './source-files.template.html',
-  styleUrls: ['./source-files.style.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'source-files',
+    templateUrl: './source-files.template.html',
+    styleUrls: ['./source-files.style.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SourceFilesComponent {
-  readonly code = code;
+    readonly code = code;
 }

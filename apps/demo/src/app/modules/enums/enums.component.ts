@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const code = `import {
     addEnums,
@@ -35,11 +35,11 @@ saveActiveProject();
 `;
 
 @Component({
-  selector: 'enums',
-  templateUrl: 'enums.template.html',
-  styleUrls: ['./enums.style.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'enums',
+    templateUrl: 'enums.template.html',
+    styleUrls: ['./enums.style.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EnumsComponent {
-  readonly code = code;
+    readonly code = code;
 }

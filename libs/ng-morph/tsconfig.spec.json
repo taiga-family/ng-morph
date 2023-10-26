@@ -1,19 +1,12 @@
 {
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
-    "module": "esnext",
-    "target": "esnext",
-    "moduleResolution": "nodenext",
-    "esModuleInterop": true,
-    "types": ["jest", "node"]
-  },
-  "include": [
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.spec.js",
-    "**/*.spec.jsx",
-    "**/*.d.ts",
-    "jest.config.ts"
-  ]
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "../../dist/out-tsc",
+        "module": "esnext",
+        "target": "esnext",
+        "moduleResolution": "nodenext",
+        "esModuleInterop": true,
+        "types": ["jest", "node"]
+    },
+    "include": ["**/*.spec.ts", "**/*.spec.tsx", "**/*.spec.js", "**/*.spec.jsx", "**/*.d.ts", "jest.config.ts"]
 }

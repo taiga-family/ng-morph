@@ -1,52 +1,52 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { getFunctions } from './get-functions';
-import { editFunctions } from './edit-functions';
+import {createSourceFile} from 'ng-morph/source-file';
+import {getFunctions} from './get-functions';
+import {editFunctions} from './edit-functions';
 
 describe('editFunctions', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile(
-      'some/path/file.ts',
-      `
+        createSourceFile(
+            'some/path/file.ts',
+            `
 function a(){
   return 'a'
 }
 `,
-    );
-  });
+        );
+    });
 
-  it('should rename a function', () => {
-    const functions = getFunctions('some/**/**.ts');
+    it('should rename a function', () => {
+        const functions = getFunctions('some/**/**.ts');
 
-    editFunctions(functions, () => ({
-      isExported: true,
-      name: 'b',
-      statements: `return 'b'`,
-    }));
+        editFunctions(functions, () => ({
+            isExported: true,
+            name: 'b',
+            statements: `return 'b'`,
+        }));
 
-    saveActiveProject();
+        saveActiveProject();
 
-    expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toEqual(`
 export function b(){
     return 'b'
 }
 `);
-  });
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });

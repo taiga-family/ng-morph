@@ -1,31 +1,31 @@
 {
-  "name": "ng-morph",
-  "version": "0.0.0-development",
-  "peerDependencies": {
-    "@angular-devkit/core": ">=11.0.0",
-    "@angular-devkit/schematics": ">=11.0.0"
-  },
-  "dependencies": {
-    "minimatch": "9.0.3",
-    "multimatch": "6.0.0",
-    "ts-morph": "20.0.0",
-    "jsonc-parser": "3.2.0"
-  },
-  "license": "Apache-2.0",
-  "keywords": [
-    "typescript",
-    "ast",
-    "mutations",
-    "angular",
-    "schematics"
-  ],
-  "authors": [
-    "Igor Katsuba <katsuba.igor@gmail.ru>"
-  ],
-  "contributors": [
-    "Igor Katsuba <katsuba.igor@gmail.ru>",
-    "Roman Sedov <79601794011@ya.ru>"
-  ],
-  "repository": "https://github.com/taiga-family/ng-morph",
-  "homepage": "https://taiga-family.github.io/ng-morph/"
+    "name": "ng-morph",
+    "version": "0.0.0-development",
+    "keywords": [
+        "typescript",
+        "ast",
+        "mutations",
+        "angular",
+        "schematics"
+    ],
+    "homepage": "https://taiga-family.github.io/ng-morph/",
+    "repository": "https://github.com/taiga-family/ng-morph",
+    "license": "Apache-2.0",
+    "contributors": [
+        "Igor Katsuba <katsuba.igor@gmail.ru>",
+        "Roman Sedov <79601794011@ya.ru>"
+    ],
+    "dependencies": {
+        "jsonc-parser": "3.2.0",
+        "minimatch": "9.0.3",
+        "multimatch": "6.0.0",
+        "ts-morph": "20.0.0"
+    },
+    "peerDependencies": {
+        "@angular-devkit/core": ">=11.0.0",
+        "@angular-devkit/schematics": ">=11.0.0"
+    },
+    "authors": [
+        "Igor Katsuba <katsuba.igor@gmail.ru>"
+    ]
 }
