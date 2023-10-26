@@ -11,8 +11,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   TypesComponent: () => (/* binding */ TypesComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7357);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1197);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5706);
+
 
 
 const types = `import {
@@ -46,38 +47,56 @@ class TypesComponent {
   constructor() {
     this.types = types;
   }
-  static #_ = this.ɵfac = function TypesComponent_Factory(t) {
-    return new (t || TypesComponent)();
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  static #_ = this.ɵfac = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareFactory"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
     type: TypesComponent,
-    selectors: [["types"]],
-    decls: 4,
-    vars: 1,
-    consts: [["header", "Types"], ["filename", "migration.ts", 3, "code"]],
-    template: function TypesComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-page", 0)(1, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " You can create, get, edit and remove types in your files with declarative descriptions and conditions. ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "tui-doc-code", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      }
-      if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("code", ctx.types);
-      }
-    },
-    dependencies: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocCodeComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageComponent],
-    styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
-    changeDetection: 0
+    deps: [],
+    target: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵFactoryTarget"].Component
+  });
+  static #_2 = this.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareComponent"]({
+    minVersion: "14.0.0",
+    version: "16.2.11",
+    type: TypesComponent,
+    selector: "types",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
+    template: "<tui-doc-page header=\"Types\">\n  <p>\n    You can create, get, edit and remove types in your files with declarative\n    descriptions and conditions.\n  </p>\n\n  <tui-doc-code filename=\"migration.ts\" [code]=\"types\"></tui-doc-code>\n</tui-doc-page>\n",
+    styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
+    dependencies: [{
+      kind: "component",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocCodeComponent,
+      selector: "tui-doc-code",
+      inputs: ["filename", "code"]
+    }, {
+      kind: "component",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageComponent,
+      selector: "tui-doc-page",
+      inputs: ["header", "package", "type", "path", "deprecated"]
+    }],
+    changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush
   });
 }
 
+_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareClassMetadata"]({
+  minVersion: "12.0.0",
+  version: "16.2.11",
+  ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
+  type: TypesComponent,
+  decorators: [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Component,
+    args: [{
+      selector: 'types',
+      changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush,
+      template: "<tui-doc-page header=\"Types\">\n  <p>\n    You can create, get, edit and remove types in your files with declarative\n    descriptions and conditions.\n  </p>\n\n  <tui-doc-code filename=\"migration.ts\" [code]=\"types\"></tui-doc-code>\n</tui-doc-page>\n",
+      styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+    }]
+  }]
+});
 
 /***/ }),
 
-/***/ 6400:
+/***/ 8180:
 /*!*********************************************************!*\
   !*** ./apps/demo/src/app/modules/types/types.module.ts ***!
   \*********************************************************/
@@ -87,12 +106,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   TypesModule: () => (/* binding */ TypesModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 7947);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 6684);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7626);
-/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 798);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1197);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 2454);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 2895);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5948);
+/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 103);
 /* harmony import */ var _types_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types.component */ 7128);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
+
 
 
 
@@ -100,24 +120,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class TypesModule {
-  static #_ = this.ɵfac = function TypesModule_Factory(t) {
-    return new (t || TypesModule)();
-  };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
-    type: TypesModule
+  static #_ = this.ɵfac = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareFactory"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: TypesModule,
+    deps: [],
+    target: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵFactoryTarget"].NgModule
   });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_types_component__WEBPACK_IMPORTED_MODULE_0__.TypesComponent))]
-  });
-}
-
-(function () {
-  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](TypesModule, {
+  static #_2 = this.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareNgModule"]({
+    minVersion: "14.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: TypesModule,
     declarations: [_types_component__WEBPACK_IMPORTED_MODULE_0__.TypesComponent],
     imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule],
     exports: [_types_component__WEBPACK_IMPORTED_MODULE_0__.TypesComponent]
   });
-})();
+  static #_3 = this.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareInjector"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: TypesModule,
+    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_types_component__WEBPACK_IMPORTED_MODULE_0__.TypesComponent))]
+  });
+}
+
+_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareClassMetadata"]({
+  minVersion: "12.0.0",
+  version: "16.2.11",
+  ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+  type: TypesModule,
+  decorators: [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_1__.NgModule,
+    args: [{
+      imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_types_component__WEBPACK_IMPORTED_MODULE_0__.TypesComponent))],
+      declarations: [_types_component__WEBPACK_IMPORTED_MODULE_0__.TypesComponent],
+      exports: [_types_component__WEBPACK_IMPORTED_MODULE_0__.TypesComponent]
+    }]
+  }]
+});
 
 /***/ })
 

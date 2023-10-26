@@ -11,36 +11,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ImportsAndExportsComponent: () => (/* binding */ ImportsAndExportsComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7357);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1197);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5706);
 
 
-function ImportsAndExportsComponent_ng_template_1_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " You can create, get, edit and remove imports in your files with declarative descriptions and conditions. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "tui-doc-code", 3);
-  }
-  if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("code", ctx_r0.imports);
-  }
-}
-function ImportsAndExportsComponent_ng_template_2_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " You can create, get, edit and remove exports in your files with declarative descriptions and conditions. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "tui-doc-code", 3);
-  }
-  if (rf & 2) {
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("code", ctx_r1.exports);
-  }
-}
+
 const imports = `import {
     addImports,
     editImports,
@@ -129,29 +104,57 @@ class ImportsAndExportsComponent {
     this.imports = imports;
     this.exports = exportsSamples;
   }
-  static #_ = this.ɵfac = function ImportsAndExportsComponent_Factory(t) {
-    return new (t || ImportsAndExportsComponent)();
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  static #_ = this.ɵfac = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareFactory"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
     type: ImportsAndExportsComponent,
-    selectors: [["imports-and-exports"]],
-    decls: 3,
-    vars: 0,
-    consts: [["header", "Imports and exports"], ["pageTab", "Imports"], ["pageTab", "Exports"], ["filename", "migration.ts", 3, "code"]],
-    template: function ImportsAndExportsComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-page", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, ImportsAndExportsComponent_ng_template_1_Template, 3, 1, "ng-template", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, ImportsAndExportsComponent_ng_template_2_Template, 3, 1, "ng-template", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      }
-    },
-    dependencies: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocCodeComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageTabConnectorDirective],
-    styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
-    changeDetection: 0
+    deps: [],
+    target: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵFactoryTarget"].Component
+  });
+  static #_2 = this.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareComponent"]({
+    minVersion: "14.0.0",
+    version: "16.2.11",
+    type: ImportsAndExportsComponent,
+    selector: "imports-and-exports",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
+    template: "<tui-doc-page header=\"Imports and exports\">\n  <ng-template pageTab=\"Imports\">\n    <p>\n      You can create, get, edit and remove imports in your files with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"imports\"></tui-doc-code>\n  </ng-template>\n\n  <ng-template pageTab=\"Exports\">\n    <p>\n      You can create, get, edit and remove exports in your files with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"exports\"></tui-doc-code>\n  </ng-template>\n</tui-doc-page>\n",
+    styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
+    dependencies: [{
+      kind: "component",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocCodeComponent,
+      selector: "tui-doc-code",
+      inputs: ["filename", "code"]
+    }, {
+      kind: "component",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageComponent,
+      selector: "tui-doc-page",
+      inputs: ["header", "package", "type", "path", "deprecated"]
+    }, {
+      kind: "directive",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageTabConnectorDirective,
+      selector: "[pageTab]",
+      inputs: ["pageTab"]
+    }],
+    changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush
   });
 }
 
+_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareClassMetadata"]({
+  minVersion: "12.0.0",
+  version: "16.2.11",
+  ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
+  type: ImportsAndExportsComponent,
+  decorators: [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Component,
+    args: [{
+      selector: 'imports-and-exports',
+      changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush,
+      template: "<tui-doc-page header=\"Imports and exports\">\n  <ng-template pageTab=\"Imports\">\n    <p>\n      You can create, get, edit and remove imports in your files with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"imports\"></tui-doc-code>\n  </ng-template>\n\n  <ng-template pageTab=\"Exports\">\n    <p>\n      You can create, get, edit and remove exports in your files with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"exports\"></tui-doc-code>\n  </ng-template>\n</tui-doc-page>\n",
+      styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+    }]
+  }]
+});
 
 /***/ }),
 
@@ -165,12 +168,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ImportsAndExportsModule: () => (/* binding */ ImportsAndExportsModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 7947);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 6684);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7626);
-/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 798);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1197);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 2454);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 2895);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5948);
+/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 103);
 /* harmony import */ var _imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imports-and-exports.component */ 4050);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
+
 
 
 
@@ -178,24 +182,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class ImportsAndExportsModule {
-  static #_ = this.ɵfac = function ImportsAndExportsModule_Factory(t) {
-    return new (t || ImportsAndExportsModule)();
-  };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
-    type: ImportsAndExportsModule
+  static #_ = this.ɵfac = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareFactory"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: ImportsAndExportsModule,
+    deps: [],
+    target: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵFactoryTarget"].NgModule
   });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__.ImportsAndExportsComponent))]
-  });
-}
-
-(function () {
-  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](ImportsAndExportsModule, {
+  static #_2 = this.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareNgModule"]({
+    minVersion: "14.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: ImportsAndExportsModule,
     declarations: [_imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__.ImportsAndExportsComponent],
     imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule],
     exports: [_imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__.ImportsAndExportsComponent]
   });
-})();
+  static #_3 = this.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareInjector"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: ImportsAndExportsModule,
+    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__.ImportsAndExportsComponent))]
+  });
+}
+
+_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareClassMetadata"]({
+  minVersion: "12.0.0",
+  version: "16.2.11",
+  ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+  type: ImportsAndExportsModule,
+  decorators: [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_1__.NgModule,
+    args: [{
+      imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__.ImportsAndExportsComponent))],
+      declarations: [_imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__.ImportsAndExportsComponent],
+      exports: [_imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__.ImportsAndExportsComponent]
+    }]
+  }]
+});
 
 /***/ })
 

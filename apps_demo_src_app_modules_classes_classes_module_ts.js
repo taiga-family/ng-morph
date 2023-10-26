@@ -11,13 +11,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ClassesComponent: () => (/* binding */ ClassesComponent)
 /* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 1197);
 /* harmony import */ var _samples_accessors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./samples/accessors */ 3105);
 /* harmony import */ var _samples_contructors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./samples/contructors */ 6672);
-/* harmony import */ var _samples_decorators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./samples/decorators */ 373);
+/* harmony import */ var _samples_decorators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./samples/decorators */ 1851);
 /* harmony import */ var _samples_methods__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./samples/methods */ 8589);
 /* harmony import */ var _samples_properties__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./samples/properties */ 9928);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 1699);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7357);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5706);
 
 
 
@@ -25,121 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ClassesComponent_ng_template_1_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](1, "You can manipulate with classes using the following utils");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](2, "section")(3, "h2");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](4, "Add classes");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](5, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](6, " You can generate a class from declarative description. Use autocomplete to check all the abilities. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](7, "tui-doc-code", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](8, "section")(9, "h2");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](10, "Get classes");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](11, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](12, " You can get all classes with some declarative condition. Use autocomplete to check all the abilities. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](13, "tui-doc-code", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](14, "section")(15, "h2");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](16, "Edit classes");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](17, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](18, " You can edit existing classes with a handler returining a declarative description. Use autocomplete to check all the abilities. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](19, "tui-doc-code", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](20, "section")(21, "h2");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](22, "Remove classes");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](23, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](24, " You can remove all classes with some declarative condition. Use autocomplete to check all the abilities. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](25, "tui-doc-code", 7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-  }
-  if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](7);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("code", ctx_r0.add);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("code", ctx_r0.getClasses);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("code", ctx_r0.edit);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("code", ctx_r0.remove);
-  }
-}
-function ClassesComponent_ng_template_2_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](1, " You can create, get, edit and remove constructors of your classes with declarative descriptions and conditions. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](2, "tui-doc-code", 7);
-  }
-  if (rf & 2) {
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("code", ctx_r1.constructors);
-  }
-}
-function ClassesComponent_ng_template_3_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](1, " You can create, get, edit and remove methods of your classes with declarative descriptions and conditions. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](2, "tui-doc-code", 7);
-  }
-  if (rf & 2) {
-    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("code", ctx_r2.methods);
-  }
-}
-function ClassesComponent_ng_template_4_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](1, " You can create, get, edit and remove properties of your classes with declarative descriptions and conditions. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](2, "tui-doc-code", 7);
-  }
-  if (rf & 2) {
-    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("code", ctx_r3.properties);
-  }
-}
-function ClassesComponent_ng_template_5_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](1, " You can create, get, edit and remove accessors of your classes with declarative descriptions and conditions. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](2, "tui-doc-code", 7);
-  }
-  if (rf & 2) {
-    const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("code", ctx_r4.accessors);
-  }
-}
-function ClassesComponent_ng_template_6_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "p");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](1, " You can create, get, edit and remove decorators of your classes with declarative descriptions and conditions. ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](2, "tui-doc-code", 7);
-  }
-  if (rf & 2) {
-    const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("code", ctx_r5.decorators);
-  }
-}
+
 const add = `import {
     addClasses,
     setActiveProject,
@@ -216,33 +102,57 @@ class ClassesComponent {
     this.decorators = _samples_decorators__WEBPACK_IMPORTED_MODULE_2__.DECORATORS_SAMPLES;
     this.constructors = _samples_contructors__WEBPACK_IMPORTED_MODULE_1__.CONSTRUCTORS_SAMPLES;
   }
-  static #_ = this.ɵfac = function ClassesComponent_Factory(t) {
-    return new (t || ClassesComponent)();
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineComponent"]({
+  static #_ = this.ɵfac = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵngDeclareFactory"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_5__,
     type: ClassesComponent,
-    selectors: [["classes"]],
-    decls: 7,
-    vars: 0,
-    consts: [["header", "Classes"], ["pageTab", "Classes"], ["pageTab", "Constructors"], ["pageTab", "Methods"], ["pageTab", "Properties"], ["pageTab", "Accessors"], ["pageTab", "Decorators"], ["filename", "migration.ts", 3, "code"]],
-    template: function ClassesComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "tui-doc-page", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](1, ClassesComponent_ng_template_1_Template, 26, 4, "ng-template", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](2, ClassesComponent_ng_template_2_Template, 3, 1, "ng-template", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](3, ClassesComponent_ng_template_3_Template, 3, 1, "ng-template", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](4, ClassesComponent_ng_template_4_Template, 3, 1, "ng-template", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](5, ClassesComponent_ng_template_5_Template, 3, 1, "ng-template", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](6, ClassesComponent_ng_template_6_Template, 3, 1, "ng-template", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
-      }
-    },
-    dependencies: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocCodeComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageTabConnectorDirective],
-    styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
-    changeDetection: 0
+    deps: [],
+    target: _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵFactoryTarget"].Component
+  });
+  static #_2 = this.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵngDeclareComponent"]({
+    minVersion: "14.0.0",
+    version: "16.2.11",
+    type: ClassesComponent,
+    selector: "classes",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_5__,
+    template: "<tui-doc-page header=\"Classes\">\n  <ng-template pageTab=\"Classes\">\n    <p>You can manipulate with classes using the following utils</p>\n\n    <section>\n      <h2>Add classes</h2>\n\n      <p>\n        You can generate a class from declarative description. Use autocomplete\n        to check all the abilities.\n      </p>\n\n      <tui-doc-code filename=\"migration.ts\" [code]=\"add\"></tui-doc-code>\n    </section>\n\n    <section>\n      <h2>Get classes</h2>\n\n      <p>\n        You can get all classes with some declarative condition. Use\n        autocomplete to check all the abilities.\n      </p>\n\n      <tui-doc-code filename=\"migration.ts\" [code]=\"getClasses\"></tui-doc-code>\n    </section>\n\n    <section>\n      <h2>Edit classes</h2>\n\n      <p>\n        You can edit existing classes with a handler returining a declarative\n        description. Use autocomplete to check all the abilities.\n      </p>\n\n      <tui-doc-code filename=\"migration.ts\" [code]=\"edit\"></tui-doc-code>\n    </section>\n\n    <section>\n      <h2>Remove classes</h2>\n\n      <p>\n        You can remove all classes with some declarative condition. Use\n        autocomplete to check all the abilities.\n      </p>\n\n      <tui-doc-code filename=\"migration.ts\" [code]=\"remove\"></tui-doc-code>\n    </section>\n  </ng-template>\n\n  <ng-template pageTab=\"Constructors\">\n    <p>\n      You can create, get, edit and remove constructors of your classes with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"constructors\"></tui-doc-code>\n  </ng-template>\n\n  <ng-template pageTab=\"Methods\">\n    <p>\n      You can create, get, edit and remove methods of your classes with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"methods\"></tui-doc-code>\n  </ng-template>\n\n  <ng-template pageTab=\"Properties\">\n    <p>\n      You can create, get, edit and remove properties of your classes with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"properties\"></tui-doc-code>\n  </ng-template>\n\n  <ng-template pageTab=\"Accessors\">\n    <p>\n      You can create, get, edit and remove accessors of your classes with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"accessors\"></tui-doc-code>\n  </ng-template>\n\n  <ng-template pageTab=\"Decorators\">\n    <p>\n      You can create, get, edit and remove decorators of your classes with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"decorators\"></tui-doc-code>\n  </ng-template>\n</tui-doc-page>\n",
+    styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
+    dependencies: [{
+      kind: "component",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocCodeComponent,
+      selector: "tui-doc-code",
+      inputs: ["filename", "code"]
+    }, {
+      kind: "component",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageComponent,
+      selector: "tui-doc-page",
+      inputs: ["header", "package", "type", "path", "deprecated"]
+    }, {
+      kind: "directive",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageTabConnectorDirective,
+      selector: "[pageTab]",
+      inputs: ["pageTab"]
+    }],
+    changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_5__.ChangeDetectionStrategy.OnPush
   });
 }
 
+_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵngDeclareClassMetadata"]({
+  minVersion: "12.0.0",
+  version: "16.2.11",
+  ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_5__,
+  type: ClassesComponent,
+  decorators: [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_5__.Component,
+    args: [{
+      selector: 'classes',
+      changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_5__.ChangeDetectionStrategy.OnPush,
+      template: "<tui-doc-page header=\"Classes\">\n  <ng-template pageTab=\"Classes\">\n    <p>You can manipulate with classes using the following utils</p>\n\n    <section>\n      <h2>Add classes</h2>\n\n      <p>\n        You can generate a class from declarative description. Use autocomplete\n        to check all the abilities.\n      </p>\n\n      <tui-doc-code filename=\"migration.ts\" [code]=\"add\"></tui-doc-code>\n    </section>\n\n    <section>\n      <h2>Get classes</h2>\n\n      <p>\n        You can get all classes with some declarative condition. Use\n        autocomplete to check all the abilities.\n      </p>\n\n      <tui-doc-code filename=\"migration.ts\" [code]=\"getClasses\"></tui-doc-code>\n    </section>\n\n    <section>\n      <h2>Edit classes</h2>\n\n      <p>\n        You can edit existing classes with a handler returining a declarative\n        description. Use autocomplete to check all the abilities.\n      </p>\n\n      <tui-doc-code filename=\"migration.ts\" [code]=\"edit\"></tui-doc-code>\n    </section>\n\n    <section>\n      <h2>Remove classes</h2>\n\n      <p>\n        You can remove all classes with some declarative condition. Use\n        autocomplete to check all the abilities.\n      </p>\n\n      <tui-doc-code filename=\"migration.ts\" [code]=\"remove\"></tui-doc-code>\n    </section>\n  </ng-template>\n\n  <ng-template pageTab=\"Constructors\">\n    <p>\n      You can create, get, edit and remove constructors of your classes with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"constructors\"></tui-doc-code>\n  </ng-template>\n\n  <ng-template pageTab=\"Methods\">\n    <p>\n      You can create, get, edit and remove methods of your classes with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"methods\"></tui-doc-code>\n  </ng-template>\n\n  <ng-template pageTab=\"Properties\">\n    <p>\n      You can create, get, edit and remove properties of your classes with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"properties\"></tui-doc-code>\n  </ng-template>\n\n  <ng-template pageTab=\"Accessors\">\n    <p>\n      You can create, get, edit and remove accessors of your classes with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"accessors\"></tui-doc-code>\n  </ng-template>\n\n  <ng-template pageTab=\"Decorators\">\n    <p>\n      You can create, get, edit and remove decorators of your classes with\n      declarative descriptions and conditions.\n    </p>\n\n    <tui-doc-code filename=\"migration.ts\" [code]=\"decorators\"></tui-doc-code>\n  </ng-template>\n</tui-doc-page>\n",
+      styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+    }]
+  }]
+});
 
 /***/ }),
 
@@ -256,12 +166,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ClassesModule: () => (/* binding */ ClassesModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 7947);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 6684);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7626);
-/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 798);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1197);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 2454);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 2895);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5948);
+/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 103);
 /* harmony import */ var _classes_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./classes.component */ 6793);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
+
 
 
 
@@ -269,24 +180,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class ClassesModule {
-  static #_ = this.ɵfac = function ClassesModule_Factory(t) {
-    return new (t || ClassesModule)();
-  };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
-    type: ClassesModule
+  static #_ = this.ɵfac = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareFactory"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: ClassesModule,
+    deps: [],
+    target: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵFactoryTarget"].NgModule
   });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_classes_component__WEBPACK_IMPORTED_MODULE_0__.ClassesComponent))]
-  });
-}
-
-(function () {
-  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](ClassesModule, {
+  static #_2 = this.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareNgModule"]({
+    minVersion: "14.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: ClassesModule,
     declarations: [_classes_component__WEBPACK_IMPORTED_MODULE_0__.ClassesComponent],
     imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule],
     exports: [_classes_component__WEBPACK_IMPORTED_MODULE_0__.ClassesComponent]
   });
-})();
+  static #_3 = this.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareInjector"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: ClassesModule,
+    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_classes_component__WEBPACK_IMPORTED_MODULE_0__.ClassesComponent))]
+  });
+}
+
+_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareClassMetadata"]({
+  minVersion: "12.0.0",
+  version: "16.2.11",
+  ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+  type: ClassesModule,
+  decorators: [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_1__.NgModule,
+    args: [{
+      imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_classes_component__WEBPACK_IMPORTED_MODULE_0__.ClassesComponent))],
+      declarations: [_classes_component__WEBPACK_IMPORTED_MODULE_0__.ClassesComponent],
+      exports: [_classes_component__WEBPACK_IMPORTED_MODULE_0__.ClassesComponent]
+    }]
+  }]
+});
 
 /***/ }),
 
@@ -384,7 +317,7 @@ saveActiveProject();
 
 /***/ }),
 
-/***/ 373:
+/***/ 1851:
 /*!*****************************************************************!*\
   !*** ./apps/demo/src/app/modules/classes/samples/decorators.ts ***!
   \*****************************************************************/

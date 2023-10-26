@@ -11,8 +11,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   SourceFilesComponent: () => (/* binding */ SourceFilesComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7357);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1197);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5706);
+
 
 
 const code = `import {
@@ -39,34 +40,52 @@ class SourceFilesComponent {
   constructor() {
     this.code = code;
   }
-  static #_ = this.ɵfac = function SourceFilesComponent_Factory(t) {
-    return new (t || SourceFilesComponent)();
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  static #_ = this.ɵfac = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareFactory"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
     type: SourceFilesComponent,
-    selectors: [["source-files"]],
-    decls: 4,
-    vars: 1,
-    consts: [["header", "Source files"], ["filename", "migration.ts", 3, "code"]],
-    template: function SourceFilesComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-page", 0)(1, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " You can create, get and move sources files of the project and their paths. ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "tui-doc-code", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      }
-      if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("code", ctx.code);
-      }
-    },
-    dependencies: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocCodeComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageComponent],
-    styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
-    changeDetection: 0
+    deps: [],
+    target: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵFactoryTarget"].Component
+  });
+  static #_2 = this.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareComponent"]({
+    minVersion: "14.0.0",
+    version: "16.2.11",
+    type: SourceFilesComponent,
+    selector: "source-files",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
+    template: "<tui-doc-page header=\"Source files\">\n  <p>\n    You can create, get and move sources files of the project and their paths.\n  </p>\n\n  <tui-doc-code filename=\"migration.ts\" [code]=\"code\"></tui-doc-code>\n</tui-doc-page>\n",
+    styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
+    dependencies: [{
+      kind: "component",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocCodeComponent,
+      selector: "tui-doc-code",
+      inputs: ["filename", "code"]
+    }, {
+      kind: "component",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageComponent,
+      selector: "tui-doc-page",
+      inputs: ["header", "package", "type", "path", "deprecated"]
+    }],
+    changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush
   });
 }
 
+_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareClassMetadata"]({
+  minVersion: "12.0.0",
+  version: "16.2.11",
+  ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
+  type: SourceFilesComponent,
+  decorators: [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Component,
+    args: [{
+      selector: 'source-files',
+      changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush,
+      template: "<tui-doc-page header=\"Source files\">\n  <p>\n    You can create, get and move sources files of the project and their paths.\n  </p>\n\n  <tui-doc-code filename=\"migration.ts\" [code]=\"code\"></tui-doc-code>\n</tui-doc-page>\n",
+      styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+    }]
+  }]
+});
 
 /***/ }),
 
@@ -80,12 +99,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   SourceFilesModule: () => (/* binding */ SourceFilesModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 7947);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 6684);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7626);
-/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 798);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1197);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 2454);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 2895);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5948);
+/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 103);
 /* harmony import */ var _source_files_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./source-files.component */ 8447);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
+
 
 
 
@@ -93,24 +113,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class SourceFilesModule {
-  static #_ = this.ɵfac = function SourceFilesModule_Factory(t) {
-    return new (t || SourceFilesModule)();
-  };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
-    type: SourceFilesModule
+  static #_ = this.ɵfac = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareFactory"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: SourceFilesModule,
+    deps: [],
+    target: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵFactoryTarget"].NgModule
   });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_source_files_component__WEBPACK_IMPORTED_MODULE_0__.SourceFilesComponent))]
-  });
-}
-
-(function () {
-  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](SourceFilesModule, {
+  static #_2 = this.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareNgModule"]({
+    minVersion: "14.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: SourceFilesModule,
     declarations: [_source_files_component__WEBPACK_IMPORTED_MODULE_0__.SourceFilesComponent],
     imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule],
     exports: [_source_files_component__WEBPACK_IMPORTED_MODULE_0__.SourceFilesComponent]
   });
-})();
+  static #_3 = this.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareInjector"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: SourceFilesModule,
+    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_source_files_component__WEBPACK_IMPORTED_MODULE_0__.SourceFilesComponent))]
+  });
+}
+
+_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareClassMetadata"]({
+  minVersion: "12.0.0",
+  version: "16.2.11",
+  ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+  type: SourceFilesModule,
+  decorators: [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_1__.NgModule,
+    args: [{
+      imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_source_files_component__WEBPACK_IMPORTED_MODULE_0__.SourceFilesComponent))],
+      declarations: [_source_files_component__WEBPACK_IMPORTED_MODULE_0__.SourceFilesComponent],
+      exports: [_source_files_component__WEBPACK_IMPORTED_MODULE_0__.SourceFilesComponent]
+    }]
+  }]
+});
 
 /***/ })
 

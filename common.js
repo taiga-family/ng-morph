@@ -1,6 +1,6 @@
 (self["webpackChunkdemo"] = self["webpackChunkdemo"] || []).push([["common"],{
 
-/***/ 8445:
+/***/ 4419:
 /*!***********************************************************************************!*\
   !*** ./node_modules/@taiga-ui/addon-doc/fesm2015/taiga-ui-addon-doc-languages.js ***!
   \***********************************************************************************/
@@ -11,7 +11,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   TUI_DOC_RUSSIAN: () => (/* binding */ TUI_DOC_RUSSIAN)
 /* harmony export */ });
-/* harmony import */ var _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @taiga-ui/addon-doc/tokens */ 1739);
+/* harmony import */ var _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @taiga-ui/addon-doc/tokens */ 9933);
 
 const TUI_DOC_RUSSIAN = [{
   provide: _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__.TUI_DOC_DEMO_TEXTS,
@@ -39,7 +39,7 @@ const TUI_DOC_RUSSIAN = [{
 
 /***/ }),
 
-/***/ 5881:
+/***/ 9509:
 /*!*******************************************************************************!*\
   !*** ./node_modules/@taiga-ui/addon-doc/fesm2015/taiga-ui-addon-doc-types.js ***!
   \*******************************************************************************/
@@ -49,7 +49,7 @@ const TUI_DOC_RUSSIAN = [{
 
 /***/ }),
 
-/***/ 6684:
+/***/ 2895:
 /*!*************************************************************************!*\
   !*** ./node_modules/@taiga-ui/addon-doc/fesm2015/taiga-ui-addon-doc.js ***!
   \*************************************************************************/
@@ -154,16 +154,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   tuiTransliterateKeyboardLayout: () => (/* reexport safe */ _taiga_ui_addon_doc_utils__WEBPACK_IMPORTED_MODULE_1__.tuiTransliterateKeyboardLayout),
 /* harmony export */   tuiTryParseMarkdownCodeBlock: () => (/* reexport safe */ _taiga_ui_addon_doc_utils__WEBPACK_IMPORTED_MODULE_1__.tuiTryParseMarkdownCodeBlock)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 1699);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ 7947);
-/* harmony import */ var _taiga_ui_addon_doc_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @taiga-ui/addon-doc/components */ 7357);
-/* harmony import */ var _taiga_ui_addon_doc_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc/utils */ 7626);
-/* harmony import */ var _taiga_ui_addon_doc_directives__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/addon-doc/directives */ 7511);
-/* harmony import */ var _taiga_ui_addon_doc_interfaces__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc/interfaces */ 7572);
-/* harmony import */ var _taiga_ui_addon_doc_languages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @taiga-ui/addon-doc/languages */ 8445);
-/* harmony import */ var _taiga_ui_addon_doc_services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc/services */ 1571);
-/* harmony import */ var _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @taiga-ui/addon-doc/tokens */ 1739);
-/* harmony import */ var _taiga_ui_addon_doc_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @taiga-ui/addon-doc/types */ 5881);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 1197);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ 2454);
+/* harmony import */ var _taiga_ui_addon_doc_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @taiga-ui/addon-doc/components */ 5706);
+/* harmony import */ var _taiga_ui_addon_doc_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc/utils */ 5948);
+/* harmony import */ var _taiga_ui_addon_doc_directives__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/addon-doc/directives */ 9707);
+/* harmony import */ var _taiga_ui_addon_doc_interfaces__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc/interfaces */ 5565);
+/* harmony import */ var _taiga_ui_addon_doc_languages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @taiga-ui/addon-doc/languages */ 4419);
+/* harmony import */ var _taiga_ui_addon_doc_services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc/services */ 860);
+/* harmony import */ var _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @taiga-ui/addon-doc/tokens */ 9933);
+/* harmony import */ var _taiga_ui_addon_doc_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @taiga-ui/addon-doc/types */ 9509);
 /* harmony import */ var _taiga_ui_addon_doc_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_taiga_ui_addon_doc_types__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
 /* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _taiga_ui_addon_doc_types__WEBPACK_IMPORTED_MODULE_7__) if(["default","TuiAddonDocModule","tuiGetDocModules","PAGE_PROVIDERS","PAGE_SEE_ALSO","TUI_DOC_EXAMPLE_DEFAULT_OPTIONS","TUI_DOC_EXAMPLE_OPTIONS","TuiDocCodeComponent","TuiDocCodeModule","TuiDocCopyComponent","TuiDocCopyModule","TuiDocDemoComponent","TuiDocDemoModule","TuiDocDocumentationComponent","TuiDocDocumentationModule","TuiDocDocumentationPropertyConnectorDirective","TuiDocExampleCapitalizePipe","TuiDocExampleComponent","TuiDocExampleGetTabsPipe","TuiDocExampleModule","TuiDocHeaderComponent","TuiDocHeaderModule","TuiDocMainComponent","TuiDocMainModule","TuiDocNavigationComponent","TuiDocNavigationModule","TuiDocPageComponent","TuiDocPageModule","TuiDocPageTabConnectorDirective","TuiDocSeeAlsoComponent","TuiDocSeeAlsoModule","TuiDocSourceCodeComponent","TuiDocSourceCodeModule","TuiGetColorPipe","TuiGetOpacityPipe","TuiInputOpacityDirective","TuiInputOpacityModule","TuiInspectPipe","TuiIsOptionalPipe","TuiIsPrimitivePolymorpheusContentPipe","TuiLanguageSwitcherComponent","TuiLanguageSwitcherModule","TuiShowCleanerPipe","TuiShowContentTooltip","TuiStripOptionalPipe","tuiDocExampleOptionsProvider","tuiCoerceValue","tuiCoerceValueIsTrue","tuiGenerateRoutes","tuiInspectAny","tuiRawLoad","tuiRawLoadRecord","tuiToFlatMapPages","tuiTransliterateKeyboardLayout","tuiTryParseMarkdownCodeBlock","TuiScrollIntoViewLinkDirective","TuiScrollIntoViewLinkModule","TuiTextCodeDirective","TuiTextCodeModule","TUI_EXAMPLE_PRIMARY_FILE_NAME","TUI_DOC_RUSSIAN","TUI_THEME_DEFAULT_NAME","TUI_THEME_NAME","TUI_THEME_NIGHT_STORAGE_DEFAULT_KEY","TUI_THEME_NIGHT_STORAGE_KEY","TUI_THEME_STORAGE_DEFAULT_KEY","TUI_THEME_STORAGE_KEY","TUI_USE_DEFAULT_NIGHT_THEME","TuiThemeNightService","TuiThemeService","TUI_DOC_CODE_ACTIONS","TUI_DOC_CODE_EDITOR","TUI_DOC_DEFAULT_ICONS","TUI_DOC_DEFAULT_TABS","TUI_DOC_DEMO_TEXTS","TUI_DOC_DOCUMENTATION_TEXTS","TUI_DOC_EXAMPLE_CONTENT_PROCESSOR","TUI_DOC_EXAMPLE_MARKDOWN_CODE_PROCESSOR","TUI_DOC_EXAMPLE_TEXTS","TUI_DOC_EXCLUDED_PROPERTIES","TUI_DOC_ICONS","TUI_DOC_LOGO","TUI_DOC_MAP_PAGES","TUI_DOC_MENU_TEXT","TUI_DOC_PAGES","TUI_DOC_PAGE_LOADED","TUI_DOC_SCROLL_BEHAVIOR","TUI_DOC_SEARCH_TEXT","TUI_DOC_SEE_ALSO","TUI_DOC_SEE_ALSO_TEXT","TUI_DOC_SOURCE_CODE","TUI_DOC_SOURCE_CODE_TEXT","TUI_DOC_TITLE","TUI_DOC_URL_STATE_HANDLER","tuiDocExcludeProperties","tuiDocIconsProvider"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _taiga_ui_addon_doc_types__WEBPACK_IMPORTED_MODULE_7__[__WEBPACK_IMPORT_KEY__]

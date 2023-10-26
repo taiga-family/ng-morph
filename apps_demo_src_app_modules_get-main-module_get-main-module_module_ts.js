@@ -11,8 +11,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   GetMainModuleComponent: () => (/* binding */ GetMainModuleComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7357);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1197);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5706);
+
 
 
 const code = `import {
@@ -28,34 +29,52 @@ class GetMainModuleComponent {
   constructor() {
     this.code = code;
   }
-  static #_ = this.ɵfac = function GetMainModuleComponent_Factory(t) {
-    return new (t || GetMainModuleComponent)();
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  static #_ = this.ɵfac = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareFactory"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
     type: GetMainModuleComponent,
-    selectors: [["get-main-module"]],
-    decls: 4,
-    vars: 1,
-    consts: [["header", "Get main module"], ["filename", "migration.ts", 3, "code"]],
-    template: function GetMainModuleComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-page", 0)(1, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, "Finds a main module of Angular application in path pattern");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "tui-doc-code", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      }
-      if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("code", ctx.code);
-      }
-    },
-    dependencies: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocCodeComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageComponent],
-    styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
-    changeDetection: 0
+    deps: [],
+    target: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵFactoryTarget"].Component
+  });
+  static #_2 = this.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareComponent"]({
+    minVersion: "14.0.0",
+    version: "16.2.11",
+    type: GetMainModuleComponent,
+    selector: "get-main-module",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
+    template: "<tui-doc-page header=\"Get main module\">\n  <p>Finds a main module of Angular application in path pattern</p>\n\n  <tui-doc-code filename=\"migration.ts\" [code]=\"code\"></tui-doc-code>\n</tui-doc-page>\n",
+    styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
+    dependencies: [{
+      kind: "component",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocCodeComponent,
+      selector: "tui-doc-code",
+      inputs: ["filename", "code"]
+    }, {
+      kind: "component",
+      type: _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageComponent,
+      selector: "tui-doc-page",
+      inputs: ["header", "package", "type", "path", "deprecated"]
+    }],
+    changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush
   });
 }
 
+_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵngDeclareClassMetadata"]({
+  minVersion: "12.0.0",
+  version: "16.2.11",
+  ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_0__,
+  type: GetMainModuleComponent,
+  decorators: [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Component,
+    args: [{
+      selector: 'get-main-module',
+      changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush,
+      template: "<tui-doc-page header=\"Get main module\">\n  <p>Finds a main module of Angular application in path pattern</p>\n\n  <tui-doc-code filename=\"migration.ts\" [code]=\"code\"></tui-doc-code>\n</tui-doc-page>\n",
+      styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+    }]
+  }]
+});
 
 /***/ }),
 
@@ -69,12 +88,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   GetMainModuleModule: () => (/* binding */ GetMainModuleModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 7947);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 6684);
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 7626);
-/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 798);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1197);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 2454);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 2895);
+/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5948);
+/* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 103);
 /* harmony import */ var _get_main_module_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./get-main-module.component */ 6556);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
+
 
 
 
@@ -82,24 +102,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class GetMainModuleModule {
-  static #_ = this.ɵfac = function GetMainModuleModule_Factory(t) {
-    return new (t || GetMainModuleModule)();
-  };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
-    type: GetMainModuleModule
+  static #_ = this.ɵfac = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareFactory"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: GetMainModuleModule,
+    deps: [],
+    target: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵFactoryTarget"].NgModule
   });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_get_main_module_component__WEBPACK_IMPORTED_MODULE_0__.GetMainModuleComponent))]
-  });
-}
-
-(function () {
-  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](GetMainModuleModule, {
+  static #_2 = this.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareNgModule"]({
+    minVersion: "14.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: GetMainModuleModule,
     declarations: [_get_main_module_component__WEBPACK_IMPORTED_MODULE_0__.GetMainModuleComponent],
     imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule],
     exports: [_get_main_module_component__WEBPACK_IMPORTED_MODULE_0__.GetMainModuleComponent]
   });
-})();
+  static #_3 = this.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareInjector"]({
+    minVersion: "12.0.0",
+    version: "16.2.11",
+    ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+    type: GetMainModuleModule,
+    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_get_main_module_component__WEBPACK_IMPORTED_MODULE_0__.GetMainModuleComponent))]
+  });
+}
+
+_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵngDeclareClassMetadata"]({
+  minVersion: "12.0.0",
+  version: "16.2.11",
+  ngImport: _angular_core__WEBPACK_IMPORTED_MODULE_1__,
+  type: GetMainModuleModule,
+  decorators: [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_1__.NgModule,
+    args: [{
+      imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_get_main_module_component__WEBPACK_IMPORTED_MODULE_0__.GetMainModuleComponent))],
+      declarations: [_get_main_module_component__WEBPACK_IMPORTED_MODULE_0__.GetMainModuleComponent],
+      exports: [_get_main_module_component__WEBPACK_IMPORTED_MODULE_0__.GetMainModuleComponent]
+    }]
+  }]
+});
 
 /***/ })
 
