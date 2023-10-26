@@ -1,8 +1,9 @@
 /* eslint-disable */
+process.env.NODE_OPTIONS = '--experimental-vm-modules';
+
 module.exports = {
   displayName: 'ng-morph',
   preset: '../../jest.preset.js',
-  setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
   globals: {
     'ts-jest': {
       isolatedModules: true,
