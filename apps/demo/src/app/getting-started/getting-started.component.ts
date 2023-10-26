@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const script = `import {
   setActiveProject,
@@ -126,13 +126,13 @@ describe('ng-add', () => {
 `;
 
 @Component({
-  selector: 'getting-started',
-  templateUrl: './getting-started.template.html',
-  styles: [':host {max-width: 1200px}'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'getting-started',
+    templateUrl: './getting-started.template.html',
+    styles: [':host {max-width: 1200px}'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GettingStartedComponent {
-  readonly script = script;
-  readonly creatingRule = creatingRule;
-  readonly creatingSpec = creatingSpec;
+    readonly script = script;
+    readonly creatingRule = creatingRule;
+    readonly creatingSpec = creatingSpec;
 }

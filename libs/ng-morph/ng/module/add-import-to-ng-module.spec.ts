@@ -1,46 +1,42 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
-import {
-  createProject,
-  saveActiveProject,
-  setActiveProject,
-} from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { addImportToNgModule } from 'ng-morph/ng/module/add-import-to-ng-module';
-import { getClasses } from 'ng-morph/classes';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
+import {createProject, saveActiveProject, setActiveProject} from 'ng-morph/project';
+import {createSourceFile} from 'ng-morph/source-file';
+import {addImportToNgModule} from 'ng-morph/ng/module/add-import-to-ng-module';
+import {getClasses} from 'ng-morph/classes';
 
 describe('addImportToModule', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
-
-    setActiveProject(createProject(host));
-  });
-
-  describe('No imports property', () => {
     beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { NgModule } from '@angular/core';
+        host = new UnitTestTree(new HostTree());
+
+        setActiveProject(createProject(host));
+    });
+
+    describe('No imports property', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { NgModule } from '@angular/core';
 
 @NgModule({})
 export class SomeModule {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should create the imports property', () => {
-      addImportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule',
-      );
+        it('should create the imports property', () => {
+            addImportToNgModule(
+                getClasses('src/main.ts', {name: 'SomeModule'})[0],
+                'TestModule',
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({
     imports: [TestModule]
@@ -48,45 +44,45 @@ export class SomeModule {
 export class SomeModule {
 
 }`);
+        });
     });
-  });
 
-  describe('No decorator arguments', () => {
-    beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { NgModule } from '@angular/core';
+    describe('No decorator arguments', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { NgModule } from '@angular/core';
 
 @NgModule()
 export class SomeModule {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should create the imports property', () => {
-      addImportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule',
-      );
+        it('should create the imports property', () => {
+            addImportToNgModule(
+                getClasses('src/main.ts', {name: 'SomeModule'})[0],
+                'TestModule',
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { NgModule } from '@angular/core';
 
 @NgModule({imports: [TestModule]})
 export class SomeModule {
 
 }`);
+        });
     });
-  });
 
-  describe('The imports property is exists', () => {
-    beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { NgModule } from '@angular/core';
+    describe('The imports property is exists', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -95,19 +91,19 @@ import { CommonModule } from '@angular/common';
 export class SomeModule {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should add module to imports', () => {
-      addImportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule.forRoot()',
-      );
+        it('should add module to imports', () => {
+            addImportToNgModule(
+                getClasses('src/main.ts', {name: 'SomeModule'})[0],
+                'TestModule.forRoot()',
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -116,14 +112,14 @@ import { CommonModule } from '@angular/common';
 export class SomeModule {
 
 }`);
+        });
     });
-  });
 
-  describe('With unique flag', () => {
-    beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { NgModule } from '@angular/core';
+    describe('With unique flag', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -132,20 +128,20 @@ import { CommonModule } from '@angular/common';
 export class SomeModule {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should not add duplicate module to imports', () => {
-      addImportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CommonModule',
-        { unique: true },
-      );
+        it('should not add duplicate module to imports', () => {
+            addImportToNgModule(
+                getClasses('src/main.ts', {name: 'SomeModule'})[0],
+                'CommonModule',
+                {unique: true},
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -154,14 +150,14 @@ import { CommonModule } from '@angular/common';
 export class SomeModule {
 
 }`);
+        });
     });
-  });
 
-  describe('Imports is a const', () => {
-    beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { NgModule } from '@angular/core';
+    describe('Imports is a const', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { NgModule } from '@angular/core';
 import { APP_IMPORTS } from './imports.ts';
 
 @NgModule({
@@ -170,20 +166,20 @@ import { APP_IMPORTS } from './imports.ts';
 export class SomeModule {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should wrap const with array and push new provider', () => {
-      addImportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'CommonModule',
-        { unique: true },
-      );
+        it('should wrap const with array and push new provider', () => {
+            addImportToNgModule(
+                getClasses('src/main.ts', {name: 'SomeModule'})[0],
+                'CommonModule',
+                {unique: true},
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { NgModule } from '@angular/core';
 import { APP_IMPORTS } from './imports.ts';
 
 @NgModule({
@@ -192,14 +188,14 @@ import { APP_IMPORTS } from './imports.ts';
 export class SomeModule {
 
 }`);
+        });
     });
-  });
 
-  describe('Package name is specified', () => {
-    beforeEach(() => {
-      createSourceFile(
-        'src/main.ts',
-        `import { NgModule } from '@angular/core';
+    describe('Package name is specified', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExistingModule } from 'test-package';
 
@@ -209,19 +205,19 @@ import { ExistingModule } from 'test-package';
 export class SomeModule {
 
 }`,
-      );
-    });
+            );
+        });
 
-    it('should add module to imports', () => {
-      addImportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule',
-      );
+        it('should add module to imports', () => {
+            addImportToNgModule(
+                getClasses('src/main.ts', {name: 'SomeModule'})[0],
+                'TestModule',
+            );
 
-      saveActiveProject();
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExistingModule } from 'test-package';
 
@@ -231,18 +227,18 @@ import { ExistingModule } from 'test-package';
 export class SomeModule {
 
 }`);
-    });
+        });
 
-    it('should add module to imports', () => {
-      addImportToNgModule(
-        getClasses('src/main.ts', { name: 'SomeModule' })[0],
-        'TestModule',
-        { unique: true },
-      );
-      saveActiveProject();
+        it('should add module to imports', () => {
+            addImportToNgModule(
+                getClasses('src/main.ts', {name: 'SomeModule'})[0],
+                'TestModule',
+                {unique: true},
+            );
+            saveActiveProject();
 
-      expect(host.readContent('src/main.ts'))
-        .toStrictEqual(`import { NgModule } from '@angular/core';
+            expect(host.readContent('src/main.ts'))
+                .toStrictEqual(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExistingModule } from 'test-package';
 
@@ -252,6 +248,6 @@ import { ExistingModule } from 'test-package';
 export class SomeModule {
 
 }`);
+        });
     });
-  });
 });

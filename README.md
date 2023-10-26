@@ -14,8 +14,9 @@ You also need `@angular-devkit/core` and `@angular-devkit/schematics` to be inst
 
 ## What is it?
 
-It is a large set of tools for both global code base
-updates in your project and speeding up your work on Angular schematics. It has [ts-morph](https://ts-morph.com/) under the hood and allows you to manipulate with safe TypeScript AST.
+It is a large set of tools for both global code base updates in your project and speeding up your work on Angular
+schematics. It has [ts-morph](https://ts-morph.com/) under the hood and allows you to manipulate with safe TypeScript
+AST.
 
 ## Why is it better than default schematics?
 
@@ -23,9 +24,8 @@ updates in your project and speeding up your work on Angular schematics. It has 
 
 🛠 There are many tools made for working with Angular. You can easily find and manipulate TS and Ng entities.
 
-✅ You work with an abstract tree and it can be replaced,
-for example, with virtual tree for testing instead of real file system.
-So, you can test your schematics rapidly fast.
+✅ You work with an abstract tree and it can be replaced, for example, with virtual tree for testing instead of real
+file system. So, you can test your schematics rapidly fast.
 
 ## How to start
 
@@ -34,7 +34,7 @@ Install the package and visit our [documentation](https://taiga-family.github.io
 For example, this is how `ng-morph` setup looks for migrating your own project:
 
 ```typescript
-import { setActiveProject, createProject, getImports, NgMorphTree } from 'ng-morph';
+import {setActiveProject, createProject, getImports, NgMorphTree} from 'ng-morph';
 
 /**
  * set all ng-morph functions to work with the all TS and JSON files
@@ -50,7 +50,7 @@ const imports = getImports('some/path/**.ts', {
   moduleSpecifier: '@morph-old*',
 });
 
-editImports(imports, (importEntity) => ({
+editImports(imports, importEntity => ({
   moduleSpecifier: importEntity.moduleSpecifier.replace('old', 'new'),
 }));
 
@@ -61,7 +61,8 @@ editImports(imports, (importEntity) => ({
 saveActiveProject();
 ```
 
-You can check it out on [Stackblitz playground](https://stackblitz.com/edit/ts-angular-13-web-container-starter-nzd2ew?file=ng-morph-scripts%2Fscript.ts,src%2Fapp%2Fapp.component.ts)
+You can check it out on
+[Stackblitz playground](https://stackblitz.com/edit/ts-angular-13-web-container-starter-nzd2ew?file=ng-morph-scripts%2Fscript.ts,src%2Fapp%2Fapp.component.ts)
 
 ## Core team
 
@@ -136,8 +137,8 @@ You can check it out on [Stackblitz playground](https://stackblitz.com/edit/ts-a
 
 </table>
 
-ng-morph is a part of [Taiga UI](https://github.com/taiga-family/taiga-ui) libraries family which is backed and used by a
-large enterprise. This means you can rely on timely support and continuous development.
+ng-morph is a part of [Taiga UI](https://github.com/taiga-family/taiga-ui) libraries family which is backed and used by
+a large enterprise. This means you can rely on timely support and continuous development.
 
 ## License
 

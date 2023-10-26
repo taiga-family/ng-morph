@@ -1,37 +1,37 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { getVariables } from './get-variables';
-import { removeVariables } from './remove-variables';
+import {createSourceFile} from 'ng-morph/source-file';
+import {getVariables} from './get-variables';
+import {removeVariables} from './remove-variables';
 
 describe('removeVariables', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile('some/path/file.ts', `const a = 'b'`);
-  });
+        createSourceFile('some/path/file.ts', `const a = 'b'`);
+    });
 
-  it('should remove variables', () => {
-    const declarations = getVariables('some/path/file.ts');
+    it('should remove variables', () => {
+        const declarations = getVariables('some/path/file.ts');
 
-    removeVariables(declarations);
+        removeVariables(declarations);
 
-    saveActiveProject();
+        saveActiveProject();
 
-    expect(host.readContent('some/path/file.ts')).toEqual(``);
-  });
+        expect(host.readContent('some/path/file.ts')).toEqual(``);
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });

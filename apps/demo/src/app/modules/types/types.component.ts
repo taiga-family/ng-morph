@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const types = `import {
     addTypeAliases,
@@ -29,11 +29,11 @@ saveActiveProject();
 `;
 
 @Component({
-  selector: 'types',
-  templateUrl: 'types.template.html',
-  styleUrls: ['./types.style.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'types',
+    templateUrl: 'types.template.html',
+    styleUrls: ['./types.style.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TypesComponent {
-  readonly types = types;
+    readonly types = types;
 }

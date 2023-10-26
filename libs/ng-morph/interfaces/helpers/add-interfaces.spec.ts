@@ -1,42 +1,42 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { addInterfaces } from './add-interfaces';
+import {createSourceFile} from 'ng-morph/source-file';
+import {addInterfaces} from './add-interfaces';
 
 describe('addInterfaces', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile('some/path/file.ts', ``);
-  });
-
-  it('should add Interfaces', () => {
-    addInterfaces('some/path/file.ts', {
-      name: 'A',
-      properties: [{ name: 's', type: 'string' }],
-      methods: [{ name: 'method', returnType: 'number' }],
+        createSourceFile('some/path/file.ts', ``);
     });
 
-    saveActiveProject();
+    it('should add Interfaces', () => {
+        addInterfaces('some/path/file.ts', {
+            name: 'A',
+            properties: [{name: 's', type: 'string'}],
+            methods: [{name: 'method', returnType: 'number'}],
+        });
 
-    expect(host.readContent('some/path/file.ts')).toEqual(`interface A {
+        saveActiveProject();
+
+        expect(host.readContent('some/path/file.ts')).toEqual(`interface A {
     s: string;
     method(): number;
 }
 `);
-  });
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });

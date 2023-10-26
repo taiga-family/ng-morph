@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const example = `import {
   setActiveProject,
@@ -69,11 +69,11 @@ function fixInjectImport(file: string) {
 }`;
 
 @Component({
-  selector: 'inject-sample',
-  templateUrl: 'inject-sample.template.html',
-  styleUrls: ['./inject-sample.style.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'inject-sample',
+    templateUrl: 'inject-sample.template.html',
+    styleUrls: ['./inject-sample.style.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InjectSampleComponent {
-  readonly example = example;
+    readonly example = example;
 }

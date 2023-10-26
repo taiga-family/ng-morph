@@ -1,17 +1,17 @@
-import { NgCliProject } from '../classes/ng-cli-project';
+import {NgCliProject} from '../classes/ng-cli-project';
 
 let _project: NgCliProject = null;
 
 export function setActiveProject(project: NgCliProject): NgCliProject | null {
-  const prev = _project;
-  _project = project;
-  return prev;
+    const prev = _project;
+    _project = project;
+    return prev;
 }
 
 export function getActiveProject(): NgCliProject | null {
-  return _project;
+    return _project;
 }
 
 export function resetActiveProject(): NgCliProject | null {
-  return setActiveProject(null);
+    return setActiveProject(null);
 }

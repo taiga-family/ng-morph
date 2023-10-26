@@ -1,53 +1,53 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { addParams } from './add-params';
-import { getMethods } from 'ng-morph/methods';
-import { getClasses } from 'ng-morph/classes';
+import {createSourceFile} from 'ng-morph/source-file';
+import {addParams} from './add-params';
+import {getMethods} from 'ng-morph/methods';
+import {getClasses} from 'ng-morph/classes';
 
 describe('addParams', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile(
-      'some/path/file.ts',
-      `
+        createSourceFile(
+            'some/path/file.ts',
+            `
 class B {
   add(){}
 }
     `,
-    );
-  });
+        );
+    });
 
-  it('should add params', () => {
-    addParams(getMethods(getClasses('some/path/file.ts'), { name: 'add' }), [
-      {
-        name: 'param',
-        type: 'number',
-        decorators: [{ name: 'Pure', arguments: [] }],
-      },
-    ]);
+    it('should add params', () => {
+        addParams(getMethods(getClasses('some/path/file.ts'), {name: 'add'}), [
+            {
+                name: 'param',
+                type: 'number',
+                decorators: [{name: 'Pure', arguments: []}],
+            },
+        ]);
 
-    saveActiveProject();
+        saveActiveProject();
 
-    expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toEqual(`
 class B {
   add(@Pure() param: number){}
 }
     `);
-  });
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });

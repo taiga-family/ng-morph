@@ -1,37 +1,37 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { getInterfaces } from './get-interfaces';
-import { removeInterfaces } from './remove-interfaces';
+import {createSourceFile} from 'ng-morph/source-file';
+import {getInterfaces} from './get-interfaces';
+import {removeInterfaces} from './remove-interfaces';
 
 describe('removeInterfaces', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile('some/path/file.ts', `interface A {}`);
-  });
+        createSourceFile('some/path/file.ts', `interface A {}`);
+    });
 
-  it('should remove Interfaces', () => {
-    const declarations = getInterfaces('some/path/file.ts');
+    it('should remove Interfaces', () => {
+        const declarations = getInterfaces('some/path/file.ts');
 
-    removeInterfaces(declarations);
+        removeInterfaces(declarations);
 
-    saveActiveProject();
+        saveActiveProject();
 
-    expect(host.readContent('some/path/file.ts')).toEqual(``);
-  });
+        expect(host.readContent('some/path/file.ts')).toEqual(``);
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });

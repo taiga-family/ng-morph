@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const imports = `import {
     addImports,
@@ -86,12 +86,12 @@ saveActiveProject();
 `;
 
 @Component({
-  selector: 'imports-and-exports',
-  templateUrl: 'imports-and-exports.template.html',
-  styleUrls: ['./imports-and-exports.style.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'imports-and-exports',
+    templateUrl: 'imports-and-exports.template.html',
+    styleUrls: ['./imports-and-exports.style.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ImportsAndExportsComponent {
-  readonly imports = imports;
-  readonly exports = exportsSamples;
+    readonly imports = imports;
+    readonly exports = exportsSamples;
 }

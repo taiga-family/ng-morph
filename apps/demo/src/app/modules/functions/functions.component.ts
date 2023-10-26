@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const code = `import {
     addFunctions,
@@ -31,11 +31,11 @@ saveActiveProject();
 `;
 
 @Component({
-  selector: 'functions',
-  templateUrl: 'functions.template.html',
-  styleUrls: ['./functions.style.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'functions',
+    templateUrl: 'functions.template.html',
+    styleUrls: ['./functions.style.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FunctionsComponent {
-  readonly code = code;
+    readonly code = code;
 }

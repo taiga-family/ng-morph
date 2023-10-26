@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 const code = `import {
     getMainModule
@@ -11,11 +11,11 @@ const classDeclaration = getMainModule('src/main.ts');
 `;
 
 @Component({
-  selector: 'get-main-module',
-  templateUrl: 'get-main-module.template.html',
-  styleUrls: ['./get-main-module.style.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'get-main-module',
+    templateUrl: 'get-main-module.template.html',
+    styleUrls: ['./get-main-module.style.less'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GetMainModuleComponent {
-  readonly code = code;
+    readonly code = code;
 }

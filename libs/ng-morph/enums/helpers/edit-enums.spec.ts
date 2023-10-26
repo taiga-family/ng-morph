@@ -1,44 +1,44 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { getEnums } from './get-enums';
-import { editEnums } from './edit-enums';
+import {createSourceFile} from 'ng-morph/source-file';
+import {getEnums} from './get-enums';
+import {editEnums} from './edit-enums';
 
 describe('editEnums', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile(
-      'some/path/file.ts',
-      `
+        createSourceFile(
+            'some/path/file.ts',
+            `
 enum Test {First}
 
 let a: Test;
 const b = Test.First;
 `,
-    );
-  });
+        );
+    });
 
-  it('should edit enums', () => {
-    const declarations = getEnums('some/path/file.ts');
+    it('should edit enums', () => {
+        const declarations = getEnums('some/path/file.ts');
 
-    editEnums(declarations, () => ({
-      name: 'Name',
-    }));
+        editEnums(declarations, () => ({
+            name: 'Name',
+        }));
 
-    saveActiveProject();
+        saveActiveProject();
 
-    expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toEqual(`
 enum Name {
     First
 }
@@ -46,9 +46,9 @@ enum Name {
 let a: Name;
 const b = Name.First;
 `);
-  });
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });

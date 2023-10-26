@@ -1,51 +1,51 @@
-import { UnitTestTree } from '@angular-devkit/schematics/testing';
-import { HostTree } from '@angular-devkit/schematics';
-import { getClasses } from './get-classes';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {HostTree} from '@angular-devkit/schematics';
+import {getClasses} from './get-classes';
 import {
-  createProject,
-  resetActiveProject,
-  saveActiveProject,
-  setActiveProject,
+    createProject,
+    resetActiveProject,
+    saveActiveProject,
+    setActiveProject,
 } from 'ng-morph/project';
-import { createSourceFile } from 'ng-morph/source-file';
-import { editClasses } from './edit-classes';
+import {createSourceFile} from 'ng-morph/source-file';
+import {editClasses} from './edit-classes';
 
 describe('editClasses', () => {
-  let host: UnitTestTree;
+    let host: UnitTestTree;
 
-  beforeEach(() => {
-    host = new UnitTestTree(new HostTree());
+    beforeEach(() => {
+        host = new UnitTestTree(new HostTree());
 
-    setActiveProject(createProject(host));
+        setActiveProject(createProject(host));
 
-    createSourceFile(
-      'some/path/file.ts',
-      `
+        createSourceFile(
+            'some/path/file.ts',
+            `
 class A {}
 
 const a: A;
 `,
-    );
-  });
+        );
+    });
 
-  it('should edit classes', () => {
-    const classes = getClasses('some/path/file.ts');
+    it('should edit classes', () => {
+        const classes = getClasses('some/path/file.ts');
 
-    editClasses(classes, () => ({
-      isExported: true,
-      name: 'B',
-    }));
+        editClasses(classes, () => ({
+            isExported: true,
+            name: 'B',
+        }));
 
-    saveActiveProject();
+        saveActiveProject();
 
-    expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toEqual(`
 export class B {}
 
 const a: B;
 `);
-  });
+    });
 
-  afterEach(() => {
-    resetActiveProject();
-  });
+    afterEach(() => {
+        resetActiveProject();
+    });
 });
