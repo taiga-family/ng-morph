@@ -6,11 +6,8 @@
     "prefix": "ng-morph",
     "targets": {
         "build": {
-            "executor": "@angular-builders/custom-webpack:browser",
+            "executor": "@angular-devkit/build-angular:browser",
             "options": {
-                "customWebpackConfig": {
-                    "path": "projects/demo/webpack.config.ts"
-                },
                 "outputPath": "dist/apps/demo",
                 "index": "apps/demo/src/index.html",
                 "main": "apps/demo/src/main.ts",
