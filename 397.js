@@ -31,7 +31,7 @@ class GetMainModuleComponent {
   static #_ = this.ɵfac = function GetMainModuleComponent_Factory(t) {
     return new (t || GetMainModuleComponent)();
   };
-  static #_2 = this.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
     type: GetMainModuleComponent,
     selectors: [["get-main-module"]],
     decls: 4,
@@ -85,10 +85,10 @@ class GetMainModuleModule {
   static #_ = this.ɵfac = function GetMainModuleModule_Factory(t) {
     return new (t || GetMainModuleModule)();
   };
-  static #_2 = this.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
     type: GetMainModuleModule
   });
-  static #_3 = this.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
     imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_get_main_module_component__WEBPACK_IMPORTED_MODULE_0__.GetMainModuleComponent))]
   });
 }

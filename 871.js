@@ -49,7 +49,7 @@ class InterfacesComponent {
   static #_ = this.ɵfac = function InterfacesComponent_Factory(t) {
     return new (t || InterfacesComponent)();
   };
-  static #_2 = this.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
     type: InterfacesComponent,
     selectors: [["interfaces"]],
     decls: 4,
@@ -103,10 +103,10 @@ class InterfacesModule {
   static #_ = this.ɵfac = function InterfacesModule_Factory(t) {
     return new (t || InterfacesModule)();
   };
-  static #_2 = this.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
     type: InterfacesModule
   });
-  static #_3 = this.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
     imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_interfaces_component__WEBPACK_IMPORTED_MODULE_0__.InterfacesComponent))]
   });
 }

@@ -132,7 +132,7 @@ class ImportsAndExportsComponent {
   static #_ = this.ɵfac = function ImportsAndExportsComponent_Factory(t) {
     return new (t || ImportsAndExportsComponent)();
   };
-  static #_2 = this.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
     type: ImportsAndExportsComponent,
     selectors: [["imports-and-exports"]],
     decls: 3,
@@ -181,10 +181,10 @@ class ImportsAndExportsModule {
   static #_ = this.ɵfac = function ImportsAndExportsModule_Factory(t) {
     return new (t || ImportsAndExportsModule)();
   };
-  static #_2 = this.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
     type: ImportsAndExportsModule
   });
-  static #_3 = this.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
     imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__.ImportsAndExportsComponent))]
   });
 }

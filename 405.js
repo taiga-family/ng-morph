@@ -54,7 +54,7 @@ class GetBootstrapFunctionComponent {
   static #_ = this.ɵfac = function GetBootstrapFunctionComponent_Factory(t) {
     return new (t || GetBootstrapFunctionComponent)();
   };
-  static #_2 = this.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
     type: GetBootstrapFunctionComponent,
     selectors: [["get-bootstrap-function"]],
     decls: 22,
@@ -135,10 +135,10 @@ class GetBootstrapFunctionModule {
   static #_ = this.ɵfac = function GetBootstrapFunctionModule_Factory(t) {
     return new (t || GetBootstrapFunctionModule)();
   };
-  static #_2 = this.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
     type: GetBootstrapFunctionModule
   });
-  static #_3 = this.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
     imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_get_bootstrap_function_component__WEBPACK_IMPORTED_MODULE_0__.GetBootstrapFunctionComponent))]
   });
 }
