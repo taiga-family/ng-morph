@@ -1,7 +1,7 @@
 "use strict";
 (self["webpackChunkdemo"] = self["webpackChunkdemo"] || []).push([[873],{
 
-/***/ 8694:
+/***/ 3631:
 /*!********************************************************************!*\
   !*** ./apps/demo/src/app/modules/functions/functions.component.ts ***!
   \********************************************************************/
@@ -93,7 +93,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 2895);
 /* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5948);
 /* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 103);
-/* harmony import */ var _functions_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions.component */ 8694);
+/* harmony import */ var _functions_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions.component */ 3631);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1197);
 
 
