@@ -10,33 +10,6 @@
             }
         }
     },
-    "generators": {
-        "@nx/angular:application": {
-            "style": "less",
-            "linter": "eslint",
-            "unitTestRunner": "jest",
-            "e2eTestRunner": "none"
-        },
-        "@nx/angular:library": {
-            "style": "less",
-            "linter": "eslint",
-            "unitTestRunner": "jest"
-        },
-        "@nx/angular:component": {
-            "style": "less"
-        },
-        "@nx/angular": {
-            "application": {
-                "linter": "eslint"
-            },
-            "library": {
-                "linter": "eslint"
-            },
-            "storybook-configuration": {
-                "linter": "eslint"
-            }
-        }
-    },
     "$schema": "./node_modules/nx/schemas/nx-schema.json",
     "targetDefaults": {
         "build": {
@@ -66,6 +39,5 @@
             "!{projectRoot}/tsconfig.spec.json",
             "!{projectRoot}/jest.config.[jt]s"
         ]
-    },
-    "nxCloudAccessToken": "YWUxOTUxOWUtMDk5ZS00ZmIzLTk0ZDgtODE4M2QwYjIxN2M5fHJlYWQtd3JpdGU="
+    }
 }
