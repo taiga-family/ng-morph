@@ -13,7 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _samples_accessors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./samples/accessors */ 3105);
 /* harmony import */ var _samples_contructors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./samples/contructors */ 6672);
-/* harmony import */ var _samples_decorators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./samples/decorators */ 1851);
+/* harmony import */ var _samples_decorators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./samples/decorators */ 373);
 /* harmony import */ var _samples_methods__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./samples/methods */ 8589);
 /* harmony import */ var _samples_properties__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./samples/properties */ 9928);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 1197);
@@ -384,7 +384,7 @@ saveActiveProject();
 
 /***/ }),
 
-/***/ 1851:
+/***/ 373:
 /*!*****************************************************************!*\
   !*** ./apps/demo/src/app/modules/classes/samples/decorators.ts ***!
   \*****************************************************************/
