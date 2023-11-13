@@ -55,7 +55,7 @@
         "@angular/router": "16.2.11",
         "@ng-builders/semrel": "1.5.0",
         "@nx/angular": "17.0.3",
-        "@nx/eslint-plugin": "17.0.3",
+        "@nx/eslint-plugin": "17.1.2",
         "@nx/jest": "17.0.3",
         "@nx/linter": "17.0.3",
         "@nx/node": "17.0.3",
