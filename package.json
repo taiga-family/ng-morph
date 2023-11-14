@@ -43,7 +43,7 @@
         "@angular-eslint/template-parser": "16.2.0",
         "@angular/animations": "16.2.11",
         "@angular/cdk": "16.2.10",
-        "@angular/cli": "16.2.8",
+        "@angular/cli": "17.0.0",
         "@angular/common": "16.2.11",
         "@angular/compiler": "16.2.11",
         "@angular/compiler-cli": "16.2.11",
