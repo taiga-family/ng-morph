@@ -23,7 +23,6 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
       - name: release
         run: npm run release
-        continue-on-error: true
         env:
           CI: true
           GH_TOKEN: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
