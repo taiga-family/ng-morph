@@ -18,10 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
       - uses: taiga-family/ci/actions/setup/node@v1.39.1
+      - uses: taiga-family/ci/actions/setup/config/npm@v1.43.0
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
       - name: release
         run: npm run release
         continue-on-error: true
         env:
           CI: true
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GH_TOKEN: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
