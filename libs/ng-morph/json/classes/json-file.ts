@@ -29,7 +29,7 @@ export class JSONFile extends JSONFileContent {
         this.path = path;
     }
 
-    modify(
+    override modify(
         jsonPath: JSONPath,
         value: JsonValue | undefined,
         insertInOrder?: InsertionIndex | false,
@@ -38,7 +38,7 @@ export class JSONFile extends JSONFileContent {
         this.host.overwrite(this.path, this.content);
     }
 
-    protected jsonAst(): Node {
+    protected override jsonAst(): Node {
         try {
             return super.jsonAst();
         } catch (e) {

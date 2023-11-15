@@ -12,16 +12,16 @@ export class NgCliProject extends Project {
         });
     }
 
-    getFileSystem(): NgCliFileSystem {
+    override getFileSystem(): NgCliFileSystem {
         return super.getFileSystem() as NgCliFileSystem;
     }
 
-    async save(): Promise<void> {
+    override async save(): Promise<void> {
         await super.save();
         await this.trySaveTree();
     }
 
-    saveSync() {
+    override saveSync() {
         super.saveSync();
         this.trySaveTree();
     }
