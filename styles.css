@@ -290,6 +290,55 @@ tui-doc-page section {
   --tui-chart-3: var(--tui-support-11);
   --tui-chart-4: var(--tui-base-05);
 }
+[tuiTheme='night'] {
+  --tui-base-01: #222;
+  --tui-base-02: #333;
+  --tui-base-03: #808080;
+  --tui-base-04: #959595;
+  --tui-base-05: #b0b0b0;
+  --tui-base-06: #d7d7d7;
+  --tui-base-07: #ededed;
+  --tui-base-08: #f6f6f6;
+  --tui-base-09: #fff;
+  --tui-focus: rgba(51, 51, 51, 0.64);
+  --tui-secondary: rgba(255, 255, 255, 0.16);
+  --tui-secondary-hover: rgba(255, 255, 255, 0.24);
+  --tui-secondary-active: rgba(255, 255, 255, 0.4);
+  --tui-clear: rgba(255, 255, 255, 0.16);
+  --tui-clear-disabled: rgba(255, 255, 255, 0.08);
+  --tui-clear-hover: rgba(255, 255, 255, 0.24);
+  --tui-clear-active: rgba(255, 255, 255, 0.4);
+  --tui-error-fill: #ff8c67;
+  --tui-error-bg: rgba(244, 87, 37, 0.32);
+  --tui-error-bg-hover: rgba(244, 87, 37, 0.4);
+  --tui-success-fill: #4ac99b;
+  --tui-success-bg: rgba(74, 201, 155, 0.32);
+  --tui-success-bg-hover: rgba(74, 201, 155, 0.4);
+  --tui-warning-fill: #ffc700;
+  --tui-warning-bg: rgba(255, 199, 0, 0.32);
+  --tui-warning-bg-hover: rgba(255, 199, 0, 0.4);
+  --tui-info-fill: #70b6f6;
+  --tui-info-bg: rgba(112, 182, 246, 0.32);
+  --tui-info-bg-hover: rgba(112, 182, 246, 0.4);
+  --tui-neutral-fill: #959ba4;
+  --tui-neutral-bg: rgba(149, 155, 164, 0.32);
+  --tui-neutral-bg-hover: rgba(149, 155, 164, 0.48);
+  --tui-text-01: #ffffff;
+  --tui-text-02: rgba(255, 255, 255, 0.72);
+  --tui-text-03: rgba(255, 255, 255, 0.6);
+  --tui-link: #6788ff;
+  --tui-link-hover: #526ed3;
+  --tui-positive: #44c596;
+  --tui-positive-hover: #3aa981;
+  --tui-negative: #ff8c67;
+  --tui-negative-hover: #bb593a;
+  --tui-autofill: var(--tui-autofill-night);
+  --tui-elevation-01: #222;
+  --tui-elevation-02: #222;
+}
+[tuiTheme='night'] tui-notification {
+  --tui-base-01: #000;
+}
 /**
  * @deprecated remove in 4.0
  */
@@ -301,6 +350,474 @@ tui-doc-page section {
 Every max-width of breakpoint is equal:
 next min-width - 60% from 1px (1/16 * 0.6 = 0.0375)
 */
+[tuiAppearance] {
+  transition-property: color, background, opacity, box-shadow;
+  transition-duration: var(--tui-duration, 300ms);
+  transition-timing-function: ease-in-out;
+  position: relative;
+  appearance: none;
+  outline: 0.125rem solid transparent;
+  outline-offset: -0.125rem;
+}
+[tuiAppearance]:focus-visible:not([data-focus='false']),
+[tuiAppearance][data-focus='true'] {
+  outline-color: var(--tui-focus);
+}
+[tuiAppearance]:disabled:not([data-state]),
+[tuiAppearance][data-state='disabled'] {
+  pointer-events: none;
+  opacity: var(--tui-disabled-opacity);
+}
+[tuiAppearance][data-appearance='accent'] {
+  background: var(--tui-accent);
+  color: var(--tui-accent-text);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='accent']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-accent-hover);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='accent']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-accent-hover);
+  }
+}
+[tuiAppearance][data-appearance='accent'][data-state='hover'] {
+  background: var(--tui-accent-hover);
+}
+[tuiAppearance][data-appearance='accent']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-accent-active);
+}
+[tuiAppearance][data-appearance='accent']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-accent-active);
+}
+[tuiAppearance][data-appearance='accent'][data-state='active'] {
+  background: var(--tui-accent-active);
+}
+[tuiAppearance][data-appearance='floating'] {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='floating']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    box-shadow: 0 0.875rem 2.625rem rgba(0, 0, 0, 0.14);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='floating']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    box-shadow: 0 0.875rem 2.625rem rgba(0, 0, 0, 0.14);
+  }
+}
+[tuiAppearance][data-appearance='floating'][data-state='hover'] {
+  box-shadow: 0 0.875rem 2.625rem rgba(0, 0, 0, 0.14);
+}
+[tuiAppearance][data-appearance='floating']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: #f6f7f8;
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+[tuiAppearance][data-appearance='floating']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: #f6f7f8;
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+[tuiAppearance][data-appearance='floating'][data-state='active'] {
+  background: #f6f7f8;
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+/* stylelint-disable order/order */
+[tuiAppearance][data-appearance='glass'] {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  --tui-focus: rgba(255, 255, 255, 0.64);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='glass']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: rgba(0, 0, 0, 0.48);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='glass']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: rgba(0, 0, 0, 0.48);
+  }
+}
+[tuiAppearance][data-appearance='glass'][data-state='hover'] {
+  background: rgba(0, 0, 0, 0.48);
+}
+[tuiAppearance][data-appearance='glass']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: rgba(0, 0, 0, 0.6);
+}
+[tuiAppearance][data-appearance='glass']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: rgba(0, 0, 0, 0.6);
+}
+[tuiAppearance][data-appearance='glass'][data-state='active'] {
+  background: rgba(0, 0, 0, 0.6);
+}
+[tuiTheme='night'] [tuiAppearance][data-appearance='glass'] {
+  background: rgba(255, 255, 255, 0.3);
+}
+@media (hover: hover) {
+  [tuiTheme='night'] [tuiAppearance][data-appearance='glass']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+@media (hover: hover) {
+  [tuiTheme='night'] [tuiAppearance][data-appearance='glass']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+[tuiTheme='night'] [tuiAppearance][data-appearance='glass'][data-state='hover'] {
+  background: rgba(255, 255, 255, 0.4);
+}
+[tuiTheme='night'] [tuiAppearance][data-appearance='glass']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: rgba(255, 255, 255, 0.5);
+}
+[tuiTheme='night'] [tuiAppearance][data-appearance='glass']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: rgba(255, 255, 255, 0.5);
+}
+[tuiTheme='night'] [tuiAppearance][data-appearance='glass'][data-state='active'] {
+  background: rgba(255, 255, 255, 0.5);
+}
+[tuiAppearance][data-appearance='icon'] {
+  color: var(--tui-text-03);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='icon']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    color: var(--tui-text-02);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='icon']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    color: var(--tui-text-02);
+  }
+}
+[tuiAppearance][data-appearance='icon'][data-state='hover'] {
+  color: var(--tui-text-02);
+}
+[tuiAppearance][data-appearance='icon']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  color: var(--tui-text-01);
+}
+[tuiAppearance][data-appearance='icon']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  color: var(--tui-text-01);
+}
+[tuiAppearance][data-appearance='icon'][data-state='active'] {
+  color: var(--tui-text-01);
+}
+[tuiAppearance][data-appearance='opposite'] {
+  background: #000;
+  color: #fff;
+  --tui-focus: rgba(255, 255, 255, 0.64);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='opposite']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: #333;
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='opposite']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: #333;
+  }
+}
+[tuiAppearance][data-appearance='opposite'][data-state='hover'] {
+  background: #333;
+}
+[tuiAppearance][data-appearance='opposite']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: #5c636b;
+}
+[tuiAppearance][data-appearance='opposite']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: #5c636b;
+}
+[tuiAppearance][data-appearance='opposite'][data-state='active'] {
+  background: #5c636b;
+}
+[tuiTheme='night'] [tuiAppearance][data-appearance='opposite'] {
+  color: rgba(0, 0, 0, 0.8);
+  background: #fff;
+  --tui-focus: rgba(51, 51, 51, 0.48);
+}
+@media (hover: hover) {
+  [tuiTheme='night'] [tuiAppearance][data-appearance='opposite']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: #f3F4f6;
+  }
+}
+@media (hover: hover) {
+  [tuiTheme='night'] [tuiAppearance][data-appearance='opposite']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: #f3F4f6;
+  }
+}
+[tuiTheme='night'] [tuiAppearance][data-appearance='opposite'][data-state='hover'] {
+  background: #f3F4f6;
+}
+[tuiTheme='night'] [tuiAppearance][data-appearance='opposite']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: #eaecee;
+}
+[tuiTheme='night'] [tuiAppearance][data-appearance='opposite']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: #eaecee;
+}
+[tuiTheme='night'] [tuiAppearance][data-appearance='opposite'][data-state='active'] {
+  background: #eaecee;
+}
+[tuiAppearance][data-appearance='outline'] {
+  background: transparent;
+  color: var(--tui-link);
+  box-shadow: inset 0 0 0 1px var(--tui-base-04);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='outline']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-clear);
+    box-shadow: inset 0 0 0 1px var(--tui-base-05);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='outline']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-clear);
+    box-shadow: inset 0 0 0 1px var(--tui-base-05);
+  }
+}
+[tuiAppearance][data-appearance='outline'][data-state='hover'] {
+  background: var(--tui-clear);
+  box-shadow: inset 0 0 0 1px var(--tui-base-05);
+}
+[tuiAppearance][data-appearance='outline']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-clear);
+  box-shadow: inset 0 0 0 1px var(--tui-base-06);
+}
+[tuiAppearance][data-appearance='outline']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-clear);
+  box-shadow: inset 0 0 0 1px var(--tui-base-06);
+}
+[tuiAppearance][data-appearance='outline'][data-state='active'] {
+  background: var(--tui-clear);
+  box-shadow: inset 0 0 0 1px var(--tui-base-06);
+}
+[tuiAppearance][data-appearance='outline']:checked {
+  box-shadow: inset 0 0 0 2px var(--tui-primary);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='outline']:checked:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    box-shadow: inset 0 0 0 2px var(--tui-primary-hover);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='outline']:checked:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    box-shadow: inset 0 0 0 2px var(--tui-primary-hover);
+  }
+}
+[tuiAppearance][data-appearance='outline']:checked[data-state='hover'] {
+  box-shadow: inset 0 0 0 2px var(--tui-primary-hover);
+}
+[tuiAppearance][data-appearance='outline']:checked:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  box-shadow: inset 0 0 0 2px var(--tui-primary-active);
+}
+[tuiAppearance][data-appearance='outline']:checked:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  box-shadow: inset 0 0 0 2px var(--tui-primary-active);
+}
+[tuiAppearance][data-appearance='outline']:checked[data-state='active'] {
+  box-shadow: inset 0 0 0 2px var(--tui-primary-active);
+}
+[tuiAppearance][data-appearance='primary'] {
+  background: var(--tui-primary);
+  color: var(--tui-primary-text);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='primary']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-primary-hover);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='primary']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-primary-hover);
+  }
+}
+[tuiAppearance][data-appearance='primary'][data-state='hover'] {
+  background: var(--tui-primary-hover);
+}
+[tuiAppearance][data-appearance='primary']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-primary-active);
+}
+[tuiAppearance][data-appearance='primary']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-primary-active);
+}
+[tuiAppearance][data-appearance='primary'][data-state='active'] {
+  background: var(--tui-primary-active);
+}
+[tuiAppearance][data-appearance='secondary'],
+[tuiAppearance][data-appearance='flat'],
+[tuiAppearance][data-appearance='destructive'] {
+  background: var(--tui-secondary);
+  color: var(--tui-link);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='secondary']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]),
+  [tuiAppearance][data-appearance='flat']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]),
+  [tuiAppearance][data-appearance='destructive']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-secondary-hover);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='secondary']:-moz-any(a, button, select, textarea, input):hover:not([data-state]),
+  [tuiAppearance][data-appearance='flat']:-moz-any(a, button, select, textarea, input):hover:not([data-state]),
+  [tuiAppearance][data-appearance='destructive']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-secondary-hover);
+  }
+}
+[tuiAppearance][data-appearance='secondary'][data-state='hover'],
+[tuiAppearance][data-appearance='flat'][data-state='hover'],
+[tuiAppearance][data-appearance='destructive'][data-state='hover'] {
+  background: var(--tui-secondary-hover);
+}
+[tuiAppearance][data-appearance='secondary']:-webkit-any(a, button, select, textarea, input):active:not([data-state]),
+[tuiAppearance][data-appearance='flat']:-webkit-any(a, button, select, textarea, input):active:not([data-state]),
+[tuiAppearance][data-appearance='destructive']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-secondary-active);
+}
+[tuiAppearance][data-appearance='secondary']:-moz-any(a, button, select, textarea, input):active:not([data-state]),
+[tuiAppearance][data-appearance='flat']:-moz-any(a, button, select, textarea, input):active:not([data-state]),
+[tuiAppearance][data-appearance='destructive']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-secondary-active);
+}
+[tuiAppearance][data-appearance='secondary'][data-state='active'],
+[tuiAppearance][data-appearance='flat'][data-state='active'],
+[tuiAppearance][data-appearance='destructive'][data-state='active'] {
+  background: var(--tui-secondary-active);
+}
+[tuiAppearance][data-appearance='flat'] {
+  background: transparent;
+}
+[tuiAppearance][data-appearance='destructive'] {
+  color: var(--tui-negative);
+}
+[tuiAppearance][data-appearance='error'] {
+  color: var(--tui-text-01);
+  background: var(--tui-error-bg);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='error']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-error-bg-hover);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='error']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-error-bg-hover);
+  }
+}
+[tuiAppearance][data-appearance='error'][data-state='hover'] {
+  background: var(--tui-error-bg-hover);
+}
+[tuiAppearance][data-appearance='error']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-error-bg-hover);
+}
+[tuiAppearance][data-appearance='error']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-error-bg-hover);
+}
+[tuiAppearance][data-appearance='error'][data-state='active'] {
+  background: var(--tui-error-bg-hover);
+}
+[tuiAppearance][data-appearance='success'] {
+  color: var(--tui-text-01);
+  background: var(--tui-success-bg);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='success']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-success-bg-hover);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='success']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-success-bg-hover);
+  }
+}
+[tuiAppearance][data-appearance='success'][data-state='hover'] {
+  background: var(--tui-success-bg-hover);
+}
+[tuiAppearance][data-appearance='success']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-success-bg-hover);
+}
+[tuiAppearance][data-appearance='success']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-success-bg-hover);
+}
+[tuiAppearance][data-appearance='success'][data-state='active'] {
+  background: var(--tui-success-bg-hover);
+}
+[tuiAppearance][data-appearance='warning'] {
+  color: var(--tui-text-01);
+  background: var(--tui-warning-bg);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='warning']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-warning-bg-hover);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='warning']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-warning-bg-hover);
+  }
+}
+[tuiAppearance][data-appearance='warning'][data-state='hover'] {
+  background: var(--tui-warning-bg-hover);
+}
+[tuiAppearance][data-appearance='warning']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-warning-bg-hover);
+}
+[tuiAppearance][data-appearance='warning']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-warning-bg-hover);
+}
+[tuiAppearance][data-appearance='warning'][data-state='active'] {
+  background: var(--tui-warning-bg-hover);
+}
+[tuiAppearance][data-appearance='info'] {
+  color: var(--tui-text-01);
+  background: var(--tui-info-bg);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='info']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-info-bg-hover);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='info']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-info-bg-hover);
+  }
+}
+[tuiAppearance][data-appearance='info'][data-state='hover'] {
+  background: var(--tui-info-bg-hover);
+}
+[tuiAppearance][data-appearance='info']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-info-bg-hover);
+}
+[tuiAppearance][data-appearance='info']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-info-bg-hover);
+}
+[tuiAppearance][data-appearance='info'][data-state='active'] {
+  background: var(--tui-info-bg-hover);
+}
+[tuiAppearance][data-appearance='neutral'] {
+  color: var(--tui-text-01);
+  background: var(--tui-neutral-bg);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='neutral']:-webkit-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-neutral-bg-hover);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='neutral']:-moz-any(a, button, select, textarea, input):hover:not([data-state]) {
+    background: var(--tui-neutral-bg-hover);
+  }
+}
+[tuiAppearance][data-appearance='neutral'][data-state='hover'] {
+  background: var(--tui-neutral-bg-hover);
+}
+[tuiAppearance][data-appearance='neutral']:-webkit-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-neutral-bg-hover);
+}
+[tuiAppearance][data-appearance='neutral']:-moz-any(a, button, select, textarea, input):active:not([data-state]) {
+  background: var(--tui-neutral-bg-hover);
+}
+[tuiAppearance][data-appearance='neutral'][data-state='active'] {
+  background: var(--tui-neutral-bg-hover);
+}
 /* stylelint-disable order/order */
 [tuiWrapper][data-appearance='icon'][data-appearance='icon'] {
   transition-property: opacity;
