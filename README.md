@@ -64,6 +64,15 @@ saveActiveProject();
 You can check it out on
 [Stackblitz playground](https://stackblitz.com/edit/ts-angular-13-web-container-starter-nzd2ew?file=ng-morph-scripts%2Fscript.ts,src%2Fapp%2Fapp.component.ts)
 
+## Dive into More Examples 🌟🔍
+
+- [Add readonly for unchanged 📜🔒](https://stackblitz.com/edit/ts-angular-13-web-container-starter-55t636?file=ng-morph-scripts%2Fscript.ts)
+- [Upgrade constructor DI to inject 🛠️🎩](https://stackblitz.com/edit/ts-angular-13-web-container-starter-ozrudz?file=ng-morph-scripts%2Fscript.ts)
+- [Remove unused deps 🧹❌](https://stackblitz.com/edit/ts-angular-13-web-container-starter-d4rb9b?file=ng-morph-scripts%2Fscript.ts)
+- [Prefix for selector 🏷️✨](https://stackblitz.com/edit/ts-angular-13-web-container-starter-9dawcd?file=ng-morph-scripts%2Fscript.ts)
+
+For more examples visit [this stackblitz collection](https://stackblitz.com/@MarsiBarsi/collections/ng-morph-examples)
+
 ## Core team
 
 <table>
