@@ -67,7 +67,7 @@
         "@taiga-ui/kit": "3.55.0",
         "@taiga-ui/prettier-config": "0.6.0",
         "@taiga-ui/tsconfig": "0.5.0",
-        "@types/jest": "29.5.8",
+        "@types/jest": "29.5.9",
         "@types/minimatch": "5.1.2",
         "@types/node": "20.9.2",
         "@typescript-eslint/eslint-plugin": "5.62.0",
