@@ -19,7 +19,7 @@
         "jsonc-parser": "3.2.0",
         "minimatch": "9.0.3",
         "multimatch": "5.0.0",
-        "ts-morph": "20.0.0",
+        "ts-morph": "21.0.1",
         "tslib": "2.6.2"
     },
     "peerDependencies": {
