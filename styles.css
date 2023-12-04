@@ -358,10 +358,6 @@ tui-doc-page section {
 /**
  * @deprecated remove in 4.0
  */
-/**
- * @description:
- * disable smooth scrolling when users have prefers-reduced-motion enabled
- */
 /*
 Every max-width of breakpoint is equal:
 next min-width - 60% from 1px (1/16 * 0.6 = 0.0375)
