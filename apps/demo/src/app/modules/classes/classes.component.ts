@@ -11,7 +11,7 @@ const add = `import {
     saveActiveProject,
 } from 'ng-morph';
 
-setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts']));
 
 addClasses('some/path/file.ts', {
     name: 'A',
