@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {ACCESSORS_SAMPLES} from './samples/accessors';
-import {CONSTRUCTORS_SAMPLES} from './samples/contructors';
+import {CONSTRUCTORS_SAMPLES} from './samples/constructors';
 import {DECORATORS_SAMPLES} from './samples/decorators';
 import {METHODS_SAMPLES} from './samples/methods';
 import {PROPERTIES_SAMPLES} from './samples/properties';
@@ -11,7 +11,7 @@ const add = `import {
     saveActiveProject,
 } from 'ng-morph';
 
-setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts']));
 
 addClasses('some/path/file.ts', {
     name: 'A',
