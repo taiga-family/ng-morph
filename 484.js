@@ -12,7 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ClassesComponent: () => (/* binding */ ClassesComponent)
 /* harmony export */ });
 /* harmony import */ var _samples_accessors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./samples/accessors */ 3105);
-/* harmony import */ var _samples_contructors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./samples/contructors */ 6672);
+/* harmony import */ var _samples_constructors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./samples/constructors */ 1157);
 /* harmony import */ var _samples_decorators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./samples/decorators */ 373);
 /* harmony import */ var _samples_methods__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./samples/methods */ 8589);
 /* harmony import */ var _samples_properties__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./samples/properties */ 9928);
@@ -146,7 +146,7 @@ const add = `import {
     saveActiveProject,
 } from 'ng-morph';
 
-setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
+setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts']));
 
 addClasses('some/path/file.ts', {
     name: 'A',
@@ -214,7 +214,7 @@ class ClassesComponent {
     this.methods = _samples_methods__WEBPACK_IMPORTED_MODULE_3__.METHODS_SAMPLES;
     this.properties = _samples_properties__WEBPACK_IMPORTED_MODULE_4__.PROPERTIES_SAMPLES;
     this.decorators = _samples_decorators__WEBPACK_IMPORTED_MODULE_2__.DECORATORS_SAMPLES;
-    this.constructors = _samples_contructors__WEBPACK_IMPORTED_MODULE_1__.CONSTRUCTORS_SAMPLES;
+    this.constructors = _samples_constructors__WEBPACK_IMPORTED_MODULE_1__.CONSTRUCTORS_SAMPLES;
   }
   static #_ = this.ɵfac = function ClassesComponent_Factory(t) {
     return new (t || ClassesComponent)();
@@ -334,10 +334,10 @@ saveActiveProject();
 
 /***/ }),
 
-/***/ 6672:
-/*!******************************************************************!*\
-  !*** ./apps/demo/src/app/modules/classes/samples/contructors.ts ***!
-  \******************************************************************/
+/***/ 1157:
+/*!*******************************************************************!*\
+  !*** ./apps/demo/src/app/modules/classes/samples/constructors.ts ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
