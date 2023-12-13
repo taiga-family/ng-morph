@@ -35,7 +35,7 @@
     "prettier": "@taiga-ui/prettier-config",
     "devDependencies": {
         "@angular-devkit/build-angular": "16.2.8",
-        "@angular-devkit/core": "17.0.6",
+        "@angular-devkit/core": "17.0.7",
         "@angular-devkit/schematics": "16.2.8",
         "@angular-eslint/eslint-plugin": "16.2.0",
         "@angular-eslint/eslint-plugin-template": "17.1.1",
