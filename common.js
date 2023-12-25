@@ -17,25 +17,25 @@ __webpack_require__.r(__webpack_exports__);
 // TODO: drop in v4.0
 const TUI_DOC_RUSSIAN = [{
   provide: _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__.TUI_DOC_DEMO_TEXTS,
-  useValue: [`Сделано с помощью директивы: `, `Фон`, `Детали формы`]
+  useValue: ['Сделано с помощью директивы: ', 'Фон', 'Детали формы']
 }, {
   provide: _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__.TUI_DOC_DOCUMENTATION_TEXTS,
-  useValue: [`Аргумент`, `Тип`, `Имя и описание`, `Значение`, `Для работы с динамическими шаблонами используется`]
+  useValue: ['Аргумент', 'Тип', 'Имя и описание', 'Значение', 'Для работы с динамическими шаблонами используется']
 }, {
   provide: _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__.TUI_DOC_EXAMPLE_TEXTS,
-  useValue: [`Превью`, `Ссылка на пример скопирована`, `Готово`]
+  useValue: ['Превью', 'Ссылка на пример скопирована', 'Готово']
 }, {
   provide: _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__.TUI_DOC_MENU_TEXT,
-  useValue: `Меню`
+  useValue: 'Меню'
 }, {
   provide: _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__.TUI_DOC_SEARCH_TEXT,
-  useValue: `Поиск`
+  useValue: 'Поиск'
 }, {
   provide: _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__.TUI_DOC_SEE_ALSO_TEXT,
-  useValue: `Смотрите также`
+  useValue: 'Смотрите также'
 }, {
   provide: _taiga_ui_addon_doc_tokens__WEBPACK_IMPORTED_MODULE_0__.TUI_DOC_SOURCE_CODE_TEXT,
-  useValue: `Исходный код`
+  useValue: 'Исходный код'
 }];
 
 /**
