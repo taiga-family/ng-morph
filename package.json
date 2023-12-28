@@ -50,7 +50,7 @@
         "@angular/forms": "16.2.11",
         "@angular/platform-browser": "16.2.11",
         "@angular/platform-browser-dynamic": "16.2.11",
-        "@angular/router": "16.2.11",
+        "@angular/router": "17.0.8",
         "@ng-builders/semrel": "1.5.0",
         "@nx/angular": "17.2.8",
         "@nx/eslint-plugin": "17.2.8",
