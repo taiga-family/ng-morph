@@ -58,7 +58,7 @@
         "@nx/linter": "17.2.8",
         "@nx/node": "17.2.8",
         "@nx/workspace": "17.2.8",
-        "@schematics/angular": "16.2.8",
+        "@schematics/angular": "17.0.9",
         "@taiga-ui/addon-doc": "3.61.0",
         "@taiga-ui/addon-mobile": "3.61.0",
         "@taiga-ui/cdk": "3.61.0",
