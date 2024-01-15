@@ -49,7 +49,7 @@
         "@angular/core": "16.2.11",
         "@angular/forms": "16.2.11",
         "@angular/platform-browser": "16.2.11",
-        "@angular/platform-browser-dynamic": "16.2.11",
+        "@angular/platform-browser-dynamic": "17.0.9",
         "@angular/router": "16.2.11",
         "@ng-builders/semrel": "1.5.0",
         "@nx/angular": "17.2.8",
