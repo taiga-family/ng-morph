@@ -16,7 +16,7 @@
         "Roman Sedov <79601794011@ya.ru>"
     ],
     "dependencies": {
-        "jsonc-parser": "3.2.0",
+        "jsonc-parser": "3.2.1",
         "minimatch": "9.0.3",
         "multimatch": "5.0.0",
         "ts-morph": "21.0.1",
