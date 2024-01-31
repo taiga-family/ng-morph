@@ -579,6 +579,31 @@ next min-width - 60% from 1px (1/16 * 0.6 = 0.0375)
 [tuiAppearance][data-appearance='floating'][data-state='active']:after {
   color: var(--tui-text-01);
 }
+[tuiAppearance][data-appearance='link'] {
+  color: var(--tui-link);
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='link']:-webkit-any(a, button, select, textarea, input, label):hover:not([data-state]) {
+    color: var(--tui-link-hover);
+  }
+}
+@media (hover: hover) {
+  [tuiAppearance][data-appearance='link']:-moz-any(a, button, select, textarea, input, label):hover:not([data-state]) {
+    color: var(--tui-link-hover);
+  }
+}
+[tuiAppearance][data-appearance='link'][data-state='hover'] {
+  color: var(--tui-link-hover);
+}
+[tuiAppearance][data-appearance='link']:-webkit-any(a, button, select, textarea, input, label):active:not([data-state]) {
+  color: var(--tui-link-hover);
+}
+[tuiAppearance][data-appearance='link']:-moz-any(a, button, select, textarea, input, label):active:not([data-state]) {
+  color: var(--tui-link-hover);
+}
+[tuiAppearance][data-appearance='link'][data-state='active'] {
+  color: var(--tui-link-hover);
+}
 [tuiAppearance][data-appearance='opposite'] {
   --tui-focus: rgba(255, 255, 255, 0.64);
   background: #000;
@@ -644,6 +669,7 @@ next min-width - 60% from 1px (1/16 * 0.6 = 0.0375)
   [tuiAppearance][data-appearance='whiteblock']:-webkit-any(a, button, select, textarea, input, label):hover:not([data-state]) {
     background: var(--tui-clear);
     box-shadow: inset 0 0 0 1px var(--tui-base-05);
+    cursor: pointer;
   }
 }
 @media (hover: hover) {
@@ -651,12 +677,14 @@ next min-width - 60% from 1px (1/16 * 0.6 = 0.0375)
   [tuiAppearance][data-appearance='whiteblock']:-moz-any(a, button, select, textarea, input, label):hover:not([data-state]) {
     background: var(--tui-clear);
     box-shadow: inset 0 0 0 1px var(--tui-base-05);
+    cursor: pointer;
   }
 }
 [tuiAppearance][data-appearance='outline'][data-state='hover'],
 [tuiAppearance][data-appearance='whiteblock'][data-state='hover'] {
   background: var(--tui-clear);
   box-shadow: inset 0 0 0 1px var(--tui-base-05);
+  cursor: pointer;
 }
 [tuiAppearance][data-appearance='outline']:-webkit-any(a, button, select, textarea, input, label):active:not([data-state]),
 [tuiAppearance][data-appearance='whiteblock']:-webkit-any(a, button, select, textarea, input, label):active:not([data-state]) {
