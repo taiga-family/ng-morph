@@ -23,8 +23,8 @@
         "tslib": "2.6.2"
     },
     "peerDependencies": {
-        "@angular-devkit/core": ">=11.0.0",
-        "@angular-devkit/schematics": ">=11.0.0"
+        "@angular-devkit/core": "17.1.2",
+        "@angular-devkit/schematics": "16.2.8"
     },
     "authors": [
         "Igor Katsuba <katsuba.igor@gmail.ru>"
