@@ -65,7 +65,7 @@
         "@taiga-ui/core": "3.64.0",
         "@taiga-ui/icons": "3.64.0",
         "@taiga-ui/kit": "3.64.0",
-        "@taiga-ui/prettier-config": "0.7.3",
+        "@taiga-ui/prettier-config": "0.8.1",
         "@taiga-ui/tsconfig": "0.14.0",
         "@types/jest": "29.5.12",
         "@types/minimatch": "5.1.2",
