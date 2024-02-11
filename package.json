@@ -79,7 +79,7 @@
         "highlight.js": "11.9.0",
         "jest": "29.7.0",
         "jest-environment-jsdom": "29.7.0",
-        "jest-preset-angular": "14.0.1",
+        "jest-preset-angular": "14.0.2",
         "jsonc-parser": "3.2.1",
         "minimatch": "9.0.3",
         "multimatch": "5.0.0",
