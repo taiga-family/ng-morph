@@ -41,7 +41,7 @@
         "@angular-eslint/eslint-plugin-template": "17.2.1",
         "@angular-eslint/template-parser": "17.2.1",
         "@angular/animations": "16.2.11",
-        "@angular/cdk": "17.2.0",
+        "@angular/cdk": "17.2.1",
         "@angular/cli": "16.2.8",
         "@angular/common": "16.2.11",
         "@angular/compiler": "16.2.11",
