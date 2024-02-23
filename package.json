@@ -70,7 +70,7 @@
         "@types/jest": "29.5.12",
         "@types/minimatch": "5.1.2",
         "@types/node": "20.11.20",
-        "@typescript-eslint/eslint-plugin": "5.62.0",
+        "@typescript-eslint/eslint-plugin": "7.0.2",
         "@typescript-eslint/parser": "5.62.0",
         "dotenv": "16.4.5",
         "eslint": "8.57.0",
