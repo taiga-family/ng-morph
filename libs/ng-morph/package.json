@@ -23,7 +23,7 @@
         "tslib": "2.6.2"
     },
     "peerDependencies": {
-        "@angular-devkit/core": "17.2.1",
+        "@angular-devkit/core": "17.2.2",
         "@angular-devkit/schematics": "16.2.8"
     },
     "authors": [
