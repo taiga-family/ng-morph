@@ -1,7 +1,8 @@
-import {Pattern} from '../types/pattern';
-import {matchQuery, Query} from './match-query';
-import {StructuredStatement} from '../types/structured-statement';
-import {StructureType} from '../types/structure-type';
+import type {Pattern} from '../types/pattern';
+import type {StructureType} from '../types/structure-type';
+import type {StructuredStatement} from '../types/structured-statement';
+import type {Query} from './match-query';
+import {matchQuery} from './match-query';
 
 export function getDeclarationGetter<
     Declaration extends StructuredStatement<Declaration>,

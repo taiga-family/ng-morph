@@ -1,18 +1,14 @@
-import {
-    CallExpression,
-    Identifier,
-    Node,
-    ObjectLiteralExpression,
-    SyntaxKind,
-} from 'ts-morph';
+import type {CallExpression, Identifier, ObjectLiteralExpression} from 'ts-morph';
+import {Node, SyntaxKind} from 'ts-morph';
+
 import {pushToObjectLiteralArrayProperty} from '../helpers/push-to-object-literal-array-property';
 
 export function addProviderToBootstrapApplicationFn(
     callExpression: CallExpression,
     provider: string,
     {unique = false}: {unique?: boolean} = {},
-) {
-    const [_, options = callExpression.addArgument(`{providers: []}`)] =
+): void {
+    const [, options = callExpression.addArgument('{providers: []}')] =
         callExpression.getArguments();
 
     if (!Node.isIdentifier(options) && !Node.isObjectLiteralExpression(options)) {

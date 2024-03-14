@@ -30,10 +30,10 @@ saveActiveProject();
 
 @Component({
     selector: 'interfaces',
-    templateUrl: 'interfaces.template.html',
+    templateUrl: './interfaces.template.html',
     styleUrls: ['./interfaces.style.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InterfacesComponent {
-    readonly interfaces = interfaces;
+    protected readonly interfaces = interfaces;
 }

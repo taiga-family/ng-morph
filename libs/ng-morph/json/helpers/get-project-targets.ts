@@ -1,7 +1,8 @@
-import {ANGULAR_PATH} from '../consts';
-import {WorkspaceProject} from '@schematics/angular/utility/workspace-models';
-import {Tree} from '@angular-devkit/schematics';
+import type {Tree} from '@angular-devkit/schematics';
+import type {WorkspaceProject} from '@schematics/angular/utility/workspace-models';
+
 import {JSONFile} from '../classes/json-file';
+import {ANGULAR_PATH} from '../consts';
 
 export function getProjectTargets(
     host: Tree,
@@ -12,7 +13,7 @@ export function getProjectTargets(
     const projects = file.get(['projects']);
 
     if (projects) {
-        return new Map(Object.entries(projects));
+        return new Map(Object.entries(projects) as Array<[string, any]>);
     }
 
     return new Map();
@@ -25,7 +26,5 @@ export function getProjectTarget(
 ): WorkspaceProject | null {
     const file = new JSONFile(host, angularJsonPath);
 
-    const project = file.get(['projects', name]) as WorkspaceProject;
-
-    return project ?? null;
+    return (file.get(['projects', name]) as any) ?? null;
 }

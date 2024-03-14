@@ -7,6 +7,7 @@
  */
 import {EmptyTree} from '@angular-devkit/schematics';
 import {UnitTestTree} from '@angular-devkit/schematics/testing';
+
 import {getProjectTarget, getProjectTargets} from './get-project-targets';
 
 describe('get project targets', () => {
@@ -47,7 +48,7 @@ describe('get project targets', () => {
         it('should return null', () => {
             const project = getProjectTarget(tree, 'some-project');
 
-            expect(project).toEqual(null);
+            expect(project).toBeNull();
         });
     });
 });

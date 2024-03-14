@@ -6,30 +6,26 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {JsonValue} from '@angular-devkit/core';
+import type {JsonValue} from '@angular-devkit/core';
+import type {Node, ParseError} from 'jsonc-parser';
 import {
     applyEdits,
     findNodeAtLocation,
     getNodeValue,
     modify,
-    Node,
-    ParseError,
     parseTree,
     printParseErrorCode,
 } from 'jsonc-parser';
-import {JSONPath} from '../types/json-path';
-import {InsertionIndex} from '../types/insertion-index';
+
+import type {InsertionIndex} from '../types/insertion-index';
+import type {JSONPath} from '../types/json-path';
 
 export class JSONFileContent {
-    protected _jsonAst: Node | undefined;
+    protected jsonAstNode: Node | undefined;
 
     constructor(protected content: string) {}
 
-    getContent(): string {
-        return this.content;
-    }
-
-    get(jsonPath: JSONPath) {
+    public get(jsonPath: JSONPath): string {
         if (jsonPath.length === 0) {
             return getNodeValue(this.jsonAst());
         }
@@ -39,15 +35,22 @@ export class JSONFileContent {
         return node === undefined ? undefined : getNodeValue(node);
     }
 
-    modify(
+    public getContent(): string {
+        return this.content;
+    }
+
+    public modify(
         jsonPath: JSONPath,
         value: JsonValue | undefined,
         insertInOrder?: InsertionIndex | false,
     ): void {
         let getInsertionIndex: InsertionIndex | undefined;
+
         if (insertInOrder === undefined) {
             const property = jsonPath.slice(-1)[0];
+
             getInsertionIndex = properties =>
+                // eslint-disable-next-line sonar/no-alphabetical-sort,@typescript-eslint/require-array-sort-compare
                 [...properties, property].sort().findIndex(p => p === property);
         } else if (insertInOrder !== false) {
             getInsertionIndex = insertInOrder;
@@ -62,24 +65,27 @@ export class JSONFileContent {
         });
 
         this.content = applyEdits(this.content, edits);
-        this._jsonAst = undefined;
+        this.jsonAstNode = undefined;
     }
 
-    remove(jsonPath: JSONPath): void {
+    public remove(jsonPath: JSONPath): void {
         if (this.get(jsonPath) !== undefined) {
             this.modify(jsonPath, undefined);
         }
     }
 
     protected jsonAst(): Node {
-        if (this._jsonAst) {
-            return this._jsonAst;
+        if (this.jsonAstNode) {
+            return this.jsonAstNode;
         }
 
         const errors: ParseError[] = [];
-        this._jsonAst = parseTree(this.content, errors);
+
+        this.jsonAstNode = parseTree(this.content, errors);
+
         if (errors.length) {
             const {error, offset} = errors[0];
+
             throw new Error(
                 `Failed to parse as JSON AST Object. ${printParseErrorCode(
                     error,
@@ -87,6 +93,6 @@ export class JSONFileContent {
             );
         }
 
-        return this._jsonAst;
+        return this.jsonAstNode;
     }
 }

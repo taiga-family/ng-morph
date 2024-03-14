@@ -132,7 +132,7 @@ describe('ng-add', () => {
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GettingStartedComponent {
-    readonly script = script;
-    readonly creatingRule = creatingRule;
-    readonly creatingSpec = creatingSpec;
+    protected readonly script = script;
+    protected readonly creatingRule = creatingRule;
+    protected readonly creatingSpec = creatingSpec;
 }

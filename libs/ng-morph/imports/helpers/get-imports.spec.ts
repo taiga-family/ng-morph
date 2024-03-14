@@ -1,9 +1,10 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {createProject, resetActiveProject, setActiveProject} from 'ng-morph/project';
 import {StructureKind} from 'ts-morph';
-import {getImports} from './get-imports';
+
 import {createSourceFile} from '../../source-file';
+import {getImports} from './get-imports';
 
 describe('getImports', () => {
     let host: UnitTestTree;
@@ -33,13 +34,13 @@ import b from 'd';
     it('should find two imports', () => {
         const imports = getImports('some/path/**.ts');
 
-        expect(imports.length).toEqual(4);
+        expect(imports.length).toBe(4);
     });
 
     it('should find one import', () => {
         const imports = getImports('some/path/file.ts');
 
-        expect(imports.length).toEqual(1);
+        expect(imports.length).toBe(1);
     });
 
     it('should find one import by module name', () => {

@@ -1,5 +1,5 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {
     createProject,
     resetActiveProject,
@@ -17,7 +17,7 @@ describe('addTypeAliases', () => {
 
         setActiveProject(createProject(host));
 
-        createSourceFile('some/path/file.ts', ``);
+        createSourceFile('some/path/file.ts', '');
     });
 
     it('should add type aliases', () => {
@@ -29,7 +29,7 @@ describe('addTypeAliases', () => {
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(`type A<T> = T[];
+        expect(host.readContent('some/path/file.ts')).toBe(`type A<T> = T[];
 `);
     });
 

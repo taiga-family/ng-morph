@@ -1,4 +1,5 @@
-import {Node, ObjectLiteralExpression} from 'ts-morph';
+import type {ObjectLiteralExpression} from 'ts-morph';
+import {Node} from 'ts-morph';
 
 export function pushToObjectLiteralArrayProperty(
     objectLiteral: ObjectLiteralExpression,
@@ -8,7 +9,7 @@ export function pushToObjectLiteralArrayProperty(
         unique = false,
         forceToArray = false,
     }: {unique?: boolean; forceToArray?: boolean} = {},
-) {
+): void {
     const property =
         objectLiteral.getProperty(propertyName) ??
         objectLiteral.addProperty(`${propertyName}: []`);

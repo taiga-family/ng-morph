@@ -7,10 +7,11 @@
  */
 import {EmptyTree} from '@angular-devkit/schematics';
 import {UnitTestTree} from '@angular-devkit/schematics/testing';
+
+import type {NodeDependency} from './dependencies';
 import {
     addPackageJsonDependency,
     getPackageJsonDependency,
-    NodeDependency,
     NodeDependencyType,
 } from './dependencies';
 
@@ -19,6 +20,7 @@ describe('dependencies', () => {
         let tree: UnitTestTree;
         const pkgJsonPath = '/package.json';
         let dependency: NodeDependency;
+
         beforeEach(() => {
             tree = new UnitTestTree(new EmptyTree());
             tree.create(pkgJsonPath, '{}');
@@ -43,6 +45,7 @@ describe('dependencies', () => {
                 it('should add a dependency', () => {
                     addPackageJsonDependency(tree, dependency);
                     const pkgJson = JSON.parse(tree.readContent(pkgJsonPath));
+
                     expect(pkgJson[type.key][dependency.name]).toEqual(
                         dependency.version,
                     );
@@ -52,6 +55,7 @@ describe('dependencies', () => {
                     addPackageJsonDependency(tree, {...dependency, version: '^2.0.0'});
                     addPackageJsonDependency(tree, {...dependency, overwrite: true});
                     const pkgJson = JSON.parse(tree.readContent(pkgJsonPath));
+
                     expect(pkgJson[type.key][dependency.name]).toEqual(
                         dependency.version,
                     );
@@ -61,7 +65,8 @@ describe('dependencies', () => {
                     addPackageJsonDependency(tree, {...dependency, version: '~2.0.0'});
                     addPackageJsonDependency(tree, {...dependency});
                     const pkgJson = JSON.parse(tree.readContent(pkgJsonPath));
-                    expect(pkgJson[type.key][dependency.name]).toEqual('~2.0.0');
+
+                    expect(pkgJson[type.key][dependency.name]).toBe('~2.0.0');
                 });
             });
         });
@@ -73,6 +78,7 @@ describe('dependencies', () => {
 
     describe('getDependency', () => {
         let tree: UnitTestTree;
+
         beforeEach(() => {
             const pkgJsonPath = '/package.json';
             const pkgJsonContent = JSON.stringify(
@@ -84,19 +90,22 @@ describe('dependencies', () => {
                 null,
                 2,
             );
+
             tree = new UnitTestTree(new EmptyTree());
             tree.create(pkgJsonPath, pkgJsonContent);
         });
 
         it('should get a dependency', () => {
-            const dep = getPackageJsonDependency(tree, 'my-pkg') as NodeDependency;
+            const dep = getPackageJsonDependency(tree, 'my-pkg');
+
             expect(dep.type).toEqual(NodeDependencyType.Default);
-            expect(dep.name).toEqual('my-pkg');
-            expect(dep.version).toEqual('1.2.3');
+            expect(dep.name).toBe('my-pkg');
+            expect(dep.version).toBe('1.2.3');
         });
 
         it('should return null if dependency does not exist', () => {
-            const dep = getPackageJsonDependency(tree, 'missing-pkg') as NodeDependency;
+            const dep = getPackageJsonDependency(tree, 'missing-pkg');
+
             expect(dep).toBeNull();
         });
     });

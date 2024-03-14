@@ -1,16 +1,18 @@
 import {minimatch} from 'minimatch';
 import {coerceArray} from 'ng-morph/utils';
-import {Structure, WriterFunction} from 'ts-morph';
+import type {Structure, WriterFunction} from 'ts-morph';
 
 // если массив, то берем его тип и возвращаем
 // иначе возвращаем переданный тип
 type FlatType<T> = T extends Array<infer R> ? R : T;
+
 // если тип never[], то вернется never
-type NeverIfIsNeverArray<T> = T extends Array<never> ? never : T;
+type NeverIfIsNeverArray<T> = T extends never[] ? never : T;
+
 // пытаемся достать примитивы если они допустимы при определении в структурах
 type ExtractPrimitive<T> = Extract<
     FlatType<Exclude<T, WriterFunction>>,
-    string | number | boolean
+    boolean | number | string
 >;
 
 /**
@@ -38,7 +40,7 @@ type ExtractPrimitive<T> = Extract<
 export type Query<T extends Structure> = Partial<{
     [key in keyof T]:
         | ExtractPrimitive<T[key]>
-        | NeverIfIsNeverArray<ExtractPrimitive<T[key]>[]>;
+        | NeverIfIsNeverArray<Array<ExtractPrimitive<T[key]>>>;
 }>;
 
 function isObject(value: unknown): value is Record<string, unknown> {
@@ -50,7 +52,7 @@ function coerceName<T extends string>(name: T | {name: T}): T {
         return name;
     }
 
-    return 'name' in name ? name['name'] : name;
+    return 'name' in name ? name.name : name;
 }
 
 export function matchQuery<T extends Structure>(value: T, query?: Query<T>): boolean {

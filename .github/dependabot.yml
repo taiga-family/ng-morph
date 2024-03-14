@@ -1,0 +1,10 @@
+# Specify the number of open pull requests allowed
+
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    # Disable version updates for npm dependencies
+    open-pull-requests-limit: 0

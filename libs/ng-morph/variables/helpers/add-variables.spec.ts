@@ -1,5 +1,5 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {
     createProject,
     resetActiveProject,
@@ -7,8 +7,9 @@ import {
     setActiveProject,
 } from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {addVariables} from './add-variables';
 import {VariableDeclarationKind} from 'ts-morph';
+
+import {addVariables} from './add-variables';
 
 describe('addVariables', () => {
     let host: UnitTestTree;
@@ -18,7 +19,7 @@ describe('addVariables', () => {
 
         setActiveProject(createProject(host));
 
-        createSourceFile('some/path/file.ts', ``);
+        createSourceFile('some/path/file.ts', '');
     });
 
     it('should add variables', () => {
@@ -27,14 +28,14 @@ describe('addVariables', () => {
             declarations: [
                 {
                     name: 'name',
-                    initializer: `'value'`,
+                    initializer: "'value'",
                 },
             ],
         });
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(`const name = 'value';
+        expect(host.readContent('some/path/file.ts')).toBe(`const name = 'value';
 `);
     });
 

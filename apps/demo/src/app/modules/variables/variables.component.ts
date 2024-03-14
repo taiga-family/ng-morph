@@ -34,10 +34,10 @@ saveActiveProject();
 
 @Component({
     selector: 'variables',
-    templateUrl: 'variables.template.html',
+    templateUrl: './variables.template.html',
     styleUrls: ['./variables.style.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class VariablesComponent {
-    readonly code = code;
+    protected readonly code = code;
 }

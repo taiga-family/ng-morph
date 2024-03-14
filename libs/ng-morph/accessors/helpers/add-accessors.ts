@@ -1,25 +1,25 @@
 import {coerceArray} from 'ng-morph/utils';
-import {
+import type {
     ClassDeclaration,
     GetAccessorDeclarationStructure,
     SetAccessorDeclarationStructure,
-    Structure,
 } from 'ts-morph';
+import {Structure} from 'ts-morph';
 
 export function addAccessors(
     classes: ClassDeclaration | ClassDeclaration[],
     accessors:
+        | Array<GetAccessorDeclarationStructure | SetAccessorDeclarationStructure>
         | GetAccessorDeclarationStructure
-        | SetAccessorDeclarationStructure
-        | Array<GetAccessorDeclarationStructure | SetAccessorDeclarationStructure>,
+        | SetAccessorDeclarationStructure,
 ): void {
     coerceArray(classes).forEach(klass => {
-        for (const accessor of coerceArray(accessors)) {
+        coerceArray(accessors).forEach(accessor => {
             if (Structure.isGetAccessor(accessor)) {
                 klass.addGetAccessor(accessor);
             } else {
                 klass.addSetAccessor(accessor);
             }
-        }
+        });
     });
 }

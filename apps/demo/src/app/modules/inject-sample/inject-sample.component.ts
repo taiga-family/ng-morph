@@ -70,10 +70,10 @@ function fixInjectImport(file: string) {
 
 @Component({
     selector: 'inject-sample',
-    templateUrl: 'inject-sample.template.html',
+    templateUrl: './inject-sample.template.html',
     styleUrls: ['./inject-sample.style.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InjectSampleComponent {
-    readonly example = example;
+    protected readonly example = example;
 }

@@ -6,9 +6,9 @@ import {HighlightModule} from 'ngx-highlightjs';
 @Component({
     standalone: true,
     selector: 'ng-morph-root',
+    imports: [TuiDocMainModule, TuiLinkModule, HighlightModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [TuiDocMainModule, TuiLinkModule, HighlightModule],
 })
 export class AppComponent {}

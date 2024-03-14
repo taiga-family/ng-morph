@@ -30,10 +30,10 @@ saveActiveProject();
 
 @Component({
     selector: 'types',
-    templateUrl: 'types.template.html',
+    templateUrl: './types.template.html',
     styleUrls: ['./types.style.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TypesComponent {
-    readonly types = types;
+    protected readonly types = types;
 }

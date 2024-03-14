@@ -1,19 +1,20 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getAccessors} from 'ng-morph/accessors';
+import {getClasses} from 'ng-morph/classes';
+import {getConstructors} from 'ng-morph/constructors';
+import {getMethods} from 'ng-morph/methods';
+import {getParams} from 'ng-morph/params';
 import {
     createProject,
     resetActiveProject,
     saveActiveProject,
     setActiveProject,
 } from 'ng-morph/project';
-import {createSourceFile} from 'ng-morph/source-file';
-import {addDecorators} from './add-decorators';
-import {getClasses} from 'ng-morph/classes';
-import {getMethods} from 'ng-morph/methods';
 import {getProperties} from 'ng-morph/properties';
-import {getAccessors} from 'ng-morph/accessors';
-import {getParams} from 'ng-morph/params';
-import {getConstructors} from 'ng-morph/constructors';
+import {createSourceFile} from 'ng-morph/source-file';
+
+import {addDecorators} from './add-decorators';
 
 describe('addDecorators', () => {
     let host: UnitTestTree;
@@ -55,7 +56,7 @@ class A {
 
         addDecorators(classes, {
             name: 'Component',
-            arguments: [`{template: ''}`],
+            arguments: ["{template: ''}"],
         });
 
         addDecorators(methods, {
@@ -80,17 +81,17 @@ class A {
 
         addDecorators(getAccessorss, {
             name: 'AnotherDecorator',
-            arguments: ['SomeComponent', `['string']`],
+            arguments: ['SomeComponent', "['string']"],
         });
 
         addDecorators(setAccessors, {
             name: 'SetDecorator',
-            arguments: [`[1, 3]`],
+            arguments: ['[1, 3]'],
         });
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toBe(`
 @Component({template: ''})
 class A {
   constructor(value, @Optional() param){}

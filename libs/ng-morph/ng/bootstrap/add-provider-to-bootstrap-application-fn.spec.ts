@@ -1,11 +1,11 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getBootstrapApplicationFn} from 'ng-morph/ng';
 import {createProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getBootstrapApplicationFn} from 'ng-morph/ng';
-import {addProviderToBootstrapApplicationFn} from './add-provider-to-bootstrap-application-fn';
 import {getVariables} from 'ng-morph/variables';
-import {VariableDeclarationStructure} from 'ts-morph';
+
+import {addProviderToBootstrapApplicationFn} from './add-provider-to-bootstrap-application-fn';
 
 describe('addProviderToBootstrapApplicationFn', () => {
     let host: UnitTestTree;
@@ -29,8 +29,8 @@ bootstrapApplication(AppComponent)
 
         addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp()');
 
-        expect(bootstrapFn.getText()).toEqual(
-            `bootstrapApplication(AppComponent, {providers: [provideApp()]})`,
+        expect(bootstrapFn.getText()).toBe(
+            'bootstrapApplication(AppComponent, {providers: [provideApp()]})',
         );
     });
 
@@ -47,8 +47,8 @@ bootstrapApplication(AppComponent, {providers: [provideApp()]})
 
         addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp2()');
 
-        expect(bootstrapFn.getText()).toEqual(
-            `bootstrapApplication(AppComponent, {providers: [provideApp(), provideApp2()]})`,
+        expect(bootstrapFn.getText()).toBe(
+            'bootstrapApplication(AppComponent, {providers: [provideApp(), provideApp2()]})',
         );
     });
 
@@ -67,8 +67,8 @@ bootstrapApplication(AppComponent, {providers: [provideApp()]})
             unique: true,
         });
 
-        expect(bootstrapFn.getText()).toEqual(
-            `bootstrapApplication(AppComponent, {providers: [provideApp()]})`,
+        expect(bootstrapFn.getText()).toBe(
+            'bootstrapApplication(AppComponent, {providers: [provideApp()]})',
         );
     });
 
@@ -88,8 +88,8 @@ bootstrapApplication(AppComponent, options)
 
         addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp2()');
 
-        expect(options.getText()).toEqual(
-            `options = {providers: [provideApp(), provideApp2()]}`,
+        expect(options.getText()).toBe(
+            'options = {providers: [provideApp(), provideApp2()]}',
         );
     });
 });

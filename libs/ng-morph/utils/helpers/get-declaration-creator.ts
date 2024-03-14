@@ -1,9 +1,10 @@
-import {OptionalKind, StatementStructures, StructureKind} from 'ts-morph';
-import {StructureType} from '../types/structure-type';
-import {Pattern} from '../types/pattern';
 import {getSourceFiles} from 'ng-morph/source-file';
+import type {StructuredStatement} from 'ng-morph/utils/types/structured-statement';
+import type {OptionalKind, StatementStructures, StructureKind} from 'ts-morph';
+
+import type {Pattern} from '../types/pattern';
+import type {StructureType} from '../types/structure-type';
 import {coerceArray} from './coerce-array';
-import {StructuredStatement} from 'ng-morph/utils/types/structured-statement';
 
 export function getDeclarationCreator<
     Declaration extends StructuredStatement<Declaration>,

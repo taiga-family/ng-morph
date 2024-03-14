@@ -1,9 +1,9 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getClasses} from 'ng-morph/classes';
+import {addImportToNgModule} from 'ng-morph/ng/module/add-import-to-ng-module';
 import {createProject, saveActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {addImportToNgModule} from 'ng-morph/ng/module/add-import-to-ng-module';
-import {getClasses} from 'ng-morph/classes';
 
 describe('addImportToModule', () => {
     let host: UnitTestTree;
@@ -36,7 +36,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 
 @NgModule({
     imports: [TestModule]
@@ -69,7 +69,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 
 @NgModule({imports: [TestModule]})
 export class SomeModule {
@@ -103,7 +103,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -141,7 +141,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -179,7 +179,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 import { APP_IMPORTS } from './imports.ts';
 
 @NgModule({
@@ -217,7 +217,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExistingModule } from 'test-package';
 
@@ -229,7 +229,7 @@ export class SomeModule {
 }`);
         });
 
-        it('should add module to imports', () => {
+        it('should add module to imports when unique is true', () => {
             addImportToNgModule(
                 getClasses('src/main.ts', {name: 'SomeModule'})[0],
                 'TestModule',
@@ -238,7 +238,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExistingModule } from 'test-package';
 

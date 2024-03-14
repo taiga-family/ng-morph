@@ -1,8 +1,9 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getClasses} from 'ng-morph/classes';
 import {createProject, saveActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getClasses} from 'ng-morph/classes';
+
 import {addProviderToComponent} from './add-provider-to-component';
 
 describe('addProviderToComponent', () => {
@@ -38,7 +39,7 @@ export class SomeComponent {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { Component } from '@angular/core';
+                .toBe(`import { Component } from '@angular/core';
 
 @Component({
     providers: [TestProvider]
@@ -73,7 +74,7 @@ export class SomeComponent {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { Component } from '@angular/core';
+                .toBe(`import { Component } from '@angular/core';
 
 @Component({providers: [TestProvider]})
 export class SomeComponent {
@@ -109,7 +110,7 @@ export class SomeComponent {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { Component } from '@angular/core';
+                .toBe(`import { Component } from '@angular/core';
 import { TestProvider } from '@angular/common';
 
 @Component({

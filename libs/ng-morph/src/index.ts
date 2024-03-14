@@ -16,5 +16,4 @@ export * from 'ng-morph/properties';
 export * from 'ng-morph/source-file';
 export * from 'ng-morph/utils';
 export * from 'ng-morph/variables';
-
 export * from 'ts-morph';

@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
+
 import {ACCESSORS_SAMPLES} from './samples/accessors';
 import {CONSTRUCTORS_SAMPLES} from './samples/constructors';
 import {DECORATORS_SAMPLES} from './samples/decorators';
@@ -75,19 +76,19 @@ saveActiveProject();
 
 @Component({
     selector: 'classes',
-    templateUrl: 'classes.template.html',
+    templateUrl: './classes.template.html',
     styleUrls: ['./classes.style.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ClassesComponent {
-    readonly add = add;
-    readonly edit = edit;
-    readonly remove = remove;
-    readonly getClasses = getClasses;
+    protected readonly add = add;
+    protected readonly edit = edit;
+    protected readonly remove = remove;
+    protected readonly getClasses = getClasses;
 
-    readonly accessors = ACCESSORS_SAMPLES;
-    readonly methods = METHODS_SAMPLES;
-    readonly properties = PROPERTIES_SAMPLES;
-    readonly decorators = DECORATORS_SAMPLES;
-    readonly constructors = CONSTRUCTORS_SAMPLES;
+    protected readonly accessors = ACCESSORS_SAMPLES;
+    protected readonly methods = METHODS_SAMPLES;
+    protected readonly properties = PROPERTIES_SAMPLES;
+    protected readonly decorators = DECORATORS_SAMPLES;
+    protected readonly constructors = CONSTRUCTORS_SAMPLES;
 }

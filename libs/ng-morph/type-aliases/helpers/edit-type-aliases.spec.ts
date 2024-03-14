@@ -1,5 +1,5 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {
     createProject,
     resetActiveProject,
@@ -7,8 +7,9 @@ import {
     setActiveProject,
 } from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getTypeAliases} from './get-type-aliases';
+
 import {editTypeAliases} from './edit-type-aliases';
+import {getTypeAliases} from './get-type-aliases';
 
 describe('editTypeAliases', () => {
     let host: UnitTestTree;
@@ -18,7 +19,7 @@ describe('editTypeAliases', () => {
 
         setActiveProject(createProject(host));
 
-        createSourceFile('some/path/file.ts', `type A = string[]; let a: A;`);
+        createSourceFile('some/path/file.ts', 'type A = string[]; let a: A;');
     });
 
     it('should edit type aliases', () => {
@@ -30,8 +31,8 @@ describe('editTypeAliases', () => {
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(
-            `type B = string[]; let a: B;`,
+        expect(host.readContent('some/path/file.ts')).toBe(
+            'type B = string[]; let a: B;',
         );
     });
 

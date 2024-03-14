@@ -1,8 +1,9 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getClasses} from 'ng-morph/classes';
 import {createProject, saveActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getClasses} from 'ng-morph/classes';
+
 import {addBootstrapToNgModule} from './add-bootstrap-to-ng-module';
 
 describe('addBootstrapToModule', () => {
@@ -36,7 +37,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 
 @NgModule({
     bootstrap: [TestComponent]
@@ -68,7 +69,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 
 @NgModule({bootstrap: [TestComponent]})
 export class SomeModule {
@@ -102,7 +103,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({

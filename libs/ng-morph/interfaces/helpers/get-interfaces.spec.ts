@@ -1,7 +1,8 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {createProject, resetActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
+
 import {getInterfaces} from './get-interfaces';
 
 describe('getInterfaces', () => {
@@ -30,13 +31,13 @@ interface B {}
     it('should find two Interfaces', () => {
         const declarations = getInterfaces('some/path/**.ts');
 
-        expect(declarations.length).toEqual(2);
+        expect(declarations.length).toBe(2);
     });
 
     it('should find one interface', () => {
         const declarations = getInterfaces('some/path/file.ts');
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     it('should find one interface by name', () => {
@@ -44,7 +45,7 @@ interface B {}
             name: 'B',
         });
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     afterEach(() => {

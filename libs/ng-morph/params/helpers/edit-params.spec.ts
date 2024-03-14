@@ -1,5 +1,7 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getClasses} from 'ng-morph/classes';
+import {getConstructors} from 'ng-morph/constructors';
 import {
     createProject,
     resetActiveProject,
@@ -7,11 +9,10 @@ import {
     setActiveProject,
 } from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getParams} from './get-params';
-import {editParams} from './edit-params';
 import {Scope} from 'ts-morph';
-import {getConstructors} from 'ng-morph/constructors';
-import {getClasses} from 'ng-morph/classes';
+
+import {editParams} from './edit-params';
+import {getParams} from './get-params';
 
 describe('editParams', () => {
     let host: UnitTestTree;
@@ -45,7 +46,7 @@ class B {
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toBe(`
 class B {
   constructor(param1: number, private anotherParam: number = Math.PI){}
 }

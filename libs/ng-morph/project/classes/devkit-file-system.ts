@@ -6,10 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {normalize, Path, PathIsDirectoryException} from '@angular-devkit/core';
-import {Tree, UpdateRecorder} from '@angular-devkit/schematics';
+import type {Path} from '@angular-devkit/core';
+import {normalize, PathIsDirectoryException} from '@angular-devkit/core';
+import type {Tree, UpdateRecorder} from '@angular-devkit/schematics';
 import * as path from 'path';
-import {DirectoryEntry, FileSystem} from './file-system';
+
+import type {DirectoryEntry} from './file-system';
+import {FileSystem} from './file-system';
 
 /**
  * File system that leverages the virtual tree from the CLI devkit. This file
@@ -17,32 +20,35 @@ import {DirectoryEntry, FileSystem} from './file-system';
  * Angular CLI.
  */
 export class DevkitFileSystem extends FileSystem {
-    private _updateRecorderCache = new Map<string, UpdateRecorder>();
+    private readonly updateRecorderCache = new Map<string, UpdateRecorder>();
 
-    constructor(readonly tree: Tree) {
+    constructor(public readonly tree: Tree) {
         super();
     }
 
-    resolve(...segments: string[]): Path {
+    public resolve(...segments: string[]): Path {
         // Note: We use `posix.resolve` as the devkit paths are using posix separators.
         return normalize(path.posix.resolve('/', ...segments.map(normalize)));
     }
 
-    edit(filePath: Path): UpdateRecorder {
-        if (this._updateRecorderCache.has(filePath)) {
-            return this._updateRecorderCache.get(filePath) as UpdateRecorder;
+    public edit(filePath: Path): UpdateRecorder {
+        if (this.updateRecorderCache.has(filePath)) {
+            return this.updateRecorderCache.get(filePath);
         }
+
         const recorder = this.tree.beginUpdate(filePath);
-        this._updateRecorderCache.set(filePath, recorder);
+
+        this.updateRecorderCache.set(filePath, recorder);
+
         return recorder;
     }
 
-    commitEdits() {
-        this._updateRecorderCache.forEach(r => this.tree.commitUpdate(r));
-        this._updateRecorderCache.clear();
+    public commitEdits(): void {
+        this.updateRecorderCache.forEach(r => this.tree.commitUpdate(r));
+        this.updateRecorderCache.clear();
     }
 
-    exists(fileOrDirPath: Path) {
+    public exists(fileOrDirPath: Path): boolean {
         // The devkit tree does not expose an API for checking whether a given
         // directory exists. It throws a specific error though if a directory
         // is being read as a file. We use that to check if a directory exists.
@@ -53,29 +59,32 @@ export class DevkitFileSystem extends FileSystem {
                 return true;
             }
         }
+
         return false;
     }
 
-    overwrite(filePath: Path, content: string) {
+    public overwrite(filePath: Path, content: string): void {
         this.tree.overwrite(filePath, content);
     }
 
-    create(filePath: Path, content: string) {
+    public create(filePath: Path, content: string): void {
         this.tree.create(filePath, content);
     }
 
-    delete(filePath: Path) {
+    public delete(filePath: Path): void {
         this.tree.delete(filePath);
     }
 
-    read(filePath: Path) {
+    public read(filePath: Path): string | null {
         const buffer = this.tree.read(filePath);
+
         return buffer !== null ? buffer.toString() : null;
     }
 
-    readDirectory(dirPath: Path): DirectoryEntry {
+    public readDirectory(dirPath: Path): DirectoryEntry {
         try {
             const {subdirs: directories, subfiles: files} = this.tree.getDir(dirPath);
+
             return {directories, files};
         } catch (e) {
             return {directories: [], files: []};

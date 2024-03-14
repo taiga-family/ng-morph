@@ -19,12 +19,12 @@
         "jsonc-parser": "3.2.1",
         "minimatch": "9.0.3",
         "multimatch": "5.0.0",
-        "ts-morph": "21.0.1",
+        "ts-morph": "22.0.0",
         "tslib": "2.6.2"
     },
     "peerDependencies": {
-        "@angular-devkit/core": "17.2.2",
-        "@angular-devkit/schematics": "16.2.8"
+        "@angular-devkit/core": ">=16.0.0",
+        "@angular-devkit/schematics": ">=16.0.0"
     },
     "authors": [
         "Igor Katsuba <katsuba.igor@gmail.ru>"
