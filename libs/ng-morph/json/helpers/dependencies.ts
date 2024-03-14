@@ -5,11 +5,13 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import {Tree} from '@angular-devkit/schematics';
-import {JSONFile} from '../classes/json-file';
-import {PACKAGE_PATH} from '../consts';
+import type {Tree} from '@angular-devkit/schematics';
 import * as semver from 'semver';
 
+import {JSONFile} from '../classes/json-file';
+import {PACKAGE_PATH} from '../consts';
+
+// eslint-disable-next-line no-restricted-syntax
 export enum NodeDependencyType {
     Default = 'dependencies',
     Dev = 'devDependencies',
@@ -32,7 +34,7 @@ const ALL_DEPENDENCY_TYPE = [
 ];
 
 function versionSanitize(version: string): string {
-    return version.replace(/([\^~])/g, '');
+    return version.replaceAll(/([\^~])/g, '');
 }
 
 export function addPackageJsonDependency(
@@ -65,9 +67,7 @@ export function removePackageJsonDependency(
 ): void {
     const json = new JSONFile(tree, pkgJsonPath);
 
-    for (const depType of ALL_DEPENDENCY_TYPE) {
-        json.remove([depType, name]);
-    }
+    ALL_DEPENDENCY_TYPE.forEach(depType => json.remove([depType, name]));
 }
 
 export function getPackageJsonDependency(
@@ -83,7 +83,7 @@ export function getPackageJsonDependency(
         if (typeof version === 'string') {
             return {
                 type: depType,
-                name: name,
+                name,
                 version,
             };
         }

@@ -1,4 +1,4 @@
 import {getDeclarationRemover} from 'ng-morph/utils';
-import {EnumDeclaration} from 'ts-morph';
+import type {EnumDeclaration} from 'ts-morph';
 
 export const removeEnums = getDeclarationRemover<EnumDeclaration>();

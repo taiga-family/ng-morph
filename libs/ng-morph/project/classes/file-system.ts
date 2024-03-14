@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/require-await */
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.
@@ -6,11 +7,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {UpdateRecorder} from './update-recorder';
-import {FileSystemHost, RuntimeDirEntry} from 'ts-morph';
-import {basename, join} from 'path';
 import multimatch from 'multimatch';
-import {DevkitFileSystem} from './devkit-file-system';
+import {basename, join} from 'path';
+import type {FileSystemHost, RuntimeDirEntry} from 'ts-morph';
+
+import type {DevkitFileSystem} from './devkit-file-system';
+import type {UpdateRecorder} from './update-recorder';
 
 /**
  * A workspace path semantically is equivalent to the `Path` type provided by the
@@ -48,32 +50,32 @@ export interface DirectoryEntry {
  */
 export abstract class FileSystem {
     /** Checks whether the given file or directory exists. */
-    abstract exists(path: WorkspacePath): boolean;
+    public abstract exists(path: WorkspacePath): boolean;
 
     /** Gets the contents of the given file. */
-    abstract read(filePath: WorkspacePath): string | null;
+    public abstract read(filePath: WorkspacePath): string | null;
 
     /** Reads the given directory to retrieve children. */
-    abstract readDirectory(dirPath: WorkspacePath): DirectoryEntry;
+    public abstract readDirectory(dirPath: WorkspacePath): DirectoryEntry;
 
     /**
      * Creates an update recorder for the given file. Edits can be recorded and
      * committed in batches. Changes are not applied automatically because otherwise
      * migrations would need to re-read files, or account for shifted file contents.
      */
-    abstract edit(filePath: WorkspacePath): UpdateRecorder;
+    public abstract edit(filePath: WorkspacePath): UpdateRecorder;
 
     /** Applies all changes which have been recorded in update recorders. */
-    abstract commitEdits(): void;
+    public abstract commitEdits(): void;
 
     /** Creates a new file with the given content. */
-    abstract create(filePath: WorkspacePath, content: string): void;
+    public abstract create(filePath: WorkspacePath, content: string): void;
 
     /** Overwrites an existing file with the given content. */
-    abstract overwrite(filePath: WorkspacePath, content: string): void;
+    public abstract overwrite(filePath: WorkspacePath, content: string): void;
 
     /** Deletes the given file. */
-    abstract delete(filePath: WorkspacePath): void;
+    public abstract delete(filePath: WorkspacePath): void;
 
     /**
      * Resolves given paths to a resolved path in the file system. For example, the devkit
@@ -84,17 +86,17 @@ export abstract class FileSystem {
      * function will iterate from the target through other segments until it finds an
      * absolute path segment.
      */
-    abstract resolve(...segments: string[]): WorkspacePath;
+    public abstract resolve(...segments: string[]): WorkspacePath;
 }
 
 export class NgCliFileSystem implements FileSystemHost {
     constructor(public fs: DevkitFileSystem) {}
 
-    async copy(srcPath: string, destPath: string): Promise<void> {
+    public async copy(srcPath: string, destPath: string): Promise<void> {
         this.copySync(srcPath, destPath);
     }
 
-    copySync(srcPath: string, destPath: string): void {
+    public copySync(srcPath: string, destPath: string): void {
         if (this.fileExistsSync(srcPath)) {
             this.writeFileSync(destPath, this.readFileSync(srcPath));
         } else if (this.directoryExistsSync(srcPath)) {
@@ -106,27 +108,27 @@ export class NgCliFileSystem implements FileSystemHost {
         }
     }
 
-    async delete(path: string): Promise<void> {
+    public async delete(path: string): Promise<void> {
         this.deleteSync(path);
     }
 
-    deleteSync(path: string): void {
+    public deleteSync(path: string): void {
         this.fs.delete(path as WorkspacePath);
     }
 
-    async directoryExists(dirPath: string): Promise<boolean> {
+    public async directoryExists(dirPath: string): Promise<boolean> {
         return this.directoryExistsSync(dirPath);
     }
 
-    directoryExistsSync(dirPath: string): boolean {
+    public directoryExistsSync(dirPath: string): boolean {
         return this.fs.exists(dirPath as WorkspacePath) && !this.fileExistsSync(dirPath);
     }
 
-    async fileExists(filePath: string): Promise<boolean> {
+    public async fileExists(filePath: string): Promise<boolean> {
         return this.fileExistsSync(filePath);
     }
 
-    fileExistsSync(filePath: string): boolean {
+    public fileExistsSync(filePath: string): boolean {
         try {
             return this.fs.read(filePath as WorkspacePath) !== null;
         } catch (e) {
@@ -134,43 +136,43 @@ export class NgCliFileSystem implements FileSystemHost {
         }
     }
 
-    getCurrentDirectory(): string {
+    public getCurrentDirectory(): string {
         return '/';
     }
 
-    async glob(patterns: ReadonlyArray<string>): Promise<string[]> {
+    public async glob(patterns: readonly string[]): Promise<string[]> {
         return this.globSync(patterns);
     }
 
-    globSync(patterns: ReadonlyArray<string>): string[] {
+    public globSync(patterns: readonly string[]): string[] {
         return multimatch(this.getAllFilePaths(), patterns as string[]);
     }
 
-    isCaseSensitive(): boolean {
+    public isCaseSensitive(): boolean {
         return true;
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    mkdir(dirPath: string): Promise<void> {
+    public async mkdir(dirPath: string): Promise<void> {
         return Promise.resolve(undefined);
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    mkdirSync(dirPath: string): void {
+    public mkdirSync(dirPath: string): void {
         // empty
     }
 
-    async move(srcPath: string, destPath: string): Promise<void> {
+    public async move(srcPath: string, destPath: string): Promise<void> {
         this.moveSync(srcPath, destPath);
     }
 
-    moveSync(srcPath: string, destPath: string): void {
+    public moveSync(srcPath: string, destPath: string): void {
         this.copySync(srcPath, destPath);
 
         this.deleteSync(srcPath);
     }
 
-    readDirSync(dirPath: string): RuntimeDirEntry[] {
+    public readDirSync(dirPath: string): RuntimeDirEntry[] {
         const {directories, files} = this.fs.readDirectory(dirPath as WorkspacePath);
 
         return directories
@@ -191,24 +193,24 @@ export class NgCliFileSystem implements FileSystemHost {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    async readFile(filePath: string, encoding?: string): Promise<string> {
+    public async readFile(filePath: string, encoding?: string): Promise<string> {
         return this.readFileSync(filePath);
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    readFileSync(filePath: string, encoding?: string): string {
-        return this.fs.read(filePath as WorkspacePath) as string;
+    public readFileSync(filePath: string, encoding?: string): string {
+        return this.fs.read(filePath as WorkspacePath);
     }
 
-    realpathSync(path: string): string {
+    public realpathSync(path: string): string {
         return path;
     }
 
-    async writeFile(filePath: string, fileText: string): Promise<void> {
+    public async writeFile(filePath: string, fileText: string): Promise<void> {
         this.writeFileSync(filePath, fileText);
     }
 
-    writeFileSync(filePath: string, fileText: string): void {
+    public writeFileSync(filePath: string, fileText: string): void {
         if (this.fileExistsSync(filePath)) {
             this.fs.overwrite(filePath as WorkspacePath, fileText);
         } else {
@@ -216,7 +218,7 @@ export class NgCliFileSystem implements FileSystemHost {
         }
     }
 
-    getAllFilePaths(path = '/', foundedFiles: string[] = []) {
+    protected getAllFilePaths(path = '/', foundedFiles: string[] = []): string[] {
         const {directories, files} = this.fs.readDirectory(path as WorkspacePath);
 
         foundedFiles.push(...files.map(file => join(path, file)));

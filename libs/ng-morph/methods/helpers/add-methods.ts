@@ -1,12 +1,12 @@
-import {ClassDeclaration, MethodDeclarationStructure, OptionalKind} from 'ts-morph';
 import {coerceArray} from 'ng-morph/utils';
+import type {ClassDeclaration, MethodDeclarationStructure, OptionalKind} from 'ts-morph';
 
 export function addMethods(
     classes: ClassDeclaration | ClassDeclaration[],
     methods:
-        | OptionalKind<MethodDeclarationStructure>
-        | OptionalKind<MethodDeclarationStructure>[],
-) {
+        | Array<OptionalKind<MethodDeclarationStructure>>
+        | OptionalKind<MethodDeclarationStructure>,
+): void {
     coerceArray(classes).forEach(klass => {
         klass.addMethods(coerceArray(methods));
     });

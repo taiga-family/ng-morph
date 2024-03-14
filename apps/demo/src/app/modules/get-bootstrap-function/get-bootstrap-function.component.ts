@@ -40,7 +40,7 @@ addProviderToBootstrapApplicationFn(bootstrapFn, 'provideRouter()');
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GetBootstrapFunctionComponent {
-    readonly bootstrap = bootstrap;
-    readonly bootstrapApplication = bootstrapApplication;
-    readonly addProviders = addProviders;
+    protected readonly bootstrap = bootstrap;
+    protected readonly bootstrapApplication = bootstrapApplication;
+    protected readonly addProviders = addProviders;
 }

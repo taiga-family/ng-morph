@@ -1,7 +1,10 @@
-import {coerceArray, StructureEditor} from 'ng-morph/utils';
-import {Node, OptionalKind, Structure} from 'ts-morph';
-import {StructuredStatement} from '../types/structured-statement';
-import {StructureType} from 'ng-morph/utils/types/structure-type';
+import type {StructureEditor} from 'ng-morph/utils';
+import {coerceArray} from 'ng-morph/utils';
+import type {StructureType} from 'ng-morph/utils/types/structure-type';
+import type {OptionalKind} from 'ts-morph';
+import {Node, Structure} from 'ts-morph';
+
+import type {StructuredStatement} from '../types/structured-statement';
 
 export function getDeclarationEditor<
     Declaration extends StructuredStatement<Declaration>,

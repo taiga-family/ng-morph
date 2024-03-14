@@ -1,4 +1,4 @@
 import {getDeclarationRemover} from 'ng-morph/utils';
-import {ConstructorDeclaration} from 'ts-morph';
+import type {ConstructorDeclaration} from 'ts-morph';
 
 export const removeConstructors = getDeclarationRemover<ConstructorDeclaration>();

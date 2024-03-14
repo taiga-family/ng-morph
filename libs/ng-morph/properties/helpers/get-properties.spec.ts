@@ -1,9 +1,10 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getClasses} from 'ng-morph/classes';
 import {createProject, resetActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
+
 import {getProperties} from './get-properties';
-import {getClasses} from 'ng-morph/classes';
 
 describe('getProperties', () => {
     let host: UnitTestTree;
@@ -37,13 +38,13 @@ class B {
     it('should find two properties', () => {
         const declarations = getProperties(getClasses('some/path/**.ts'));
 
-        expect(declarations.length).toEqual(3);
+        expect(declarations.length).toBe(3);
     });
 
     it('should find one property', () => {
         const declarations = getProperties(getClasses('some/path/file.ts'));
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     it('should find one property by name pattern **', () => {
@@ -52,7 +53,7 @@ class B {
             isStatic: true,
         });
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     it('should find one property by blob pattern **/*', () => {
@@ -61,7 +62,7 @@ class B {
             isStatic: true,
         });
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     afterEach(() => {

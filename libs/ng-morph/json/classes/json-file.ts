@@ -6,12 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {JsonValue} from '@angular-devkit/core';
-import {Tree} from '@angular-devkit/schematics';
-import {Node} from 'jsonc-parser';
+import type {JsonValue} from '@angular-devkit/core';
+import type {Tree} from '@angular-devkit/schematics';
+import type {Node} from 'jsonc-parser';
+
+import type {InsertionIndex} from '../types/insertion-index';
+import type {JSONPath} from '../types/json-path';
 import {JSONFileContent} from './json-file-content';
-import {JSONPath} from '../types/json-path';
-import {InsertionIndex} from '../types/insertion-index';
 
 export class JSONFile extends JSONFileContent {
     private readonly host: Tree;
@@ -19,6 +20,7 @@ export class JSONFile extends JSONFileContent {
 
     constructor(host: Tree, path: string) {
         const buffer = host.read(path);
+
         if (buffer) {
             super(buffer.toString());
         } else {
@@ -29,7 +31,7 @@ export class JSONFile extends JSONFileContent {
         this.path = path;
     }
 
-    override modify(
+    public override modify(
         jsonPath: JSONPath,
         value: JsonValue | undefined,
         insertInOrder?: InsertionIndex | false,

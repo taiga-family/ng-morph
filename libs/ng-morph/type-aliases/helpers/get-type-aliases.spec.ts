@@ -1,7 +1,8 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {createProject, resetActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
+
 import {getTypeAliases} from './get-type-aliases';
 
 describe('getTypeAliases', () => {
@@ -12,21 +13,21 @@ describe('getTypeAliases', () => {
 
         setActiveProject(createProject(host));
 
-        createSourceFile('some/path/file.ts', `type A = string[];`);
+        createSourceFile('some/path/file.ts', 'type A = string[];');
 
-        createSourceFile('some/path/one-more-file.ts', `type B = number | string;`);
+        createSourceFile('some/path/one-more-file.ts', 'type B = number | string;');
     });
 
     it('should find two type aliases', () => {
         const declarations = getTypeAliases('some/path/**.ts');
 
-        expect(declarations.length).toEqual(2);
+        expect(declarations.length).toBe(2);
     });
 
     it('should find one type aliases', () => {
         const declarations = getTypeAliases('some/path/file.ts');
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     it('should find one type alias by name', () => {
@@ -34,7 +35,7 @@ describe('getTypeAliases', () => {
             name: 'B',
         });
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     afterEach(() => {

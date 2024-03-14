@@ -1,5 +1,5 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {
     createProject,
     resetActiveProject,
@@ -7,8 +7,9 @@ import {
     setActiveProject,
 } from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getEnums} from './get-enums';
+
 import {editEnums} from './edit-enums';
+import {getEnums} from './get-enums';
 
 describe('editEnums', () => {
     let host: UnitTestTree;
@@ -38,7 +39,7 @@ const b = Test.First;
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toBe(`
 enum Name {
     First
 }

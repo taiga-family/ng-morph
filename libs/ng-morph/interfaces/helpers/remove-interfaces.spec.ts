@@ -1,5 +1,5 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {
     createProject,
     resetActiveProject,
@@ -7,6 +7,7 @@ import {
     setActiveProject,
 } from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
+
 import {getInterfaces} from './get-interfaces';
 import {removeInterfaces} from './remove-interfaces';
 
@@ -18,7 +19,7 @@ describe('removeInterfaces', () => {
 
         setActiveProject(createProject(host));
 
-        createSourceFile('some/path/file.ts', `interface A {}`);
+        createSourceFile('some/path/file.ts', 'interface A {}');
     });
 
     it('should remove Interfaces', () => {
@@ -28,7 +29,7 @@ describe('removeInterfaces', () => {
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(``);
+        expect(host.readContent('some/path/file.ts')).toBe('');
     });
 
     afterEach(() => {

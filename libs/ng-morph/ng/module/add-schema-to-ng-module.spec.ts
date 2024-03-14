@@ -1,9 +1,10 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getClasses} from 'ng-morph/classes';
 import {createProject, saveActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
+
 import {addSchemaToNgModule} from './add-schema-to-ng-module';
-import {getClasses} from 'ng-morph/classes';
 
 describe('addSchemaToModule', () => {
     let host: UnitTestTree;
@@ -36,7 +37,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 
 @NgModule({
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -69,7 +70,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 
 @NgModule({schemas: [CUSTOM_ELEMENTS_SCHEMA]})
 export class SomeModule {
@@ -103,7 +104,7 @@ export class SomeModule {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { NgModule } from '@angular/core';
+                .toBe(`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({

@@ -1,5 +1,6 @@
 import {getDeclarationCreator} from 'ng-morph/utils';
-import {StructureKind, VariableStatement} from 'ts-morph';
+import type {VariableStatement} from 'ts-morph';
+import {StructureKind} from 'ts-morph';
 
 export const addVariables = getDeclarationCreator<VariableStatement>({
     kind: StructureKind.VariableStatement,

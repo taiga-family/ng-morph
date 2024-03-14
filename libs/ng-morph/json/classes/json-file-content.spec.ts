@@ -6,7 +6,7 @@ describe('JSONFileContent', () => {
 
         file.modify(['some', 'path', 0], {value: 3});
 
-        expect(file.getContent()).toEqual(`{
+        expect(file.getContent()).toBe(`{
   "some": {
     "path": [
       {
@@ -48,7 +48,7 @@ describe('JSONFileContent', () => {
 
         file.remove(['some', 'path', 0]);
 
-        expect(file.getContent()).toEqual(`{
+        expect(file.getContent()).toBe(`{
   "some": {
     "path": []
   }

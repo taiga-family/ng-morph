@@ -28,5 +28,5 @@ saveActiveProject();
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SourceFilesComponent {
-    readonly code = code;
+    protected readonly code = code;
 }

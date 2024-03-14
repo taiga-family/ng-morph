@@ -1,8 +1,9 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getClasses} from 'ng-morph/classes';
 import {createProject, saveActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getClasses} from 'ng-morph/classes';
+
 import {addProviderToDirective} from './add-provider-to-directive';
 
 describe('addProviderToDirective', () => {
@@ -38,7 +39,7 @@ export class SomeDirective {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { Component } from '@angular/core';
+                .toBe(`import { Component } from '@angular/core';
 
 @Directive({
     providers: [TestProvider]
@@ -73,7 +74,7 @@ export class SomeDirective {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { Component } from '@angular/core';
+                .toBe(`import { Component } from '@angular/core';
 
 @Directive({providers: [TestProvider]})
 export class SomeDirective {
@@ -109,7 +110,7 @@ export class SomeDirective {
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))
-                .toStrictEqual(`import { Component } from '@angular/core';
+                .toBe(`import { Component } from '@angular/core';
 import { TestService } from 'test-package';
 
 @Directive({

@@ -1,5 +1,5 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {
     createProject,
     resetActiveProject,
@@ -7,6 +7,7 @@ import {
     setActiveProject,
 } from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
+
 import {getVariables} from './get-variables';
 import {removeVariables} from './remove-variables';
 
@@ -18,7 +19,7 @@ describe('removeVariables', () => {
 
         setActiveProject(createProject(host));
 
-        createSourceFile('some/path/file.ts', `const a = 'b'`);
+        createSourceFile('some/path/file.ts', "const a = 'b'");
     });
 
     it('should remove variables', () => {
@@ -28,7 +29,7 @@ describe('removeVariables', () => {
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(``);
+        expect(host.readContent('some/path/file.ts')).toBe('');
     });
 
     afterEach(() => {

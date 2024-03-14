@@ -1,5 +1,6 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getClasses} from 'ng-morph/classes';
 import {
     createProject,
     resetActiveProject,
@@ -7,9 +8,9 @@ import {
     setActiveProject,
 } from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getProperties} from './get-properties';
+
 import {editProperties} from './edit-properties';
-import {getClasses} from 'ng-morph/classes';
+import {getProperties} from './get-properties';
 
 describe('editProperties', () => {
     let host: UnitTestTree;
@@ -34,12 +35,12 @@ class A {
 
         editProperties(declarations, () => ({
             name: 'b',
-            initializer: `'s'`,
+            initializer: "'s'",
         }));
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toBe(`
 class A {
   b = 's';
 }

@@ -1,7 +1,7 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
-import {createSourceFile, getSourceFiles} from 'ng-morph/source-file';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {createProject, resetActiveProject, setActiveProject} from 'ng-morph/project';
+import {createSourceFile, getSourceFiles} from 'ng-morph/source-file';
 
 describe('getSourceFiles', () => {
     let host: UnitTestTree;
@@ -19,19 +19,19 @@ describe('getSourceFiles', () => {
     it('should find all source files', () => {
         const sourceFiles = getSourceFiles('some/**/*.ts');
 
-        expect(sourceFiles.length).toEqual(2);
+        expect(sourceFiles.length).toBe(2);
     });
 
     it('should find three source files', () => {
         const sourceFiles = getSourceFiles('**/*.ts');
 
-        expect(sourceFiles.length).toEqual(3);
+        expect(sourceFiles.length).toBe(3);
     });
 
     it('should find one source file', () => {
         const sourceFiles = getSourceFiles('some/test.ts');
 
-        expect(sourceFiles.length).toEqual(1);
+        expect(sourceFiles.length).toBe(1);
     });
 
     afterEach(() => {

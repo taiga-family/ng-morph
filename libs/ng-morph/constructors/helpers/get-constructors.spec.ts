@@ -1,10 +1,11 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {getClasses} from 'ng-morph/classes';
 import {createProject, resetActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getConstructors} from './get-constructors';
-import {getClasses} from 'ng-morph/classes';
 import {Scope} from 'ts-morph';
+
+import {getConstructors} from './get-constructors';
 
 describe('getConstructors', () => {
     let host: UnitTestTree;
@@ -40,13 +41,13 @@ class B {
     it('should find two constructors', () => {
         const declarations = getConstructors(getClasses('some/path/**.ts'));
 
-        expect(declarations.length).toEqual(2);
+        expect(declarations.length).toBe(2);
     });
 
     it('should find one constructor', () => {
         const declarations = getConstructors(getClasses('some/path/file.ts'));
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     it('should find one constructor by name', () => {
@@ -54,7 +55,7 @@ class B {
             scope: Scope.Protected,
         });
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     afterEach(() => {

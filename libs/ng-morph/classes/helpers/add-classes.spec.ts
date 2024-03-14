@@ -1,5 +1,5 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {
     createProject,
     resetActiveProject,
@@ -7,6 +7,7 @@ import {
     setActiveProject,
 } from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
+
 import {addClasses} from './add-classes';
 
 describe('addClasses', () => {
@@ -17,7 +18,7 @@ describe('addClasses', () => {
 
         setActiveProject(createProject(host));
 
-        createSourceFile('some/path/file.ts', ``);
+        createSourceFile('some/path/file.ts', '');
     });
 
     it('should add classes', () => {
@@ -36,7 +37,7 @@ describe('addClasses', () => {
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(`export default class A {
+        expect(host.readContent('some/path/file.ts')).toBe(`export default class A {
     static method(): number {
         return 0
     }

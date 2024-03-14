@@ -1,8 +1,9 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {createProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
 import {Node} from 'ts-morph';
+
 import {getBootstrapApplicationFn} from './get-bootstrap-application-fn';
 
 describe('getBootstrapApplicationFn', () => {
@@ -30,8 +31,8 @@ bootstrapApplication(AppComponent)
         );
         const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 
-        expect(bootstrapFn.getText()).toEqual(`bootstrapApplication(AppComponent)`);
-        expect(Node.isCallExpression(bootstrapFn)).toEqual(true);
+        expect(bootstrapFn.getText()).toBe('bootstrapApplication(AppComponent)');
+        expect(Node.isCallExpression(bootstrapFn)).toBe(true);
     });
 
     it('should return undefined if bootstrap function is not found', () => {

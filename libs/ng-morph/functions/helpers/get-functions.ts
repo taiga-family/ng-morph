@@ -1,6 +1,6 @@
-import {arrayFlat, getDeclarationGetter} from 'ng-morph/utils';
 import {getSourceFiles} from 'ng-morph/source-file';
-import {FunctionDeclaration, FunctionDeclarationStructure} from 'ts-morph';
+import {arrayFlat, getDeclarationGetter} from 'ng-morph/utils';
+import type {FunctionDeclaration, FunctionDeclarationStructure} from 'ts-morph';
 
 export const getFunctions = getDeclarationGetter<
     FunctionDeclaration,

@@ -1,1 +1,1 @@
-export type JSONPath = (string | number)[];
+export type JSONPath = Array<number | string>;

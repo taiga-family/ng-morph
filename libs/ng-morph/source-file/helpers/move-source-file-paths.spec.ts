@@ -1,7 +1,6 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
-import {HostTree} from '@angular-devkit/schematics';
 import {dasherize} from '@angular-devkit/core/src/utils/strings';
-import {moveSourceFilePaths} from './move-source-file-paths';
+import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {
     createProject,
     resetActiveProject,
@@ -9,6 +8,8 @@ import {
     setActiveProject,
 } from 'ng-morph/project';
 import {createSourceFile, getSourceFiles} from 'ng-morph/source-file';
+
+import {moveSourceFilePaths} from './move-source-file-paths';
 
 describe('renameSourceFilePaths', () => {
     let host: UnitTestTree;
@@ -28,7 +29,7 @@ describe('renameSourceFilePaths', () => {
     });
 
     it('should change a file content', () => {
-        expect(host.readContent('testFile.ts')).toEqual(
+        expect(host.readContent('testFile.ts')).toBe(
             "import {a} from './some/test-file'",
         );
     });

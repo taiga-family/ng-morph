@@ -1,6 +1,5 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
-import {getImports} from './get-imports';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {
     createProject,
     resetActiveProject,
@@ -8,6 +7,8 @@ import {
     setActiveProject,
 } from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
+
+import {getImports} from './get-imports';
 import {removeImports} from './remove-imports';
 
 describe('removeImports', () => {
@@ -35,7 +36,7 @@ console.log(a);
 
         saveActiveProject();
 
-        expect(host.readContent('some/path/file.ts')).toEqual(`
+        expect(host.readContent('some/path/file.ts')).toBe(`
 console.log(a);
 `);
     });

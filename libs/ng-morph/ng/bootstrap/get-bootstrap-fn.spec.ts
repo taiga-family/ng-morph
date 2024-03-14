@@ -1,9 +1,10 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {createProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getBootstrapFn} from './get-bootstrap-fn';
 import {Node} from 'ts-morph';
+
+import {getBootstrapFn} from './get-bootstrap-fn';
 
 describe('getBootstrapFn', () => {
     let host: UnitTestTree;
@@ -32,9 +33,9 @@ platformBrowserDynamic()
         );
         const bootstrapFn = getBootstrapFn('src/main.ts');
 
-        expect(bootstrapFn.getText()).toEqual(`platformBrowserDynamic()
+        expect(bootstrapFn.getText()).toBe(`platformBrowserDynamic()
   .bootstrapModule(AppModule)`);
-        expect(Node.isCallExpression(bootstrapFn)).toEqual(true);
+        expect(Node.isCallExpression(bootstrapFn)).toBe(true);
     });
 
     it('should return undefined if bootstrap function is not found', () => {

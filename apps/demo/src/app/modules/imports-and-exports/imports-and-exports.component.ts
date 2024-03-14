@@ -87,11 +87,11 @@ saveActiveProject();
 
 @Component({
     selector: 'imports-and-exports',
-    templateUrl: 'imports-and-exports.template.html',
+    templateUrl: './imports-and-exports.template.html',
     styleUrls: ['./imports-and-exports.style.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ImportsAndExportsComponent {
-    readonly imports = imports;
-    readonly exports = exportsSamples;
+    protected readonly imports = imports;
+    protected readonly exports = exportsSamples;
 }

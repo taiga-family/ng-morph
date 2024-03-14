@@ -1,116 +1,109 @@
-import {Route} from '@angular/router';
-import {GettingStartedComponent} from './getting-started/getting-started.component';
+import type {Route} from '@angular/router';
 
 export const ROUTES: Route[] = [
     {
         path: 'getting-started',
-        // component: GettingStartedComponent,
-        loadChildren: () =>
-            import('./getting-started/getting-started.module').then(
-                m => m.GettingStartedModule,
-            ),
+        loadChildren: async () =>
+            (await import('./getting-started/getting-started.module'))
+                .GettingStartedModule,
         data: {
-            title: `Getting started`,
+            title: 'Getting started',
         },
     },
     {
         path: 'classes',
-        loadChildren: () =>
-            import('./modules/classes/classes.module').then(m => m.ClassesModule),
+        loadChildren: async () =>
+            (await import('./modules/classes/classes.module')).ClassesModule,
         data: {
-            title: `Classes`,
+            title: 'Classes',
         },
     },
     {
         path: 'interfaces',
-        loadChildren: () =>
-            import('./modules/interfaces/interfaces.module').then(
-                m => m.InterfacesModule,
-            ),
+        loadChildren: async () =>
+            (await import('./modules/interfaces/interfaces.module')).InterfacesModule,
         data: {
-            title: `Interfaces`,
+            title: 'Interfaces',
         },
     },
     {
         path: 'variables',
-        loadChildren: () =>
-            import('./modules/variables/variables.module').then(m => m.VariablesModule),
+        loadChildren: async () =>
+            (await import('./modules/variables/variables.module')).VariablesModule,
         data: {
-            title: `Variables`,
+            title: 'Variables',
         },
     },
     {
         path: 'imports-and-exports',
-        loadChildren: () =>
-            import('./modules/imports-and-exports/imports-and-exports.module').then(
-                m => m.ImportsAndExportsModule,
-            ),
+        loadChildren: async () =>
+            (await import('./modules/imports-and-exports/imports-and-exports.module'))
+                .ImportsAndExportsModule,
         data: {
-            title: `Imports and Exports`,
+            title: 'Imports and Exports',
         },
     },
     {
         path: 'enums',
-        loadChildren: () =>
-            import('./modules/enums/enums.module').then(m => m.EnumsModule),
+        loadChildren: async () =>
+            (await import('./modules/enums/enums.module')).EnumsModule,
         data: {
-            title: `Enums`,
+            title: 'Enums',
         },
     },
     {
         path: 'functions',
-        loadChildren: () =>
-            import('./modules/functions/functions.module').then(m => m.FunctionsModule),
+        loadChildren: async () =>
+            (await import('./modules/functions/functions.module')).FunctionsModule,
         data: {
-            title: `Functions`,
+            title: 'Functions',
         },
     },
     {
         path: 'types',
-        loadChildren: () =>
-            import('./modules/types/types.module').then(m => m.TypesModule),
+        loadChildren: async () =>
+            (await import('./modules/types/types.module')).TypesModule,
         data: {
-            title: `Types`,
+            title: 'Types',
         },
     },
     {
         path: 'get-main-module',
-        loadChildren: () =>
-            import('./modules/get-main-module/get-main-module.module').then(
-                m => m.GetMainModuleModule,
-            ),
+        loadChildren: async () =>
+            (await import('./modules/get-main-module/get-main-module.module'))
+                .GetMainModuleModule,
         data: {
-            title: `Get main module`,
+            title: 'Get main module',
         },
     },
     {
         path: 'get-bootstrap-function',
-        loadChildren: () =>
-            import('./modules/get-bootstrap-function/get-bootstrap-function.module').then(
-                m => m.GetBootstrapFunctionModule,
-            ),
+        loadChildren: async () =>
+            (
+                await import(
+                    './modules/get-bootstrap-function/get-bootstrap-function.module'
+                )
+            ).GetBootstrapFunctionModule,
         data: {
-            title: `Get bootstrap function`,
+            title: 'Get bootstrap function',
         },
     },
     {
         path: 'source-files',
-        loadChildren: () =>
-            import('./modules/source-files/source-files.module').then(
-                m => m.SourceFilesModule,
-            ),
+        loadChildren: async () =>
+            (await import('./modules/source-files/source-files.module'))
+                .SourceFilesModule,
         data: {
-            title: `Source files`,
+            title: 'Source files',
         },
     },
     {
         path: 'inject-sample',
-        loadChildren: () =>
-            import('./modules/inject-sample/inject-sample.module').then(
-                m => m.InjectSampleModule,
-            ),
+        loadChildren: async () =>
+            (await import('./modules/inject-sample/inject-sample.module'))
+                .InjectSampleModule,
         data: {
-            title: `@Inject -> inject example`,
+            title: '@Inject -> inject example',
         },
     },
     {path: '**', redirectTo: 'getting-started'},

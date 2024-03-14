@@ -1,10 +1,10 @@
 import {getDeclarationCreator} from 'ng-morph/utils';
-import {
+import type {
     FunctionDeclaration,
     FunctionDeclarationStructure,
     OptionalKind,
-    StructureKind,
 } from 'ts-morph';
+import {StructureKind} from 'ts-morph';
 
 export const addFunctions = getDeclarationCreator<
     FunctionDeclaration,

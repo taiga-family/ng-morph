@@ -1,17 +1,12 @@
-import {
-    arrayFlat,
-    coerceArray,
-    getDeclarationGetter,
-    matchQuery,
-    Query,
-} from 'ng-morph/utils';
-import {DecoratableNode, Decorator, DecoratorStructure} from 'ts-morph';
+import {getAccessors} from 'ng-morph/accessors';
 import {getClasses} from 'ng-morph/classes';
-import {getMethods} from 'ng-morph/methods';
 import {getConstructors} from 'ng-morph/constructors';
+import {getMethods} from 'ng-morph/methods';
 import {getParams} from 'ng-morph/params';
 import {getProperties} from 'ng-morph/properties';
-import {getAccessors} from 'ng-morph/accessors';
+import type {Query} from 'ng-morph/utils';
+import {arrayFlat, coerceArray, getDeclarationGetter, matchQuery} from 'ng-morph/utils';
+import type {DecoratableNode, Decorator, DecoratorStructure} from 'ts-morph';
 
 export function getDecorators(
     declarations: DecoratableNode | DecoratableNode[],

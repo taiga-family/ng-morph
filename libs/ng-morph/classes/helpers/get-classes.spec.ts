@@ -1,8 +1,9 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
-import {getClasses} from './get-classes';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {createProject, resetActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
+
+import {getClasses} from './get-classes';
 
 describe('getClasses', () => {
     let host: UnitTestTree;
@@ -30,13 +31,13 @@ class B { }
     it('should find two classes', () => {
         const exports = getClasses('some/path/**.ts');
 
-        expect(exports.length).toEqual(2);
+        expect(exports.length).toBe(2);
     });
 
     it('should find one class', () => {
         const exports = getClasses('some/path/file.ts');
 
-        expect(exports.length).toEqual(1);
+        expect(exports.length).toBe(1);
     });
 
     it('should find one export by class name', () => {
@@ -44,7 +45,7 @@ class B { }
             name: 'B',
         });
 
-        expect(exports.length).toEqual(1);
+        expect(exports.length).toBe(1);
     });
 
     afterEach(() => {

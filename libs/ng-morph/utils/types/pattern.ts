@@ -1,1 +1,1 @@
-export type Pattern = string | string[];
+export type Pattern = string[] | string;

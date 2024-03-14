@@ -1,8 +1,9 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
-import {getExports} from './get-exports';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {createProject, resetActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
+
+import {getExports} from './get-exports';
 
 describe('getExports', () => {
     let host: UnitTestTree;
@@ -30,13 +31,13 @@ export { c } from 'd';
     it('should find two exports', () => {
         const exports = getExports('some/path/**.ts');
 
-        expect(exports.length).toEqual(2);
+        expect(exports.length).toBe(2);
     });
 
     it('should find one export', () => {
         const exports = getExports('some/path/file.ts');
 
-        expect(exports.length).toEqual(1);
+        expect(exports.length).toBe(1);
     });
 
     it('should find one export by name', () => {
@@ -44,7 +45,7 @@ export { c } from 'd';
             moduleSpecifier: 'd',
         });
 
-        expect(exports.length).toEqual(1);
+        expect(exports.length).toBe(1);
     });
 
     afterEach(() => {

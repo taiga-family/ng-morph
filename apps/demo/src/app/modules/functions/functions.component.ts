@@ -32,10 +32,10 @@ saveActiveProject();
 
 @Component({
     selector: 'functions',
-    templateUrl: 'functions.template.html',
+    templateUrl: './functions.template.html',
     styleUrls: ['./functions.style.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FunctionsComponent {
-    readonly code = code;
+    protected readonly code = code;
 }

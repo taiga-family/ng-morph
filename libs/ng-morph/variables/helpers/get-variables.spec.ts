@@ -1,9 +1,10 @@
-import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {HostTree} from '@angular-devkit/schematics';
+import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {createProject, resetActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
-import {getVariables} from './get-variables';
 import {VariableDeclarationKind} from 'ts-morph';
+
+import {getVariables} from './get-variables';
 
 describe('getVariables', () => {
     let host: UnitTestTree;
@@ -13,21 +14,21 @@ describe('getVariables', () => {
 
         setActiveProject(createProject(host));
 
-        createSourceFile('some/path/file.ts', `const a;`);
+        createSourceFile('some/path/file.ts', 'const a;');
 
-        createSourceFile('some/path/one-more-file.ts', `var b = {};`);
+        createSourceFile('some/path/one-more-file.ts', 'var b = {};');
     });
 
     it('should find two variables', () => {
         const declarations = getVariables('some/path/**.ts');
 
-        expect(declarations.length).toEqual(2);
+        expect(declarations.length).toBe(2);
     });
 
     it('should find one variable', () => {
         const declarations = getVariables('some/path/file.ts');
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     it('should find one variable by variable kind', () => {
@@ -35,7 +36,7 @@ describe('getVariables', () => {
             declarationKind: VariableDeclarationKind.Var,
         });
 
-        expect(declarations.length).toEqual(1);
+        expect(declarations.length).toBe(1);
     });
 
     afterEach(() => {
