@@ -13,6 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1197);
 /* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 5706);
+var _ImportsAndExportsComponent;
 
 
 function ImportsAndExportsComponent_ng_template_1_Template(rf, ctx) {
@@ -129,28 +130,29 @@ class ImportsAndExportsComponent {
     this.imports = imports;
     this.exports = exportsSamples;
   }
-  static #_ = this.ɵfac = function ImportsAndExportsComponent_Factory(t) {
-    return new (t || ImportsAndExportsComponent)();
-  };
-  static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
-    type: ImportsAndExportsComponent,
-    selectors: [["imports-and-exports"]],
-    decls: 3,
-    vars: 0,
-    consts: [["header", "Imports and exports"], ["pageTab", "Imports"], ["pageTab", "Exports"], ["filename", "migration.ts", 3, "code"]],
-    template: function ImportsAndExportsComponent_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-page", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, ImportsAndExportsComponent_ng_template_1_Template, 3, 1, "ng-template", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, ImportsAndExportsComponent_ng_template_2_Template, 3, 1, "ng-template", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-      }
-    },
-    dependencies: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocCodeComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageTabConnectorDirective],
-    styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"],
-    changeDetection: 0
-  });
 }
+_ImportsAndExportsComponent = ImportsAndExportsComponent;
+_ImportsAndExportsComponent.ɵfac = function ImportsAndExportsComponent_Factory(t) {
+  return new (t || _ImportsAndExportsComponent)();
+};
+_ImportsAndExportsComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _ImportsAndExportsComponent,
+  selectors: [["imports-and-exports"]],
+  decls: 3,
+  vars: 0,
+  consts: [["header", "Imports and exports"], ["pageTab", "Imports"], ["pageTab", "Exports"], ["filename", "migration.ts", 3, "code"]],
+  template: function ImportsAndExportsComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-page", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, ImportsAndExportsComponent_ng_template_1_Template, 3, 1, "ng-template", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, ImportsAndExportsComponent_ng_template_2_Template, 3, 1, "ng-template", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    }
+  },
+  dependencies: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocCodeComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_1__.TuiDocPageTabConnectorDirective],
+  styles: ["/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJpbXBvcnRzLWFuZC1leHBvcnRzLnN0eWxlLmxlc3MifQ== */\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2FwcHMvZGVtby9zcmMvYXBwL21vZHVsZXMvaW1wb3J0cy1hbmQtZXhwb3J0cy9pbXBvcnRzLWFuZC1leHBvcnRzLnN0eWxlLmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLGdMQUFnTCIsInNvdXJjZVJvb3QiOiIifQ== */"],
+  changeDetection: 0
+});
 
 
 /***/ }),
@@ -171,23 +173,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @taiga-ui/core */ 103);
 /* harmony import */ var _imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imports-and-exports.component */ 4050);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1197);
+var _ImportsAndExportsModule;
 
 
 
 
 
 
-class ImportsAndExportsModule {
-  static #_ = this.ɵfac = function ImportsAndExportsModule_Factory(t) {
-    return new (t || ImportsAndExportsModule)();
-  };
-  static #_2 = this.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
-    type: ImportsAndExportsModule
-  });
-  static #_3 = this.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-    imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__.ImportsAndExportsComponent))]
-  });
-}
+class ImportsAndExportsModule {}
+_ImportsAndExportsModule = ImportsAndExportsModule;
+_ImportsAndExportsModule.ɵfac = function ImportsAndExportsModule_Factory(t) {
+  return new (t || _ImportsAndExportsModule)();
+};
+_ImportsAndExportsModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
+  type: _ImportsAndExportsModule
+});
+_ImportsAndExportsModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
+  imports: [_taiga_ui_core__WEBPACK_IMPORTED_MODULE_2__.TuiLinkModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_3__.TuiAddonDocModule, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild((0,_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_5__.tuiGenerateRoutes)(_imports_and_exports_component__WEBPACK_IMPORTED_MODULE_0__.ImportsAndExportsComponent))]
+});
 
 (function () {
   (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](ImportsAndExportsModule, {

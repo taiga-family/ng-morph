@@ -367,7 +367,8 @@ next min-width - 60% from 1px (1/16 * 0.6 = 0.0375)
   transition-duration: var(--tui-duration, 300ms);
   transition-timing-function: ease-in-out;
   position: relative;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   outline: 0.125rem solid transparent;
   outline-offset: -0.125rem;
 }
@@ -1794,7 +1795,8 @@ table [tuiWrapper][data-appearance='table']._focused {
   display: block;
   height: 100%;
   width: 100%;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   border-radius: inherit;
 }
 [tuiWrapper]:after {

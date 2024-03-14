@@ -27,7 +27,7 @@ __webpack_require__.r(__webpack_exports__);
  * (c) 2010-2022 Google LLC. https://angular.io/
  * License: MIT
  */
-(function (global) {
+(function (global, _Zone) {
   const performance = global['performance'];
   function mark(name) {
     performance && performance['mark'] && performance['mark'](name);
@@ -282,8 +282,9 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   }
+  _Zone = Zone;
   // tslint:disable-next-line:require-internal-with-underscore
-  Zone.__symbol__ = __symbol__;
+  _Zone.__symbol__ = __symbol__;
   const DELEGATE_ZS = {
     name: '',
     onHasTask: (delegate, _, target, hasTaskState) => delegate.hasTask(target, hasTaskState),
@@ -1075,7 +1076,6 @@ Zone.__load_patch('ZoneAwarePromise', (global, Zone, api) => {
       // Do not return value or you will break the Promise spec.
     };
   }
-
   const once = function () {
     let wasCalled = false;
     return function wrapper(wrappedFunction) {
@@ -2260,6 +2260,18 @@ Zone.__load_patch('util', (global, Zone, api) => {
  * @fileoverview
  * @suppress {missingRequire}
  */
+function patchQueueMicrotask(global, api) {
+  api.patchMethod(global, 'queueMicrotask', delegate => {
+    return function (self, args) {
+      Zone.current.scheduleMicroTask('queueMicrotask', args[0]);
+    };
+  });
+}
+
+/**
+ * @fileoverview
+ * @suppress {missingRequire}
+ */
 const taskSymbol = zoneSymbol('zoneTask');
 function patchTimer(window, setName, cancelName, nameSuffix) {
   let setNative = null;
@@ -2424,13 +2436,6 @@ Zone.__load_patch('legacy', global => {
   if (legacyPatch) {
     legacyPatch();
   }
-});
-Zone.__load_patch('queueMicrotask', (global, Zone, api) => {
-  api.patchMethod(global, 'queueMicrotask', delegate => {
-    return function (self, args) {
-      Zone.current.scheduleMicroTask('queueMicrotask', args[0]);
-    };
-  });
 });
 Zone.__load_patch('timers', global => {
   const set = 'set';
@@ -2636,7 +2641,6 @@ Zone.__load_patch('XHR', (global, Zone) => {
     });
   }
 });
-
 Zone.__load_patch('geolocation', global => {
   /// GEO_LOCATION
   if (global['navigator'] && global['navigator'].geolocation) {
@@ -2666,6 +2670,9 @@ Zone.__load_patch('PromiseRejectionEvent', (global, Zone) => {
     Zone[zoneSymbol('unhandledPromiseRejectionHandler')] = findPromiseRejectionHandler('unhandledrejection');
     Zone[zoneSymbol('rejectionHandledHandler')] = findPromiseRejectionHandler('rejectionhandled');
   }
+});
+Zone.__load_patch('queueMicrotask', (global, Zone, api) => {
+  patchQueueMicrotask(global, api);
 });
 
 /***/ })
