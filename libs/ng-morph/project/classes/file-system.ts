@@ -7,8 +7,9 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
+import {basename, join} from 'node:path';
+
 import multimatch from 'multimatch';
-import {basename, join} from 'path';
 import type {FileSystemHost, RuntimeDirEntry} from 'ts-morph';
 
 import type {DevkitFileSystem} from './devkit-file-system';

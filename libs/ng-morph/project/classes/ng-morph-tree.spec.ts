@@ -1,10 +1,11 @@
+import fs from 'node:fs';
+import {join} from 'node:path';
+import {URL} from 'node:url';
+
 import type {Tree} from '@angular-devkit/schematics';
 import {jest} from '@jest/globals';
-import fs from 'fs';
 import {createProject, saveActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile, getSourceFile} from 'ng-morph/source-file';
-import {join} from 'path';
-import {URL} from 'url';
 
 import {NgMorphTree} from './ng-morph-tree';
 

@@ -1,8 +1,9 @@
+import {join} from 'node:path';
+
 import type {Tree} from '@angular-devkit/schematics';
 import {NgCliProject} from 'ng-morph/project';
 import type {Pattern} from 'ng-morph/utils';
 import {coerceArray} from 'ng-morph/utils';
-import {join} from 'path';
 
 export function createProject(
     host: Tree,
