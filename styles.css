@@ -703,35 +703,49 @@ next min-width - 60% from 1px (1/16 * 0.6 = 0.0375)
   box-shadow: inset 0 0 0 1px var(--tui-base-06);
 }
 [tuiAppearance][data-appearance='outline']:checked,
-[tuiAppearance][data-appearance='whiteblock']:checked {
+[tuiAppearance][data-appearance='whiteblock']:checked,
+[tuiAppearance][data-appearance='outline']._checked,
+[tuiAppearance][data-appearance='whiteblock']._checked {
   box-shadow: inset 0 0 0 2px var(--tui-primary);
 }
 @media (hover: hover) {
   [tuiAppearance][data-appearance='outline']:checked:-webkit-any(a, button, select, textarea, input, label):hover:not([data-state]),
-  [tuiAppearance][data-appearance='whiteblock']:checked:-webkit-any(a, button, select, textarea, input, label):hover:not([data-state]) {
+  [tuiAppearance][data-appearance='whiteblock']:checked:-webkit-any(a, button, select, textarea, input, label):hover:not([data-state]),
+  [tuiAppearance][data-appearance='outline']._checked:-webkit-any(a, button, select, textarea, input, label):hover:not([data-state]),
+  [tuiAppearance][data-appearance='whiteblock']._checked:-webkit-any(a, button, select, textarea, input, label):hover:not([data-state]) {
     box-shadow: inset 0 0 0 2px var(--tui-primary-hover);
   }
 }
 @media (hover: hover) {
   [tuiAppearance][data-appearance='outline']:checked:-moz-any(a, button, select, textarea, input, label):hover:not([data-state]),
-  [tuiAppearance][data-appearance='whiteblock']:checked:-moz-any(a, button, select, textarea, input, label):hover:not([data-state]) {
+  [tuiAppearance][data-appearance='whiteblock']:checked:-moz-any(a, button, select, textarea, input, label):hover:not([data-state]),
+  [tuiAppearance][data-appearance='outline']._checked:-moz-any(a, button, select, textarea, input, label):hover:not([data-state]),
+  [tuiAppearance][data-appearance='whiteblock']._checked:-moz-any(a, button, select, textarea, input, label):hover:not([data-state]) {
     box-shadow: inset 0 0 0 2px var(--tui-primary-hover);
   }
 }
 [tuiAppearance][data-appearance='outline']:checked[data-state='hover'],
-[tuiAppearance][data-appearance='whiteblock']:checked[data-state='hover'] {
+[tuiAppearance][data-appearance='whiteblock']:checked[data-state='hover'],
+[tuiAppearance][data-appearance='outline']._checked[data-state='hover'],
+[tuiAppearance][data-appearance='whiteblock']._checked[data-state='hover'] {
   box-shadow: inset 0 0 0 2px var(--tui-primary-hover);
 }
 [tuiAppearance][data-appearance='outline']:checked:-webkit-any(a, button, select, textarea, input, label):active:not([data-state]),
-[tuiAppearance][data-appearance='whiteblock']:checked:-webkit-any(a, button, select, textarea, input, label):active:not([data-state]) {
+[tuiAppearance][data-appearance='whiteblock']:checked:-webkit-any(a, button, select, textarea, input, label):active:not([data-state]),
+[tuiAppearance][data-appearance='outline']._checked:-webkit-any(a, button, select, textarea, input, label):active:not([data-state]),
+[tuiAppearance][data-appearance='whiteblock']._checked:-webkit-any(a, button, select, textarea, input, label):active:not([data-state]) {
   box-shadow: inset 0 0 0 2px var(--tui-primary-active);
 }
 [tuiAppearance][data-appearance='outline']:checked:-moz-any(a, button, select, textarea, input, label):active:not([data-state]),
-[tuiAppearance][data-appearance='whiteblock']:checked:-moz-any(a, button, select, textarea, input, label):active:not([data-state]) {
+[tuiAppearance][data-appearance='whiteblock']:checked:-moz-any(a, button, select, textarea, input, label):active:not([data-state]),
+[tuiAppearance][data-appearance='outline']._checked:-moz-any(a, button, select, textarea, input, label):active:not([data-state]),
+[tuiAppearance][data-appearance='whiteblock']._checked:-moz-any(a, button, select, textarea, input, label):active:not([data-state]) {
   box-shadow: inset 0 0 0 2px var(--tui-primary-active);
 }
 [tuiAppearance][data-appearance='outline']:checked[data-state='active'],
-[tuiAppearance][data-appearance='whiteblock']:checked[data-state='active'] {
+[tuiAppearance][data-appearance='whiteblock']:checked[data-state='active'],
+[tuiAppearance][data-appearance='outline']._checked[data-state='active'],
+[tuiAppearance][data-appearance='whiteblock']._checked[data-state='active'] {
   box-shadow: inset 0 0 0 2px var(--tui-primary-active);
 }
 [tuiAppearance][data-appearance='whiteblock'] {
