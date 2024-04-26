@@ -5,6 +5,7 @@ export * from './helpers/get-declaration-editor';
 export * from './helpers/get-declaration-getter';
 export * from './helpers/get-declaration-remover';
 export * from './helpers/match-query';
+export * from './helpers/replace-text';
 export * from './helpers/throw-file-not-found';
 export * from './types/filter-primitive';
 export * from './types/pattern';

@@ -4,6 +4,8 @@ export * from './classes/ng-cli-project';
 export * from './classes/ng-morph-tree';
 export * from './classes/update-recorder';
 export * from './helpers/create-project';
+export * from './helpers/get-file-system';
 export * from './helpers/project';
+export * from './helpers/project-root';
 export * from './helpers/save-project';
 export * from './types/ng-cli-project-options';
