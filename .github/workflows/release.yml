@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.4
-      - uses: taiga-family/ci/actions/setup/node@v1.55.16
-      - uses: taiga-family/ci/actions/setup/config/npm@v1.55.16
+      - uses: taiga-family/ci/actions/setup/node@v1.55.17
+      - uses: taiga-family/ci/actions/setup/config/npm@v1.55.17
         with:
           token: ${{ secrets.NPM_TOKEN }}
       - name: release
