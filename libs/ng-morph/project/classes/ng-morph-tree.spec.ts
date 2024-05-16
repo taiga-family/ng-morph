@@ -3,7 +3,7 @@ import {join} from 'node:path';
 import {URL} from 'node:url';
 
 import type {Tree} from '@angular-devkit/schematics';
-import {jest} from '@jest/globals';
+import {beforeEach, describe, expect, it, jest} from '@jest/globals';
 import {createProject, saveActiveProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile, getSourceFile} from 'ng-morph/source-file';
 

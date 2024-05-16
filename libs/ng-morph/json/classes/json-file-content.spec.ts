@@ -1,3 +1,5 @@
+import {describe, expect, it} from '@jest/globals';
+
 import {JSONFileContent} from './json-file-content';
 
 describe('JSONFileContent', () => {
