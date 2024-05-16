@@ -50,7 +50,7 @@ export class JSONFileContent {
             const property = jsonPath.slice(-1)[0];
 
             getInsertionIndex = properties =>
-                // eslint-disable-next-line sonar/no-alphabetical-sort,@typescript-eslint/require-array-sort-compare
+                // eslint-disable-next-line @typescript-eslint/require-array-sort-compare
                 [...properties, property].sort().findIndex(p => p === property);
         } else if (insertInOrder !== false) {
             getInsertionIndex = insertInOrder;

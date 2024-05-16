@@ -1,5 +1,6 @@
 import {HostTree} from '@angular-devkit/schematics';
 import {UnitTestTree} from '@angular-devkit/schematics/testing';
+import {beforeEach, describe, expect, it} from '@jest/globals';
 import {getMainModule} from 'ng-morph/ng';
 import {createProject, setActiveProject} from 'ng-morph/project';
 import {createSourceFile} from 'ng-morph/source-file';
