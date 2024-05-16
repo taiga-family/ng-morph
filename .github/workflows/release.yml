@@ -16,7 +16,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.5
+      - uses: actions/checkout@v4.1.6
       - uses: taiga-family/ci/actions/setup/node@v1.57.0
       - uses: taiga-family/ci/actions/setup/config/npm@v1.57.0
         with:
