@@ -117,7 +117,7 @@
         "jsonc-parser": "3.2.1",
         "minimatch": "9.0.4",
         "multimatch": "5.0.0",
-        "ngx-highlightjs": "10.0.0",
+        "ngx-highlightjs": "11.0.0",
         "nx": "19.1.0",
         "rxjs": "7.8.1",
         "ts-jest": "29.1.3",
