@@ -10,16 +10,16 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: taiga-family/ci/actions/setup/checkout@v1.57.4
-      - uses: taiga-family/ci/actions/setup/node@v1.57.4
+      - uses: taiga-family/ci/actions/setup/checkout@v1.58.0
+      - uses: taiga-family/ci/actions/setup/node@v1.58.0
       - run: npm run build
 
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: taiga-family/ci/actions/setup/checkout@v1.57.4
-      - uses: taiga-family/ci/actions/setup/node@v1.57.4
+      - uses: taiga-family/ci/actions/setup/checkout@v1.58.0
+      - uses: taiga-family/ci/actions/setup/node@v1.58.0
       - run: npm run prettier -- --check
       - run: npm run lint
 
@@ -27,8 +27,8 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: taiga-family/ci/actions/setup/checkout@v1.57.4
-      - uses: taiga-family/ci/actions/setup/node@v1.57.4
+      - uses: taiga-family/ci/actions/setup/checkout@v1.58.0
+      - uses: taiga-family/ci/actions/setup/node@v1.58.0
       - run: npm test
 
 concurrency:
