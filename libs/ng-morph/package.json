@@ -20,7 +20,7 @@
         "minimatch": "9.0.4",
         "multimatch": "5.0.0",
         "ts-morph": "22.0.0",
-        "tslib": "2.6.2"
+        "tslib": "2.6.3"
     },
     "peerDependencies": {
         "@angular-devkit/core": ">=16.0.0",
