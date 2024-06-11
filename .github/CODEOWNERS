@@ -1,8 +1,14 @@
+
 # ==================================================================================
-#                      @TinkoffCreditSystems/ng-morph codeowners
 # ==================================================================================
+#                            @taiga-ui codeowners
+# ==================================================================================
+# ==================================================================================
+#
+#  Configuration of code ownership and review approvals for the @taiga-ui repo.
+#
 #  More info: https://help.github.com/articles/about-codeowners/
 #
 
-* @IKatsuba @MarsiBarsi @sevaru
+* @waterplea @MarsiBarsi @vladimirpotekhin @nsbarsukov @mdlufy
 # will be requested for review when someone opens a pull request

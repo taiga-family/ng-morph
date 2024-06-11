@@ -1,13 +1,13 @@
-# ng-morph
+# @taiga-ui/morph
 
-[![npm version](https://img.shields.io/npm/v/ng-morph.svg)](https://npmjs.com/package/ng-morph)
-[![downloads](https://img.shields.io/npm/dy/ng-morph?color=dark-green)](https://npmjs.com/package/ng-morph)
+[![npm version](https://img.shields.io/npm/v/@taiga-ui/morph.svg)](https://npmjs.com/package/@taiga-ui/morph)
+[![downloads](https://img.shields.io/npm/dy/@taiga-ui/morph?color=dark-green)](https://npmjs.com/package/@taiga-ui/morph)
 [![telegram chat](https://img.shields.io/badge/support-Contact%20us-blue)](https://t.me/taiga_ui)
 
 Code mutations were never easier than now.
 
 ```
-npm i --save-dev ng-morph
+npm i --save-dev @taiga-ui/morph
 ```
 
 You also need `@angular-devkit/core` and `@angular-devkit/schematics` to be installed.
@@ -29,15 +29,15 @@ file system. So, you can test your schematics rapidly fast.
 
 ## How to start
 
-Install the package and visit our [documentation](https://taiga-family.github.io/ng-morph)
+Install the package and visit our [documentation](https://taiga-family.github.io/@taiga-ui/morph)
 
-For example, this is how `ng-morph` setup looks for migrating your own project:
+For example, this is how `@taiga-ui/morph` setup looks for migrating your own project:
 
 ```typescript
 import {setActiveProject, createProject, getImports, NgMorphTree} from '@taiga-ui/morph';
 
 /**
- * set all ng-morph functions to work with the all TS and JSON files
+ * set all @taiga-ui/morph functions to work with the all TS and JSON files
  * of the current project
  * */
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts', '**/*.json']));
