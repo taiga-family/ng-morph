@@ -1,44 +1,17 @@
 name: Deploy demo to gh-pages
-
-env:
-  NX_BRANCH: ${{ github.event.number }}
-  NX_RUN_GROUP: ${{ github.run_id }}
-
 on:
   push:
     branches:
       - main
-    paths:
-      - '.github/workflows/deploy.yml'
-      - 'apps/**'
-      - 'libs/**'
-      - 'angular.json'
-      - 'package.json'
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@v4
+      - uses: taiga-family/ci/actions/setup/checkout@v1.60.1
+      - uses: taiga-family/ci/actions/setup/variables@v1.60.1
+      - run: npm run build:demo
+      - uses: taiga-family/ci/actions/deploy/github-pages@v1.60.1
         with:
-          node-version: 18.x
-      - name: Cache Node.js modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-            ${{ runner.OS }}-
-      - name: npm ci and build demo
-        run: |
-          npm ci --cache ~/.npm --prefer-offline
-          npm run build:demo
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist/apps/demo
+          token: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
+          folder: dist/apps/demo

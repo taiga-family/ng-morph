@@ -5,7 +5,7 @@ export const DECORATORS_SAMPLES = `import {
     removeDecorators,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 

@@ -5,7 +5,7 @@ export const ACCESSORS_SAMPLES = `import {
     removeAccessors,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -15,7 +15,7 @@ addAccessors(getClasses('some/path/file.ts'), [
       kind: StructureKind.SetAccessor,
     },
 ]);
-    
+
 const declarations = getAccessors(getClasses('some/path/**.ts'), {
     name: 'd',
     isStatic: true,

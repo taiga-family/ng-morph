@@ -3,7 +3,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 const code = `import {
     getMainModule
     setActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 

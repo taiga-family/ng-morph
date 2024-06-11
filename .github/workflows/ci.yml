@@ -12,24 +12,11 @@ jobs:
     steps:
       - uses: taiga-family/ci/actions/setup/checkout@v1.60.1
       - uses: taiga-family/ci/actions/setup/node@v1.60.1
-      - run: npm run build
-
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: taiga-family/ci/actions/setup/checkout@v1.60.1
-      - uses: taiga-family/ci/actions/setup/node@v1.60.1
-      - run: npm run prettier -- --check
-      - run: npm run lint
-
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: taiga-family/ci/actions/setup/checkout@v1.60.1
-      - uses: taiga-family/ci/actions/setup/node@v1.60.1
-      - run: npm test
+      - run: |
+          npm run prettier -- --check
+          npm run lint
+          npm run build
+          npm test
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}

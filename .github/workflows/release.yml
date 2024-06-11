@@ -1,28 +1,57 @@
-name: Release Workflow
-
-env:
-  NX_BRANCH: ${{ github.event.number }}
-  NX_RUN_GROUP: ${{ github.run_id }}
-
+name: ⚠️ Release
 on:
   push:
     branches:
       - main
-      - beta
-      - alpha
+  workflow_dispatch:
+    inputs:
+      forcePush:
+        type: boolean
+        required: false
+        description: --force-publish package
+      mode:
+        type: choice
+        description: force package to be versioned (depend --force-publish)
+        required: false
+        default: minor
+        options:
+          - patch
+          - minor
+          - major
+          - prepatch
 
 jobs:
-  release:
-    name: Release
+  run-release:
+    name: Run release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.6
+      - uses: taiga-family/ci/actions/setup/checkout@v1.60.1
+        with:
+          token: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+      - uses: taiga-family/ci/actions/setup/variables@v1.60.1
       - uses: taiga-family/ci/actions/setup/node@v1.60.1
+      - uses: taiga-family/ci/actions/setup/config/git@v1.60.1
+        with:
+          token: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
       - uses: taiga-family/ci/actions/setup/config/npm@v1.60.1
         with:
-          token: ${{ secrets.NPM_TOKEN }}
-      - name: release
-        run: npm run release
-        env:
-          CI: true
-          GH_TOKEN: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
+          token: ${{ secrets.TAIGA_UI_SCOPE_NPM_TOKEN }}
+
+      - run: |
+          if [[ ${{ github.event.inputs.forcePush }} == "true" ]]; then
+
+            if [[ "${{ github.event.inputs.mode }}" != "prepatch" ]]; then
+              npx release-it "${{ github.event.inputs.mode }}" --increment --ci
+            else
+                npx release-it --preRelease=alpha --ci
+            fi
+
+          else
+              npx release-it --increment --ci
+          fi
+
+concurrency:
+  group: release-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true

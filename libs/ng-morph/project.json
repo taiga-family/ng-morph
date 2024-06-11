@@ -29,35 +29,6 @@
                 "main": "libs/ng-morph/src/index.ts",
                 "assets": ["libs/ng-morph/*.md"]
             }
-        },
-        "semrel": {
-            "executor": "@ng-builders/semrel:release",
-            "options": {
-                "npm": {
-                    "pkgRoot": "dist/libs/ng-morph"
-                },
-                "branches": [
-                    "+([0-9])?(.{+([0-9]),x}).x",
-                    "main",
-                    "next",
-                    "next-major",
-                    {
-                        "name": "beta",
-                        "prerelease": true
-                    },
-                    {
-                        "name": "alpha",
-                        "prerelease": true
-                    }
-                ]
-            }
-        },
-        "release": {
-            "executor": "nx:run-commands",
-            "options": {
-                "commands": ["nx build ng-morph", "nx semrel ng-morph"],
-                "parallel": false
-            }
         }
     },
     "tags": []

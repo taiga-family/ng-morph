@@ -7,7 +7,7 @@ const imports = `import {
     removeImports,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -52,7 +52,7 @@ const exportsSamples = `import {
     removeExports,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 

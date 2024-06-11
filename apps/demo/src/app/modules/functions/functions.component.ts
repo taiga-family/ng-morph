@@ -7,7 +7,7 @@ const code = `import {
     removeFunctions,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 

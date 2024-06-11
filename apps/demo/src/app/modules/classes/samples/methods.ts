@@ -5,7 +5,7 @@ export const METHODS_SAMPLES = `import {
     removeMethods,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -14,7 +14,7 @@ addMethods(getClasses('some/path/file.ts', { name: 'B' }), {
     statements: 'return 0;',
     returnType: 'number',
 });
-    
+
 const declarations = getMethods(getClasses('some/path/**.ts'), {
     name: 'd',
     isStatic: true,

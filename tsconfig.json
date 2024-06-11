@@ -2,6 +2,7 @@
     "extends": "@taiga-ui/tsconfig",
     "compilerOptions": {
         "rootDir": ".",
+        "baseUrl": ".",
         "strict": false,
         "noUnusedLocals": false,
         "noUnusedParameters": false,
@@ -10,8 +11,7 @@
         "strictPropertyInitialization": false,
         "typeRoots": ["node_modules/@types"],
         "paths": {
-            "ng-morph": ["./libs/ng-morph/src/index.ts"],
-            "ng-morph/*": ["./libs/ng-morph/*"]
+            "@taiga-ui/morph": ["./libs/ng-morph/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]
