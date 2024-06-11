@@ -20,7 +20,7 @@
         "@angular-devkit/schematics": ">=16.0.0",
         "jsonc-parser": "^3.2.1",
         "minimatch": "^9.0.4",
-        "multimatch": "^7.0.0",
+        "multimatch": "^5.0.0",
         "ts-morph": "^22.0.0",
         "tslib": "^2.6.3"
     },
