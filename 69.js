@@ -158,11 +158,11 @@ _GettingStartedComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MO
   selectors: [["getting-started"]],
   decls: 83,
   vars: 3,
-  consts: [["header", "Getting started"], ["href", "https://ts-morph.com/", "tuiLink", ""], ["code", "npm i --save-dev ng-morph"], ["filename", "script.ts", 3, "code"], ["href", "https://www.npmjs.com/package/ts-node", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["href", "https://angular.io/guide/schematics-for-libraries#define-the-rule", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["filename", "ng-add.ts", 3, "code"], ["filename", "ng-add.spec.ts", 3, "code"], ["href", "https://github.com/taiga-family/ng-morph", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["routerLink", "/classes", "tuiLink", ""]],
+  consts: [["header", "Getting started"], ["href", "https://ts-morph.com/", "tuiLink", ""], ["code", "npm i --save-dev @taiga-ui/morph"], ["filename", "script.ts", 3, "code"], ["href", "https://www.npmjs.com/package/ts-node", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["href", "https://angular.io/guide/schematics-for-libraries#define-the-rule", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["filename", "ng-add.ts", 3, "code"], ["filename", "ng-add.spec.ts", 3, "code"], ["href", "https://github.com/taiga-family/ng-morph", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["routerLink", "/classes", "tuiLink", ""]],
   template: function GettingStartedComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-page", 0)(1, "p")(2, "strong");
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "ng-morph");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "@taiga-ui/morph");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " is a large set of tools for both global code base updates in your project and speeding up your work on Angular schematics. It has ");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "a", 1);
@@ -201,13 +201,13 @@ _GettingStartedComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MO
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Enjoy!");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "section")(32, "h3");
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "How to run ng-morph");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "How to run @taiga-ui/morph");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "h4");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "Running in your own project as a script");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "p");
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " You can use ng-morph for global updates of your porject code base, big refactiorings, dependencies migrations and much more. Just describe everything you want in a simple script and run it. ");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, " You can use @taiga-ui/morph for global updates of your porject code base, big refactiorings, dependencies migrations and much more. Just describe everything you want in a simple script and run it. ");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "tui-doc-code", 3);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "p");
