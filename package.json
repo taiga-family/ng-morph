@@ -117,7 +117,6 @@
         "jest-preset-angular": "14.1.0",
         "jsonc-parser": "3.2.1",
         "minimatch": "9.0.4",
-        "multimatch": "5.0.0",
         "ngx-highlightjs": "10.0.0",
         "nx": "19.2.3",
         "release-it": "17.3.0",
