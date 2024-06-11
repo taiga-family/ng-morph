@@ -23,7 +23,7 @@
         }
     },
     "hooks": {
-        "after:bump": "npx nx build ng-morph && npx nx publish editor",
+        "after:bump": "npx nx build ng-morph && npx nx publish ng-morph",
         "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
     }
 }
