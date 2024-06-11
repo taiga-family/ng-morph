@@ -145,7 +145,7 @@ const add = `import {
     addClasses,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts']));
 
@@ -169,7 +169,7 @@ const edit = `import {
     editClasses,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -186,7 +186,7 @@ const remove = `import {
     removeClasses,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -195,7 +195,7 @@ const getClasses = `import {
     getClasses,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -310,7 +310,7 @@ const ACCESSORS_SAMPLES = `import {
     removeAccessors,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -320,7 +320,7 @@ addAccessors(getClasses('some/path/file.ts'), [
       kind: StructureKind.SetAccessor,
     },
 ]);
-    
+
 const declarations = getAccessors(getClasses('some/path/**.ts'), {
     name: 'd',
     isStatic: true,
@@ -354,7 +354,7 @@ const CONSTRUCTORS_SAMPLES = `import {
     removeConstructors,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -404,7 +404,7 @@ const DECORATORS_SAMPLES = `import {
     removeDecorators,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -485,7 +485,7 @@ const METHODS_SAMPLES = `import {
     removeMethods,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -494,7 +494,7 @@ addMethods(getClasses('some/path/file.ts', { name: 'B' }), {
     statements: 'return 0;',
     returnType: 'number',
 });
-    
+
 const declarations = getMethods(getClasses('some/path/**.ts'), {
     name: 'd',
     isStatic: true,
@@ -529,7 +529,7 @@ const PROPERTIES_SAMPLES = `import {
     removeProperties,
     setActiveProject,
     saveActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -537,7 +537,7 @@ addProperties(getClasses('some/path/file.ts', { name: 'B' }), {
     name: 'test',
     initializer: '3',
 });
-    
+
 const declarations = getProperties(getClasses('some/path/**.ts'), {
     name: 'd',
     isStatic: true,

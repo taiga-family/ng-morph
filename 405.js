@@ -19,7 +19,7 @@ var _GetBootstrapFunctionComponent;
 const bootstrap = `import {
     getBootstrapFn,
     setActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -28,7 +28,7 @@ const bootstrapFn = getBootstrapFn('src/main.ts');
 const bootstrapApplication = `import {
     getBootstrapApplicationFn,
     setActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -38,7 +38,7 @@ const addProviders = `import {
     getBootstrapApplicationFn,
     addProviderToBootstrapApplicationFn,
     setActiveProject,
-} from 'ng-morph';
+} from '@taiga-ui/morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
