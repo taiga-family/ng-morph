@@ -1,5 +1,10 @@
 name: ⚠️ Release
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - libs/**
   workflow_dispatch:
     inputs:
       forcePush:
@@ -22,6 +27,8 @@ jobs:
     name: Run release
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
+    env:
+      GITHUB_TOKEN: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
     steps:
       - uses: taiga-family/ci/actions/setup/checkout@v1.60.1
         with:
