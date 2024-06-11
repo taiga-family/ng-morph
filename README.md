@@ -34,7 +34,7 @@ Install the package and visit our [documentation](https://taiga-family.github.io
 For example, this is how `ng-morph` setup looks for migrating your own project:
 
 ```typescript
-import {setActiveProject, createProject, getImports, NgMorphTree} from 'ng-morph';
+import {setActiveProject, createProject, getImports, NgMorphTree} from '@taiga-ui/morph';
 
 /**
  * set all ng-morph functions to work with the all TS and JSON files

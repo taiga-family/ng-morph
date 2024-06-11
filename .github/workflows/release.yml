@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - libs/**
   workflow_dispatch:
     inputs:
       forcePush:
@@ -40,10 +42,10 @@ jobs:
           token: ${{ secrets.TAIGA_UI_SCOPE_NPM_TOKEN }}
 
       - run: |
-          if [[ ${{ github.event.inputs.forcePush }} == "true" ]]; then
+          if [[ "${{ github.event.inputs.forcePush }}" == "true" ]]; then
 
             if [[ "${{ github.event.inputs.mode }}" != "prepatch" ]]; then
-              npx release-it "${{ github.event.inputs.mode }}" --increment --ci
+                npx release-it "${{ github.event.inputs.mode }}" --increment --ci
             else
                 npx release-it --preRelease=alpha --ci
             fi

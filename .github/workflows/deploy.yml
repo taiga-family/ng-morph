@@ -1,15 +1,16 @@
-name: Deploy demo to gh-pages
+name: Deploy demo
 on:
   push:
     branches:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: taiga-family/ci/actions/setup/checkout@v1.60.1
       - uses: taiga-family/ci/actions/setup/variables@v1.60.1
+      - uses: taiga-family/ci/actions/setup/node@v1.60.1
       - run: npm run build:demo
       - uses: taiga-family/ci/actions/deploy/github-pages@v1.60.1
         with:
