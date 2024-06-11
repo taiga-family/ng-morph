@@ -16,7 +16,7 @@
         "release": "nx run-many --target release",
         "test": "nx run-many --target test",
         "lint": "eslint .",
-        "prettier": "prettier !package-lock.json . --ignore-path .gitignore",
+        "prettier": "prettier !package-lock.json !CHANGELOG.md . --ignore-path .gitignore",
         "affected:apps": "nx affected:apps",
         "affected:libs": "nx affected:libs",
         "affected:build": "nx affected:build",

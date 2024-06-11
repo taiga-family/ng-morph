@@ -5,8 +5,6 @@
     },
     "github": {
         "release": true,
-        "comments": true,
-        "autoGenerate": true,
         "releaseNotes": "git log --no-merges --pretty=format:\"* %s %h\" ${latestTag}...main"
     },
     "npm": {
