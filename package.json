@@ -1,6 +1,6 @@
 {
-    "name": "ng-morph",
-    "version": "5.0.4",
+    "name": "@taiga-ui/morph",
+    "version": "3.0.0",
     "private": true,
     "license": "Apache-2.0",
     "workspaces": [

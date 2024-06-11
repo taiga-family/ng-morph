@@ -1,10 +1,5 @@
 name: ⚠️ Release
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - libs/**
   workflow_dispatch:
     inputs:
       forcePush:
@@ -26,6 +21,7 @@ jobs:
   run-release:
     name: Run release
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
     steps:
       - uses: taiga-family/ci/actions/setup/checkout@v1.60.1
         with:
