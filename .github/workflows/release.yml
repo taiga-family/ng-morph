@@ -30,17 +30,17 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
     steps:
-      - uses: taiga-family/ci/actions/setup/checkout@v1.60.1
+      - uses: taiga-family/ci/actions/setup/checkout@v1.61.0
         with:
           token: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
           ref: ${{ github.ref }}
           fetch-depth: 0
-      - uses: taiga-family/ci/actions/setup/variables@v1.60.1
-      - uses: taiga-family/ci/actions/setup/node@v1.60.1
-      - uses: taiga-family/ci/actions/setup/config/git@v1.60.1
+      - uses: taiga-family/ci/actions/setup/variables@v1.61.0
+      - uses: taiga-family/ci/actions/setup/node@v1.61.0
+      - uses: taiga-family/ci/actions/setup/config/git@v1.61.0
         with:
           token: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
-      - uses: taiga-family/ci/actions/setup/config/npm@v1.60.1
+      - uses: taiga-family/ci/actions/setup/config/npm@v1.61.0
         with:
           token: ${{ secrets.TAIGA_UI_SCOPE_NPM_TOKEN }}
 
