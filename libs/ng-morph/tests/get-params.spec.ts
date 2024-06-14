@@ -9,7 +9,7 @@ import {
     getParams,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('getParams', () => {
     let host: UnitTestTree;

@@ -7,7 +7,7 @@ import {
     getImports,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 import {StructureKind} from 'ts-morph';
 
 describe('getImports', () => {

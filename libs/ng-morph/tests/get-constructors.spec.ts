@@ -8,7 +8,7 @@ import {
     getConstructors,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 import {Scope} from 'ts-morph';
 
 describe('getConstructors', () => {

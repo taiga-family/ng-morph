@@ -10,7 +10,7 @@ import {
     resetActiveProject,
     saveActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('removeMethods', () => {
     let host: UnitTestTree;

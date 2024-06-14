@@ -7,7 +7,7 @@ import {
     resetActiveProject,
     saveActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 import {VariableDeclarationKind} from 'ts-morph';
 
 import {addVariables} from '../src/variables/add-variables';

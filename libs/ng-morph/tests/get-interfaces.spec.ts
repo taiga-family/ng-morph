@@ -7,7 +7,7 @@ import {
     getInterfaces,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('getInterfaces', () => {
     let host: UnitTestTree;

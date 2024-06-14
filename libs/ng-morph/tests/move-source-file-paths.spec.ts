@@ -10,7 +10,7 @@ import {
     resetActiveProject,
     saveActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('renameSourceFilePaths', () => {
     let host: UnitTestTree;

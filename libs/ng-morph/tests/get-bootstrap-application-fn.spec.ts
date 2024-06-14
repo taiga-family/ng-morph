@@ -6,7 +6,7 @@ import {
     createSourceFile,
     getBootstrapApplicationFn,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 import {Node} from 'ts-morph';
 
 describe('getBootstrapApplicationFn', () => {

@@ -8,7 +8,7 @@ import {
     getClasses,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('getAccessors', () => {
     let host: UnitTestTree;

@@ -8,7 +8,7 @@ import {
     getClasses,
     saveActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('addSchemaToModule', () => {
     let host: UnitTestTree;

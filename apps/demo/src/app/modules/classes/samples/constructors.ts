@@ -5,7 +5,7 @@ export const CONSTRUCTORS_SAMPLES = `import {
     removeConstructors,
     setActiveProject,
     saveActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 

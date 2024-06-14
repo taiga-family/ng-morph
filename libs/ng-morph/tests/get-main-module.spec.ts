@@ -1,12 +1,7 @@
 import {HostTree} from '@angular-devkit/schematics';
 import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {beforeEach, describe, expect, it} from '@jest/globals';
-import {
-    createProject,
-    createSourceFile,
-    getMainModule,
-    setActiveProject,
-} from '@taiga-ui/morph';
+import {createProject, createSourceFile, getMainModule, setActiveProject} from 'ng-morph';
 import {Node} from 'ts-morph';
 
 describe('getMainModule', () => {

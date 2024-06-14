@@ -8,7 +8,7 @@ import {
     getBootstrapApplicationFn,
     getVariables,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('addProviderToBootstrapApplicationFn', () => {
     let host: UnitTestTree;

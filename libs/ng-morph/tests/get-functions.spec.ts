@@ -7,7 +7,7 @@ import {
     getFunctions,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 import {Node} from 'ts-morph';
 
 describe('getFunctions', () => {

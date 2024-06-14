@@ -10,7 +10,7 @@ import {
     resetActiveProject,
     saveActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 import {Scope} from 'ts-morph';
 
 describe('editConstructors', () => {

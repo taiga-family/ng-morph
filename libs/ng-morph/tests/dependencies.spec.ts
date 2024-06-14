@@ -8,12 +8,12 @@
 import {EmptyTree} from '@angular-devkit/schematics';
 import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {beforeEach, describe, expect, it} from '@jest/globals';
-import type {NodeDependency} from '@taiga-ui/morph';
+import type {NodeDependency} from 'ng-morph';
 import {
     addPackageJsonDependency,
     getPackageJsonDependency,
     NodeDependencyType,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('dependencies', () => {
     describe('addDependency', () => {

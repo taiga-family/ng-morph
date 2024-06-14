@@ -7,7 +7,7 @@ import {
     getEnums,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('getEnums', () => {
     let host: UnitTestTree;

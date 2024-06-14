@@ -8,7 +8,7 @@ import {
     getProperties,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('getProperties', () => {
     let host: UnitTestTree;

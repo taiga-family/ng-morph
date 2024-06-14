@@ -10,7 +10,7 @@ const add = `import {
     addClasses,
     setActiveProject,
     saveActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts']));
 
@@ -35,7 +35,7 @@ const edit = `import {
     editClasses,
     setActiveProject,
     saveActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -53,7 +53,7 @@ const remove = `import {
     removeClasses,
     setActiveProject,
     saveActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 
@@ -63,7 +63,7 @@ const getClasses = `import {
     getClasses,
     setActiveProject,
     saveActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 

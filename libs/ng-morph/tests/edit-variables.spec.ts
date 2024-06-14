@@ -9,7 +9,7 @@ import {
     resetActiveProject,
     saveActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 import {VariableDeclarationKind} from 'ts-morph';
 
 describe('editVariables', () => {

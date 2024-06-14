@@ -5,7 +5,7 @@ export const ACCESSORS_SAMPLES = `import {
     removeAccessors,
     setActiveProject,
     saveActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 

@@ -7,7 +7,7 @@ import {
     resetActiveProject,
     saveActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 import {editExports} from '../src/exports/edit-exports';
 import {getExports} from '../src/exports/get-exports';

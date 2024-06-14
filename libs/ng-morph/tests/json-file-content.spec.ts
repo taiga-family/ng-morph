@@ -1,5 +1,5 @@
 import {describe, expect, it} from '@jest/globals';
-import {JSONFileContent} from '@taiga-ui/morph';
+import {JSONFileContent} from 'ng-morph';
 
 describe('JSONFileContent', () => {
     it('should modify JSON', () => {

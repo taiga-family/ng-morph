@@ -7,7 +7,7 @@ import {
     getSourceFiles,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('getSourceFiles', () => {
     let host: UnitTestTree;

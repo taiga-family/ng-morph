@@ -11,7 +11,7 @@ import {
     NgMorphTree,
     saveActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 const dirname = new URL('../src/project/', import.meta.url).pathname;
 

@@ -9,7 +9,7 @@ import {
     getDecorators,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('getDecorators', () => {
     let host: UnitTestTree;

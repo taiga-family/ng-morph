@@ -2,7 +2,7 @@
 process.env.NODE_OPTIONS = '--experimental-vm-modules';
 
 module.exports = {
-    displayName: '@taiga-ui/morph',
+    displayName: 'ng-morph',
     preset: '../../jest.preset.js',
     globals: {
         'ts-jest': {

@@ -8,7 +8,7 @@
 import {EmptyTree} from '@angular-devkit/schematics';
 import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {beforeEach, describe, expect, it} from '@jest/globals';
-import {getProjectTarget, getProjectTargets} from '@taiga-ui/morph';
+import {getProjectTarget, getProjectTargets} from 'ng-morph';
 
 describe('get project targets', () => {
     describe('getProjectTargets', () => {

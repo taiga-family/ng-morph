@@ -5,7 +5,7 @@ export const PROPERTIES_SAMPLES = `import {
     removeProperties,
     setActiveProject,
     saveActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 

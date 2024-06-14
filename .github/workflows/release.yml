@@ -1,10 +1,5 @@
 name: ⚠️ Release
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - libs/ng-morph/**
   workflow_dispatch:
     inputs:
       forcePush:
@@ -32,7 +27,7 @@ jobs:
         with:
           ref: ${{ github.ref }}
           githubToken: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
-          npmToken: ${{ secrets.TAIGA_UI_SCOPE_NPM_TOKEN }}
+          npmToken: ${{ secrets.NPM_TOKEN }}
           forcePush: ${{ github.event.inputs.forcePush }}
           mode: ${{ github.event.inputs.mode }}
 

@@ -5,7 +5,7 @@ const script = `import {
   createProject,
   getImports,
   NgMorphTree,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 /**
  * set all ng-morph functions to work with the all TS and JSON files
@@ -40,7 +40,7 @@ const creatingRule = `import {
     createProject,
     getImports,
     editImports,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 export default (): Rule => {
     return tree => {
@@ -82,7 +82,7 @@ import {
     setActiveProject,
     createSourceFile,
     saveActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 const collectionPath = join(__dirname, '../collection.json');
 

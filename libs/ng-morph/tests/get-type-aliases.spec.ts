@@ -7,7 +7,7 @@ import {
     getTypeAliases,
     resetActiveProject,
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 describe('getTypeAliases', () => {
     let host: UnitTestTree;
