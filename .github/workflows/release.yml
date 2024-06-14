@@ -1,5 +1,10 @@
 name: ⚠️ Release
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - libs/ng-morph/**
   workflow_dispatch:
     inputs:
       forcePush:
