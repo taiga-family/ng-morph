@@ -1,5 +1,7 @@
 
 
+# [4.4.0](https://github.com/taiga-family/ng-morph/compare/v4.3.2...v4.4.0) (2024-06-14)
+
 ## [4.3.2](https://github.com/taiga-family/ng-morph/compare/v4.3.1...v4.3.2) (2024-06-11)
 
 
