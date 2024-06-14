@@ -28,7 +28,7 @@ const example = `import {
   saveActiveProject,
   getImports,
   editImports,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 setActiveProject(
   createProject(new NgMorphTree(), '/', ['**/*.ts', '**/*.json'])

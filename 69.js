@@ -25,7 +25,7 @@ const script = `import {
   createProject,
   getImports,
   NgMorphTree,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 /**
  * set all ng-morph functions to work with the all TS and JSON files
@@ -59,7 +59,7 @@ const creatingRule = `import {
     createProject,
     getImports,
     editImports,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 export default (): Rule => {
     return tree => {
@@ -100,7 +100,7 @@ import {
     setActiveProject,
     createSourceFile,
     saveActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 const collectionPath = join(__dirname, '../collection.json');
 
@@ -158,7 +158,7 @@ _GettingStartedComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MO
   selectors: [["getting-started"]],
   decls: 83,
   vars: 3,
-  consts: [["header", "Getting started"], ["href", "https://ts-morph.com/", "tuiLink", ""], ["code", "npm i --save-dev @taiga-ui/morph"], ["filename", "script.ts", 3, "code"], ["href", "https://www.npmjs.com/package/ts-node", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["href", "https://angular.io/guide/schematics-for-libraries#define-the-rule", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["filename", "ng-add.ts", 3, "code"], ["filename", "ng-add.spec.ts", 3, "code"], ["href", "https://github.com/taiga-family/ng-morph", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["routerLink", "/classes", "tuiLink", ""]],
+  consts: [["header", "Getting started"], ["href", "https://ts-morph.com/", "tuiLink", ""], ["code", "npm i --save-dev ng-morph"], ["filename", "script.ts", 3, "code"], ["href", "https://www.npmjs.com/package/ts-node", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["href", "https://angular.io/guide/schematics-for-libraries#define-the-rule", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["filename", "ng-add.ts", 3, "code"], ["filename", "ng-add.spec.ts", 3, "code"], ["href", "https://github.com/taiga-family/ng-morph", "rel", "noreferrer", "target", "_blank", "tuiLink", ""], ["routerLink", "/classes", "tuiLink", ""]],
   template: function GettingStartedComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tui-doc-page", 0)(1, "p")(2, "strong");

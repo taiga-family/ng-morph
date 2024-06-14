@@ -19,7 +19,7 @@ var _GetMainModuleComponent;
 const code = `import {
     getMainModule
     setActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
 

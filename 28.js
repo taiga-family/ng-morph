@@ -22,7 +22,7 @@ const code = `import {
     moveSourceFilePaths,
     setActiveProject,
     saveActiveProject,
-} from '@taiga-ui/morph';
+} from 'ng-morph';
 import { dasherize } from '@angular-devkit/core/src/utils/strings';
 
 setActiveProject(createProject(new NgMorphTree(), '/', ['**/*.ts'));
