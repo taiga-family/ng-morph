@@ -8,11 +8,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: taiga-family/ci/actions/setup/checkout@v1.62.19
-      - uses: taiga-family/ci/actions/setup/variables@v1.62.19
-      - uses: taiga-family/ci/actions/setup/node@v1.62.19
+      - uses: taiga-family/ci/actions/setup/checkout@v1.62.20
+      - uses: taiga-family/ci/actions/setup/variables@v1.62.20
+      - uses: taiga-family/ci/actions/setup/node@v1.62.20
       - run: npm run build:demo
-      - uses: taiga-family/ci/actions/deploy/github-pages@v1.62.19
+      - uses: taiga-family/ci/actions/deploy/github-pages@v1.62.20
         with:
           token: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
           folder: dist/apps/demo
