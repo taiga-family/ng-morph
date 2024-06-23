@@ -21,7 +21,7 @@
         "jsonc-parser": "^3.2.1",
         "minimatch": "^9.0.4",
         "multimatch": "^5.0.0",
-        "ts-morph": "^22.0.0",
+        "ts-morph": "^23.0.0",
         "tslib": "^2.6.3"
     },
     "authors": [
