@@ -1,5 +1,9 @@
 
 
+* chore(deps): update dependency minimatch to v9.0.5 (#698) (ab62a0b)
+* chore(deps): update dependency @types/node to v20.14.9 (#697) (da44d61)
+* ci: prevent cancel release (e9b3231)
+
 # [4.5.0](https://github.com/taiga-family/ng-morph/compare/v4.4.0...v4.5.0) (2024-06-25)
 
 # [4.4.0](https://github.com/taiga-family/ng-morph/compare/v4.3.2...v4.4.0) (2024-06-14)
