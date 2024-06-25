@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
     steps:
-      - uses: taiga-family/ci/actions/run/release-it@v1.63.0
+      - uses: taiga-family/ci/actions/run/release-it@v1.64.0
         with:
           ref: ${{ github.ref }}
           githubToken: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
