@@ -1,5 +1,12 @@
 
 
+* chore(deps): update taiga-ui to v0.113.1 (#690) (7392fe9)
+* chore(deps): update nx to v19.4.0 (#703) (a4ce425)
+* chore(deps): update dependency release-it to v17.4.1 (#702) (e86be19)
+* chore(deps): update taiga-family/ci action to v1.65.1 (#701) (799271e)
+* chore(deps): update nx to v19.3.2 (#700) (2415848)
+* chore(deps): update toshimaru/auto-author-assign action to v2.1.1 (#699) (b846263)
+
 * chore(deps): update dependency minimatch to v9.0.5 (#698) (ab62a0b)
 * chore(deps): update dependency @types/node to v20.14.9 (#697) (da44d61)
 * ci: prevent cancel release (e9b3231)
