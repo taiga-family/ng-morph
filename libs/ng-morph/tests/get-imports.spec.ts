@@ -53,7 +53,7 @@ import b from 'd';
             namedImports: 'c',
         });
 
-        expect(imports.map(i => i.getStructure())).toEqual([
+        expect(imports.map((i) => i.getStructure())).toEqual([
             {
                 isTypeOnly: false,
                 kind: StructureKind.ImportDeclaration,

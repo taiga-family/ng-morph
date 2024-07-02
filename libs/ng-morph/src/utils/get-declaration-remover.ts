@@ -5,7 +5,7 @@ export function getDeclarationRemover<T extends {remove(): void} = {remove(): vo
 ) => void {
     // tslint:disable-next-line:no-shadowed-variable
     return function removeDeclarations(declarations: T | T[]) {
-        coerceArray(declarations).forEach(declaration => {
+        coerceArray(declarations).forEach((declaration) => {
             declaration.remove();
         });
     };

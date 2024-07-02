@@ -59,14 +59,14 @@ function coerceName<T extends string>(name: T | {name: T}): T {
 export function matchQuery<T extends Structure>(value: T, query?: Query<T>): boolean {
     return (
         !query ||
-        Object.keys(query).every(key =>
+        Object.keys(query).every((key) =>
             coerceArray(value[key])
                 .map(coerceName)
-                .some(v => {
+                .some((v) => {
                     const patterns = coerceArray(query[key]);
 
                     return typeof v === 'string'
-                        ? patterns.some(pattern => pattern && minimatch(v, pattern))
+                        ? patterns.some((pattern) => pattern && minimatch(v, pattern))
                         : patterns.includes(v);
                 }),
         )

@@ -23,8 +23,8 @@ export function getDeclarationCreator<
     ) {
         const files = getSourceFiles(pattern);
 
-        files.forEach(file => {
-            const structuresWithKind = coerceArray(structures).map(structure => ({
+        files.forEach((file) => {
+            const structuresWithKind = coerceArray(structures).map((structure) => ({
                 ...common,
                 ...structure,
             })) as StatementStructures[];

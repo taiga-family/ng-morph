@@ -27,4 +27,4 @@ bootstrapApplication(AppComponent, {
         },
         provideAnimations(),
     ],
-}).catch(e => console.error(e));
+}).catch((e) => console.error(e));

@@ -14,11 +14,11 @@ export function getDecorators(
     query?: Query<DecoratorStructure>,
 ): Decorator[] {
     return arrayFlat(
-        coerceArray(declarations).map(declaration => declaration.getDecorators()),
-    ).filter(decorator => matchQuery(decorator.getStructure(), query));
+        coerceArray(declarations).map((declaration) => declaration.getDecorators()),
+    ).filter((decorator) => matchQuery(decorator.getStructure(), query));
 }
 
-export const getAllDecorators = getDeclarationGetter<Decorator>(pattern => {
+export const getAllDecorators = getDeclarationGetter<Decorator>((pattern) => {
     const classes = getClasses(pattern);
     const methods = getMethods(classes);
     const constructors = getConstructors(classes);
@@ -29,7 +29,7 @@ export const getAllDecorators = getDeclarationGetter<Decorator>(pattern => {
 
     return arrayFlat(
         [classes, methods, properties, constructorParams, methodParams, accessors].map(
-            declarations => getDecorators(declarations),
+            (declarations) => getDecorators(declarations),
         ),
     );
 });

@@ -9,7 +9,7 @@ export function getNgModules(
     query?: Query<Omit<StructureType<ClassDeclaration>, 'kind'>>,
 ): ClassDeclaration[] {
     return getClasses(pattern, query).filter(
-        declaration => !!declaration.getDecorator('NgModule'),
+        (declaration) => !!declaration.getDecorator('NgModule'),
     );
 }
 
@@ -23,14 +23,14 @@ export function findNgModule(
     const allNgModules = getNgModules(pattern);
 
     return (
-        allNgModules.find(module => {
+        allNgModules.find((module) => {
             const moduleFile = module.getSourceFile();
             const imports = getImports(moduleFile.getFilePath(), {
                 namedImports: ngComponent.getName(),
             });
 
             return imports.some(
-                i => i.getModuleSpecifierSourceFile() === ngComponent.getSourceFile(),
+                (i) => i.getModuleSpecifierSourceFile() === ngComponent.getSourceFile(),
             );
         }) || null
     );

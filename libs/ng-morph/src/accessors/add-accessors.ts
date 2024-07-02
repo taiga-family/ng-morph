@@ -14,8 +14,8 @@ export function addAccessors(
         | GetAccessorDeclarationStructure
         | SetAccessorDeclarationStructure,
 ): void {
-    coerceArray(classes).forEach(klass => {
-        coerceArray(accessors).forEach(accessor => {
+    coerceArray(classes).forEach((klass) => {
+        coerceArray(accessors).forEach((accessor) => {
             if (Structure.isGetAccessor(accessor)) {
                 klass.addGetAccessor(accessor);
             } else {

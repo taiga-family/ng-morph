@@ -32,7 +32,7 @@ export function pushToObjectLiteralArrayProperty(
         unique &&
         importsInitializer
             .getElements()
-            .some(element => element.getText() === initializer)
+            .some((element) => element.getText() === initializer)
     ) {
         return;
     }

@@ -12,11 +12,11 @@ export function getBootstrapApplicationFn(
 
     const namedImport = bootstrapApplicationImport
         ?.getNamedImports()
-        .find(imp => imp.getName() === 'bootstrapApplication');
+        .find((imp) => imp.getName() === 'bootstrapApplication');
 
     return namedImport
         ?.getNameNode()
         .findReferencesAsNodes()
-        .find(ref => Node.isCallExpression(ref.getParent()))
+        .find((ref) => Node.isCallExpression(ref.getParent()))
         ?.getParentIfKind(SyntaxKind.CallExpression);
 }

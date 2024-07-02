@@ -12,6 +12,6 @@ export function getParams(
     query?: Query<ParameterDeclarationStructure>,
 ): ParameterDeclaration[] {
     return arrayFlat(
-        coerceArray(functionsLike).map(functionLike => functionLike.getParameters()),
-    ).filter(param => matchQuery(param.getStructure(), query));
+        coerceArray(functionsLike).map((functionLike) => functionLike.getParameters()),
+    ).filter((param) => matchQuery(param.getStructure(), query));
 }

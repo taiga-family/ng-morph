@@ -10,12 +10,12 @@ export function getBootstrapFn(mainFilePath: string): CallExpression | undefined
 
     const namedImport = platformBrowserImport
         ?.getNamedImports()
-        .find(imp => imp.getName() === 'platformBrowserDynamic');
+        .find((imp) => imp.getName() === 'platformBrowserDynamic');
 
     return namedImport
         ?.getNameNode()
         .findReferencesAsNodes()
-        .find(ref => Node.isCallExpression(ref.getParent()))
+        .find((ref) => Node.isCallExpression(ref.getParent()))
         ?.getParentIfKind(SyntaxKind.CallExpression)
         ?.getParentIfKind(SyntaxKind.PropertyAccessExpression)
         ?.getParentIfKind(SyntaxKind.CallExpression);
