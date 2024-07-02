@@ -14,7 +14,7 @@ export function getDeclarationEditor<
         declarations: Declaration | Declaration[],
         editor: StructureEditor<Declaration, OptionalKind<Structures>>,
     ) {
-        coerceArray(declarations).forEach(declaration => {
+        coerceArray(declarations).forEach((declaration) => {
             const newStructure: Structures = Object.assign(
                 declaration.getStructure(),
                 // TODO: refactor it to support new typings

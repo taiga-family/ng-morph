@@ -103,7 +103,7 @@ export class NgCliFileSystem implements FileSystemHost {
         } else if (this.directoryExistsSync(srcPath)) {
             const paths = this.readDirSync(srcPath);
 
-            paths.forEach(path =>
+            paths.forEach((path) =>
                 this.copySync(path.name, join(destPath, basename(path.name))),
             );
         }
@@ -177,14 +177,14 @@ export class NgCliFileSystem implements FileSystemHost {
         const {directories, files} = this.fs.readDirectory(dirPath as WorkspacePath);
 
         return directories
-            .map(name => ({
+            .map((name) => ({
                 name,
                 isFile: false,
                 isDirectory: true,
                 isSymlink: false,
             }))
             .concat(
-                files.map(name => ({
+                files.map((name) => ({
                     name,
                     isFile: true,
                     isDirectory: false,
@@ -222,11 +222,11 @@ export class NgCliFileSystem implements FileSystemHost {
     protected getAllFilePaths(path = '/', foundedFiles: string[] = []): string[] {
         const {directories, files} = this.fs.readDirectory(path as WorkspacePath);
 
-        foundedFiles.push(...files.map(file => join(path, file)));
+        foundedFiles.push(...files.map((file) => join(path, file)));
 
         directories
-            .filter(dir => !dir.startsWith('.') && dir !== 'node_modules')
-            .forEach(dir => this.getAllFilePaths(join(path, dir), foundedFiles));
+            .filter((dir) => !dir.startsWith('.') && dir !== 'node_modules')
+            .forEach((dir) => this.getAllFilePaths(join(path, dir), foundedFiles));
 
         return foundedFiles;
     }

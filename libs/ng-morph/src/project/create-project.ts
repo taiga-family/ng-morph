@@ -14,7 +14,7 @@ export function createProject(
     const project = new NgCliProject({host});
 
     project.addSourceFilesAtPaths(
-        coerceArray(pattern).map(glob =>
+        coerceArray(pattern).map((glob) =>
             project.getFileSystem().fs.resolve(join(rootPath, glob)),
         ),
     );

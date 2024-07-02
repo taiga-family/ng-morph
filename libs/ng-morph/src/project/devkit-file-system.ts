@@ -45,7 +45,7 @@ export class DevkitFileSystem extends FileSystem {
     }
 
     public commitEdits(): void {
-        this.updateRecorderCache.forEach(r => this.tree.commitUpdate(r));
+        this.updateRecorderCache.forEach((r) => this.tree.commitUpdate(r));
         this.updateRecorderCache.clear();
     }
 

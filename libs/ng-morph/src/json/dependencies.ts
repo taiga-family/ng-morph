@@ -67,7 +67,7 @@ export function removePackageJsonDependency(
 ): void {
     const json = new JSONFile(tree, pkgJsonPath);
 
-    ALL_DEPENDENCY_TYPE.forEach(depType => json.remove([depType, name]));
+    ALL_DEPENDENCY_TYPE.forEach((depType) => json.remove([depType, name]));
 }
 
 export function getPackageJsonDependency(

@@ -36,7 +36,7 @@ describe('dependencies', () => {
             {type: NodeDependencyType.Dev, key: 'devDependencies'},
             {type: NodeDependencyType.Optional, key: 'optionalDependencies'},
             {type: NodeDependencyType.Peer, key: 'peerDependencies'},
-        ].forEach(type => {
+        ].forEach((type) => {
             describe(`Type: ${type.type ?? NodeDependencyType.Default}`, () => {
                 beforeEach(() => {
                     dependency.type = type.type;

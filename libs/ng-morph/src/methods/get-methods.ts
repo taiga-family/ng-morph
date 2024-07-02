@@ -11,7 +11,7 @@ export function getMethods(
     classes: ClassDeclaration | ClassDeclaration[],
     query?: Query<MethodDeclarationStructure>,
 ): MethodDeclaration[] {
-    return arrayFlat(coerceArray(classes).map(klass => klass.getMethods())).filter(
-        method => !method.isOverload() && matchQuery(method.getStructure(), query),
+    return arrayFlat(coerceArray(classes).map((klass) => klass.getMethods())).filter(
+        (method) => !method.isOverload() && matchQuery(method.getStructure(), query),
     );
 }

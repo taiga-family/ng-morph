@@ -12,7 +12,7 @@ export function addParams(
         | Array<OptionalKind<ParameterDeclarationStructure>>
         | OptionalKind<ParameterDeclarationStructure>,
 ): void {
-    coerceArray(functionsLike).forEach(functionLike => {
+    coerceArray(functionsLike).forEach((functionLike) => {
         functionLike.addParameters(coerceArray(params));
     });
 }

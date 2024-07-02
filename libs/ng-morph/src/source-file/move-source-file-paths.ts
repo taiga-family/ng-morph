@@ -4,7 +4,7 @@ export function moveSourceFilePaths(
     files: SourceFile[],
     rename: (path: string) => string,
 ): void {
-    files.forEach(file => {
+    files.forEach((file) => {
         file.move(rename(file.getFilePath()));
     });
 }

@@ -50,7 +50,7 @@ const imports = getImports('some/path/**.ts', {
   moduleSpecifier: '@morph-old*',
 });
 
-editImports(imports, importEntity => ({
+editImports(imports, (importEntity) => ({
   moduleSpecifier: importEntity.moduleSpecifier.replace('old', 'new'),
 }));
 
