@@ -1,5 +1,18 @@
 
 
+* chore(deps): update dependency minimatch to v10 (#716) (f7c5ffc)
+* chore(deps): update dependency release-it to v17.5.0 (#714) (b05c0ff)
+* chore(deps): update dependency release-it to v17.4.2 (#713) (c68d8be)
+* chore(deps): update dependency ts-jest to v29.2.0 (#712) (0628b52)
+* chore(deps): update taiga-ui to v3.86.0 (#711) (bad90f2)
+* chore(deps): update taiga-ui to v0.113.5 (#710) (b48c145)
+* chore(deps): update taiga-ui to v0.113.4 (#709) (757f4ad)
+* chore(deps): update nx to v19.4.1 (#708) (2f642cc)
+* chore(deps): update dependency @types/node to v20.14.10 (#707) (bb749fe)
+* chore(deps): update taiga-family/ci action to v1.65.2 (#706) (b980945)
+* chore(deps): update taiga-ui to v0.113.3 (#705) (d3e64a3)
+* chore(deps): update taiga-ui to v0.113.2 (#704) (8a34c86)
+
 * chore(deps): update taiga-ui to v0.113.1 (#690) (7392fe9)
 * chore(deps): update nx to v19.4.0 (#703) (a4ce425)
 * chore(deps): update dependency release-it to v17.4.1 (#702) (e86be19)
