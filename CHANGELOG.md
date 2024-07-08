@@ -1,5 +1,7 @@
 
 
+* chore(deps): update dependency minimatch to v10.0.1 (#717) (902369d)
+
 * chore(deps): update dependency minimatch to v10 (#716) (f7c5ffc)
 * chore(deps): update dependency release-it to v17.5.0 (#714) (b05c0ff)
 * chore(deps): update dependency release-it to v17.4.2 (#713) (c68d8be)
