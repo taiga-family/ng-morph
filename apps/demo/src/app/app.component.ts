@@ -6,7 +6,7 @@ import {HighlightModule} from 'ngx-highlightjs';
 @Component({
     standalone: true,
     selector: 'app-root',
-    imports: [TuiDocMainModule, TuiLinkModule, HighlightModule],
+    imports: [HighlightModule, TuiDocMainModule, TuiLinkModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
