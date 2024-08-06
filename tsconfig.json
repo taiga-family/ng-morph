@@ -8,6 +8,7 @@
         "noUnusedParameters": false,
         "strictNullChecks": false,
         "module": "esnext",
+        "verbatimModuleSyntax": false,
         "strictPropertyInitialization": false,
         "typeRoots": ["node_modules/@types"],
         "paths": {
