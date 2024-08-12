@@ -1,8 +1,8 @@
 import type {NgCliProject} from './ng-cli-project';
 
-let prevProject: NgCliProject = null;
+let prevProject: NgCliProject | null = null;
 
-export function setActiveProject(project: NgCliProject): NgCliProject | null {
+export function setActiveProject(project: NgCliProject | null): NgCliProject | null {
     const prev = prevProject;
 
     prevProject = project;

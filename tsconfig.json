@@ -3,13 +3,8 @@
     "compilerOptions": {
         "rootDir": ".",
         "baseUrl": ".",
-        "strict": false,
-        "noUnusedLocals": false,
-        "noUnusedParameters": false,
-        "strictNullChecks": false,
         "module": "esnext",
         "verbatimModuleSyntax": false,
-        "strictPropertyInitialization": false,
         "typeRoots": ["node_modules/@types"],
         "paths": {
             "ng-morph": ["./libs/ng-morph/src/index.ts"]

@@ -15,19 +15,21 @@ export function addProviderToBootstrapApplicationFn(
         return;
     }
 
-    pushToObjectLiteralArrayProperty(getOptionsObject(options), 'providers', provider, {
-        unique,
-    });
+    const expression = getOptionsObject(options);
+
+    if (expression) {
+        pushToObjectLiteralArrayProperty(expression, 'providers', provider, {unique});
+    }
 }
 
 function getOptionsObject(
     options: Identifier | ObjectLiteralExpression,
-): ObjectLiteralExpression {
+): ObjectLiteralExpression | undefined {
     if (Node.isObjectLiteralExpression(options)) {
         return options;
     }
 
     const definition = options.getDefinitionNodes()[0];
 
-    return definition.getChildrenOfKind(SyntaxKind.ObjectLiteralExpression)[0];
+    return definition?.getChildrenOfKind(SyntaxKind.ObjectLiteralExpression)[0];
 }

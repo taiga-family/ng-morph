@@ -16,7 +16,7 @@ export function getDeclarationCreator<
     } = Partial<Structure> & {
         kind: StructureKind;
     },
->(common: CommonStructure, {position = null}: {position?: number} = {}) {
+>(common: CommonStructure, {position = null}: {position?: number | null} = {}) {
     return function addDeclarations(
         pattern: Pattern,
         structures: Structure | Structure[],

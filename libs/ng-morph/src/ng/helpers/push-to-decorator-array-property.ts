@@ -19,8 +19,8 @@ export function pushToDecoratorArrayProperty(
         name: decoratorName,
     });
 
-    const [metadata = decorator.addArgument(`{${propertyName}: []}`)] =
-        decorator.getArguments();
+    const [metadata = decorator?.addArgument(`{${propertyName}: []}`)] =
+        decorator?.getArguments() || [];
 
     if (!Node.isObjectLiteralExpression(metadata)) {
         return;

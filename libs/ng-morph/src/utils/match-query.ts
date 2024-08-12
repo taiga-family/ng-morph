@@ -56,7 +56,10 @@ function coerceName<T extends string>(name: T | {name: T}): T {
     return 'name' in name ? name.name : name;
 }
 
-export function matchQuery<T extends Structure>(value: T, query?: Query<T>): boolean {
+export function matchQuery<T extends Structure>(
+    value: Record<any, any> & T,
+    query?: Query<T> & Record<any, any>,
+): boolean {
     return (
         !query ||
         Object.keys(query).every((key) =>
