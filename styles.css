@@ -1001,6 +1001,9 @@ next min-width - 60% from 1px (1/16 * 0.6 = 0.0375)
 [tuiWrapper][data-appearance='icon'][data-appearance='icon'][data-state='disabled'][data-state='disabled'] {
   opacity: calc(0.5 * var(--tui-disabled-opacity));
 }
+[tuiWrapper][data-appearance='icon'][data-appearance='icon'][data-state='readonly'][data-state='readonly'] {
+  pointer-events: none;
+}
 /* stylelint-disable order/order */
 [tuiWrapper][data-appearance='outline'] {
   background: transparent;
