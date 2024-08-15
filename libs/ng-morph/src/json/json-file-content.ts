@@ -25,14 +25,15 @@ export class JSONFileContent {
 
     constructor(protected content: string) {}
 
-    public get(jsonPath: JSONPath): string {
-        if (jsonPath.length === 0) {
-            return getNodeValue(this.jsonAst());
+    public get(jsonPath: JSONPath): string | undefined {
+        const ast = this.jsonAst();
+        const node = ast ? findNodeAtLocation(ast, jsonPath) : null;
+
+        if (!node || !ast) {
+            return undefined;
         }
 
-        const node = findNodeAtLocation(this.jsonAst(), jsonPath);
-
-        return node === undefined ? undefined : getNodeValue(node);
+        return getNodeValue(node);
     }
 
     public getContent(): string {
@@ -74,7 +75,7 @@ export class JSONFileContent {
         }
     }
 
-    protected jsonAst(): Node {
+    protected jsonAst(): Node | undefined {
         if (this.jsonAstNode) {
             return this.jsonAstNode;
         }
@@ -84,7 +85,7 @@ export class JSONFileContent {
         this.jsonAstNode = parseTree(this.content, errors);
 
         if (errors.length) {
-            const {error, offset} = errors[0];
+            const {error, offset} = errors[0]!;
 
             throw new Error(
                 `Failed to parse as JSON AST Object. ${printParseErrorCode(

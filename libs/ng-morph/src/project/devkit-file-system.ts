@@ -34,7 +34,7 @@ export class DevkitFileSystem extends FileSystem {
 
     public edit(filePath: Path): UpdateRecorder {
         if (this.updateRecorderCache.has(filePath)) {
-            return this.updateRecorderCache.get(filePath);
+            return this.updateRecorderCache.get(filePath)!;
         }
 
         const recorder = this.tree.beginUpdate(filePath);
@@ -76,7 +76,7 @@ export class DevkitFileSystem extends FileSystem {
         this.tree.delete(filePath);
     }
 
-    public read(filePath: Path): string | null {
+    public read(filePath: Path | string): string | null {
         const buffer = this.tree.read(filePath);
 
         return buffer !== null ? buffer.toString() : null;

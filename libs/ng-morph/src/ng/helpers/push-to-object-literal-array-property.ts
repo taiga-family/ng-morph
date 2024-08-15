@@ -19,7 +19,7 @@ export function pushToObjectLiteralArrayProperty(
     }
 
     if (forceToArray && !Node.isArrayLiteralExpression(property.getInitializer())) {
-        property.setInitializer(`[${property.getInitializer().getText()}]`);
+        property.setInitializer(`[${property.getInitializer()?.getText()}]`);
     }
 
     const importsInitializer = property.getInitializer();

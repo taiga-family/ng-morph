@@ -27,7 +27,7 @@ export function getDeclarationEditor<
             // if the issue is resolved code will be remove
             if (Structure.hasName(newStructure) && Node.isRenameable(declaration)) {
                 declaration.rename(newStructure.name);
-                delete newStructure.name;
+                delete (newStructure as {name?: string}).name;
             }
 
             declaration.set(newStructure);

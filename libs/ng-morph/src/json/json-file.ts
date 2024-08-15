@@ -40,11 +40,11 @@ export class JSONFile extends JSONFileContent {
         this.host.overwrite(this.path, this.content);
     }
 
-    protected override jsonAst(): Node {
+    protected override jsonAst(): Node | undefined {
         try {
             return super.jsonAst();
-        } catch (e) {
-            throw new Error(`[${this.path}] ${e.message}`);
+        } catch (e: unknown) {
+            throw new Error(`[${this.path}] ${(e as Error | undefined)?.message}`);
         }
     }
 }

@@ -154,12 +154,12 @@ export class NgCliFileSystem implements FileSystemHost {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    public async mkdir(dirPath: string): Promise<void> {
+    public async mkdir(_dirPath: string): Promise<void> {
         return Promise.resolve(undefined);
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    public mkdirSync(dirPath: string): void {
+    public mkdirSync(_dirPath: string): void {
         // empty
     }
 
@@ -194,13 +194,13 @@ export class NgCliFileSystem implements FileSystemHost {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    public async readFile(filePath: string, encoding?: string): Promise<string> {
+    public async readFile(filePath: string, _encoding?: string): Promise<string> {
         return this.readFileSync(filePath);
     }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    public readFileSync(filePath: string, encoding?: string): string {
-        return this.fs.read(filePath as WorkspacePath);
+    public readFileSync(filePath: string, _encoding?: string): string {
+        return this.fs.read(filePath) ?? '';
     }
 
     public realpathSync(path: string): string {
