@@ -87,7 +87,7 @@ export class DevkitFileSystem extends FileSystem {
             const {subdirs: directories, subfiles: files} = this.tree.getDir(dirPath);
 
             return {directories, files};
-        } catch (e) {
+        } catch {
             return {directories: [], files: []};
         }
     }
