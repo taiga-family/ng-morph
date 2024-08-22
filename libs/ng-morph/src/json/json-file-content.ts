@@ -51,8 +51,11 @@ export class JSONFileContent {
             const property = jsonPath.slice(-1)[0];
 
             getInsertionIndex = (properties) =>
-                // eslint-disable-next-line @typescript-eslint/require-array-sort-compare
-                [...properties, property].sort().findIndex((p) => p === property);
+                [...properties, property]
+                    .sort(
+                        (a, b) => a?.toString().localeCompare(b?.toString() ?? '') ?? -1,
+                    )
+                    .findIndex((p) => p === property);
         } else if (insertInOrder !== false) {
             getInsertionIndex = insertInOrder;
         }
