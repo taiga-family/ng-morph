@@ -1,5 +1,20 @@
 
 
+* chore(deps): update taiga-ui (#804) (3b9eb82)
+* chore(deps): update taiga-family/ci action to v1.67.1 (#803) (462f7fb)
+* chore(deps): update taiga-ui to v3.91.0 (#802) (b636bcb)
+* chore(deps): update nx to v19.6.1 (#801) (1275f4c)
+* chore(deps): update taiga-ui to v0.143.2 (#800) (9da1207)
+* chore(deps): update dependency @types/node to v22.4.1 (#799) (d6155d7)
+* chore(deps): update taiga-ui to v0.143.1 (#798) (e643e90)
+* chore(deps): update dependency @types/node to v22.4.0 (#797) (cfd52c0)
+* chore(deps): update taiga-ui to v0.143.0 (#796) (9d262cf)
+* chore(deps): update taiga-ui to v0.142.0 (#795) (569fc4e)
+* chore(deps): update taiga-ui to v0.141.0 (#794) (639de18)
+* chore(deps): update taiga-ui to v0.139.1 (#793) (8876ac1)
+* chore(deps): update nx to v19.6.0 (#792) (609f05c)
+* chore(deps): update taiga-family/ci action to v1.67.0 (#791) (c37d99a)
+
 * feat: enable strict mode (#783) (f82a6da)
 * chore(deps): update taiga-ui to v0.139.0 (#790) (8cc04d8)
 * chore(deps): update taiga-family/ci action to v1.66.6 (#789) (5fcd3ab)
