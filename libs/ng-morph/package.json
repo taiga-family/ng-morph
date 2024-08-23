@@ -24,7 +24,7 @@
     "peerDependencies": {
         "@angular-devkit/core": ">=16.0.0",
         "@angular-devkit/schematics": ">=16.0.0",
-        "tslib": "^2.6.3"
+        "tslib": "^2.7.0"
     },
     "authors": [
         "Igor Katsuba <katsuba.igor@gmail.ru>"
