@@ -1,5 +1,13 @@
 
 
+* chore(deps): update dependency tslib to v2.7.0 (#812) (2cdc944)
+* chore(deps): update dependency ts-jest to v29.2.5 (#811) (a9f0f85)
+* chore(deps): update dependency @types/node to v22.5.0 (#809) (91e55f4)
+* chore(deps): update taiga-ui to v0.144.10 (#808) (6d04cbe)
+* chore(deps): update taiga-ui to v0.144.7 (#807) (2a06ba9)
+* chore(deps): update taiga-family/ci action to v1.67.2 (#806) (2ccbf99)
+* chore(deps): update nx to v19.6.2 (#805) (9572d5f)
+
 * chore(deps): update taiga-ui (#804) (3b9eb82)
 * chore(deps): update taiga-family/ci action to v1.67.1 (#803) (462f7fb)
 * chore(deps): update taiga-ui to v3.91.0 (#802) (b636bcb)
