@@ -3,9 +3,6 @@
     "version": "4.6.2",
     "private": true,
     "license": "Apache-2.0",
-    "workspaces": [
-        "libs/*"
-    ],
     "scripts": {
         "ng": "ng",
         "nx": "nx",
@@ -115,6 +112,7 @@
         "jest-preset-angular": "14.2.2",
         "jsonc-parser": "3.3.1",
         "minimatch": "10.0.1",
+        "multimatch": "5.0.0",
         "ngx-highlightjs": "10.0.0",
         "nx": "19.6.2",
         "release-it": "17.6.0",
