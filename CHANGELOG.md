@@ -1,5 +1,14 @@
 
 
+* chore: update (da2bd45)
+* ci: try release (9427358)
+* chore(demo): standalone (5d9a374)
+* chore: remove symlink for ng-morph (a34518b)
+* chore: remove redundant (9eecd04)
+* chore: update (62c6634)
+* chore(deps): update taiga-ui config tools to v0.144.12 (#814) (89f121f)
+* chore(deps): update taiga-family/ci action to v1.67.3 (#813) (28de61d)
+
 * chore(deps): update dependency tslib to v2.7.0 (#812) (2cdc944)
 * chore(deps): update dependency ts-jest to v29.2.5 (#811) (a9f0f85)
 * chore(deps): update dependency @types/node to v22.5.0 (#809) (91e55f4)
