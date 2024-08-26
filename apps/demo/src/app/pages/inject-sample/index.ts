@@ -1,7 +1,6 @@
+import { TuiLink } from "@taiga-ui/core";
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {TuiDocCodeModule, TuiDocPageModule} from '@taiga-ui/addon-doc';
-import {TuiLinkModule} from '@taiga-ui/core';
-
+import { TuiAddonDoc } from '@taiga-ui/addon-doc';
 const example = `import {
   setActiveProject,
   createProject,
@@ -72,7 +71,7 @@ function fixInjectImport(file: string) {
 
 @Component({
     standalone: true,
-    imports: [TuiDocCodeModule, TuiDocPageModule, TuiLinkModule],
+    imports: [TuiAddonDoc, TuiLink],
     templateUrl: './index.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
