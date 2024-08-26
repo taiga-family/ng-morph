@@ -1,6 +1,5 @@
-import type {TuiDocPages} from '@taiga-ui/addon-doc';
-
-export const pages: TuiDocPages = [
+import { TuiDocRoutePages } from "@taiga-ui/addon-doc";
+export const pages: TuiDocRoutePages = [
     {
         section: 'Starting',
         title: 'Getting started',

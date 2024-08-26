@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {TuiDocCodeModule, TuiDocPageModule} from '@taiga-ui/addon-doc';
+import { TuiAddonDoc } from '@taiga-ui/addon-doc';
 
 const bootstrap = `import {
     getBootstrapFn,
@@ -36,7 +36,7 @@ addProviderToBootstrapApplicationFn(bootstrapFn, 'provideRouter()');
 
 @Component({
     standalone: true,
-    imports: [TuiDocCodeModule, TuiDocPageModule],
+    imports: [TuiAddonDoc],
     templateUrl: './index.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
