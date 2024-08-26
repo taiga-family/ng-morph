@@ -3,108 +3,63 @@ import type {Route} from '@angular/router';
 export const ROUTES: Route[] = [
     {
         path: 'getting-started',
-        loadChildren: async () =>
-            (await import('./getting-started/getting-started.module'))
-                .GettingStartedModule,
-        data: {
-            title: 'Getting started',
-        },
+        data: {title: 'Getting started'},
+        loadComponent: async () => import('./getting-started'),
     },
     {
         path: 'classes',
-        loadChildren: async () =>
-            (await import('./modules/classes/classes.module')).ClassesModule,
-        data: {
-            title: 'Classes',
-        },
+        data: {title: 'Classes'},
+        loadComponent: async () => import('./pages/classes'),
     },
     {
         path: 'interfaces',
-        loadChildren: async () =>
-            (await import('./modules/interfaces/interfaces.module')).InterfacesModule,
-        data: {
-            title: 'Interfaces',
-        },
+        data: {title: 'Interfaces'},
+        loadComponent: async () => import('./pages/interfaces'),
     },
     {
         path: 'variables',
-        loadChildren: async () =>
-            (await import('./modules/variables/variables.module')).VariablesModule,
-        data: {
-            title: 'Variables',
-        },
+        data: {title: 'Variables'},
+        loadComponent: async () => import('./pages/variables'),
     },
     {
         path: 'imports-and-exports',
-        loadChildren: async () =>
-            (await import('./modules/imports-and-exports/imports-and-exports.module'))
-                .ImportsAndExportsModule,
-        data: {
-            title: 'Imports and Exports',
-        },
+        data: {title: 'Imports and Exports'},
+        loadComponent: async () => import('./pages/imports-and-exports'),
     },
     {
         path: 'enums',
-        loadChildren: async () =>
-            (await import('./modules/enums/enums.module')).EnumsModule,
-        data: {
-            title: 'Enums',
-        },
+        data: {title: 'Enums'},
+        loadComponent: async () => import('./pages/enums'),
     },
     {
         path: 'functions',
-        loadChildren: async () =>
-            (await import('./modules/functions/functions.module')).FunctionsModule,
-        data: {
-            title: 'Functions',
-        },
+        data: {title: 'Functions'},
+        loadComponent: async () => import('./pages/functions'),
     },
     {
         path: 'types',
-        loadChildren: async () =>
-            (await import('./modules/types/types.module')).TypesModule,
-        data: {
-            title: 'Types',
-        },
+        data: {title: 'Types'},
+        loadComponent: async () => import('./pages/types'),
     },
     {
         path: 'get-main-module',
-        loadChildren: async () =>
-            (await import('./modules/get-main-module/get-main-module.module'))
-                .GetMainModuleModule,
-        data: {
-            title: 'Get main module',
-        },
+        data: {title: 'Get main module'},
+        loadComponent: async () => import('./pages/get-main-module'),
     },
     {
         path: 'get-bootstrap-function',
-        loadChildren: async () =>
-            (
-                await import(
-                    './modules/get-bootstrap-function/get-bootstrap-function.module'
-                )
-            ).GetBootstrapFunctionModule,
-        data: {
-            title: 'Get bootstrap function',
-        },
+        data: {title: 'Get bootstrap function'},
+        loadComponent: async () => import('./pages/get-bootstrap-function'),
     },
     {
         path: 'source-files',
-        loadChildren: async () =>
-            (await import('./modules/source-files/source-files.module'))
-                .SourceFilesModule,
-        data: {
-            title: 'Source files',
-        },
+        data: {title: 'Source files'},
+        loadComponent: async () => import('./pages/source-files'),
     },
     {
         path: 'inject-sample',
-        loadChildren: async () =>
-            (await import('./modules/inject-sample/inject-sample.module'))
-                .InjectSampleModule,
-        data: {
-            title: '@Inject -> inject example',
-        },
+        data: {title: '@Inject -> inject example'},
+        loadComponent: async () => import('./pages/inject-sample'),
     },
     {path: '**', redirectTo: 'getting-started'},
 ];
