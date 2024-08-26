@@ -7,7 +7,7 @@
 Code mutations were never easier than now.
 
 ```
-npm i --save-dev ng-morph
+npm i ng-morph -D
 ```
 
 You also need `@angular-devkit/core` and `@angular-devkit/schematics` to be installed.
