@@ -87,6 +87,7 @@
         "@nx/node": "19.6.2",
         "@nx/workspace": "19.6.2",
         "@release-it-plugins/workspaces": "4.2.0",
+        "@release-it/bumper": "6.0.1",
         "@release-it/conventional-changelog": "8.0.1",
         "@schematics/angular": "16.2.14",
         "@taiga-ui/addon-doc": "3.92.0",

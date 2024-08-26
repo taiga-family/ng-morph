@@ -1,4 +1,5 @@
 {
+    "$schema": "https://unpkg.com/release-it@17/schema/release-it.json",
     "git": {
         "commitMessage": "chore(release): v${version}",
         "tagName": "v${version}"
@@ -13,9 +14,11 @@
         "allowSameVersion": true
     },
     "plugins": {
-        "@release-it-plugins/workspaces": {
-            "skipChecks": true,
-            "publish": false
+        "@release-it/bumper": {
+            "out": {
+                "file": "libs/ng-morph/package.json",
+                "path": "version"
+            }
         },
         "@release-it/conventional-changelog": {
             "preset": "angular",
