@@ -1,5 +1,20 @@
 
 
+* chore(deps): update dependency nx to v19.6.4 (#833) (eeede60)
+* chore(deps): update taiga-family/ci action to v1.71.0 (#832) (547e510)
+* chore(deps): update taiga-family/ci action to v1.70.1 (#831) (2c26587)
+* chore(deps): update taiga-ui family to v0.145.0 (#830) (a22dc35)
+* chore(deps): update taiga-config to v0.144.19 (#829) (4f8e043)
+* chore(deps): update dependency @types/node to v22.5.1 (#828) (dd006a4)
+* chore(deps): update taiga-config to v0.144.17 (#827) (5499e90)
+* chore(deps): update dependency @taiga-ui/cspell-config to v0.144.15 (#825) (3aeb9de)
+* chore(deps): update dependency @taiga-ui/browserslist-config to v0.144.15 (#823) (3c9315e)
+* chore(deps): update dependency @taiga-ui/commitlint-config to v0.144.15 (#824) (ca02afd)
+* chore(deps): update nx to v19.6.3 (#821) (dc20860)
+* chore(deps): update taiga-ui config tools to v0.144.14 (#820) (616f8d8)
+* chore(deps): update dependency @taiga-ui/cdk to v3.93.0 (#819) (8f14ace)
+* chore(deps): update taiga-ui config tools to v0.144.13 (#816) (3199a90)
+
 * chore: update (da2bd45)
 * ci: try release (9427358)
 * chore(demo): standalone (5d9a374)
