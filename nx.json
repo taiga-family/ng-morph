@@ -1,7 +1,4 @@
 {
-    "affected": {
-        "defaultBase": "main"
-    },
     "tasksRunnerOptions": {
         "default": {
             "options": {
@@ -39,5 +36,6 @@
             "!{projectRoot}/tsconfig.spec.json",
             "!{projectRoot}/jest.config.[jt]s"
         ]
-    }
+    },
+    "defaultBase": "main"
 }

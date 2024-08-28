@@ -3,6 +3,7 @@
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/ng-morph/src",
     "projectType": "library",
+    "tags": [],
     "targets": {
         "lint": {
             "executor": "@nx/linter:eslint",
@@ -36,6 +37,5 @@
                 "command": "export TAG=\"$(node -p \"require('./package.json')?.version?.includes('alpha') ? 'alpha' : 'latest'\")\" && npm publish --tag $TAG ./dist/libs/ng-morph --access=public --verbose --ignore-scripts || echo 'already published'"
             }
         }
-    },
-    "tags": []
+    }
 }
