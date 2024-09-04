@@ -19,6 +19,7 @@
         "affected:libs": "nx affected:libs",
         "affected:build": "nx affected:build",
         "affected:test": "nx affected:test",
+        "stylelint": "stylelint '**/*.{less,css}' --config package.json",
         "affected:lint": "nx affected:lint",
         "affected:dep-graph": "nx affected:dep-graph",
         "affected": "nx affected",
@@ -62,7 +63,6 @@
             "@taiga-ui/stylelint-config"
         ],
         "ignoreFiles": [
-            "**/demo/**",
             "**/dist/**",
             "**/coverage/**",
             "**/node_modules/**"
