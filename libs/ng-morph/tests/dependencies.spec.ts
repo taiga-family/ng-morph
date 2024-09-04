@@ -71,8 +71,10 @@ describe('dependencies', () => {
             });
         });
 
-        it('should throw when missing package.json', () => {
-            expect(() => addPackageJsonDependency(new EmptyTree(), dependency)).toThrow();
+        it('do not anything when missing package.json', () => {
+            expect(() =>
+                addPackageJsonDependency(new EmptyTree(), dependency),
+            ).not.toThrow();
         });
     });
 
