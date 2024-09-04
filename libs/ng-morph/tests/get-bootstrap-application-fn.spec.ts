@@ -34,7 +34,7 @@ bootstrapApplication(AppComponent)
         );
         const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 
-        expect(bootstrapFn.getText()).toBe('bootstrapApplication(AppComponent)');
+        expect(bootstrapFn?.getText()).toBe('bootstrapApplication(AppComponent)');
         expect(Node.isCallExpression(bootstrapFn)).toBe(true);
     });
 

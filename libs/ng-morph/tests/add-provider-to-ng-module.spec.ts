@@ -33,10 +33,11 @@ export class SomeModule {
         });
 
         it('should create the providers property', () => {
-            addProviderToNgModule(
-                getClasses('src/main.ts', {name: 'SomeModule'})[0],
-                'TestService',
-            );
+            const classFile = getClasses('src/main.ts', {name: 'SomeModule'})[0];
+
+            if (classFile) {
+                addProviderToNgModule(classFile, 'TestService');
+            }
 
             saveActiveProject();
 
@@ -66,10 +67,11 @@ export class SomeModule {
         });
 
         it('should create the providers property', () => {
-            addProviderToNgModule(
-                getClasses('src/main.ts', {name: 'SomeModule'})[0],
-                'TestService',
-            );
+            const classFile = getClasses('src/main.ts', {name: 'SomeModule'})[0];
+
+            if (classFile) {
+                addProviderToNgModule(classFile, 'TestService');
+            }
 
             saveActiveProject();
 
@@ -100,10 +102,11 @@ export class SomeModule {
         });
 
         it('should add module to providers', () => {
-            addProviderToNgModule(
-                getClasses('src/main.ts', {name: 'SomeModule'})[0],
-                'TestService',
-            );
+            const classFile = getClasses('src/main.ts', {name: 'SomeModule'})[0];
+
+            if (classFile) {
+                addProviderToNgModule(classFile, 'TestService');
+            }
 
             saveActiveProject();
 
@@ -137,11 +140,11 @@ export class SomeModule {
         });
 
         it('should not add duplicate module to providers', () => {
-            addProviderToNgModule(
-                getClasses('src/main.ts', {name: 'SomeModule'})[0],
-                'CommonService',
-                {unique: true},
-            );
+            const classFile = getClasses('src/main.ts', {name: 'SomeModule'})[0];
+
+            if (classFile) {
+                addProviderToNgModule(classFile, 'CommonService', {unique: true});
+            }
 
             saveActiveProject();
 
@@ -175,11 +178,11 @@ export class SomeModule {
         });
 
         it('should wrap const with array and push new provider', () => {
-            addProviderToNgModule(
-                getClasses('src/main.ts', {name: 'SomeModule'})[0],
-                'CommonService',
-                {unique: true},
-            );
+            const classFile = getClasses('src/main.ts', {name: 'SomeModule'})[0];
+
+            if (classFile) {
+                addProviderToNgModule(classFile, 'CommonService', {unique: true});
+            }
 
             saveActiveProject();
 
@@ -213,11 +216,12 @@ export class SomeModule {
         });
 
         it('should not add service to providers', () => {
-            addProviderToNgModule(
-                getClasses('src/main.ts', {name: 'SomeModule'})[0],
-                'NewService',
-                {unique: true},
-            );
+            const classFile = getClasses('src/main.ts', {name: 'SomeModule'})[0];
+
+            if (classFile) {
+                addProviderToNgModule(classFile, 'NewService', {unique: true});
+            }
+
             saveActiveProject();
 
             expect(host.readContent('src/main.ts'))

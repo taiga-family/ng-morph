@@ -36,7 +36,7 @@ platformBrowserDynamic()
         );
         const bootstrapFn = getBootstrapFn('src/main.ts');
 
-        expect(bootstrapFn.getText()).toBe(`platformBrowserDynamic()
+        expect(bootstrapFn?.getText()).toBe(`platformBrowserDynamic()
   .bootstrapModule(AppModule)`);
         expect(Node.isCallExpression(bootstrapFn)).toBe(true);
     });

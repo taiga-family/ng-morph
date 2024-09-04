@@ -33,10 +33,11 @@ export class SomeModule {
         });
 
         it('should create the schemas property', () => {
-            addSchemaToNgModule(
-                getClasses('src/main.ts', {name: 'SomeModule'})[0],
-                'CUSTOM_ELEMENTS_SCHEMA',
-            );
+            const classFile = getClasses('src/main.ts', {name: 'SomeModule'})[0];
+
+            if (classFile) {
+                addSchemaToNgModule(classFile, 'CUSTOM_ELEMENTS_SCHEMA');
+            }
 
             saveActiveProject();
 
@@ -66,10 +67,11 @@ export class SomeModule {
         });
 
         it('should create the schemas property', () => {
-            addSchemaToNgModule(
-                getClasses('src/main.ts', {name: 'SomeModule'})[0],
-                'CUSTOM_ELEMENTS_SCHEMA',
-            );
+            const classFile = getClasses('src/main.ts', {name: 'SomeModule'})[0];
+
+            if (classFile) {
+                addSchemaToNgModule(classFile, 'CUSTOM_ELEMENTS_SCHEMA');
+            }
 
             saveActiveProject();
 
@@ -100,10 +102,11 @@ export class SomeModule {
         });
 
         it('should add module to schemas', () => {
-            addSchemaToNgModule(
-                getClasses('src/main.ts', {name: 'SomeModule'})[0],
-                'CUSTOM_ELEMENTS_SCHEMA',
-            );
+            const classFile = getClasses('src/main.ts', {name: 'SomeModule'})[0];
+
+            if (classFile) {
+                addSchemaToNgModule(classFile, 'CUSTOM_ELEMENTS_SCHEMA');
+            }
 
             saveActiveProject();
 

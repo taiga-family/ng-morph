@@ -33,12 +33,13 @@ export class SomeDirective {
         });
 
         it('should create the providers property', () => {
-            addProviderToDirective(
-                getClasses('src/main.ts', {
-                    name: 'SomeDirective',
-                })[0],
-                'TestProvider',
-            );
+            const classFile = getClasses('src/main.ts', {
+                name: 'SomeDirective',
+            })[0];
+
+            if (classFile) {
+                addProviderToDirective(classFile, 'TestProvider');
+            }
 
             saveActiveProject();
 
@@ -68,12 +69,13 @@ export class SomeDirective {
         });
 
         it('should create the providers property', () => {
-            addProviderToDirective(
-                getClasses('src/main.ts', {
-                    name: 'SomeDirective',
-                })[0],
-                'TestProvider',
-            );
+            const classFile = getClasses('src/main.ts', {
+                name: 'SomeDirective',
+            })[0];
+
+            if (classFile) {
+                addProviderToDirective(classFile, 'TestProvider');
+            }
 
             saveActiveProject();
 
@@ -104,12 +106,13 @@ export class SomeDirective {
         });
 
         it('should add module to providers', () => {
-            addProviderToDirective(
-                getClasses('src/main.ts', {
-                    name: 'SomeDirective',
-                })[0],
-                'NewTestService',
-            );
+            const classFile = getClasses('src/main.ts', {
+                name: 'SomeDirective',
+            })[0];
+
+            if (classFile) {
+                addProviderToDirective(classFile, 'NewTestService');
+            }
 
             saveActiveProject();
 

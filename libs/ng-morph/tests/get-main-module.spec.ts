@@ -44,7 +44,7 @@ export class AppModule {
     it('should find the AppModule class', () => {
         const classDeclaration = getMainModule('src/main.ts');
 
-        expect(classDeclaration.getText()).toBe(`@NgModule()
+        expect(classDeclaration?.getText()).toBe(`@NgModule()
 export class AppModule {
 
 }`);

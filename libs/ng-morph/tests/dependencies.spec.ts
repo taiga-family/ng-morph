@@ -98,9 +98,9 @@ describe('dependencies', () => {
         it('should get a dependency', () => {
             const dep = getPackageJsonDependency(tree, 'my-pkg');
 
-            expect(dep.type).toEqual(NodeDependencyType.Default);
-            expect(dep.name).toBe('my-pkg');
-            expect(dep.version).toBe('1.2.3');
+            expect(dep?.type).toEqual(NodeDependencyType.Default);
+            expect(dep?.name).toBe('my-pkg');
+            expect(dep?.version).toBe('1.2.3');
         });
 
         it('should return null if dependency does not exist', () => {

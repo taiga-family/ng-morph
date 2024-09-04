@@ -33,12 +33,13 @@ export class SomeComponent {
         });
 
         it('should create the providers property', () => {
-            addStyleUrlToComponent(
-                getClasses('src/main.ts', {
-                    name: 'SomeComponent',
-                })[0],
-                '"./style.less"',
-            );
+            const classFile = getClasses('src/main.ts', {
+                name: 'SomeComponent',
+            })[0];
+
+            if (classFile) {
+                addStyleUrlToComponent(classFile, '"./style.less"');
+            }
 
             saveActiveProject();
 
@@ -68,12 +69,13 @@ export class SomeComponent {
         });
 
         it('should create the providers property', () => {
-            addStyleUrlToComponent(
-                getClasses('src/main.ts', {
-                    name: 'SomeComponent',
-                })[0],
-                '"./style.less"',
-            );
+            const classFile = getClasses('src/main.ts', {
+                name: 'SomeComponent',
+            })[0];
+
+            if (classFile) {
+                addStyleUrlToComponent(classFile, '"./style.less"');
+            }
 
             saveActiveProject();
 
@@ -104,12 +106,13 @@ export class SomeComponent {
         });
 
         it('should add module to providers', () => {
-            addStyleUrlToComponent(
-                getClasses('src/main.ts', {
-                    name: 'SomeComponent',
-                })[0],
-                '"./new-style.less"',
-            );
+            const classFile = getClasses('src/main.ts', {
+                name: 'SomeComponent',
+            })[0];
+
+            if (classFile) {
+                addStyleUrlToComponent(classFile, '"./new-style.less"');
+            }
 
             saveActiveProject();
 

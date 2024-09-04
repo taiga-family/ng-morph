@@ -30,9 +30,11 @@ bootstrapApplication(AppComponent)
         );
         const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 
-        addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp()');
+        if (bootstrapFn) {
+            addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp()');
+        }
 
-        expect(bootstrapFn.getText()).toBe(
+        expect(bootstrapFn?.getText()).toBe(
             'bootstrapApplication(AppComponent, {providers: [provideApp()]})',
         );
     });
@@ -48,9 +50,11 @@ bootstrapApplication(AppComponent, {providers: [provideApp()]})
         );
         const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 
-        addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp2()');
+        if (bootstrapFn) {
+            addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp2()');
+        }
 
-        expect(bootstrapFn.getText()).toBe(
+        expect(bootstrapFn?.getText()).toBe(
             'bootstrapApplication(AppComponent, {providers: [provideApp(), provideApp2()]})',
         );
     });
@@ -66,11 +70,13 @@ bootstrapApplication(AppComponent, {providers: [provideApp()]})
         );
         const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
 
-        addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp()', {
-            unique: true,
-        });
+        if (bootstrapFn) {
+            addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp()', {
+                unique: true,
+            });
+        }
 
-        expect(bootstrapFn.getText()).toBe(
+        expect(bootstrapFn?.getText()).toBe(
             'bootstrapApplication(AppComponent, {providers: [provideApp()]})',
         );
     });
@@ -87,11 +93,13 @@ bootstrapApplication(AppComponent, options)
 `,
         );
         const bootstrapFn = getBootstrapApplicationFn('src/main.ts');
-        const [options] = getVariables('src/main.ts')[0].getDeclarations();
+        const [options] = getVariables('src/main.ts')[0]?.getDeclarations() ?? [];
 
-        addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp2()');
+        if (bootstrapFn) {
+            addProviderToBootstrapApplicationFn(bootstrapFn, 'provideApp2()');
+        }
 
-        expect(options.getText()).toBe(
+        expect(options?.getText()).toBe(
             'options = {providers: [provideApp(), provideApp2()]}',
         );
     });

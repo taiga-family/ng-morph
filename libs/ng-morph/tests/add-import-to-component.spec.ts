@@ -33,12 +33,13 @@ export class SomeComponent {
         });
 
         it('should create the providers property', () => {
-            addImportToComponent(
-                getClasses('src/main.ts', {
-                    name: 'SomeComponent',
-                })[0],
-                'TestImport',
-            );
+            const classFile = getClasses('src/main.ts', {
+                name: 'SomeComponent',
+            })[0];
+
+            if (classFile) {
+                addImportToComponent(classFile, 'TestImport');
+            }
 
             saveActiveProject();
 
@@ -68,12 +69,13 @@ export class SomeComponent {
         });
 
         it('should create the providers property', () => {
-            addImportToComponent(
-                getClasses('src/main.ts', {
-                    name: 'SomeComponent',
-                })[0],
-                'TestImport',
-            );
+            const classFile = getClasses('src/main.ts', {
+                name: 'SomeComponent',
+            })[0];
+
+            if (classFile) {
+                addImportToComponent(classFile, 'TestImport');
+            }
 
             saveActiveProject();
 
@@ -104,12 +106,13 @@ export class SomeComponent {
         });
 
         it('should add module to providers', () => {
-            addImportToComponent(
-                getClasses('src/main.ts', {
-                    name: 'SomeComponent',
-                })[0],
-                'NewTestImport',
-            );
+            const classFile = getClasses('src/main.ts', {
+                name: 'SomeComponent',
+            })[0];
+
+            if (classFile) {
+                addImportToComponent(classFile, 'NewTestImport');
+            }
 
             saveActiveProject();
 
