@@ -10,13 +10,16 @@ export function getDeclarationGetter<
 >(getFn: (pattern: Pattern) => Declaration[]) {
     return function getDeclaration(
         pattern: Pattern,
-        query?: Query<Omit<Structure, 'kind'>>,
+        query?: Query<Structure>,
     ): Declaration[] {
-        return getFn(pattern).filter((declaration) =>
-            // TODO: refactor it to support new typings
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            matchQuery(declaration.getStructure(), query),
-        );
+        return getFn(pattern).filter((declaration) => {
+            try {
+                return matchQuery(declaration.getStructure(), query);
+            } catch (error: unknown) {
+                const filePath = declaration.getSourceFile().getFilePath();
+
+                throw new Error(`Error in ${filePath}\n${(error as Error).message}`);
+            }
+        });
     };
 }

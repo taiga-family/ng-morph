@@ -57,15 +57,15 @@ function coerceName<T extends string>(name: T | {name: T}): T {
 }
 
 export function matchQuery<T extends Structure>(
-    value: Record<any, any> & T,
+    value: Record<any, any> | T,
     query?: Query<T> & Record<any, any>,
 ): boolean {
     return (
         !query ||
         Object.keys(query).every((key) =>
-            coerceArray(value[key])
+            coerceArray((value as unknown as Record<any, any>)?.[key])
                 .map(coerceName)
-                .some((v) => {
+                .some((v: unknown) => {
                     const patterns = coerceArray(query[key]);
 
                     return typeof v === 'string'
