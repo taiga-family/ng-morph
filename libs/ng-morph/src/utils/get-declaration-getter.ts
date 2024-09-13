@@ -16,9 +16,12 @@ export function getDeclarationGetter<
             try {
                 return matchQuery(declaration.getStructure(), query);
             } catch (error: unknown) {
-                const filePath = declaration.getSourceFile().getFilePath();
+                const path = declaration.getSourceFile().getFilePath();
+                const err = error as Error;
 
-                throw new Error(`Error in ${filePath}\n${(error as Error).message}`);
+                throw new Error(
+                    `An error occurred in ${path}\n${err.message}\n${err.stack}`,
+                );
             }
         });
     };
