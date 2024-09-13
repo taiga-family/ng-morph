@@ -4,7 +4,8 @@
         "module": "commonjs",
         "outDir": "../../dist/out-tsc",
         "declaration": true,
-        "sourceMap": true,
+        "inlineSourceMap": true,
+        "lib": ["esnext"],
         "types": ["node"]
     },
     "exclude": ["**/*.spec.ts", "jest.config.ts"],
