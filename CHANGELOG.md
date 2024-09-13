@@ -1,5 +1,7 @@
 
 
+* feat: add file path in error result (#885) (3963cec)
+
 * feat: inline source map (8bbaeed)
 * chore(deps): update nx to v19.7.3 (#883) (aab6720)
 * chore(deps): update taiga-family/ci action to v1.73.0 (#882) (11f9097)
