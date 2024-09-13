@@ -1,5 +1,8 @@
 
 
+* fix: add error stack (#887) (a3738a0)
+* chore(deps): update taiga-ui dev infra to v0.174.1 (#886) (48a6dc0)
+
 * feat: add file path in error result (#885) (3963cec)
 
 * feat: inline source map (8bbaeed)
