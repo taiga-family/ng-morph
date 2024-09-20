@@ -7,31 +7,38 @@ on:
       - libs/ng-morph/**
   workflow_dispatch:
     inputs:
-      forcePush:
-        type: boolean
-        required: false
-        description: --force-publish package
       mode:
         type: choice
-        description: force package to be versioned (depend --force-publish)
-        required: false
-        default: minor
+        description: Bump version as requested
+        required: true
         options:
-          - patch
           - minor
+          - patch
           - major
-          - prepatch
 
 jobs:
   release:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
     steps:
-      - uses: taiga-family/ci/actions/setup/checkout@v1.79.0
-      - uses: taiga-family/ci/actions/run/release-it@v1.79.0
+      - uses: taiga-family/ci/actions/setup/checkout@v1.80.0
+      - uses: taiga-family/ci/actions/run/release-it@v1.80.0
         with:
           ref: ${{ github.ref }}
-          githubToken: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
-          npmToken: ${{ secrets.NPM_TOKEN }}
-          forcePush: ${{ github.event.inputs.forcePush }}
           mode: ${{ github.event.inputs.mode }}
+          npmToken: ${{ secrets.NPM_TOKEN }}
+          githubToken: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
+
+      - id: info
+        run: |
+          echo "version=v$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+          echo "name=$(node -p "require('./package.json').name")" >> $GITHUB_OUTPUT
+
+      - name: Announce to Telegram
+        uses: taiga-family/ci/actions/messenger/telegram/announce@v1.80.0
+        with:
+          chatId: ${{ secrets.TAIGA_TELEGRAM_CHAT_ID }}
+          topicId: ${{ secrets.TAIGA_TELEGRAM_CHAT_THREAD_ID }}
+          token: ${{ secrets.TAIGA_TELEGRAM_BOT_TOKEN }}
+          version: ${{ steps.info.outputs.version }}
+          textLink: ${{ steps.info.outputs.name }}

@@ -3,20 +3,19 @@
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "sourceRoot": "libs/ng-morph/src",
     "projectType": "library",
-    "tags": [],
     "targets": {
         "lint": {
             "executor": "@nx/linter:eslint",
             "options": {
-                "lintFilePatterns": ["libs/ng-morph/**/*.ts"]
+                "lintFilePatterns": ["libs/{projectName}/**/*.ts"]
             },
             "outputs": ["{options.outputFile}"]
         },
         "test": {
             "executor": "@nx/jest:jest",
-            "outputs": ["{workspaceRoot}/coverage/libs/ng-morph"],
+            "outputs": ["{workspaceRoot}/coverage/{projectName}/ng-morph"],
             "options": {
-                "jestConfig": "libs/ng-morph/jest.config.ts",
+                "jestConfig": "libs/{projectName}/jest.config.ts",
                 "passWithNoTests": true
             }
         },
@@ -24,18 +23,31 @@
             "executor": "@nx/js:tsc",
             "outputs": ["{options.outputPath}"],
             "options": {
-                "outputPath": "dist/libs/ng-morph",
-                "tsConfig": "libs/ng-morph/tsconfig.lib.json",
-                "packageJson": "libs/ng-morph/package.json",
-                "main": "libs/ng-morph/src/index.ts",
-                "assets": ["libs/ng-morph/*.md"]
+                "outputPath": "dist/{projectName}",
+                "tsConfig": "libs/{projectName}/tsconfig.lib.json",
+                "packageJson": "libs/{projectName}/package.json",
+                "main": "libs/{projectName}/src/index.ts",
+                "assets": ["libs/{projectName}/*.md"]
+            }
+        },
+        "prepublish": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "cp ./LICENSE ./README.md ./dist/{projectName}"
             }
         },
         "publish": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "export TAG=\"$(node -p \"require('./package.json')?.version?.includes('alpha') ? 'alpha' : 'latest'\")\" && npm publish --tag $TAG ./dist/libs/ng-morph --access=public --verbose --ignore-scripts || echo 'already published'"
-            }
+                "command": "npm publish ./dist/{projectName} --ignore-scripts"
+            },
+            "dependsOn": [
+                {
+                    "target": "prepublish",
+                    "params": "ignore",
+                    "dependencies": false
+                }
+            ]
         }
     }
 }
