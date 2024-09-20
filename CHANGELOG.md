@@ -1,217 +1,170 @@
+# Changelog
 
+All notable changes to this project will be documented in this file. See
+[standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-* fix: add error stack (#887) (a3738a0)
-* chore(deps): update taiga-ui dev infra to v0.174.1 (#886) (48a6dc0)
+### [4.8.2](https://github.com/taiga-family/ng-morph/compare/v4.8.1...v4.8.2) (2024-09-20)
 
-* feat: add file path in error result (#885) (3963cec)
+### 🐞 Bug Fixes
 
-* feat: inline source map (8bbaeed)
-* chore(deps): update nx to v19.7.3 (#883) (aab6720)
-* chore(deps): update taiga-family/ci action to v1.73.0 (#882) (11f9097)
-* chore(deps): update dependency @types/jest to v29.5.13 (#881) (b329737)
-* chore(deps): update taiga-ui dev infra to v0.174.0 (#880) (330cffb)
-* chore(deps): update dependency jest-preset-angular to v14.2.4 (#879) (4d123fd)
-* chore(deps): update dependency @release-it/conventional-changelog to v8.0.2 (#878) (05b454d)
-* chore(deps): update taiga-ui dev infra to v0.171.0 (#877) (a106b67)
-* chore(deps): update taiga-ui dev infra to v0.170.0 (#876) (d6ce276)
-* chore(deps): update taiga-family/ci action to v1.72.0 (#875) (a72135b)
-* chore(deps): update taiga-ui dev infra to v0.169.1 (#874) (de3d012)
-* chore(deps): update taiga-ui dev infra to v0.169.0 (#873) (7652a4c)
-* chore(deps): update taiga-ui cdk to v3.94.0 (#872) (f61feeb)
-* chore(deps): update taiga-ui dev infra to v0.168.0 (#871) (2eb0e9a)
-* chore(deps): update nx to v19.7.2 (#870) (cc1efc4)
-* chore(deps): update nx to v19.7.1 (#869) (2edd148)
-* chore(deps): update taiga-ui dev infra to v0.166.0 (#868) (393aa8d)
-* chore(deps): update nx to v19.7.0 (#867) (76e1c5c)
-* chore(deps): update taiga-ui dev infra to v0.164.2 (#866) (b18568e)
-* chore(deps): update taiga-ui dev infra to v0.164.1 (#865) (864bdca)
-* chore(deps): update nx to v19.6.6 (#864) (1f285fe)
-* chore(deps): update taiga-ui dev infra to v0.164.0 (#863) (fac49f6)
-* chore(deps): update taiga-ui dev infra to v0.163.0 (#862) (9fc4188)
-* chore(deps): update taiga-ui dev infra to v0.162.0 (#861) (f24bfe8)
-* chore(deps): update taiga-ui dev infra to v0.161.0 (#860) (9aaab99)
-* chore(deps): update taiga-ui dev infra to v0.160.1 (#859) (29d50f3)
-* chore(deps): update taiga-ui dev infra to v0.160.0 (#858) (e3fd6d2)
-* chore(deps): update taiga-ui dev infra to v0.159.1 (#857) (c61d58b)
-* chore(deps): update taiga-ui dev infra to v0.159.0 (#856) (011a0e6)
-* chore(deps): update taiga-ui dev infra to v0.158.0 (#855) (0f8e446)
-* chore(deps): update taiga-ui dev infra to v0.157.1 (#854) (6c026ee)
-* chore(deps): update taiga-ui dev infra to v0.157.0 (#853) (e7407de)
-* chore(deps): update dependency @types/node to v22.5.4 (#852) (eb75f90)
-* chore(deps): update taiga-ui dev infra to v0.156.1 (#851) (194f18c)
-* chore(deps): update taiga-ui dev infra to v0.156.0 (#850) (c4c274b)
-* chore(deps): update taiga-family/ci action to v1.71.2 (#849) (6082aec)
-* chore(deps): update nx to v19.6.5 (#848) (5e538bc)
-* chore(deps): update dependency @types/node to v22.5.3 (#847) (27fd3e4)
-* chore: update (a1794ea)
-* chore: update (58e2ea4)
-* chore: update (9cc2965)
-* chore(deps): update taiga-ui dev infra to v0.147.10 (#844) (dd23ba7)
-* chore(deps): update ng to v16.2.15 (#843) (a2bdbee)
-* chore(deps): update dependency highlight.js to v11.10.0 (#842) (c6e7ed9)
-* chore(deps): update taiga-ui family to v0.147.9 (#841) (a9de3a4)
-* chore(deps): update taiga-ui family to v0.147.8 (#840) (10b1c4e)
-* chore(deps): update taiga-ui family to v0.147.5 (#839) (b0642f1)
-* chore(deps): update taiga-ui family to v0.147.4 (#838) (76047bc)
-* chore(deps): update taiga-family/ci action to v1.71.1 (#837) (6eec8e5)
-* chore(deps): update taiga-ui family to v0.147.2 (#836) (e1503aa)
-* chore(deps): update taiga-ui family to v0.147.1 (#835) (2b6ac8b)
-* chore(deps): update taiga-ui family to v0.147.0 (#834) (f686bcd)
+- forgot publish licence
+  [(4d7de6d)](https://github.com/taiga-family/ng-morph/commit/4d7de6dd0409b41d955b99372f14198f4a5b7d19)
 
-* chore(deps): update dependency nx to v19.6.4 (#833) (eeede60)
-* chore(deps): update taiga-family/ci action to v1.71.0 (#832) (547e510)
-* chore(deps): update taiga-family/ci action to v1.70.1 (#831) (2c26587)
-* chore(deps): update taiga-ui family to v0.145.0 (#830) (a22dc35)
-* chore(deps): update taiga-config to v0.144.19 (#829) (4f8e043)
-* chore(deps): update dependency @types/node to v22.5.1 (#828) (dd006a4)
-* chore(deps): update taiga-config to v0.144.17 (#827) (5499e90)
-* chore(deps): update dependency @taiga-ui/cspell-config to v0.144.15 (#825) (3aeb9de)
-* chore(deps): update dependency @taiga-ui/browserslist-config to v0.144.15 (#823) (3c9315e)
-* chore(deps): update dependency @taiga-ui/commitlint-config to v0.144.15 (#824) (ca02afd)
-* chore(deps): update nx to v19.6.3 (#821) (dc20860)
-* chore(deps): update taiga-ui config tools to v0.144.14 (#820) (616f8d8)
-* chore(deps): update dependency @taiga-ui/cdk to v3.93.0 (#819) (8f14ace)
-* chore(deps): update taiga-ui config tools to v0.144.13 (#816) (3199a90)
+### [4.8.1](https://github.com/taiga-family/ng-morph/compare/v4.8.0...v4.8.1) (2024-09-13)
 
-* chore: update (da2bd45)
-* ci: try release (9427358)
-* chore(demo): standalone (5d9a374)
-* chore: remove symlink for ng-morph (a34518b)
-* chore: remove redundant (9eecd04)
-* chore: update (62c6634)
-* chore(deps): update taiga-ui config tools to v0.144.12 (#814) (89f121f)
-* chore(deps): update taiga-family/ci action to v1.67.3 (#813) (28de61d)
+### 🐞 Bug Fixes
 
-* chore(deps): update dependency tslib to v2.7.0 (#812) (2cdc944)
-* chore(deps): update dependency ts-jest to v29.2.5 (#811) (a9f0f85)
-* chore(deps): update dependency @types/node to v22.5.0 (#809) (91e55f4)
-* chore(deps): update taiga-ui to v0.144.10 (#808) (6d04cbe)
-* chore(deps): update taiga-ui to v0.144.7 (#807) (2a06ba9)
-* chore(deps): update taiga-family/ci action to v1.67.2 (#806) (2ccbf99)
-* chore(deps): update nx to v19.6.2 (#805) (9572d5f)
+- add error stack (#887)
+  [(a3738a0)](https://github.com/taiga-family/ng-morph/commit/a3738a066b9a7e4fdc70d1215578a67b4c16e798)
 
-* chore(deps): update taiga-ui (#804) (3b9eb82)
-* chore(deps): update taiga-family/ci action to v1.67.1 (#803) (462f7fb)
-* chore(deps): update taiga-ui to v3.91.0 (#802) (b636bcb)
-* chore(deps): update nx to v19.6.1 (#801) (1275f4c)
-* chore(deps): update taiga-ui to v0.143.2 (#800) (9da1207)
-* chore(deps): update dependency @types/node to v22.4.1 (#799) (d6155d7)
-* chore(deps): update taiga-ui to v0.143.1 (#798) (e643e90)
-* chore(deps): update dependency @types/node to v22.4.0 (#797) (cfd52c0)
-* chore(deps): update taiga-ui to v0.143.0 (#796) (9d262cf)
-* chore(deps): update taiga-ui to v0.142.0 (#795) (569fc4e)
-* chore(deps): update taiga-ui to v0.141.0 (#794) (639de18)
-* chore(deps): update taiga-ui to v0.139.1 (#793) (8876ac1)
-* chore(deps): update nx to v19.6.0 (#792) (609f05c)
-* chore(deps): update taiga-family/ci action to v1.67.0 (#791) (c37d99a)
+### [4.8.0](https://github.com/taiga-family/ng-morph/compare/v4.7.0...v4.8.0) (2024-09-13)
 
-* feat: enable strict mode (#783) (f82a6da)
-* chore(deps): update taiga-ui to v0.139.0 (#790) (8cc04d8)
-* chore(deps): update taiga-family/ci action to v1.66.6 (#789) (5fcd3ab)
-* chore(deps): update taiga-ui to v0.138.0 (#788) (6a69ff7)
-* chore(deps): update dependency @types/node to v22.3.0 (#787) (f21cea1)
-* chore(deps): update taiga-family/ci action to v1.66.5 (#786) (cfeadba)
-* chore(deps): update taiga-ui to v3.90.0 (#785) (6ab7f25)
-* chore(deps): update taiga-ui to v0.137.0 (#784) (35213aa)
-* chore(deps): update taiga-ui to v0.136.8 (#782) (9578d26)
-* chore(deps): update taiga-ui to v0.136.7 (#781) (24dab1a)
-* chore(deps): update taiga-ui to v0.136.6 (#780) (9d9968f)
-* chore(deps): update taiga-ui to v0.136.5 (#779) (d3e27a4)
-* chore(deps): update taiga-ui to v0.136.4 (#778) (8e26e5e)
-* chore(deps): update taiga-ui to v0.136.3 (#777) (67cd7d7)
-* chore(deps): update taiga-ui to v0.136.2 (#776) (143bb26)
-* chore(deps): update taiga-ui to v0.136.1 (#775) (f040c2f)
-* chore(deps): update dependency @types/node to v22.2.0 (#774) (e6eebba)
-* chore(deps): update taiga-ui to v0.136.0 (#772) (ec8112a)
-* chore(deps): update taiga-ui to v0.135.0 (#771) (e1f3350)
-* chore(deps): update nx to v19.5.7 (#770) (6eb189e)
-* chore(deps): update taiga-family/ci action to v1.66.4 (#769) (ea6956d)
-* chore(deps): update taiga-ui to v3.89.0 (#768) (fc6bfe0)
-* chore(deps): update taiga-ui (#757) (8e78796)
-* chore(deps): update dependency @types/node to v22.1.0 (#767) (d93521e)
-* chore(deps): update dependency @types/node to v22.0.3 (#766) (260a39f)
-* chore(deps): update nx to v19.5.6 (#765) (947fbe1)
-* chore(deps): update nx to v19.5.5 (#764) (7349525)
-* chore(deps): update dependency ts-jest to v29.2.4 (#763) (6290c7a)
-* chore(deps): update dependency @types/node to v22.0.2 (#762) (003b92f)
-* chore(deps): update dependency @types/node to v22.0.1 (#761) (372eec7)
-* chore(deps): update dependency jest-preset-angular to v14.2.2 (#760) (6c3853e)
-* chore(deps): update nx to v19.5.4 (#759) (ff9f508)
-* chore(deps): update dependency jest-preset-angular to v14.2.1 (#758) (115ebf1)
-* chore(deps): update taiga-ui to v0.125.3 (#756) (6a6b30e)
-* chore(deps): update taiga-ui to v0.125.2 (#755) (9c67bdb)
-* chore(deps): update dependency @types/node to v22 (#754) (a60c315)
-* chore(deps): update dependency @types/node to v20.14.13 (#753) (67125ea)
-* chore(deps): update taiga-ui to v0.125.1 (#752) (934dfd8)
-* chore(deps): update taiga-family/ci action to v1.66.3 (#751) (70703b2)
-* chore(deps): update taiga-ui to v0.125.0 (#750) (9eedf67)
-* chore(deps): update taiga-ui to v0.124.0 (#749) (78f0b23)
-* chore(deps): update taiga-family/ci action to v1.66.2 (#748) (6edaf77)
-* chore(deps): update nx to v19.5.3 (#747) (e7d4d70)
-* chore(deps): update taiga-ui to v0.122.3 (#746) (0e91bbb)
-* chore(deps): update taiga-ui to v0.122.2 (#745) (bdf237d)
-* chore(deps): update taiga-ui to v0.122.1 (#744) (4ab5504)
-* chore(deps): update dependency @types/node to v20.14.12 (#743) (cf6e4d7)
-* chore(deps): update taiga-ui to v0.122.0 (#734) (759301d)
-* chore(deps): update nx to v19.5.2 (#742) (5b238d9)
-* chore(deps): update dependency jest-preset-angular to v14.2.0 (#741) (bd0224d)
-* chore(deps): update taiga-family/ci action to v1.66.1 (#740) (fadc60a)
-* chore(deps): update dependency ts-jest to v29.2.3 (#739) (89750a7)
-* chore(deps): update nx to v19.5.1 (#738) (f3bcd6a)
-* chore(deps): update nx to v19.5.0 (#737) (58e517f)
-* chore(deps): update nx to v19.4.4 (#736) (8cb39d0)
-* chore(deps): update dependency @types/node to v20.14.11 (#735) (f55bedd)
-* chore(deps): update taiga-ui to v3.87.0 (#733) (d7d1334)
-* chore(deps): update taiga-family/ci action to v1.66.0 (#732) (56bbc71)
-* chore(deps): update taiga-ui to v0.115.0 (#731) (a86222e)
-* chore(deps): update dependency release-it to v17.6.0 (#730) (c490903)
-* chore(deps): update taiga-ui to v0.114.2 (#729) (b028c62)
-* chore(deps): update taiga-ui to v0.114.1 (#728) (4214197)
-* chore(deps): update nx to v19.4.3 (#727) (009078d)
-* chore(deps): update taiga-ui to v0.114.0 (#715) (094bb62)
-* chore(deps): update nx to v19.4.3 (#726) (ef12ffe)
-* chore(deps): update ng to v16.2.14 (#725) (862032f)
-* chore(deps): update dependency @schematics/angular to v16.2.14 (#724) (2d90259)
-* chore(deps): update taiga-family/ci action to v1.65.5 (#723) (04450ac)
-* chore(deps): update taiga-family/ci action to v1.65.4 (#722) (543f86b)
-* chore(deps): update dependency ts-jest to v29.2.2 (#721) (da8effe)
-* chore(deps): update dependency ts-jest to v29.2.1 (#720) (4f87fc9)
-* chore(deps): update taiga-family/ci action to v1.65.3 (#719) (ab9731e)
-* chore(deps): update nx to v19.4.2 (#718) (5ec79b1)
+### 🚀 Features
 
-* chore(deps): update dependency minimatch to v10.0.1 (#717) (902369d)
+- add file path in error result (#885)
+  [(3963cec)](https://github.com/taiga-family/ng-morph/commit/3963cecfbe09ddd83df94303c5fb3cd717efeffc)
 
-* chore(deps): update dependency minimatch to v10 (#716) (f7c5ffc)
-* chore(deps): update dependency release-it to v17.5.0 (#714) (b05c0ff)
-* chore(deps): update dependency release-it to v17.4.2 (#713) (c68d8be)
-* chore(deps): update dependency ts-jest to v29.2.0 (#712) (0628b52)
-* chore(deps): update taiga-ui to v3.86.0 (#711) (bad90f2)
-* chore(deps): update taiga-ui to v0.113.5 (#710) (b48c145)
-* chore(deps): update taiga-ui to v0.113.4 (#709) (757f4ad)
-* chore(deps): update nx to v19.4.1 (#708) (2f642cc)
-* chore(deps): update dependency @types/node to v20.14.10 (#707) (bb749fe)
-* chore(deps): update taiga-family/ci action to v1.65.2 (#706) (b980945)
-* chore(deps): update taiga-ui to v0.113.3 (#705) (d3e64a3)
-* chore(deps): update taiga-ui to v0.113.2 (#704) (8a34c86)
+### [4.7.0](https://github.com/taiga-family/ng-morph/compare/v4.6.4...v4.7.0) (2024-09-13)
 
-* chore(deps): update taiga-ui to v0.113.1 (#690) (7392fe9)
-* chore(deps): update nx to v19.4.0 (#703) (a4ce425)
-* chore(deps): update dependency release-it to v17.4.1 (#702) (e86be19)
-* chore(deps): update taiga-family/ci action to v1.65.1 (#701) (799271e)
-* chore(deps): update nx to v19.3.2 (#700) (2415848)
-* chore(deps): update toshimaru/auto-author-assign action to v2.1.1 (#699) (b846263)
+### 🚀 Features
 
-* chore(deps): update dependency minimatch to v9.0.5 (#698) (ab62a0b)
-* chore(deps): update dependency @types/node to v20.14.9 (#697) (da44d61)
-* ci: prevent cancel release (e9b3231)
+- inline source map
+  [(8bbaeed)](https://github.com/taiga-family/ng-morph/commit/8bbaeedf1a9d9fc538f2ce7eb591f6e4b78dbcdd)
 
-# [4.5.0](https://github.com/taiga-family/ng-morph/compare/v4.4.0...v4.5.0) (2024-06-25)
+### [4.6.4](https://github.com/taiga-family/ng-morph/compare/v4.6.3...v4.6.4) (2024-08-28)
 
-# [4.4.0](https://github.com/taiga-family/ng-morph/compare/v4.3.2...v4.4.0) (2024-06-14)
+### [4.6.3](https://github.com/taiga-family/ng-morph/compare/v4.6.2...v4.6.3) (2024-08-26)
 
-## [4.3.2](https://github.com/taiga-family/ng-morph/compare/v4.3.1...v4.3.2) (2024-06-11)
+### [4.6.2](https://github.com/taiga-family/ng-morph/compare/v4.6.1...v4.6.2) (2024-08-23)
 
+### [4.6.1](https://github.com/taiga-family/ng-morph/compare/v4.6.0...v4.6.1) (2024-08-22)
 
-### Bug Fixes
+### [4.6.0](https://github.com/taiga-family/ng-morph/compare/v4.5.4...v4.6.0) (2024-08-15)
 
-* revert multimatch ([f426e27](https://github.com/taiga-family/ng-morph/commit/f426e27c89f568655d3b4cbd03eb3127eea95c10))
+### 🚀 Features
+
+- enable strict mode (#783)
+  [(f82a6da)](https://github.com/taiga-family/ng-morph/commit/f82a6da68f924b485893f23cf4e07fcbf68d140a)
+
+### [4.5.4](https://github.com/taiga-family/ng-morph/compare/v4.5.3...v4.5.4) (2024-07-08)
+
+### [4.5.3](https://github.com/taiga-family/ng-morph/compare/v4.5.2...v4.5.3) (2024-07-08)
+
+### [4.5.2](https://github.com/taiga-family/ng-morph/compare/v4.5.1...v4.5.2) (2024-07-02)
+
+### [4.5.1](https://github.com/taiga-family/ng-morph/compare/v4.5.0...v4.5.1) (2024-06-25)
+
+### [4.5.0](https://github.com/taiga-family/ng-morph/compare/v4.4.0...v4.5.0) (2024-06-25)
+
+### [4.4.0](https://github.com/taiga-family/ng-morph/compare/v4.3.2...v4.4.0) (2024-06-14)
+
+### [4.3.2](https://github.com/taiga-family/ng-morph/compare/v4.3.1...v4.3.2) (2024-06-11)
+
+### 🐞 Bug Fixes
+
+- revert multimatch
+  [(f426e27)](https://github.com/taiga-family/ng-morph/commit/f426e27c89f568655d3b4cbd03eb3127eea95c10)
+
+### [4.3.1](https://github.com/taiga-family/ng-morph/compare/v4.3.0...v4.3.1) (2024-06-11)
+
+### 🐞 Bug Fixes
+
+- invalid npm tag [(42214f5)](https://github.com/taiga-family/ng-morph/commit/42214f57bf342a457576f076263ab96382c85196)
+
+### [4.3.0](https://github.com/taiga-family/ng-morph/compare/v4.2.0...v4.3.0) (2024-06-11)
+
+### 🚀 Features
+
+- upgrade multimatch (#651)
+  [(6555b10)](https://github.com/taiga-family/ng-morph/commit/6555b1014922b152b35d19dd8a37cf9501866ae4)
+
+### [4.2.0]() (2024-06-11)
+
+### 🚀 Features
+
+- initial commit [(8798ec5)](https://github.com/taiga-family/ng-morph/commit/8798ec5b433a133be1c7656a816a5bbe10cdf464)
+- use taiga-ui npm scope
+  [(6da1df9)](https://github.com/taiga-family/ng-morph/commit/6da1df9731544b7e8ec54b7f143d1bc0587ae536)
+- add blob pattern support for entities
+  [(e978551)](https://github.com/taiga-family/ng-morph/commit/e9785515ad913725a9fd660f3e66752d03e5bf56)
+- add utils for working with NgModule metadata
+  [(8e45ff9)](https://github.com/taiga-family/ng-morph/commit/8e45ff9c640c2568d8e3a7242a35f9b091689895)
+- add more fn [(189e39d)](https://github.com/taiga-family/ng-morph/commit/189e39de099ba2350cc36e97d448f1cfe44ca13c)
+- add the addImportToModule function
+  [(65c68f6)](https://github.com/taiga-family/ng-morph/commit/65c68f60bbb7cebce185a99c9632b388c08ba901)
+- add new `addImportToComponent` util
+  [(74bbc00)](https://github.com/taiga-family/ng-morph/commit/74bbc00a7f446a9eff6ac041b63a9c045e2e278d)
+- **docs**: add @Inject -&gt; inject migration sample
+  [(bd76806)](https://github.com/taiga-family/ng-morph/commit/bd768067cf1eba6641c849b251089770fbed12da)
+- change the addImportToModule declaration
+  [(174ed99)](https://github.com/taiga-family/ng-morph/commit/174ed994c9a1a2b6839f526b38528e877e51fa43)
+- added a tree to run ng-morph without schematics
+  [(83d83ac)](https://github.com/taiga-family/ng-morph/commit/83d83accb6ac78b63094a9a7567ef5e9cf4148b2)
+- **ng-morph**: export some classes from secondary points
+  [(fb31b94)](https://github.com/taiga-family/ng-morph/commit/fb31b9458a154c6f0adda495172e8518012fd202)
+- add the `overwrite` option in createSourceFile
+  [(448b183)](https://github.com/taiga-family/ng-morph/commit/448b1836b62f60ab46cb54f836f27571379819d3)
+- add `isStandaloneComponent` (#602)
+  [(c344ae4)](https://github.com/taiga-family/ng-morph/commit/c344ae4cea6966c122ae5a52f4581f90f6fd120b)
+- add angular 16 (#577)
+  [(e1f8bcb)](https://github.com/taiga-family/ng-morph/commit/e1f8bcb7e2628ec7be59de89d6fc339d6ff1de2c)
+- add support for standalone applications (#105)
+  [(8ab14cd)](https://github.com/taiga-family/ng-morph/commit/8ab14cda2ae88f315c2d37006951ea923a909018)
+
+### 🐞 Bug Fixes
+
+- change get-module typo
+  [(0c162b7)](https://github.com/taiga-family/ng-morph/commit/0c162b7c8ff7d3a9e2560def83a8f05dd1132818)
+- try to save changes in NgMorphTree automatically
+  [(0744ec1)](https://github.com/taiga-family/ng-morph/commit/0744ec1ffd9cc5c884bad4051bdc3869ba22553c)
+- new dependabot rules and release
+  [(e22af21)](https://github.com/taiga-family/ng-morph/commit/e22af21e109b9220a92da8df95f71582b24a06b5)
+- add missing multimatch
+  [(a204e64)](https://github.com/taiga-family/ng-morph/commit/a204e64145401310ba2820692421a6d25d6400a1)
+- `NgMorphTree` use deep import for ng16 support
+  [(d6a9059)](https://github.com/taiga-family/ng-morph/commit/d6a9059738a4ee102e65239191312e87d4b763b9)
+- change the homepage url
+  [(4218456)](https://github.com/taiga-family/ng-morph/commit/421845600a321bcd84eb93f157ed4c3e1462139a)
+- set CWD as default path
+  [(d9f0b6f)](https://github.com/taiga-family/ng-morph/commit/d9f0b6f1d98a6e7c0638c1ffa35c4798f39676b2)
+- invalid ng entry point
+  [(f731772)](https://github.com/taiga-family/ng-morph/commit/f731772ee2ed0adfaaa0621cce9225620c89bdaf)
+- invalid helpers entry point (#607)
+  [(f699a74)](https://github.com/taiga-family/ng-morph/commit/f699a748e2f270994fd5b8ec1f10139631fcd3cd)
+- bump @angular-eslint/template-parser from 16.2.0 to 17.1.1 (#384)
+  [(2b986f7)](https://github.com/taiga-family/ng-morph/commit/2b986f71d3e0e0e58056d50375a633a379186854)
+- bump @adobe/css-tools from 4.3.1 to 4.3.2 (#363)
+  [(bb2d67a)](https://github.com/taiga-family/ng-morph/commit/bb2d67a2b5cf74c43673494c4dac9f31b5aa0d0e)
+- bump axios from 1.5.1 to 1.6.2 (#362)
+  [(7a1042f)](https://github.com/taiga-family/ng-morph/commit/7a1042f68ed1672282e4188ec55c01c45fc01c29)
+- bump @angular-devkit/core from 16.2.8 to 17.0.5 (#358)
+  [(cc36534)](https://github.com/taiga-family/ng-morph/commit/cc36534f6cb0ab253f6dec77dd21d48dd4519d2e)
+- bump @angular/cdk from 16.2.10 to 17.0.2 (#359)
+  [(5b3a753)](https://github.com/taiga-family/ng-morph/commit/5b3a753cbbe4080fd13e88ae1c0f3e68f7988945)
+- bump @angular-eslint/eslint-plugin-template from 16.2.0 to 17.1.1 (#361)
+  [(29429bd)](https://github.com/taiga-family/ng-morph/commit/29429bd00c39e49cdc6fe84505ac91aa7aec356a)
+- release package (#326)
+  [(3485bf3)](https://github.com/taiga-family/ng-morph/commit/3485bf3055ead175bd8ef66d2d45c0b870d035cb)
+- add missed build artefacts (#313)
+  [(6ffd38c)](https://github.com/taiga-family/ng-morph/commit/6ffd38c6b0413b0f74d0ded93d4f1d7ba6639a48)
+- publish (#312) [(1a6ccd0)](https://github.com/taiga-family/ng-morph/commit/1a6ccd09891c1742394e7ce074a9f74f2e9949b3)
+- cleanup packages, trigger release (#311)
+  [(a2998b4)](https://github.com/taiga-family/ng-morph/commit/a2998b467082399f209b11e137f451a2df7c0314)
+- release and loose package tslib dep (#310)
+  [(499fe88)](https://github.com/taiga-family/ng-morph/commit/499fe88c6eb0d0242979f4cf2f51fd9f7f8ab544)
+- **deps**: pin tslib to allow install on angular 17 (#308)
+  [(cbfa923)](https://github.com/taiga-family/ng-morph/commit/cbfa92391eefeaf6d3b60c3adbf8d62e200f7e35)
+- **ng-morph**: update npm readme (#60)
+  [(9f694ec)](https://github.com/taiga-family/ng-morph/commit/9f694ecfc5ba16ccd71c39a956458feef158fe5d)
+- bump ansi-regex (#62)
+  [(3d3e6a3)](https://github.com/taiga-family/ng-morph/commit/3d3e6a3b07d6edd87f909423b2b8381fb19f1e38)
+- bump async from 2.6.3 to 2.6.4 (#61)
+  [(8825d49)](https://github.com/taiga-family/ng-morph/commit/8825d4911cdb65f2cc7bedb03da7f0a70ee17f19)
+- bump minimist from 1.2.5 to 1.2.8 (#55)
+  [(10858fa)](https://github.com/taiga-family/ng-morph/commit/10858fa13a0f959930aae04020fbc375b4f3f88f)
+- **deps**: bump url-parse from 1.5.1 to 1.5.10 (#33)
+  [(a1512bc)](https://github.com/taiga-family/ng-morph/commit/a1512bca3b6dff0defc8ec67c3e743a704a7e2dd)
+- **deps**: bump nanoid from 3.1.22 to 3.2.0 (#24)
+  [(faeb789)](https://github.com/taiga-family/ng-morph/commit/faeb7894c01e1e6e463b76024e837a4d465cbdb6)
+- **deps**: bump follow-redirects from 1.13.3 to 1.14.7 (#23)
+  [(73c845c)](https://github.com/taiga-family/ng-morph/commit/73c845c97dad289f8ad7ef394c7d4504de1eb25b)
