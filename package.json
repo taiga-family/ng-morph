@@ -10,7 +10,6 @@
         "build": "nx run-many --target build --configuration production --verbose",
         "build:demo": "nx build demo --verbose",
         "postbuild:demo": "cp ./dist/apps/demo/index.html ./dist/apps/demo/404.html",
-        "release": "nx run-many --target release --verbose",
         "pretest": "tsc --noEmit --strict --incremental false --tsBuildInfoFile null --project libs/ng-morph/tsconfig.spec.json",
         "test": "nx run-many --target test --verbose",
         "lint": "eslint .",
@@ -30,8 +29,7 @@
         "workspace-generator": "nx workspace-generator",
         "dep-graph": "nx dep-graph",
         "help": "nx help",
-        "prebump": "npx syncer && npx nx build ng-morph",
-        "bump": "npx nx publish ng-morph"
+        "release": "npx syncer && npx nx publish ng-morph"
     },
     "commitlint": {
         "extends": [
