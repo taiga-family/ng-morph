@@ -1,5 +1,6 @@
 export * from './array-flat';
 export * from './coerce-array';
+export * from './colored-log';
 export * from './filter-primitive';
 export * from './get-declaration-creator';
 export * from './get-declaration-editor';
