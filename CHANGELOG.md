@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [`conventional commits`](https://www.conventionalcommits.org/) guidelines.
 
+### [4.8.4](https://github.com/taiga-family/ng-morph/compare/v4.8.3...v4.8.4) (2024-09-27)
+
+### 🚀 Features
+
+- add colored logger (#940)
+  [(4b4f829)](https://github.com/taiga-family/ng-morph/commit/4b4f829cbbc4c3e46ef29ae511f7ffd7c9dc4902)
+
 ### [4.8.3](https://github.com/taiga-family/ng-morph/compare/v4.8.2...v4.8.3) (2024-09-23)
 
 ### [4.8.2](https://github.com/taiga-family/ng-morph/compare/v4.8.1...v4.8.2) (2024-09-20)
