@@ -8,43 +8,43 @@ env:
 jobs:
   setup:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.value }}
     steps:
       - uses: actions/checkout@v4.2.0
-      - uses: taiga-family/ci/actions/setup/variables@v1.87.5
-      - id: jobs
+      - uses: taiga-family/ci/actions/setup/variables@v1.87.0
+      - id: matrix
         run: |
           if [[ "${{ env.IS_TAIGA_FAMILY_BOT_PR_AUTHOR }}" == "true" ]]; then
               echo "value=$PR_JOBS_NAME" >> $GITHUB_OUTPUT
           else
             echo "value=[]" >> $GITHUB_OUTPUT
           fi
-    outputs:
-      jobs: ${{ steps.jobs.outputs.value }}
 
   wait:
     needs: [setup]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
-      jobs:
-        value: ${{ fromJSON(needs.setup.outputs.jobs) }}
+      matrix:
+        value: ${{ fromJSON(needs.setup.outputs.matrix) }}
     steps:
-      - uses: taiga-family/ci/actions/run/wait-job@v1.87.5
+      - uses: taiga-family/ci/actions/run/wait-job@v1.87.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          job: ${{ jobs.value }}
+          job: ${{ matrix.value }}
 
   approve:
     needs: [wait]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.0
-      - uses: taiga-family/ci/actions/setup/variables@v1.87.5
-      - uses: taiga-family/ci/actions/auto/approve/double@v1.87.5
+      - uses: taiga-family/ci/actions/setup/variables@v1.87.0
+      - uses: taiga-family/ci/actions/auto/approve/double@v1.87.0
         with:
           token1: ${{ secrets.GITHUB_TOKEN }}
           token2: ${{ secrets.TAIGA_FAMILY_APPROVE_BOT_PAT }}
-      - uses: taiga-family/ci/actions/run/merge@v1.87.5
+      - uses: taiga-family/ci/actions/run/merge@v1.87.0
         with:
           token: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
 
