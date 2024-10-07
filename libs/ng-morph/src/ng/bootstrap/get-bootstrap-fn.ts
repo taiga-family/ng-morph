@@ -1,5 +1,5 @@
-import {CallExpression, Identifier} from 'ts-morph';
-import {Node, SyntaxKind} from 'ts-morph';
+import type {CallExpression} from 'ts-morph';
+import {Identifier, Node, SyntaxKind} from 'ts-morph';
 
 import {getImports} from '../../imports';
 
