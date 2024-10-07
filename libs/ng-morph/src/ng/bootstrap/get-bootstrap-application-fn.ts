@@ -1,5 +1,5 @@
 import type {CallExpression} from 'ts-morph';
-import {Node, SyntaxKind} from 'ts-morph';
+import {Identifier, Node, SyntaxKind} from 'ts-morph';
 
 import {getImports} from '../../imports';
 
@@ -14,9 +14,14 @@ export function getBootstrapApplicationFn(
         ?.getNamedImports()
         .find((imp) => imp.getName() === 'bootstrapApplication');
 
-    return namedImport
-        ?.getNameNode()
-        .findReferencesAsNodes()
-        .find((ref) => Node.isCallExpression(ref.getParent()))
-        ?.getParentIfKind(SyntaxKind.CallExpression);
+    const nameNode = namedImport?.getNameNode();
+
+    if (nameNode instanceof Identifier) {
+        return nameNode
+            .findReferencesAsNodes()
+            .find((ref) => Node.isCallExpression(ref.getParent()))
+            ?.getParentIfKind(SyntaxKind.CallExpression);
+    }
+
+    return undefined;
 }
