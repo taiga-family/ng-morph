@@ -6,7 +6,7 @@ import {
 } from '@angular/platform-browser/animations';
 import {PreloadAllModules, provideRouter, withPreloading} from '@angular/router';
 import {TUI_DOC_LOGO, TUI_DOC_PAGES} from '@taiga-ui/addon-doc';
-import {TuiRootModule} from '@taiga-ui/core';
+import {NG_EVENT_PLUGINS} from '@taiga-ui/event-plugins';
 
 import {AppComponent} from './app/app.component';
 import {LOGO_CONTENT} from './app/logo';
@@ -15,7 +15,7 @@ import {ROUTES} from './app/routes';
 
 bootstrapApplication(AppComponent, {
     providers: [
-        importProvidersFrom(BrowserModule, BrowserAnimationsModule, TuiRootModule),
+        importProvidersFrom(BrowserModule, BrowserAnimationsModule),
         provideRouter(ROUTES, withPreloading(PreloadAllModules)),
         {
             provide: TUI_DOC_LOGO,
@@ -26,5 +26,6 @@ bootstrapApplication(AppComponent, {
             useValue: pages,
         },
         provideAnimations(),
+        NG_EVENT_PLUGINS,
     ],
 }).catch((e: unknown) => console.error(e));
