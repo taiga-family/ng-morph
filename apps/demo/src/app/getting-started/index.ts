@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterLink} from '@angular/router';
-import {TuiDocCodeModule, TuiDocPageModule} from '@taiga-ui/addon-doc';
-import {TuiLinkModule} from '@taiga-ui/core';
+import {TuiAddonDoc} from '@taiga-ui/addon-doc';
+import {TuiLink} from '@taiga-ui/core';
 
 const script = `import {
   setActiveProject,
@@ -131,7 +131,7 @@ describe('ng-add', () => {
 @Component({
     standalone: true,
     selector: 'getting-started',
-    imports: [RouterLink, TuiDocCodeModule, TuiDocPageModule, TuiLinkModule],
+    imports: [RouterLink, TuiAddonDoc, TuiLink],
     templateUrl: './index.html',
     styles: [':host {max-width: 1200px}'],
     changeDetection: ChangeDetectionStrategy.OnPush,
