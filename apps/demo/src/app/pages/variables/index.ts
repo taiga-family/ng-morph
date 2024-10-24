@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {TuiAddonDocModule} from '@taiga-ui/addon-doc';
+import {TuiAddonDoc} from '@taiga-ui/addon-doc';
 
 const code = `import {
     addVariables,
@@ -36,7 +36,7 @@ saveActiveProject();
 @Component({
     standalone: true,
     selector: 'variables',
-    imports: [TuiAddonDocModule],
+    imports: [TuiAddonDoc],
     templateUrl: './index.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
