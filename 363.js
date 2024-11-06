@@ -11,15 +11,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @taiga-ui/addon-doc */ 73);
 /* harmony import */ var _samples_accessors__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./samples/accessors */ 9419);
 /* harmony import */ var _samples_constructors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./samples/constructors */ 5534);
 /* harmony import */ var _samples_decorators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./samples/decorators */ 2945);
 /* harmony import */ var _samples_methods__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./samples/methods */ 513);
 /* harmony import */ var _samples_properties__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./samples/properties */ 8226);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 6623);
+/* harmony import */ var _taiga_ui_addon_doc_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @taiga-ui/addon-doc/components */ 4841);
 var _ClassesComponent;
-
 
 
 
@@ -243,7 +242,7 @@ _ClassesComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5_
       _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
     }
   },
-  dependencies: [_taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocCodeModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocCodeComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageModule, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageComponent, _taiga_ui_addon_doc__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageTabConnectorDirective],
+  dependencies: [_taiga_ui_addon_doc_components__WEBPACK_IMPORTED_MODULE_6__.TuiDocCode, _taiga_ui_addon_doc_components__WEBPACK_IMPORTED_MODULE_6__.TuiDocPage, _taiga_ui_addon_doc_components__WEBPACK_IMPORTED_MODULE_6__.TuiDocPageTabConnector],
   encapsulation: 2,
   changeDetection: 0
 });
