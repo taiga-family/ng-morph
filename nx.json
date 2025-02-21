@@ -37,6 +37,5 @@
             "!{projectRoot}/jest.config.[jt]s"
         ]
     },
-    "defaultBase": "main",
-    "useLegacyCache": true
+    "defaultBase": "main"
 }
