@@ -106,7 +106,7 @@
         "@taiga-ui/tsconfig": "0.222.5",
         "@types/jest": "29.5.14",
         "@types/minimatch": "5.1.2",
-        "@types/node": "22.13.5",
+        "@types/node": "22.13.6",
         "dotenv": "16.4.7",
         "highlight.js": "11.11.1",
         "jest": "29.7.0",
