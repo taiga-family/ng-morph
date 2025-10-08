@@ -8,10 +8,10 @@
 import {EmptyTree} from '@angular-devkit/schematics';
 import {UnitTestTree} from '@angular-devkit/schematics/testing';
 import {beforeEach, describe, expect, it} from '@jest/globals';
-import type {NodeDependency} from 'ng-morph';
 import {
     addPackageJsonDependency,
     getPackageJsonDependency,
+    type NodeDependency,
     NodeDependencyType,
 } from 'ng-morph';
 

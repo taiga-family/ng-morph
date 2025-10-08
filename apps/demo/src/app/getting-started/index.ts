@@ -129,11 +129,10 @@ describe('ng-add', () => {
 `;
 
 @Component({
-    standalone: true,
     selector: 'getting-started',
     imports: [RouterLink, TuiAddonDoc, TuiLink],
     templateUrl: './index.html',
-    styles: [':host {max-width: 1200px}'],
+    styles: ':host {max-width: 1200px}',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class GettingStartedComponent {

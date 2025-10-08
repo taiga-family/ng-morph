@@ -1,4 +1,4 @@
-import type {Node, StructureKind, WriterFunction} from 'ts-morph';
+import {type Node, type StructureKind, type WriterFunction} from 'ts-morph';
 
 export type StructureType<T> = T extends Node & {
     set(structure: Record<string, unknown>): unknown;

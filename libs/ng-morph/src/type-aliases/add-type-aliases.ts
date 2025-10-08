@@ -1,5 +1,4 @@
-import type {TypeAliasDeclaration} from 'ts-morph';
-import {StructureKind} from 'ts-morph';
+import {StructureKind, type TypeAliasDeclaration} from 'ts-morph';
 
 import {getDeclarationCreator} from '../utils';
 

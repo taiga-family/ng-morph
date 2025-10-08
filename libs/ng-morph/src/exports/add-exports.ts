@@ -1,5 +1,4 @@
-import type {ExportDeclaration} from 'ts-morph';
-import {StructureKind} from 'ts-morph';
+import {type ExportDeclaration, StructureKind} from 'ts-morph';
 
 import {getDeclarationCreator} from '../utils';
 

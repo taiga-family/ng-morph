@@ -1,5 +1,4 @@
-import type {ClassDeclaration} from 'ts-morph';
-import {Node} from 'ts-morph';
+import {type ClassDeclaration, Node} from 'ts-morph';
 
 import {getDecorators} from '../../decorators';
 import {pushToObjectLiteralArrayProperty} from './push-to-object-literal-array-property';

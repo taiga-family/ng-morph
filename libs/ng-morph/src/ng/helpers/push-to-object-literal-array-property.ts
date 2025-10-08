@@ -1,5 +1,4 @@
-import type {ObjectLiteralExpression} from 'ts-morph';
-import {Node} from 'ts-morph';
+import {Node, type ObjectLiteralExpression} from 'ts-morph';
 
 export function pushToObjectLiteralArrayProperty(
     objectLiteral: ObjectLiteralExpression,

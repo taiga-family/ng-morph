@@ -1,4 +1,4 @@
-import type {AccessorDeclaration} from 'ts-morph';
+import {type AccessorDeclaration} from 'ts-morph';
 
 import {getDeclarationRemover} from '../utils';
 

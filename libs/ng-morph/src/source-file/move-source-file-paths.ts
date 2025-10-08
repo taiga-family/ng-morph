@@ -1,4 +1,4 @@
-import type {SourceFile} from 'ts-morph';
+import {type SourceFile} from 'ts-morph';
 
 export function moveSourceFilePaths(
     files: SourceFile[],

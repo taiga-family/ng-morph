@@ -1,4 +1,4 @@
-import type {EnumDeclaration} from 'ts-morph';
+import {type EnumDeclaration} from 'ts-morph';
 
 import {getDeclarationRemover} from '../utils';
 

@@ -1,4 +1,4 @@
-import type {ClassDeclaration} from 'ts-morph';
+import {type ClassDeclaration} from 'ts-morph';
 
 import {pushToDecoratorArrayProperty} from '../helpers';
 

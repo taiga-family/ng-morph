@@ -1,4 +1,4 @@
-import type {NgCliProject} from './ng-cli-project';
+import {type NgCliProject} from './ng-cli-project';
 
 let prevProject: NgCliProject | null = null;
 

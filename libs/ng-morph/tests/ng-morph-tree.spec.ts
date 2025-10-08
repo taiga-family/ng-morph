@@ -1,8 +1,7 @@
 import fs from 'node:fs';
 import {join} from 'node:path';
-import {URL} from 'node:url';
 
-import type {Tree} from '@angular-devkit/schematics';
+import {type Tree} from '@angular-devkit/schematics';
 import {beforeEach, describe, expect, it, jest} from '@jest/globals';
 import {
     createProject,
@@ -13,7 +12,7 @@ import {
     setActiveProject,
 } from 'ng-morph';
 
-const dirname = new URL('../src/project/', import.meta.url).pathname;
+const dirname = join(process.cwd(), 'libs/ng-morph/src/project');
 
 describe('NgMorphTree', () => {
     let tree: Tree;

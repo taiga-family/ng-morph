@@ -1,4 +1,4 @@
-import type {DecoratableNode, DecoratorStructure, OptionalKind} from 'ts-morph';
+import {type DecoratableNode, type DecoratorStructure, type OptionalKind} from 'ts-morph';
 
 import {coerceArray} from '../utils';
 

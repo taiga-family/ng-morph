@@ -1,9 +1,8 @@
 import {join} from 'node:path';
 
-import type {Tree} from '@angular-devkit/schematics';
+import {type Tree} from '@angular-devkit/schematics';
 
-import type {Pattern} from '../utils';
-import {coerceArray} from '../utils';
+import {coerceArray, type Pattern} from '../utils';
 import {NgCliProject} from './ng-cli-project';
 
 export function createProject(

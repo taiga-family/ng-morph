@@ -1,5 +1,10 @@
-import type {CallExpression, Identifier, ObjectLiteralExpression} from 'ts-morph';
-import {Node, SyntaxKind} from 'ts-morph';
+import {
+    type CallExpression,
+    type Identifier,
+    Node,
+    type ObjectLiteralExpression,
+    SyntaxKind,
+} from 'ts-morph';
 
 import {pushToObjectLiteralArrayProperty} from '../helpers/push-to-object-literal-array-property';
 

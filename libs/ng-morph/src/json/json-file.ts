@@ -6,13 +6,13 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import type {JsonValue} from '@angular-devkit/core';
-import type {Tree} from '@angular-devkit/schematics';
-import type {Node} from 'jsonc-parser';
+import {type JsonValue} from '@angular-devkit/core';
+import {type Tree} from '@angular-devkit/schematics';
+import {type Node} from 'jsonc-parser';
 
-import type {InsertionIndex} from './insertion-index';
+import {type InsertionIndex} from './insertion-index';
 import {JSONFileContent} from './json-file-content';
-import type {JSONPath} from './json-path';
+import {type JSONPath} from './json-path';
 
 export class JSONFile extends JSONFileContent {
     private readonly host: Tree;

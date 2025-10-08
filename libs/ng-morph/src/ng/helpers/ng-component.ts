@@ -1,7 +1,7 @@
-import type {ClassDeclaration} from 'ts-morph';
+import {type ClassDeclaration} from 'ts-morph';
 
 import {getClasses} from '../../classes';
-import type {Pattern, Query, StructureType} from '../../utils';
+import {type Pattern, type Query, type StructureType} from '../../utils';
 
 export function getNgComponents(
     pattern: Pattern,

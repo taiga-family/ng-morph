@@ -1,4 +1,4 @@
-import type {ParameterDeclaration} from 'ts-morph';
+import {type ParameterDeclaration} from 'ts-morph';
 
 import {getDeclarationEditor} from '../utils';
 

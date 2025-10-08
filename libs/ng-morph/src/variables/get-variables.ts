@@ -1,4 +1,4 @@
-import type {VariableStatement} from 'ts-morph';
+import {type VariableStatement} from 'ts-morph';
 
 import {getSourceFiles} from '../source-file';
 import {arrayFlat, getDeclarationGetter} from '../utils';

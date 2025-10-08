@@ -2,7 +2,7 @@ import {Project} from 'ts-morph';
 
 import {DevkitFileSystem} from './devkit-file-system';
 import {NgCliFileSystem} from './file-system';
-import type {NgCliProjectOptions} from './ng-cli-project-options';
+import {type NgCliProjectOptions} from './ng-cli-project-options';
 import {NgMorphTree} from './ng-morph-tree';
 
 export class NgCliProject extends Project {

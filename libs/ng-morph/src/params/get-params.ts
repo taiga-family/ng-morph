@@ -1,11 +1,10 @@
-import type {
-    FunctionLikeDeclaration,
-    ParameterDeclaration,
-    ParameterDeclarationStructure,
+import {
+    type FunctionLikeDeclaration,
+    type ParameterDeclaration,
+    type ParameterDeclarationStructure,
 } from 'ts-morph';
 
-import type {Query} from '../utils';
-import {arrayFlat, coerceArray, matchQuery} from '../utils';
+import {arrayFlat, coerceArray, matchQuery, type Query} from '../utils';
 
 export function getParams(
     functionsLike: FunctionLikeDeclaration | FunctionLikeDeclaration[],

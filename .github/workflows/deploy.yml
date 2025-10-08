@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.3.0
-      - uses: taiga-family/ci/actions/setup/variables@v1.114.0
-      - uses: taiga-family/ci/actions/setup/node@v1.114.0
+      - uses: taiga-family/ci/actions/setup/variables@v1.164.0
+      - uses: taiga-family/ci/actions/setup/node@v1.164.0
       - run: npm run build:demo
-      - uses: taiga-family/ci/actions/deploy/github-pages@v1.114.0
+      - uses: taiga-family/ci/actions/deploy/github-pages@v1.164.0
         with:
           token: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
-          folder: dist/apps/demo
+          folder: dist/apps/demo/browser
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

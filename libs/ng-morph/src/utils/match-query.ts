@@ -1,5 +1,5 @@
 import {minimatch} from 'minimatch';
-import type {Structure, WriterFunction} from 'ts-morph';
+import {type Structure, type WriterFunction} from 'ts-morph';
 
 import {coerceArray} from './coerce-array';
 
@@ -63,7 +63,7 @@ export function matchQuery<T extends Structure>(
     return (
         !query ||
         Object.keys(query).every((key) =>
-            coerceArray((value as unknown as Record<any, any>)?.[key])
+            coerceArray((value as unknown as Record<any, any> | null)?.[key])
                 .map(coerceName)
                 .some((v: unknown) => {
                     const patterns = coerceArray(query[key]);

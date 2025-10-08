@@ -1,4 +1,4 @@
-import type {ExportDeclaration, ExportDeclarationStructure} from 'ts-morph';
+import {type ExportDeclaration, type ExportDeclarationStructure} from 'ts-morph';
 
 import {getDeclarationEditor} from '../utils';
 
