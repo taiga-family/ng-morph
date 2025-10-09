@@ -1,4 +1,4 @@
-import type {PropertyDeclaration} from 'ts-morph';
+import {type PropertyDeclaration} from 'ts-morph';
 
 import {getDeclarationRemover} from '../utils';
 

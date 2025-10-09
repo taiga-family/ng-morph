@@ -8,12 +8,10 @@
 
 import * as path from 'node:path';
 
-import type {Path} from '@angular-devkit/core';
-import {normalize, PathIsDirectoryException} from '@angular-devkit/core';
-import type {Tree, UpdateRecorder} from '@angular-devkit/schematics';
+import {normalize, type Path, PathIsDirectoryException} from '@angular-devkit/core';
+import {type Tree, type UpdateRecorder} from '@angular-devkit/schematics';
 
-import type {DirectoryEntry} from './file-system';
-import {FileSystem} from './file-system';
+import {type DirectoryEntry, FileSystem} from './file-system';
 
 /**
  * File system that leverages the virtual tree from the CLI devkit. This file

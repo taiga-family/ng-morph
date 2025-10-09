@@ -1,4 +1,4 @@
-import type {DecoratableNode, Decorator, DecoratorStructure} from 'ts-morph';
+import {type DecoratableNode, type Decorator, type DecoratorStructure} from 'ts-morph';
 
 import {getAccessors} from '../accessors';
 import {getClasses} from '../classes';
@@ -6,8 +6,13 @@ import {getConstructors} from '../constructors';
 import {getMethods} from '../methods';
 import {getParams} from '../params';
 import {getProperties} from '../properties';
-import type {Query} from '../utils';
-import {arrayFlat, coerceArray, getDeclarationGetter, matchQuery} from '../utils';
+import {
+    arrayFlat,
+    coerceArray,
+    getDeclarationGetter,
+    matchQuery,
+    type Query,
+} from '../utils';
 
 export function getDecorators(
     declarations: DecoratableNode | DecoratableNode[],

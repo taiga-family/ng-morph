@@ -1,5 +1,4 @@
-import type {ClassDeclaration} from 'ts-morph';
-import {Node} from 'ts-morph';
+import {type ClassDeclaration, Node} from 'ts-morph';
 
 export function isStandaloneComponent(component: ClassDeclaration): boolean {
     const decorator = component.getDecorator('Component');

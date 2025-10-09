@@ -1,10 +1,10 @@
-import type {OptionalKind, StatementStructures, StructureKind} from 'ts-morph';
+import {type OptionalKind, type StatementStructures, type StructureKind} from 'ts-morph';
 
 import {getSourceFiles} from '../source-file';
 import {coerceArray} from './coerce-array';
-import type {Pattern} from './pattern';
-import type {StructureType} from './structure-type';
-import type {StructuredStatement} from './structured-statement';
+import {type Pattern} from './pattern';
+import {type StructureType} from './structure-type';
+import {type StructuredStatement} from './structured-statement';
 
 export function getDeclarationCreator<
     Declaration extends StructuredStatement<Declaration>,

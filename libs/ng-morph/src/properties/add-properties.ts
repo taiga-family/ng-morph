@@ -1,7 +1,7 @@
-import type {
-    ClassDeclaration,
-    OptionalKind,
-    PropertyDeclarationStructure,
+import {
+    type ClassDeclaration,
+    type OptionalKind,
+    type PropertyDeclarationStructure,
 } from 'ts-morph';
 
 import {coerceArray} from '../utils';

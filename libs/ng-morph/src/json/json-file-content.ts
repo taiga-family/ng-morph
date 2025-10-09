@@ -6,24 +6,28 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import type {JsonValue} from '@angular-devkit/core';
-import type {Node, ParseError} from 'jsonc-parser';
+import {type JsonValue} from '@angular-devkit/core';
 import {
     applyEdits,
     findNodeAtLocation,
     getNodeValue,
     modify,
+    type Node,
+    type ParseError,
     parseTree,
     printParseErrorCode,
 } from 'jsonc-parser';
 
-import type {InsertionIndex} from './insertion-index';
-import type {JSONPath} from './json-path';
+import {type InsertionIndex} from './insertion-index';
+import {type JSONPath} from './json-path';
 
 export class JSONFileContent {
     protected jsonAstNode: Node | undefined;
+    protected content: string;
 
-    constructor(protected content: string) {}
+    constructor(content: string) {
+        this.content = content;
+    }
 
     public get(jsonPath: JSONPath): string | undefined {
         const ast = this.jsonAst();

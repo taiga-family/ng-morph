@@ -1,5 +1,5 @@
-import type {Tree} from '@angular-devkit/schematics';
-import type {WorkspaceProject} from '@schematics/angular/utility/workspace-models';
+import {type Tree} from '@angular-devkit/schematics';
+import {type WorkspaceProject} from '@schematics/angular/utility/workspace-models';
 
 import {ANGULAR_PATH} from './consts';
 import {JSONFile} from './json-file';

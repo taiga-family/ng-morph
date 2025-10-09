@@ -1,4 +1,4 @@
-import type {ConstructorDeclaration} from 'ts-morph';
+import {type ConstructorDeclaration} from 'ts-morph';
 
 import {getDeclarationRemover} from '../utils';
 

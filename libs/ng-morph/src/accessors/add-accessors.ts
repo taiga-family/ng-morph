@@ -1,9 +1,9 @@
-import type {
-    ClassDeclaration,
-    GetAccessorDeclarationStructure,
-    SetAccessorDeclarationStructure,
+import {
+    type ClassDeclaration,
+    type GetAccessorDeclarationStructure,
+    type SetAccessorDeclarationStructure,
+    Structure,
 } from 'ts-morph';
-import {Structure} from 'ts-morph';
 
 import {coerceArray} from '../utils';
 

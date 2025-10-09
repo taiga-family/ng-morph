@@ -10,10 +10,10 @@
 import {basename, join} from 'node:path';
 
 import multimatch from 'multimatch';
-import type {FileSystemHost, RuntimeDirEntry} from 'ts-morph';
+import {type FileSystemHost, type RuntimeDirEntry} from 'ts-morph';
 
-import type {DevkitFileSystem} from './devkit-file-system';
-import type {UpdateRecorder} from './update-recorder';
+import {type DevkitFileSystem} from './devkit-file-system';
+import {type UpdateRecorder} from './update-recorder';
 
 /**
  * A workspace path semantically is equivalent to the `Path` type provided by the
@@ -91,7 +91,7 @@ export abstract class FileSystem {
 }
 
 export class NgCliFileSystem implements FileSystemHost {
-    constructor(public fs: DevkitFileSystem) {}
+    constructor(public readonly fs: DevkitFileSystem) {}
 
     public async copy(srcPath: string, destPath: string): Promise<void> {
         this.copySync(srcPath, destPath);
@@ -153,12 +153,10 @@ export class NgCliFileSystem implements FileSystemHost {
         return true;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     public async mkdir(_dirPath: string): Promise<void> {
         return Promise.resolve(undefined);
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     public mkdirSync(_dirPath: string): void {
         // empty
     }
@@ -193,12 +191,10 @@ export class NgCliFileSystem implements FileSystemHost {
             );
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     public async readFile(filePath: string, _encoding?: string): Promise<string> {
         return this.readFileSync(filePath);
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     public readFileSync(filePath: string, _encoding?: string): string {
         return this.fs.read(filePath) ?? '';
     }

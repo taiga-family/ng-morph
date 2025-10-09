@@ -1,4 +1,4 @@
-import type {InterfaceDeclaration} from 'ts-morph';
+import {type InterfaceDeclaration} from 'ts-morph';
 
 import {getDeclarationEditor} from '../utils';
 

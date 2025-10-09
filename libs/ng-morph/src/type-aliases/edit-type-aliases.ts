@@ -1,4 +1,4 @@
-import type {TypeAliasDeclaration} from 'ts-morph';
+import {type TypeAliasDeclaration} from 'ts-morph';
 
 import {getDeclarationEditor} from '../utils';
 

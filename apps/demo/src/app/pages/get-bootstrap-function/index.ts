@@ -35,7 +35,6 @@ addProviderToBootstrapApplicationFn(bootstrapFn, 'provideRouter()');
 `;
 
 @Component({
-    standalone: true,
     imports: [TuiAddonDoc],
     templateUrl: './index.html',
     changeDetection: ChangeDetectionStrategy.OnPush,

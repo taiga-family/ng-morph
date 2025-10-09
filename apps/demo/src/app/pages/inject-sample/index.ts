@@ -71,7 +71,6 @@ function fixInjectImport(file: string) {
 }`;
 
 @Component({
-    standalone: true,
     imports: [TuiAddonDoc, TuiLink],
     templateUrl: './index.html',
     changeDetection: ChangeDetectionStrategy.OnPush,

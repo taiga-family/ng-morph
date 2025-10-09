@@ -1,12 +1,11 @@
-import type {
-    AccessorDeclaration,
-    ClassDeclaration,
-    GetAccessorDeclarationStructure,
-    SetAccessorDeclarationStructure,
+import {
+    type AccessorDeclaration,
+    type ClassDeclaration,
+    type GetAccessorDeclarationStructure,
+    type SetAccessorDeclarationStructure,
 } from 'ts-morph';
 
-import type {Query} from '../utils';
-import {arrayFlat, coerceArray, matchQuery} from '../utils';
+import {arrayFlat, coerceArray, matchQuery, type Query} from '../utils';
 
 export function getAccessors(
     classes: ClassDeclaration | ClassDeclaration[],

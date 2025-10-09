@@ -1,11 +1,10 @@
-import type {
-    ClassDeclaration,
-    ConstructorDeclaration,
-    ConstructorDeclarationStructure,
+import {
+    type ClassDeclaration,
+    type ConstructorDeclaration,
+    type ConstructorDeclarationStructure,
 } from 'ts-morph';
 
-import type {Query} from '../utils';
-import {arrayFlat, coerceArray, matchQuery} from '../utils';
+import {arrayFlat, coerceArray, matchQuery, type Query} from '../utils';
 
 export function getConstructors(
     classes: ClassDeclaration | ClassDeclaration[],

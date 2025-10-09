@@ -1,4 +1,4 @@
-import type {ImportDeclaration} from 'ts-morph';
+import {type ImportDeclaration} from 'ts-morph';
 
 import {getDeclarationRemover} from '../utils';
 

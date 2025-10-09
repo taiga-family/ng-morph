@@ -1,4 +1,4 @@
-import type {Decorator} from 'ts-morph';
+import {type Decorator} from 'ts-morph';
 
 import {getDeclarationEditor} from '../utils';
 

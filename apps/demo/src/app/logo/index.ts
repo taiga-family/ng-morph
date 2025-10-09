@@ -4,7 +4,7 @@ import {PolymorpheusComponent} from '@taiga-ui/polymorpheus';
 @Component({
     standalone: true,
     templateUrl: './index.html',
-    styleUrls: ['./index.less'],
+    styleUrl: './index.less',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LogoComponent {}

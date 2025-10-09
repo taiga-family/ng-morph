@@ -1,4 +1,4 @@
-import type {ClassDeclaration, Identifier} from 'ts-morph';
+import {type ClassDeclaration, type Identifier} from 'ts-morph';
 
 import {getBootstrapFn} from '../bootstrap';
 
@@ -6,7 +6,7 @@ export function getMainModule(mainFilePath: string): ClassDeclaration | undefine
     const bootstrapFn = getBootstrapFn(mainFilePath);
 
     const [mainModuleIdentifier] =
-        (bootstrapFn?.getArguments?.() as [Identifier] | undefined) || [];
+        (bootstrapFn?.getArguments() as [Identifier] | undefined) || [];
 
     const [mainModuleClass] =
         (mainModuleIdentifier?.getDefinitionNodes() as [ClassDeclaration] | undefined) ||

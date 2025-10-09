@@ -1,4 +1,8 @@
-import type {ClassDeclaration, MethodDeclarationStructure, OptionalKind} from 'ts-morph';
+import {
+    type ClassDeclaration,
+    type MethodDeclarationStructure,
+    type OptionalKind,
+} from 'ts-morph';
 
 import {coerceArray} from '../utils';
 

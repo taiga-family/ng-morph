@@ -1,4 +1,4 @@
-import type {MethodDeclaration, MethodDeclarationStructure} from 'ts-morph';
+import {type MethodDeclaration, type MethodDeclarationStructure} from 'ts-morph';
 
 import {getDeclarationEditor} from '../utils';
 

@@ -1,11 +1,10 @@
-import type {
-    ClassDeclaration,
-    PropertyDeclaration,
-    PropertyDeclarationStructure,
+import {
+    type ClassDeclaration,
+    type PropertyDeclaration,
+    type PropertyDeclarationStructure,
 } from 'ts-morph';
 
-import type {Query} from '../utils';
-import {arrayFlat, coerceArray, matchQuery} from '../utils';
+import {arrayFlat, coerceArray, matchQuery, type Query} from '../utils';
 
 export function getProperties<T extends ClassDeclaration>(
     classes: T | T[],

@@ -1,7 +1,7 @@
-import type {
-    FunctionLikeDeclaration,
-    OptionalKind,
-    ParameterDeclarationStructure,
+import {
+    type FunctionLikeDeclaration,
+    type OptionalKind,
+    type ParameterDeclarationStructure,
 } from 'ts-morph';
 
 import {coerceArray} from '../utils';

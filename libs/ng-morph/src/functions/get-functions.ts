@@ -1,4 +1,4 @@
-import type {FunctionDeclaration, FunctionDeclarationStructure} from 'ts-morph';
+import {type FunctionDeclaration, type FunctionDeclarationStructure} from 'ts-morph';
 
 import {getSourceFiles} from '../source-file';
 import {arrayFlat, getDeclarationGetter} from '../utils';

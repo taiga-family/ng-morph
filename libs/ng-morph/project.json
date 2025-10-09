@@ -4,18 +4,11 @@
     "sourceRoot": "libs/ng-morph/src",
     "projectType": "library",
     "targets": {
-        "lint": {
-            "executor": "@nx/linter:eslint",
-            "options": {
-                "lintFilePatterns": ["libs/{projectName}/**/*.ts"]
-            },
-            "outputs": ["{options.outputFile}"]
-        },
         "test": {
             "executor": "@nx/jest:jest",
             "outputs": ["{workspaceRoot}/coverage/{projectName}/ng-morph"],
             "options": {
-                "jestConfig": "libs/{projectName}/jest.config.ts",
+                "jestConfig": "jest.config.ts",
                 "passWithNoTests": true
             }
         },

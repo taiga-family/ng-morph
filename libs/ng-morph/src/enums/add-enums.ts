@@ -1,5 +1,4 @@
-import type {EnumDeclaration} from 'ts-morph';
-import {StructureKind} from 'ts-morph';
+import {type EnumDeclaration, StructureKind} from 'ts-morph';
 
 import {getDeclarationCreator} from '../utils';
 

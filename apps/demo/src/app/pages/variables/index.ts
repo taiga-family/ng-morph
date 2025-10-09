@@ -34,7 +34,6 @@ saveActiveProject();
 `;
 
 @Component({
-    standalone: true,
     selector: 'variables',
     imports: [TuiAddonDoc],
     templateUrl: './index.html',

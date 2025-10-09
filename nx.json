@@ -8,6 +8,9 @@
         }
     },
     "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "tui": {
+        "enabled": false
+    },
     "targetDefaults": {
         "build": {
             "dependsOn": ["^build"],
@@ -16,9 +19,6 @@
         },
         "test": {
             "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
-            "cache": true
-        },
-        "lint": {
             "cache": true
         }
     },
