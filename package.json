@@ -106,7 +106,7 @@
         "highlight.js": "11.11.1",
         "jest-preset-angular": "14.6.1",
         "jsonc-parser": "3.3.1",
-        "less": "4.2.0",
+        "less": "4.4.2",
         "minimatch": "10.0.3",
         "multimatch": "5.0.0",
         "ngx-highlightjs": "10.0.0",
