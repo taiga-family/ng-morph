@@ -1,4 +1,4 @@
-import{Q as f,S as u,T as g,i as s,k as l,m as x,n,o as r,p as i,q as m,t as c,u as a}from"./chunk-I2NUB5CL.js";function v(o,p){if(o&1&&(r(0,"p"),a(1,"You can create, get, edit and remove imports in your files with declarative descriptions and conditions."),i(),m(2,"tui-doc-code",3)),o&2){let e=c();s(2),n("code",e.imports)}}function I(o,p){if(o&1&&(r(0,"p"),a(1,"You can create, get, edit and remove exports in your files with declarative descriptions and conditions."),i(),m(2,"tui-doc-code",3)),o&2){let e=c();s(2),n("code",e.exports)}}var E=`import {
+import{Q as f,S as u,T as g,i as s,k as l,m as x,n,o as r,p as i,q as m,t as c,u as a}from"./chunk-YLYDPKC5.js";function v(o,p){if(o&1&&(r(0,"p"),a(1,"You can create, get, edit and remove imports in your files with declarative descriptions and conditions."),i(),m(2,"tui-doc-code",3)),o&2){let e=c();s(2),n("code",e.imports)}}function I(o,p){if(o&1&&(r(0,"p"),a(1,"You can create, get, edit and remove exports in your files with declarative descriptions and conditions."),i(),m(2,"tui-doc-code",3)),o&2){let e=c();s(2),n("code",e.exports)}}var E=`import {
     addImports,
     editImports,
     getImports,
