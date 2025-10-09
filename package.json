@@ -102,7 +102,7 @@
         "@taiga-ui/testing": "4.57.0",
         "@taiga-ui/tsconfig": "0.332.0",
         "@types/minimatch": "6.0.0",
-        "@types/node": "24.7.0",
+        "@types/node": "24.7.1",
         "highlight.js": "11.11.1",
         "jest-preset-angular": "14.6.1",
         "jsonc-parser": "3.3.1",
