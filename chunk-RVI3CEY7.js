@@ -1,4 +1,4 @@
-import{Q as l,T as m,i as a,k as d,n as r,o,p as t,q as p,u as e}from"./chunk-YLYDPKC5.js";var g=`import {
+import{Q as l,T as m,i as a,k as d,n as r,o,p as t,q as p,u as e}from"./chunk-3DFYNJCM.js";var g=`import {
     getBootstrapFn,
     setActiveProject,
 } from 'ng-morph';
