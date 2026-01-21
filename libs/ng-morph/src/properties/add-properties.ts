@@ -12,7 +12,7 @@ export function addProperties(
         | Array<OptionalKind<PropertyDeclarationStructure>>
         | OptionalKind<PropertyDeclarationStructure>,
 ): void {
-    coerceArray(classes).forEach((klass) => {
-        klass.addProperties(coerceArray(properties));
+    coerceArray(classes).forEach((declaration) => {
+        declaration.addProperties(coerceArray(properties));
     });
 }

@@ -35,9 +35,7 @@ class A {
     it('should edit accessors', () => {
         const declarations = getAccessors(getClasses('some/path/file.ts'));
 
-        editAccessors(declarations, () => ({
-            name: 'anotherName',
-        }));
+        editAccessors(declarations, () => ({name: 'anotherName'}));
 
         saveActiveProject();
 

@@ -6,7 +6,7 @@
 
 Code mutations were never easier than now.
 
-```
+```bash
 npm i --save-dev ng-morph
 ```
 

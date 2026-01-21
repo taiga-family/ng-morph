@@ -14,12 +14,12 @@ export function addAccessors(
         | GetAccessorDeclarationStructure
         | SetAccessorDeclarationStructure,
 ): void {
-    coerceArray(classes).forEach((klass) => {
+    coerceArray(classes).forEach((declaration) => {
         coerceArray(accessors).forEach((accessor) => {
             if (Structure.isGetAccessor(accessor)) {
-                klass.addGetAccessor(accessor);
+                declaration.addGetAccessor(accessor);
             } else {
-                klass.addSetAccessor(accessor);
+                declaration.addSetAccessor(accessor);
             }
         });
     });

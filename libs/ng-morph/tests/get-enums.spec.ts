@@ -47,9 +47,7 @@ enum B {
     });
 
     it('should find one enum by name', () => {
-        const declarations = getEnums('some/path/**.ts', {
-            name: 'B',
-        });
+        const declarations = getEnums('some/path/**.ts', {name: 'B'});
 
         expect(declarations.length).toBe(1);
     });

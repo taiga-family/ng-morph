@@ -33,9 +33,7 @@ const b = Test.First;
     it('should edit enums', () => {
         const declarations = getEnums('some/path/file.ts');
 
-        editEnums(declarations, () => ({
-            name: 'Name',
-        }));
+        editEnums(declarations, () => ({name: 'Name'}));
 
         saveActiveProject();
 

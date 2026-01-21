@@ -33,9 +33,7 @@ console.log(a);
     it('should edit exports', () => {
         const exports = getExports('some/path/file.ts');
 
-        editExports(exports, () => ({
-            namedExports: ['b,c'],
-        }));
+        editExports(exports, () => ({namedExports: ['b,c']}));
 
         saveActiveProject();
 

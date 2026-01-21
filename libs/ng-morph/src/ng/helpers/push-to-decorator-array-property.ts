@@ -14,9 +14,7 @@ export function pushToDecoratorArrayProperty(
         forceToArray = false,
     }: {unique?: boolean; forceToArray?: boolean} = {},
 ): void {
-    const [decorator] = getDecorators(classDeclaration, {
-        name: decoratorName,
-    });
+    const [decorator] = getDecorators(classDeclaration, {name: decoratorName});
 
     const [metadata = decorator?.addArgument(`{${propertyName}: []}`)] =
         decorator?.getArguments() || [];

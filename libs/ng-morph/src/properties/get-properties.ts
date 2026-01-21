@@ -10,7 +10,7 @@ export function getProperties<T extends ClassDeclaration>(
     classes: T | T[],
     query?: Query<PropertyDeclarationStructure>,
 ): PropertyDeclaration[] {
-    return arrayFlat(coerceArray(classes).map((klass) => klass.getProperties())).filter(
-        (method) => matchQuery(method.getStructure(), query),
-    );
+    return arrayFlat(
+        coerceArray(classes).map((declaration) => declaration.getProperties()),
+    ).filter((method) => matchQuery(method.getStructure(), query));
 }

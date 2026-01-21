@@ -87,7 +87,7 @@ All notable changes to this project will be documented in this file. See
 - upgrade multimatch (#651)
   [(6555b10)](https://github.com/taiga-family/ng-morph/commit/6555b1014922b152b35d19dd8a37cf9501866ae4)
 
-### [4.2.0]() (2024-06-11)
+### [4.2.0](https://github.com/taiga-family/ng-morph/releases/tag/v4.2.0) (2024-06-11)
 
 ### 🚀 Features
 

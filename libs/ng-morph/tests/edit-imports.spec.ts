@@ -32,9 +32,7 @@ console.log(a);
     it('should edit imports', () => {
         const imports = getImports('some/path/file.ts');
 
-        editImports(imports, () => ({
-            namedImports: ['b,c'],
-        }));
+        editImports(imports, () => ({namedImports: ['b,c']}));
 
         saveActiveProject();
 

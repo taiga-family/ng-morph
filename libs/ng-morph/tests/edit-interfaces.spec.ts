@@ -32,9 +32,7 @@ const a: A;
     it('should edit Interfaces', () => {
         const declarations = getInterfaces('some/path/file.ts');
 
-        editInterfaces(declarations, () => ({
-            name: 'B',
-        }));
+        editInterfaces(declarations, () => ({name: 'B'}));
 
         saveActiveProject();
 

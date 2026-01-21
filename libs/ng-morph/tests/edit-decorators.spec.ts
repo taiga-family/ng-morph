@@ -36,9 +36,7 @@ class A{
     it('should edit decorators', () => {
         const declarations = getDecorators(getClasses('some/path/file.ts'));
 
-        editDecorators(declarations, () => ({
-            name: 'Directive',
-        }));
+        editDecorators(declarations, () => ({name: 'Directive'}));
 
         saveActiveProject();
 

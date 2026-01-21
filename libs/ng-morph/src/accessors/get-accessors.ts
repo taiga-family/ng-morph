@@ -12,9 +12,9 @@ export function getAccessors(
     query?: Query<GetAccessorDeclarationStructure | SetAccessorDeclarationStructure>,
 ): AccessorDeclaration[] {
     return arrayFlat(
-        coerceArray(classes).map((klass) => [
-            ...klass.getGetAccessors(),
-            ...klass.getSetAccessors(),
+        coerceArray(classes).map((declaration) => [
+            ...declaration.getGetAccessors(),
+            ...declaration.getSetAccessors(),
         ]),
     ).filter((accessor) => matchQuery(accessor.getStructure(), query));
 }

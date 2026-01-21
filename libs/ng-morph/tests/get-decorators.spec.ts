@@ -72,9 +72,7 @@ class B {
     });
 
     it('should find one decorator by name for Inject', () => {
-        const declarations = getAllDecorators('some/path/**.ts', {
-            name: 'Inject',
-        });
+        const declarations = getAllDecorators('some/path/**.ts', {name: 'Inject'});
 
         expect(declarations.length).toBe(1);
     });

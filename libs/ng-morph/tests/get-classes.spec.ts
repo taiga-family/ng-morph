@@ -45,9 +45,7 @@ class B { }
     });
 
     it('should find one export by class name', () => {
-        const exports = getClasses('some/path/**.ts', {
-            name: 'B',
-        });
+        const exports = getClasses('some/path/**.ts', {name: 'B'});
 
         expect(exports.length).toBe(1);
     });

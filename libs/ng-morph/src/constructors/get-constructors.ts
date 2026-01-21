@@ -10,7 +10,9 @@ export function getConstructors(
     classes: ClassDeclaration | ClassDeclaration[],
     query?: Query<ConstructorDeclarationStructure>,
 ): ConstructorDeclaration[] {
-    return arrayFlat(coerceArray(classes).map((klass) => klass.getConstructors())).filter(
+    return arrayFlat(
+        coerceArray(classes).map((declaration) => declaration.getConstructors()),
+    ).filter(
         (constructor) =>
             !constructor.isOverload() && matchQuery(constructor.getStructure(), query),
     );
