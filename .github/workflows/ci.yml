@@ -26,6 +26,7 @@ jobs:
           fi
 
       - run: |
+          npm run cspell
           npm run build
           npm test
 
