@@ -36,9 +36,7 @@ class A {
     it('should edit constructors', () => {
         const declarations = getConstructors(getClasses('some/path/file.ts'));
 
-        editConstructors(declarations, () => ({
-            scope: Scope.Protected,
-        }));
+        editConstructors(declarations, () => ({scope: Scope.Protected}));
 
         saveActiveProject();
 

@@ -1,6 +1,7 @@
 {
     "name": "ng-morph",
     "version": "4.8.4",
+    "description": "Code mutations were never easier than now",
     "keywords": [
         "typescript",
         "ast",
@@ -9,11 +10,20 @@
         "schematics"
     ],
     "homepage": "https://taiga-family.github.io/ng-morph/",
-    "repository": "https://github.com/taiga-family/ng-morph",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/taiga-family/ng-morph"
+    },
     "license": "Apache-2.0",
     "contributors": [
-        "Igor Katsuba <katsuba.igor@gmail.ru>",
-        "Roman Sedov <79601794011@ya.ru>"
+        {
+            "name": "Igor Katsuba",
+            "email": "katsuba.igor@gmail.ru"
+        },
+        {
+            "name": "Roman Sedov",
+            "email": "79601794011@ya.ru"
+        }
     ],
     "dependencies": {
         "jsonc-parser": "3.3.1",
@@ -24,6 +34,7 @@
     "peerDependencies": {
         "@angular-devkit/core": ">=19.0.0",
         "@angular-devkit/schematics": ">=19.0.0",
+        "@types/semver": "^7.7.1",
         "tslib": "^2.8.1"
     },
     "authors": [

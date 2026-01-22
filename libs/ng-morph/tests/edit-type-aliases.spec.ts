@@ -25,9 +25,7 @@ describe('editTypeAliases', () => {
     it('should edit type aliases', () => {
         const declarations = getTypeAliases('some/path/file.ts');
 
-        editTypeAliases(declarations, () => ({
-            name: 'B',
-        }));
+        editTypeAliases(declarations, () => ({name: 'B'}));
 
         saveActiveProject();
 

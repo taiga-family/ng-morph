@@ -22,9 +22,7 @@ describe('get project targets', () => {
                     version: 1,
                     projects: {
                         migrations: {},
-                        core: {
-                            root: '',
-                        },
+                        core: {root: ''},
                     },
                 }),
             );

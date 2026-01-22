@@ -46,13 +46,11 @@ class A {
     it('should add decorators', () => {
         const classes = getClasses('some/path/file.ts');
         const methods = getMethods(classes, {name: 'method'});
-        const constructorParams = getParams(getConstructors(classes), {
-            name: 'param',
-        });
+        const constructorParams = getParams(getConstructors(classes), {name: 'param'});
         const methodParams = getParams(methods);
         const properties = getProperties(classes, {name: 'property'});
-        const getAccessorss = getAccessors(classes, {name: 'getAccessor'});
-        const setAccessors = getAccessors(classes, {name: 'setAccessor'});
+        const isGetAccessors = getAccessors(classes, {name: 'getAccessor'});
+        const isSetAccessors = getAccessors(classes, {name: 'setAccessor'});
 
         addDecorators(classes, {
             name: 'Component',
@@ -79,12 +77,12 @@ class A {
             arguments: ['SomeComponent'],
         });
 
-        addDecorators(getAccessorss, {
+        addDecorators(isGetAccessors, {
             name: 'AnotherDecorator',
             arguments: ['SomeComponent', "['string']"],
         });
 
-        addDecorators(setAccessors, {
+        addDecorators(isSetAccessors, {
             name: 'SetDecorator',
             arguments: ['[1, 3]'],
         });

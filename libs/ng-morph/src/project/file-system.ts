@@ -222,7 +222,9 @@ export class NgCliFileSystem implements FileSystemHost {
 
         directories
             .filter((dir) => !dir.startsWith('.') && dir !== 'node_modules')
-            .forEach((dir) => this.getAllFilePaths(join(path, dir), foundedFiles));
+            .forEach((dir) => {
+                this.getAllFilePaths(join(path, dir), foundedFiles);
+            });
 
         return foundedFiles;
     }

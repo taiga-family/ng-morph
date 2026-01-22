@@ -33,9 +33,7 @@ export class SomeComponent {
         });
 
         it('should create the providers property', () => {
-            const classFile = getClasses('src/main.ts', {
-                name: 'SomeComponent',
-            })[0];
+            const classFile = getClasses('src/main.ts', {name: 'SomeComponent'})[0];
 
             if (classFile) {
                 addProviderToComponent(classFile, 'TestProvider');
@@ -69,9 +67,7 @@ export class SomeComponent {
         });
 
         it('should create the providers property', () => {
-            const classFile = getClasses('src/main.ts', {
-                name: 'SomeComponent',
-            })[0];
+            const classFile = getClasses('src/main.ts', {name: 'SomeComponent'})[0];
 
             if (classFile) {
                 addProviderToComponent(classFile, 'TestProvider');
@@ -106,9 +102,7 @@ export class SomeComponent {
         });
 
         it('should add module to providers', () => {
-            const classFile = getClasses('src/main.ts', {
-                name: 'SomeComponent',
-            })[0];
+            const classFile = getClasses('src/main.ts', {name: 'SomeComponent'})[0];
 
             if (classFile) {
                 addProviderToComponent(classFile, 'NewTestProvider');

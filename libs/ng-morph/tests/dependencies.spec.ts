@@ -82,11 +82,7 @@ describe('dependencies', () => {
         beforeEach(() => {
             const pkgJsonPath = '/package.json';
             const pkgJsonContent = JSON.stringify(
-                {
-                    dependencies: {
-                        'my-pkg': '1.2.3',
-                    },
-                },
+                {dependencies: {'my-pkg': '1.2.3'}},
                 null,
                 2,
             );

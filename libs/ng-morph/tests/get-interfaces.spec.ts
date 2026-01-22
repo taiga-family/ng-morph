@@ -45,9 +45,7 @@ interface B {}
     });
 
     it('should find one interface by name', () => {
-        const declarations = getInterfaces('some/path/**.ts', {
-            name: 'B',
-        });
+        const declarations = getInterfaces('some/path/**.ts', {name: 'B'});
 
         expect(declarations.length).toBe(1);
     });

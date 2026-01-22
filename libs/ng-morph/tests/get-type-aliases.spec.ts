@@ -35,9 +35,7 @@ describe('getTypeAliases', () => {
     });
 
     it('should find one type alias by name', () => {
-        const declarations = getTypeAliases('some/path/**.ts', {
-            name: 'B',
-        });
+        const declarations = getTypeAliases('some/path/**.ts', {name: 'B'});
 
         expect(declarations.length).toBe(1);
     });

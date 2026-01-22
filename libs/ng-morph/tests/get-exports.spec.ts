@@ -45,9 +45,7 @@ export { c } from 'd';
     });
 
     it('should find one export by name', () => {
-        const exports = getExports('some/path/**.ts', {
-            moduleSpecifier: 'd',
-        });
+        const exports = getExports('some/path/**.ts', {moduleSpecifier: 'd'});
 
         expect(exports.length).toBe(1);
     });

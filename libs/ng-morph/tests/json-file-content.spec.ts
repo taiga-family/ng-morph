@@ -31,9 +31,7 @@ describe('JSONFileContent', () => {
 
         const value = file.get(['some', 'path', 0]);
 
-        expect(value).toEqual({
-            value: 3,
-        });
+        expect(value).toEqual({value: 3});
     });
 
     it('should remove a value', () => {
