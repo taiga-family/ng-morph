@@ -96,7 +96,7 @@
         "@taiga-ui/kit": "4.68.0",
         "@taiga-ui/syncer": "0.399.0",
         "@types/minimatch": "6.0.0",
-        "@types/node": "24.10.9",
+        "@types/node": "24.10.10",
         "highlight.js": "11.11.1",
         "jest-preset-angular": "14.6.2",
         "jsonc-parser": "3.3.1",
