@@ -34,7 +34,7 @@ const ALL_DEPENDENCY_TYPE = [
 ];
 
 function versionSanitize(version: string): string {
-    return version.replaceAll(/([\^~])/g, '');
+    return version.replaceAll(/[\^~]/g, '');
 }
 
 export function addPackageJsonDependency(
