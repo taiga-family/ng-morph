@@ -1,15 +1,15 @@
 {
     "extends": "@taiga-ui/tsconfig",
     "compilerOptions": {
-        "rootDir": ".",
         "baseUrl": ".",
+        "rootDir": ".",
         "module": "esnext",
-        "verbatimModuleSyntax": false,
-        "typeRoots": ["node_modules/@types"],
         "paths": {
             "ng-morph": ["./libs/ng-morph/src/index.ts"],
             "rxjs": ["node_modules/rxjs"]
-        }
+        },
+        "typeRoots": ["node_modules/@types"],
+        "verbatimModuleSyntax": false
     },
     "exclude": ["node_modules", "tmp"]
 }

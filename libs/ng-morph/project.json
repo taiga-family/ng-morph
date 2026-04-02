@@ -1,27 +1,19 @@
 {
-    "name": "ng-morph",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/ng-morph/src",
+    "name": "ng-morph",
     "projectType": "library",
+    "sourceRoot": "libs/ng-morph/src",
     "targets": {
-        "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": ["{workspaceRoot}/coverage/{projectName}/ng-morph"],
-            "options": {
-                "jestConfig": "jest.config.ts",
-                "passWithNoTests": true
-            }
-        },
         "build": {
             "executor": "@nx/js:tsc",
-            "outputs": ["{options.outputPath}"],
             "options": {
-                "outputPath": "dist/{projectName}",
-                "tsConfig": "libs/{projectName}/tsconfig.lib.json",
-                "packageJson": "libs/{projectName}/package.json",
+                "assets": ["libs/{projectName}/*.md"],
                 "main": "libs/{projectName}/src/index.ts",
-                "assets": ["libs/{projectName}/*.md"]
-            }
+                "outputPath": "dist/{projectName}",
+                "packageJson": "libs/{projectName}/package.json",
+                "tsConfig": "libs/{projectName}/tsconfig.lib.json"
+            },
+            "outputs": ["{options.outputPath}"]
         },
         "prepublish": {
             "executor": "nx:run-commands",
@@ -30,21 +22,26 @@
             }
         },
         "publish": {
-            "executor": "nx:run-commands",
-            "options": {
-                "parallel": false,
-                "commands": [
-                    "cp ./LICENSE ./README.md ./dist/{projectName}",
-                    "npm publish ./dist/{projectName} --ignore-scripts"
-                ]
-            },
             "dependsOn": [
                 {
-                    "target": "build",
+                    "dependencies": false,
                     "params": "ignore",
-                    "dependencies": false
+                    "target": "build"
                 }
-            ]
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": ["cp ./LICENSE ./README.md ./dist/{projectName}", "npm publish ./dist/{projectName} --ignore-scripts"],
+                "parallel": false
+            }
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "options": {
+                "jestConfig": "jest.config.ts",
+                "passWithNoTests": true
+            },
+            "outputs": ["{workspaceRoot}/coverage/{projectName}/ng-morph"]
         }
     }
 }

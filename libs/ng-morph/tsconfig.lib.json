@@ -1,12 +1,12 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "module": "commonjs",
-        "outDir": "../../dist/out-tsc",
         "declaration": true,
         "lib": ["esnext"],
+        "module": "commonjs",
+        "outDir": "../../dist/out-tsc",
         "types": ["node"]
     },
-    "exclude": ["**/*.spec.ts"],
-    "include": ["**/*.ts"]
+    "include": ["**/*.ts"],
+    "exclude": ["**/*.spec.ts"]
 }
