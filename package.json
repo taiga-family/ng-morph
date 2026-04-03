@@ -3,7 +3,9 @@
     "version": "4.8.4",
     "private": true,
     "license": "Apache-2.0",
-    "workspaces": ["libs/*"],
+    "workspaces": [
+        "libs/*"
+    ],
     "scripts": {
         "affected": "nx affected",
         "affected:apps": "nx affected:apps",
@@ -33,17 +35,30 @@
         "workspace-generator": "nx workspace-generator"
     },
     "commitlint": {
-        "extends": ["@taiga-ui/commitlint-config"]
+        "extends": [
+            "@taiga-ui/commitlint-config"
+        ]
     },
     "lint-staged": {
-        "*.less": ["stylelint --fix"],
-        "*.{js,ts,html}": ["eslint --fix", "prettier --write"],
-        "*.{svg,yml,md,less,json}": ["prettier --write"]
+        "*.less": [
+            "stylelint --fix"
+        ],
+        "*.{js,ts,html}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.{svg,yml,md,less,json}": [
+            "prettier --write"
+        ]
     },
-    "browserslist": ["extends @taiga-ui/browserslist-config"],
+    "browserslist": [
+        "extends @taiga-ui/browserslist-config"
+    ],
     "prettier": "@taiga-ui/prettier-config",
     "stylelint": {
-        "extends": ["@taiga-ui/stylelint-config"],
+        "extends": [
+            "@taiga-ui/stylelint-config"
+        ],
         "ignoreFiles": [
             "**/dist/**",
             "**/coverage/**",
@@ -71,12 +86,12 @@
         "@taiga-ui/addon-doc": "4.77.0",
         "@taiga-ui/addon-mobile": "4.77.0",
         "@taiga-ui/cdk": "4.77.0",
-        "@taiga-ui/configs": "0.448.0",
+        "@taiga-ui/configs": "0.449.0",
         "@taiga-ui/core": "4.77.0",
         "@taiga-ui/event-plugins": "4.7.0",
         "@taiga-ui/icons": "4.77.0",
         "@taiga-ui/kit": "4.77.0",
-        "@taiga-ui/syncer": "0.448.0",
+        "@taiga-ui/syncer": "0.449.0",
         "@types/minimatch": "6.0.0",
         "@types/node": "24.10.11",
         "highlight.js": "11.11.1",
@@ -94,7 +109,12 @@
         "typescript": "5.7.3"
     },
     "syncer": {
-        "includePaths": ["./libs", "./package-lock.json"],
-        "matchPackageNames": ["ng-morph"]
+        "includePaths": [
+            "./libs",
+            "./package-lock.json"
+        ],
+        "matchPackageNames": [
+            "ng-morph"
+        ]
     }
 }
