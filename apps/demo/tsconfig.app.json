@@ -1,15 +1,15 @@
 {
     "extends": "../../tsconfig.json",
-    "angularCompilerOptions": {
-        "strictMetadataEmit": false,
-        "compilationMode": "full"
-    },
     "compilerOptions": {
         "baseUrl": ".",
         "outDir": "../../dist/out-tsc",
-        "types": [],
         "target": "ES2022",
+        "types": [],
         "useDefineForClassFields": false
+    },
+    "angularCompilerOptions": {
+        "compilationMode": "full",
+        "strictMetadataEmit": false
     },
     "files": ["src/main.ts", "src/polyfills.ts"]
 }

@@ -3,8 +3,8 @@
     "extends": ["github>taiga-family/renovate-config"],
     "packageRules": [
         {
-            "matchPackageNames": ["multimatch"],
-            "allowedVersions": "=5.0.0"
+            "allowedVersions": "=5.0.0",
+            "matchPackageNames": ["multimatch"]
         }
     ]
 }

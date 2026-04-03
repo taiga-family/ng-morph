@@ -17,12 +17,12 @@
     "license": "Apache-2.0",
     "contributors": [
         {
-            "name": "Igor Katsuba",
-            "email": "katsuba.igor@gmail.ru"
+            "email": "katsuba.igor@gmail.ru",
+            "name": "Igor Katsuba"
         },
         {
-            "name": "Roman Sedov",
-            "email": "79601794011@ya.ru"
+            "email": "79601794011@ya.ru",
+            "name": "Roman Sedov"
         }
     ],
     "dependencies": {
@@ -37,7 +37,5 @@
         "@types/semver": "^7.7.1",
         "tslib": "^2.8.1"
     },
-    "authors": [
-        "Igor Katsuba <katsuba.igor@gmail.ru>"
-    ]
+    "authors": ["Igor Katsuba <katsuba.igor@gmail.ru>"]
 }

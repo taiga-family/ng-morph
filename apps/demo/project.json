@@ -1,19 +1,32 @@
 {
-    "name": "demo",
     "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "name": "demo",
+    "prefix": "ng-morph",
     "projectType": "application",
     "sourceRoot": "apps/demo/src",
-    "prefix": "ng-morph",
     "tags": [],
     "targets": {
         "build": {
+            "configurations": {
+                "production": {
+                    "extractLicenses": true,
+                    "fileReplacements": [
+                        {
+                            "replace": "apps/demo/src/environments/environment.ts",
+                            "with": "apps/demo/src/environments/environment.prod.ts"
+                        }
+                    ],
+                    "namedChunks": false,
+                    "optimization": true,
+                    "outputHashing": "all",
+                    "sourceMap": false
+                }
+            },
+            "defaultConfiguration": "production",
+            "dependsOn": ["^build"],
             "executor": "@angular/build:application",
             "options": {
-                "outputPath": "dist/apps/demo",
-                "index": "apps/demo/src/index.html",
-                "polyfills": ["apps/demo/src/polyfills.ts"],
-                "tsConfig": "apps/demo/tsconfig.app.json",
-                "baseHref": "/ng-morph/",
+                "allowedCommonJsDependencies": ["text-mask-core"],
                 "assets": [
                     "apps/demo/src/favicon.ico",
                     "apps/demo/src/assets",
@@ -23,45 +36,32 @@
                         "output": "assets/taiga-ui/icons"
                     }
                 ],
-                "styles": ["apps/demo/src/styles.less", "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less"],
-                "allowedCommonJsDependencies": ["text-mask-core"],
-                "scripts": [],
+                "baseHref": "/ng-morph/",
+                "browser": "apps/demo/src/main.ts",
                 "extractLicenses": false,
-                "sourceMap": true,
+                "index": "apps/demo/src/index.html",
                 "optimization": false,
-                "browser": "apps/demo/src/main.ts"
-            },
-            "configurations": {
-                "production": {
-                    "fileReplacements": [
-                        {
-                            "replace": "apps/demo/src/environments/environment.ts",
-                            "with": "apps/demo/src/environments/environment.prod.ts"
-                        }
-                    ],
-                    "optimization": true,
-                    "outputHashing": "all",
-                    "sourceMap": false,
-                    "namedChunks": false,
-                    "extractLicenses": true
-                }
-            },
-            "defaultConfiguration": "production",
-            "dependsOn": ["^build"]
-        },
-        "serve": {
-            "executor": "@angular/build:dev-server",
-            "options": {
-                "buildTarget": "demo:build"
-            },
-            "configurations": {
-                "production": {
-                    "buildTarget": "demo:build:production"
-                }
+                "outputPath": "dist/apps/demo",
+                "polyfills": ["apps/demo/src/polyfills.ts"],
+                "scripts": [],
+                "sourceMap": true,
+                "styles": ["apps/demo/src/styles.less", "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less"],
+                "tsConfig": "apps/demo/tsconfig.app.json"
             }
         },
         "extract-i18n": {
             "executor": "@angular/build:extract-i18n",
+            "options": {
+                "buildTarget": "demo:build"
+            }
+        },
+        "serve": {
+            "configurations": {
+                "production": {
+                    "buildTarget": "demo:build:production"
+                }
+            },
+            "executor": "@angular/build:dev-server",
             "options": {
                 "buildTarget": "demo:build"
             }
