@@ -77,7 +77,7 @@ export class DevkitFileSystem extends FileSystem {
     public read(filePath: Path | string): string | null {
         const buffer = this.tree.read(filePath);
 
-        return buffer !== null ? buffer.toString() : null;
+        return buffer === null ? null : buffer.toString();
     }
 
     public readDirectory(dirPath: Path): DirectoryEntry {

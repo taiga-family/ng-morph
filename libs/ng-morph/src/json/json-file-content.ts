@@ -46,7 +46,7 @@ export class JSONFileContent {
 
     public modify(
         jsonPath: JSONPath,
-        value: JsonValue | undefined,
+        value?: JsonValue,
         insertInOrder?: InsertionIndex | false,
     ): void {
         let getInsertionIndex: InsertionIndex | undefined;
@@ -78,7 +78,7 @@ export class JSONFileContent {
 
     public remove(jsonPath: JSONPath): void {
         if (this.get(jsonPath) !== undefined) {
-            this.modify(jsonPath, undefined);
+            this.modify(jsonPath);
         }
     }
 
