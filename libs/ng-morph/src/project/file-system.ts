@@ -154,7 +154,7 @@ export class NgCliFileSystem implements FileSystemHost {
     }
 
     public async mkdir(_dirPath: string): Promise<void> {
-        return Promise.resolve(undefined);
+        return Promise.resolve();
     }
 
     public mkdirSync(_dirPath: string): void {
