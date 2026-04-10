@@ -14,6 +14,9 @@ jobs:
           persist-credentials: false
       - uses: taiga-family/ci/actions/setup/variables@v1.200.0
       - uses: taiga-family/ci/actions/setup/node@v1.200.0
+        with:
+          audit: true
+
       - run: |
           if [[ "${{ env.SUPPORT_AUTO_PUSH }}" == "true" ]]; then
               npm run prettier -- --write
