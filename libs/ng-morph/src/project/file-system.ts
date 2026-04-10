@@ -9,7 +9,7 @@
 
 import {basename, join} from 'node:path';
 
-import multimatch from 'multimatch';
+import {minimatch} from 'minimatch';
 import {type FileSystemHost, type RuntimeDirEntry} from 'ts-morph';
 
 import {type DevkitFileSystem} from './devkit-file-system';
@@ -146,7 +146,17 @@ export class NgCliFileSystem implements FileSystemHost {
     }
 
     public globSync(patterns: readonly string[]): string[] {
-        return multimatch(this.getAllFilePaths(), patterns as string[]);
+        const allFiles = this.getAllFilePaths();
+
+        return allFiles.filter((file) =>
+            (patterns as string[]).reduce<boolean>((matched, pattern) => {
+                if (pattern.startsWith('!')) {
+                    return matched && !minimatch(file, pattern.slice(1));
+                }
+
+                return matched || minimatch(file, pattern);
+            }, false),
+        );
     }
 
     public isCaseSensitive(): boolean {
