@@ -24,7 +24,7 @@
             },
             "defaultConfiguration": "production",
             "dependsOn": ["^build"],
-            "executor": "@angular/build:application",
+            "executor": "@angular-devkit/build-angular:application",
             "options": {
                 "allowedCommonJsDependencies": ["text-mask-core"],
                 "assets": [
@@ -61,7 +61,7 @@
                     "buildTarget": "demo:build:production"
                 }
             },
-            "executor": "@angular/build:dev-server",
+            "executor": "@angular-devkit/build-angular:dev-server",
             "options": {
                 "buildTarget": "demo:build"
             }
