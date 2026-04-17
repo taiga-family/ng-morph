@@ -23,15 +23,12 @@ export function pushToObjectLiteralArrayProperty(
 
     const importsInitializer = property.getInitializer();
 
-    if (!Node.isArrayLiteralExpression(importsInitializer)) {
-        return;
-    }
-
     if (
-        unique &&
-        importsInitializer
-            .getElements()
-            .some((element) => element.getText() === initializer)
+        !Node.isArrayLiteralExpression(importsInitializer) ||
+        (unique &&
+            importsInitializer
+                .getElements()
+                .some((element) => element.getText() === initializer))
     ) {
         return;
     }
