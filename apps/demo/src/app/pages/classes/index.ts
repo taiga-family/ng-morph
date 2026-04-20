@@ -85,7 +85,6 @@ export default class ClassesComponent {
     protected readonly edit = edit;
     protected readonly remove = remove;
     protected readonly getClasses = getClasses;
-
     protected readonly accessors = ACCESSORS_SAMPLES;
     protected readonly methods = METHODS_SAMPLES;
     protected readonly properties = PROPERTIES_SAMPLES;
