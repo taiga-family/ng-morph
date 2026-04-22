@@ -3,24 +3,24 @@ import {type Structure, type WriterFunction} from 'ts-morph';
 
 import {coerceArray} from './coerce-array';
 
-// если массив, то берем его тип и возвращаем
-// иначе возвращаем переданный тип
+// if array, extract its type and return it
+// otherwise return the passed type
 type FlatType<T> = T extends Array<infer R> ? R : T;
 
-// если тип never[], то вернется never
+// if type is never[], return never
 type NeverIfIsNeverArray<T> = T extends never[] ? never : T;
 
-// пытаемся достать примитивы если они допустимы при определении в структурах
+// try to extract primitives if they are allowed in structure definitions
 type ExtractPrimitive<T> = Extract<
     FlatType<Exclude<T, WriterFunction>>,
     boolean | number | string
 >;
 
 /**
- * Делаем из объекта пригодный объект для поиска
+ * Convert an object to a searchable object
  *
  * @example
- * // Тип
+ * // Type
  * {
  *   named: string;
  *   flag: boolean;
