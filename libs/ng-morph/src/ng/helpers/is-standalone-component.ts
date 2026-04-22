@@ -10,13 +10,13 @@ export function isStandaloneComponent(component: ClassDeclaration): boolean {
     const [metadata] = decorator.getArguments();
 
     if (!Node.isObjectLiteralExpression(metadata)) {
-        return false;
+        return true;
     }
 
     const property = metadata.getProperty('standalone');
 
     if (!Node.isPropertyAssignment(property)) {
-        return false;
+        return true;
     }
 
     return property.getInitializer()?.getText() === 'true';
