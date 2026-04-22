@@ -12,7 +12,7 @@ export class NgMorphTree extends HostTree {
 
         super(host);
 
-        this.hostSink = new HostSink(host as any);
+        this.hostSink = new HostSink(host);
     }
 
     public async commitChanges(): Promise<void> {

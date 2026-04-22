@@ -28,10 +28,9 @@ jobs:
               npm run lint
           fi
 
-      - run: |
-          npm run cspell
-          npm run build
-          npm test
+      - run: npm run cspell
+      - run: npm run build
+      - run: npm run test
 
       - uses: taiga-family/ci/actions/auto/push@v1.201.0
         with:
