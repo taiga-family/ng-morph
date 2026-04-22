@@ -131,7 +131,7 @@ export class NgCliFileSystem implements FileSystemHost {
 
     public fileExistsSync(filePath: string): boolean {
         try {
-            return this.fs.read(filePath as WorkspacePath) !== null;
+            return this.fs.read(filePath) !== null;
         } catch {
             return false;
         }
