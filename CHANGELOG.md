@@ -1,3 +1,5 @@
+### [4.9.1](https://github.com/taiga-family/ng-morph/compare/v4.9.0...v4.9.1) (2026-04-22)
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See
