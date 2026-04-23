@@ -14,16 +14,13 @@ export function getDeclarationEditor<
         editor: StructureEditor<Declaration, OptionalKind<Structures>>,
     ) {
         coerceArray(declarations).forEach((declaration) => {
+            const structure =
+                declaration.getStructure() as unknown as OptionalKind<Structures>;
             const newStructure = Object.assign(
-                declaration.getStructure(),
-                // TODO: refactor it to support new typings
-
-                // @ts-ignore
-                editor(declaration.getStructure(), declaration),
+                structure,
+                editor(structure, declaration),
             ) as Structures;
 
-            // todo: see https://github.com/dsherret/ts-morph/issues/882
-            // if the issue is resolved code will be remove
             if (Structure.hasName(newStructure) && Node.isRenameable(declaration)) {
                 declaration.rename(newStructure.name);
                 delete (newStructure as {name?: string}).name;
