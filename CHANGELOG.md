@@ -4,26 +4,17 @@
 
 - support new angular styleUrl property in `@Component` (#1168)
   [(71069f6)](https://github.com/taiga-family/ng-morph/commit/71069f6c37e2b46beead7132a71994bb109bf684)
-- drop ts-ignore (#1167)
-  [(186cebf)](https://github.com/taiga-family/ng-morph/commit/186cebfae9f4b60b38c81b882cfaae3475885102)
-- drop useless logger (#1162)
-  [(57a9638)](https://github.com/taiga-family/ng-morph/commit/57a9638d67055902a92472933e92e5981d3e818d)
-- upgrade ts-morph (#1160)
-  [(2732047)](https://github.com/taiga-family/ng-morph/commit/2732047c89c586fa32290be37d226e9cb95cbe29)
 
 ### 🐞 Bug Fixes
 
-- revert ts-morph 28 (#1164)
-  [(35e7956)](https://github.com/taiga-family/ng-morph/commit/35e7956b3faebcd1216bc658dc5caf3a0affa5a3)
 - `isStandaloneComponent` incorrectly returns `false` for default-standalone components (Angular 19+ behavior) (#1161)
   [(99428db)](https://github.com/taiga-family/ng-morph/commit/99428dbb95eff1b55fdc1343dff28dd5bc88c4b6)
 
+### [4.9.1](https://github.com/taiga-family/ng-morph/compare/v4.9.0...v4.9.1) (2026-04-22)
+
+Reverted the accidental bump of the minimum Angular version to 19+. It's back to 16+, matching other 4.x.y versions.
+
 ### [4.9.0](https://github.com/taiga-family/ng-morph/compare/v4.8.4...v4.9.0) (2026-04-14)
-
-# Changelog
-
-All notable changes to this project will be documented in this file. See
-[`conventional commits`](https://www.conventionalcommits.org/) guidelines.
 
 ### [4.8.4](https://github.com/taiga-family/ng-morph/compare/v4.8.3...v4.8.4) (2024-09-27)
 
