@@ -32,7 +32,7 @@ export class SomeComponent {
             );
         });
 
-        it('should create the providers property', () => {
+        it('should add styleUrl property', () => {
             const classFile = getClasses('src/main.ts', {name: 'SomeComponent'})[0];
 
             if (classFile) {
@@ -45,7 +45,7 @@ export class SomeComponent {
                 .toBe(`import { Component } from '@angular/core';
 
 @Component({
-    styleUrls: ["./style.less"]
+    styleUrl: "./style.less"
 })
 export class SomeComponent {
 
@@ -66,7 +66,7 @@ export class SomeComponent {
             );
         });
 
-        it('should create the providers property', () => {
+        it('should add styleUrl property', () => {
             const classFile = getClasses('src/main.ts', {name: 'SomeComponent'})[0];
 
             if (classFile) {
@@ -78,14 +78,50 @@ export class SomeComponent {
             expect(host.readContent('src/main.ts'))
                 .toBe(`import { Component } from '@angular/core';
 
-@Component({styleUrls: ["./style.less"]})
+@Component({styleUrl: "./style.less"})
 export class SomeComponent {
 
 }`);
         });
     });
 
-    describe('The providers property is exists', () => {
+    describe('The styleUrl property exists', () => {
+        beforeEach(() => {
+            createSourceFile(
+                'src/main.ts',
+                `import { Component } from '@angular/core';
+
+@Component({
+  styleUrl: "./style.less"
+})
+export class SomeComponent {
+
+}`,
+            );
+        });
+
+        it('should convert styleUrl to styleUrls array', () => {
+            const classFile = getClasses('src/main.ts', {name: 'SomeComponent'})[0];
+
+            if (classFile) {
+                addStyleUrlToComponent(classFile, '"./new-style.less"');
+            }
+
+            saveActiveProject();
+
+            expect(host.readContent('src/main.ts'))
+                .toBe(`import { Component } from '@angular/core';
+
+@Component({
+    styleUrls: ["./style.less", "./new-style.less"]
+})
+export class SomeComponent {
+
+}`);
+        });
+    });
+
+    describe('The styleUrls property exists', () => {
         beforeEach(() => {
             createSourceFile(
                 'src/main.ts',
@@ -101,7 +137,7 @@ export class SomeComponent {
             );
         });
 
-        it('should add module to providers', () => {
+        it('should add to styleUrls array', () => {
             const classFile = getClasses('src/main.ts', {name: 'SomeComponent'})[0];
 
             if (classFile) {
