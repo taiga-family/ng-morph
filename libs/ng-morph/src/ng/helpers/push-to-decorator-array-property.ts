@@ -3,7 +3,6 @@ import {type ClassDeclaration, Node} from 'ts-morph';
 import {getDecorators} from '../../decorators';
 import {pushToObjectLiteralArrayProperty} from './push-to-object-literal-array-property';
 
-// TODO: investigate how to handle consts in descriptors that don't accept array of array type, like styleUrls
 export function pushToDecoratorArrayProperty(
     classDeclaration: ClassDeclaration,
     decoratorName: string,
