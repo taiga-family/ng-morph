@@ -55,6 +55,9 @@
         "extends @taiga-ui/browserslist-config"
     ],
     "prettier": "@taiga-ui/prettier-config",
+    "release-it": {
+        "extends": "@taiga-ui/release-it-config"
+    },
     "stylelint": {
         "extends": [
             "@taiga-ui/stylelint-config"
@@ -91,15 +94,13 @@
         "@taiga-ui/core": "4.81.0",
         "@taiga-ui/icons": "4.81.0",
         "@taiga-ui/kit": "4.81.0",
-        "@taiga-ui/syncer": "0.491.0",
         "@types/node": "25.6.0",
         "highlight.js": "11.11.1",
         "less": "4.6.4",
-        "ngx-highlightjs": "10.0.0",
         "nx": "22.6.5",
         "rxjs": "7.8.2",
         "ts-node": "10.9.2",
-        "typescript": "5.7.3"
+        "typescript": "5.8.3"
     },
     "syncer": {
         "includePaths": [
