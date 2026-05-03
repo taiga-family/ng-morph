@@ -1,4 +1,4 @@
-import{Q as l,T as m,i as o,k as n,n as r,o as s,p as t,q as c,u as d}from"./chunk-K5V5BJOU.js";var v=`import {
+import{Q as l,T as m,i as o,k as n,n as r,o as s,p as t,q as c,u as d}from"./chunk-DMLVPYUB.js";var v=`import {
     addVariables,
     editVariables,
     getVariables,
