@@ -16,6 +16,7 @@ export function getDeclarationEditor<
         coerceArray(declarations).forEach((declaration) => {
             const structure =
                 declaration.getStructure() as unknown as OptionalKind<Structures>;
+
             const newStructure = Object.assign(
                 structure,
                 editor(structure, declaration),
