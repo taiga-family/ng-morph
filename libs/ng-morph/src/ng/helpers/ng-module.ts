@@ -25,6 +25,7 @@ export function findNgModule(
     return (
         allNgModules.find((module) => {
             const moduleFile = module.getSourceFile();
+
             const imports = getImports(moduleFile.getFilePath(), {
                 namedImports: ngComponent.getName(),
             });

@@ -9,7 +9,6 @@ export function getProjectTargets(
     angularJsonPath: string = ANGULAR_PATH,
 ): Map<string, WorkspaceProject> {
     const file = new JSONFile(host, angularJsonPath);
-
     const projects = file.get(['projects']);
 
     if (projects) {
