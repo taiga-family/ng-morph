@@ -11,11 +11,9 @@ export function getProjectTargets(
     const file = new JSONFile(host, angularJsonPath);
     const projects = file.get(['projects']);
 
-    if (projects) {
-        return new Map(Object.entries(projects) as Array<[string, any]>);
-    }
-
-    return new Map();
+    return projects
+        ? new Map(Object.entries(projects) as Array<[string, any]>)
+        : new Map();
 }
 
 export function getProjectTarget(

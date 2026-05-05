@@ -149,13 +149,13 @@ export class NgCliFileSystem implements FileSystemHost {
         const allFiles = this.getAllFilePaths();
 
         return allFiles.filter((file) =>
-            (patterns as string[]).reduce<boolean>((matched, pattern) => {
-                if (pattern.startsWith('!')) {
-                    return matched && !minimatch(file, pattern.slice(1));
-                }
-
-                return matched || minimatch(file, pattern);
-            }, false),
+            (patterns as string[]).reduce<boolean>(
+                (matched, pattern) =>
+                    pattern.startsWith('!')
+                        ? matched && !minimatch(file, pattern.slice(1))
+                        : matched || minimatch(file, pattern),
+                false,
+            ),
         );
     }
 
