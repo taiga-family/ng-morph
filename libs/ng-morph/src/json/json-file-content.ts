@@ -33,11 +33,7 @@ export class JSONFileContent {
         const ast = this.jsonAst();
         const node = ast ? findNodeAtLocation(ast, jsonPath) : null;
 
-        if (!node || !ast) {
-            return undefined;
-        }
-
-        return getNodeValue(node);
+        return !node || !ast ? undefined : getNodeValue(node);
     }
 
     public getContent(): string {

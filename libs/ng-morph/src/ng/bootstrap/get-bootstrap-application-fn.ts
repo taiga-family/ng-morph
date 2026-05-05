@@ -15,12 +15,10 @@ export function getBootstrapApplicationFn(
 
     const nameNode = namedImport?.getNameNode();
 
-    if (nameNode instanceof Identifier) {
-        return nameNode
-            .findReferencesAsNodes()
-            .find((ref) => Node.isCallExpression(ref.getParent()))
-            ?.getParentIfKind(SyntaxKind.CallExpression);
-    }
-
-    return undefined;
+    return nameNode instanceof Identifier
+        ? nameNode
+              .findReferencesAsNodes()
+              .find((ref) => Node.isCallExpression(ref.getParent()))
+              ?.getParentIfKind(SyntaxKind.CallExpression)
+        : undefined;
 }

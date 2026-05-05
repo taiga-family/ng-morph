@@ -15,9 +15,7 @@ export function isStandaloneComponent(component: ClassDeclaration): boolean {
 
     const property = metadata.getProperty('standalone');
 
-    if (!Node.isPropertyAssignment(property)) {
-        return true;
-    }
-
-    return property.getInitializer()?.getText() === 'true';
+    return Node.isPropertyAssignment(property)
+        ? property.getInitializer()?.getText() === 'true'
+        : true;
 }
