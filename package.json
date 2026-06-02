@@ -91,7 +91,7 @@
         "@taiga-ui/core": "4.85.0",
         "@taiga-ui/icons": "4.85.0",
         "@taiga-ui/kit": "4.85.0",
-        "@types/node": "25.9.0",
+        "@types/node": "25.9.1",
         "highlight.js": "11.11.1",
         "less": "4.6.4",
         "nx": "22.7.2",
