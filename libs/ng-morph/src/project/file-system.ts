@@ -12,6 +12,7 @@ import {basename, join} from 'node:path';
 import {minimatch} from 'minimatch';
 import {type FileSystemHost, type RuntimeDirEntry} from 'ts-morph';
 
+import {isNegativeGlobPattern} from '../utils/pattern';
 import {type DevkitFileSystem} from './devkit-file-system';
 import {type UpdateRecorder} from './update-recorder';
 
@@ -151,7 +152,7 @@ export class NgCliFileSystem implements FileSystemHost {
         return allFiles.filter((file) =>
             (patterns as string[]).reduce<boolean>(
                 (matched, pattern) =>
-                    pattern.startsWith('!')
+                    isNegativeGlobPattern(pattern)
                         ? matched && !minimatch(file, pattern.slice(1))
                         : matched || minimatch(file, pattern),
                 false,
@@ -186,14 +187,14 @@ export class NgCliFileSystem implements FileSystemHost {
 
         return directories
             .map((name) => ({
-                name,
+                name: join(dirPath, name),
                 isFile: false,
                 isDirectory: true,
                 isSymlink: false,
             }))
             .concat(
                 files.map((name) => ({
-                    name,
+                    name: join(dirPath, name),
                     isFile: true,
                     isDirectory: false,
                     isSymlink: false,
