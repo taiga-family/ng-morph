@@ -1,3 +1,11 @@
+### [5.0.1](https://github.com/taiga-family/ng-morph/compare/v5.0.0...v5.0.1) (2026-06-09)
+
+### 🐞 Bug Fixes
+
+- preserve negative globs and recursive directory traversal
+  ([#1250](https://github.com/taiga-family/ng-morph/pull/1250))
+  [(6229313)](https://github.com/taiga-family/ng-morph/commit/6229313a3018e7ae6d02f5af75652e28a525d511)
+
 ## [5.0.0](https://github.com/taiga-family/ng-morph/compare/v4.9.1...v5.0.0) (2026-04-23)
 
 ### 🚀 Features
