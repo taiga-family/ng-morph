@@ -11,7 +11,7 @@ ng-morph is an Angular and Nx workspace for code mutations built on TypeScript t
 3. Install dependencies with npm.
 
 ```bash
-git clone https://github.com/taiga-family/ng-morph.git
+git clone https://github.com/<your-username>/ng-morph.git
 cd ng-morph
 npm install
 git checkout -b your-change
