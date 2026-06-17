@@ -2,7 +2,10 @@
 
 Thanks for your interest in contributing to ng-morph.
 
-ng-morph is an Angular and Nx workspace for code mutations built on TypeScript tooling. The most useful contributions are focused, include tests when behavior changes, and keep formatting, linting, spelling, build, and test checks green.
+ng-morph is an Angular and Nx workspace for code mutations built on TypeScript
+tooling. The most useful contributions are focused, include tests when
+behavior changes, and keep formatting, linting, spelling, build, and test
+checks green.
 
 ## Getting Started
 
@@ -19,7 +22,8 @@ git checkout -b your-change
 
 ## Local Checks
 
-The CI workflow runs formatting, style, lint, spelling, build, and tests. Before opening a pull request, run the relevant checks locally:
+The CI workflow runs formatting, style, lint, spelling, build, and tests.
+Before opening a pull request, run the relevant checks locally:
 
 ```bash
 npm run format:check
@@ -45,6 +49,7 @@ Please keep pull requests focused and include:
 - what changed
 - why the change is needed
 - which local checks you ran
-- whether the change affects the library, demo app, build tooling, or documentation
+- whether the change affects the library, demo app, build tooling, or
+  documentation
 
 When changing code mutation behavior, add or update tests that cover the affected TypeScript or Angular pattern.
