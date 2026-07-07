@@ -40,8 +40,7 @@ type ExtractPrimitive<T> = Extract<
  */
 export type Query<T extends Structure> = Partial<{
     [key in keyof T]:
-        | ExtractPrimitive<T[key]>
-        | NeverIfIsNeverArray<Array<ExtractPrimitive<T[key]>>>;
+        ExtractPrimitive<T[key]> | NeverIfIsNeverArray<Array<ExtractPrimitive<T[key]>>>;
 }>;
 
 function isObject(value: unknown): value is Record<string, unknown> {
