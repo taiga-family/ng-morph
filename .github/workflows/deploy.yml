@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: taiga-family/actions/setup-variables@ab5a9c7e8a57e7afcea80c4f7210ce57de3c109e # v2.13.0
-      - uses: taiga-family/actions/setup-node@ab5a9c7e8a57e7afcea80c4f7210ce57de3c109e # v2.13.0
+      - uses: taiga-family/actions/setup-variables@ed4e7ce7c012436a5f2b02d2b5a7aa86581db73a # v2.14.0
+      - uses: taiga-family/actions/setup-node@ed4e7ce7c012436a5f2b02d2b5a7aa86581db73a # v2.14.0
       - run: npm run build:demo
-      - uses: taiga-family/actions/deploy-github-pages@ab5a9c7e8a57e7afcea80c4f7210ce57de3c109e # v2.13.0
+      - uses: taiga-family/actions/deploy-github-pages@ed4e7ce7c012436a5f2b02d2b5a7aa86581db73a # v2.14.0
         with:
           token: ${{ secrets.TAIGA_FAMILY_BOT_PAT }}
           folder: dist/apps/demo/browser
