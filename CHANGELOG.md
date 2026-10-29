@@ -1,3 +1,7 @@
+## [5.0.2](https://github.com/taiga-family/ng-morph/compare/v5.0.1...v5.0.2) (2026-10-29)
+
+This release contains internal technical improvements only. No changes to functionality, UI, or APIs.
+
 ### [5.0.1](https://github.com/taiga-family/ng-morph/compare/v5.0.0...v5.0.1) (2026-06-09)
 
 ### 🐞 Bug Fixes
